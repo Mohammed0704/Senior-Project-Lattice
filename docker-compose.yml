@@ -1,0 +1,14 @@
+version: '3.1'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: user
+      MYSQL_DATABASE: mariadb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
+    
+    volumes: 
+        - ./mariadb/init:/docker-entrypoint-initdb.d
