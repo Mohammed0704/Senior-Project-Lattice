@@ -1,1 +1,4 @@
 Lattice
+
+---Starting up entire environment
+docker-compose up -d
