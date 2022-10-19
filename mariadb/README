@@ -1,0 +1,2 @@
+---Entering MariaDB CLI Client
+docker exec -it mariadb mariadb --user user -puser
