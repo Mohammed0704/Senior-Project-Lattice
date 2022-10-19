@@ -1,4 +1,19 @@
 Lattice
 
+---Seeing currently running containers
+docker ps -a
+
+---Seeing all images
+docker images
+
+---Restarting a container
+docker restart [container_name]
+
+---Stopping a container
+docker stop [container_name]
+
+---Removing an instance of a container (wipes all attached data unless a volume is configured)
+docker rm [container_name]
+
 ---Starting up entire environment
 docker-compose up -d
