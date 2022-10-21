@@ -17,3 +17,6 @@ docker rm [container_name]
 
 ---Starting up entire environment
 docker-compose up -d
+
+---Stopping/Pulling down entire environment (stops and removes all containers present in docker-compose.yml)
+docker-compose down
