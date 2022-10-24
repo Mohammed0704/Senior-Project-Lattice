@@ -1,4 +1,4 @@
-version: '3.1'
+version: "3.1"
 
 services:
   mariadb:
@@ -9,9 +9,9 @@ services:
       MYSQL_DATABASE: mariadb
       MYSQL_USER: user
       MYSQL_PASSWORD: user
-    
-    volumes: 
-        - ./mariadb/init:/docker-entrypoint-initdb.d
+
+    volumes:
+      - ./mariadb/init:/docker-entrypoint-initdb.d
 
   mongo:
     image: mongo:latest
@@ -25,3 +25,10 @@ services:
     container_name: cassandra
     ports:
       - 9042:9042
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.4.3
+    container_name: elasticsearch
+    ports:
+      - 9200:9200
+      - 9300:9300
