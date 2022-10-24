@@ -19,3 +19,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: root
+
+  cassandra:
+    image: cassandra:latest
+    ports:
+      - 9042:9042
