@@ -32,6 +32,45 @@ services:
     ports:
       - 9200:9200
       - 9300:9300
+    environment:
+      - cluster.name=es-cluster
+      - node.name=es-node-1
+      - path.data=/usr/share/elasticsearch/data
+      - http.port=9200
+      - http.host=0.0.0.0
+      - transport.host=127.0.0.1
+      - bootstrap.memory_lock=true
+      - ELASTIC_PASSWORD=changeme
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    networks:
+    - 'ELK'
+
+  kibana:
+    container_name: kibana
+    image: "docker.elastic.co/kibana/kibana:8.4.3"
+    ports:
+      - 5601:5601
+    networks:
+    - 'ELK'
+    depends_on:
+      - 'elasticsearch'
+
+  logstash:
+    container_name: logstash
+    image: "docker.elastic.co/logstash/logstash:8.4.3"
+    ports:
+      - 5000:5000
+      - 5044:5044
+    environment:
+      - username=elasticsearch
+      - password=changeme
+    networks: REMOVE TE NETWORKS?????
+    - 'ELK'
+    depends_on:
+      - 'elasticsearch'
 
   postgres:
     image: postgres:latest
@@ -40,3 +79,7 @@ services:
       - 5432:5432
     environment:
       POSTGRES_PASSWORD: user
+
+networks:
+  ELK:
+    driver: bridge
