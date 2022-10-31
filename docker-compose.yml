@@ -67,7 +67,7 @@ services:
     environment:
       - username=elasticsearch
       - password=changeme
-    networks: REMOVE TE NETWORKS?????
+    networks:
     - 'ELK'
     depends_on:
       - 'elasticsearch'
