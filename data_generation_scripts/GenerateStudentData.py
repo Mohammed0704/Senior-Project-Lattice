@@ -1,6 +1,7 @@
 import csv
 import random
 import names
+import random_address
 
 #MariaDB.drexel_people.basic_student_info
 drexelID = ""#
@@ -12,9 +13,9 @@ email = ""#
 chosenName = ""#
 gender = None#
 expectedGraduationYear = ""#
-studentProgramType = ""
-phone = ""
-homeAddress = ""
+studentProgramType = ""#
+phone = ""#
+homeAddress = ""#
 
 studentProgramTypeOptions = ["Undergraduate", "Graduate"]
 basicStudentInfoHeaders = ["Drexel ID", "First Name", "Middle Name", "Last Name", "Date of Birth", "Email", "Chosen Name", "Gender", "Expected Graduation Year",
@@ -78,5 +79,8 @@ for row in range(6):
         elif year == 2003:
             expectedGraduationYear = 2027
     
-    
-    print(studentProgramType)
+    phone = str(random.randint(200, 989)) + "-" + str(random.randint(100, 999)) + "-" + str(random.randint(1000, 9999))
+
+    homeAddress = random_address.real_random_address_by_state('CA')['address1']
+
+    print(homeAddress)
