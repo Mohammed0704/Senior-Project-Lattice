@@ -8,7 +8,7 @@ drexelID = ""#
 lastName = ""#
 middleName = ""#
 firstName = ""#
-dateOfBirth = None#
+dateOfBirth = ""#
 email = ""#
 chosenName = ""#
 gender = None#
@@ -17,13 +17,36 @@ studentProgramType = ""#
 phone = ""#
 homeAddress = ""#
 
+#MariaDB.locations.student_locations
+isInternational = False#
+livingAddress = ""#
+#drexelID#
+isCommuter = False#
+hasParkingPass = False#
+
+#Cassandra.finances.health_insurance
+#drexelID#
+isWaived = False
+provider = ""
+deductible = 0
+
+
+campusAddressOptions = ["115 N. 32nd Street", "203 N. 34th Street", "223 N. 34th Street", "3301 Race Street", "3200 Race Street", "101 N 34th Street", "3320 Powelton Avenue", 
+                            "3301 Arch Street", "3400 Lancaster Avenue", "3200 Chestnut Street"]
 studentProgramTypeOptions = ["Undergraduate", "Graduate"]
 basicStudentInfoHeaders = ["Drexel ID", "First Name", "Middle Name", "Last Name", "Date of Birth", "Email", "Chosen Name", "Gender", "Expected Graduation Year",
                             "Student Program Type", "Phone", "Home Address"]
 
+studentLocationsHeaders = ["Drexel ID", "International", "Living Address", "Commuter", "Has Parking Pass"]
+
+providerOptions = ["Cigna", "Aetna", "Humana", "Blue Cross", "Molina Healthcare", "UnitedHealthOne", "MagnaCare"]
+deductibleOptions = [200, 500, 1000, 2500, 3000, 5000, 10000]
+healthInsuranceHeaders = ["Drexel ID", "Waived", "Provider", "Deductible"]
+
 rows = []
 
 for row in range(6):
+    #MariaDB.drexel_people.basic_student_info
     genderChance = random.randint(1,2)
 
     if genderChance == 1:
@@ -81,6 +104,29 @@ for row in range(6):
     
     phone = str(random.randint(200, 989)) + "-" + str(random.randint(100, 999)) + "-" + str(random.randint(1000, 9999))
 
-    homeAddress = random_address.real_random_address_by_state('CA')['address1']
+    campusAddressChance = random.randint(1,100)
+    if campusAddressChance <= 50:
+        homeAddress = random.choice(campusAddressOptions)
+    else:
+        homeAddress = random_address.real_random_address_by_state('CA')['address1']
 
-    print(homeAddress)
+    #MariaDB.locations.student_locations
+    isInternational = bool(random.getrandbits(1))
+
+    livingAddress = homeAddress
+
+    isCommuter = bool(random.getrandbits(1))
+
+    hasParkingPass = bool(random.getrandbits(1))
+
+    #Cassandra.finances.health_insurance
+    isWaived = bool(random.getrandbits(1))
+
+    if isWaived:
+        provider = random.choice(providerOptions)
+    else:
+        provider = "Aetna"
+    
+    deductible = random.choice(deductibleOptions)
+
+    print(deductible)
