@@ -1,7 +1,10 @@
 import csv
 import random
+import os
 import names
 import random_address
+
+currentDirectory = os.getcwd()
 
 #MariaDB.drexel_people.basic_student_info
 drexelID = ""#
@@ -30,22 +33,40 @@ isWaived = False
 provider = ""
 deductible = 0
 
+#Postgres.education.student_education_choices
+#drexelID#
+#firstName#
+#middleName#
+#lastName#
+areaOfStudy = ""
+major = ""
+minor = ""
+
 
 campusAddressOptions = ["115 N. 32nd Street", "203 N. 34th Street", "223 N. 34th Street", "3301 Race Street", "3200 Race Street", "101 N 34th Street", "3320 Powelton Avenue", 
                             "3301 Arch Street", "3400 Lancaster Avenue", "3200 Chestnut Street"]
 studentProgramTypeOptions = ["Undergraduate", "Graduate"]
 basicStudentInfoHeaders = ["Drexel ID", "First Name", "Middle Name", "Last Name", "Date of Birth", "Email", "Chosen Name", "Gender", "Expected Graduation Year",
                             "Student Program Type", "Phone", "Home Address"]
+basicStudentInfoRows = []
 
 studentLocationsHeaders = ["Drexel ID", "International", "Living Address", "Commuter", "Has Parking Pass"]
+studentLocationsRows = []
 
 providerOptions = ["Cigna", "Aetna", "Humana", "Blue Cross", "Molina Healthcare", "UnitedHealthOne", "MagnaCare"]
 deductibleOptions = [200, 500, 1000, 2500, 3000, 5000, 10000]
 healthInsuranceHeaders = ["Drexel ID", "Waived", "Provider", "Deductible"]
+healthInsuranceRows = []
+
+areaOfStudyOptions = [""]
+minorOptions = [""]
+majorOptions = [""]
+studentEducationChoicesHeaders = ["Drexel ID", "First Name", "Middle Name", "Last Name", "Area of Study", "Major", "Minor"]
+studentEducationChoicesRows = []
 
 rows = []
 
-for row in range(6):
+for i in range(100):
     #MariaDB.drexel_people.basic_student_info
     genderChance = random.randint(1,2)
 
@@ -59,10 +80,18 @@ for row in range(6):
         middleName = names.get_first_name(gender="female")
     lastName = names.get_last_name()
     
-    tripleDigitChance = random.randint(1, 100)
-    drexelID = (firstName[0] + middleName[0] + lastName[0]).lower() + str(random.randint(10, 99))
-    if tripleDigitChance <= 20:
-        drexelID = drexelID + str(random.randint(1,9))
+    unique = False
+    while not unique:
+        unique = True
+        tripleDigitChance = random.randint(1, 100)
+        drexelID = (firstName[0] + middleName[0] + lastName[0]).lower() + str(random.randint(10, 99))
+        if tripleDigitChance <= 20:
+            drexelID = drexelID + str(random.randint(1,9))
+
+        #prevent duplicate IDs
+        for row in basicStudentInfoRows:
+            if row[0] == drexelID:
+                unique = False
     
     email = drexelID + "@drexel.edu"
 
@@ -74,12 +103,14 @@ for row in range(6):
         else:
             gender = 'M'
             chosenName = names.get_first_name(gender="male")
+    else:
+        chosenName = firstName
 
     month = random.randint(1,12)
     day = random.randint(1,28)
     olderStudentChance = random.randint(1,100)
     year = None
-    if olderStudentChance <= 3:
+    if olderStudentChance <= 1:
         year = random.randint(1982, 1997)
     else:
         year = random.randint(1999, 2004)
@@ -111,7 +142,11 @@ for row in range(6):
         homeAddress = random_address.real_random_address_by_state('CA')['address1']
 
     #MariaDB.locations.student_locations
-    isInternational = bool(random.getrandbits(1))
+    internationalChance = random.randint(1,100)
+    if internationalChance <= 35:
+        isInternational = True
+    else:
+        isInternational = False
 
     livingAddress = homeAddress
 
@@ -129,4 +164,40 @@ for row in range(6):
     
     deductible = random.choice(deductibleOptions)
 
-    print(deductible)
+    #Postgres.education.student_education_choices
+    areaOfStudy = random.choice(areaOfStudyOptions)
+    major = random.choice(majorOptions)
+    minor = random.choice(minorOptions)
+
+    #append current row to be written to CSV later
+    basicStudentInfoRows.append([drexelID, firstName, middleName, lastName, dateOfBirth, email, chosenName, gender, expectedGraduationYear, studentProgramType, phone, homeAddress])
+
+    studentLocationsRows.append([drexelID, isInternational, livingAddress, isCommuter, hasParkingPass])
+
+    healthInsuranceRows.append([drexelID, isWaived, provider, deductible])
+
+    studentEducationChoicesRows.append([drexelID, firstName, middleName, lastName, areaOfStudy, major, minor])
+
+#MariaDB.drexel_people.basic_student_info
+with open(currentDirectory + "/MariaDB-basic_student_info.csv", 'w', newline='') as csvfile: 
+    csvwriter = csv.writer(csvfile) 
+    csvwriter.writerow(basicStudentInfoHeaders)         
+    csvwriter.writerows(basicStudentInfoRows)
+
+#MariaDB.locations.student_locations
+with open(currentDirectory + "/MariaDB-student_locations.csv", 'w', newline='') as csvfile: 
+    csvwriter = csv.writer(csvfile) 
+    csvwriter.writerow(studentLocationsHeaders)         
+    csvwriter.writerows(studentLocationsRows)
+
+#Cassandra.finances.health_insurance
+with open(currentDirectory + "/Cassandra-health_insurance.csv", 'w', newline='') as csvfile: 
+    csvwriter = csv.writer(csvfile) 
+    csvwriter.writerow(healthInsuranceHeaders)         
+    csvwriter.writerows(healthInsuranceRows)
+
+#Postgres.education.student_education_choices
+with open(currentDirectory + "/Postgres-student_education_choices.csv", 'w', newline='') as csvfile: 
+    csvwriter = csv.writer(csvfile) 
+    csvwriter.writerow(studentEducationChoicesHeaders)         
+    csvwriter.writerows(studentEducationChoicesRows)
