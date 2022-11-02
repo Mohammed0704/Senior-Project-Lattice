@@ -110,7 +110,7 @@ for i in range(100):
     day = random.randint(1,28)
     olderStudentChance = random.randint(1,100)
     year = None
-    if olderStudentChance <= 1:
+    if olderStudentChance <= 2:
         year = random.randint(1982, 1997)
     else:
         year = random.randint(1999, 2004)
@@ -150,7 +150,10 @@ for i in range(100):
 
     livingAddress = homeAddress
 
-    isCommuter = bool(random.getrandbits(1))
+    if homeAddress in campusAddressOptions:
+        isCommuter = False
+    else:
+        isCommuter = bool(random.getrandbits(1))
 
     hasParkingPass = bool(random.getrandbits(1))
 
