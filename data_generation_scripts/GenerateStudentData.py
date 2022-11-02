@@ -66,7 +66,7 @@ studentEducationChoicesRows = []
 
 rows = []
 
-for i in range(100):
+for i in range(2000):
     #MariaDB.drexel_people.basic_student_info
     genderChance = random.randint(1,2)
 
@@ -182,25 +182,25 @@ for i in range(100):
     studentEducationChoicesRows.append([drexelID, firstName, middleName, lastName, areaOfStudy, major, minor])
 
 #MariaDB.drexel_people.basic_student_info
-with open(currentDirectory + "/MariaDB-basic_student_info.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/MariaDB_Data/MariaDB-basic_student_info.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(basicStudentInfoHeaders)         
     csvwriter.writerows(basicStudentInfoRows)
 
 #MariaDB.locations.student_locations
-with open(currentDirectory + "/MariaDB-student_locations.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/MariaDB_Data/MariaDB-student_locations.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(studentLocationsHeaders)         
     csvwriter.writerows(studentLocationsRows)
 
 #Cassandra.finances.health_insurance
-with open(currentDirectory + "/Cassandra-health_insurance.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/Cassandra_Data/Cassandra-health_insurance.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(healthInsuranceHeaders)         
     csvwriter.writerows(healthInsuranceRows)
 
 #Postgres.education.student_education_choices
-with open(currentDirectory + "/Postgres-student_education_choices.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/Postgres_Data/Postgres-student_education_choices.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(studentEducationChoicesHeaders)         
     csvwriter.writerows(studentEducationChoicesRows)
