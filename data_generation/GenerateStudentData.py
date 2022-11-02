@@ -42,7 +42,7 @@ areaOfStudy = ""
 major = ""
 minor = ""
 
-
+#MariaDB.locations.student_locations
 campusAddressOptions = ["115 N. 32nd Street", "203 N. 34th Street", "223 N. 34th Street", "3301 Race Street", "3200 Race Street", "101 N 34th Street", "3320 Powelton Avenue", 
                             "3301 Arch Street", "3400 Lancaster Avenue", "3200 Chestnut Street"]
 studentProgramTypeOptions = ["Undergraduate", "Graduate"]
@@ -50,14 +50,17 @@ basicStudentInfoHeaders = ["Drexel ID", "First Name", "Middle Name", "Last Name"
                             "Student Program Type", "Phone", "Home Address"]
 basicStudentInfoRows = []
 
+#MariaDB.locations.student_locations
 studentLocationsHeaders = ["Drexel ID", "International", "Living Address", "Commuter", "Has Parking Pass"]
 studentLocationsRows = []
 
+#Cassandra.finances.health_insurance
 providerOptions = ["Cigna", "Aetna", "Humana", "Blue Cross", "Molina Healthcare", "UnitedHealthOne", "MagnaCare"]
 deductibleOptions = [200, 500, 1000, 2500, 3000, 5000, 10000]
 healthInsuranceHeaders = ["Drexel ID", "Waived", "Provider", "Deductible"]
 healthInsuranceRows = []
 
+#Postgres.education.student_education_choices
 areaOfStudyOptions = [""]
 minorOptions = [""]
 majorOptions = [""]
