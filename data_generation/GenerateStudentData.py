@@ -66,7 +66,7 @@ studentEducationChoicesRows = []
 
 rows = []
 
-for i in range(2000):
+for i in range(100):
     #MariaDB.drexel_people.basic_student_info
     genderChance = random.randint(1,2)
 
