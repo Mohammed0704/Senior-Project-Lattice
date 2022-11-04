@@ -40,21 +40,17 @@ services:
       - http.host=0.0.0.0
       - transport.host=127.0.0.1
       - bootstrap.memory_lock=true
-      - ELASTIC_PASSWORD=changeme
+      - xpack.security.enabled=false
     ulimits:
       memlock:
         soft: -1
         hard: -1
-    networks:
-    - 'ELK'
 
   kibana:
     container_name: kibana
     image: "docker.elastic.co/kibana/kibana:8.4.3"
     ports:
       - 5601:5601
-    networks:
-    - 'ELK'
     depends_on:
       - 'elasticsearch'
 
@@ -67,8 +63,6 @@ services:
     environment:
       - username=elasticsearch
       - password=changeme
-    networks:
-    - 'ELK'
     depends_on:
       - 'elasticsearch'
 
@@ -79,7 +73,3 @@ services:
       - 5432:5432
     environment:
       POSTGRES_PASSWORD: user
-
-networks:
-  ELK:
-    driver: bridge
