@@ -76,8 +76,8 @@ Systems.append(systemVars)
 ##Degree Works
 systemVars = ["Degree Works",
               120000,
-              "DegreeWorks is an online tool available to undergraduate students. DegreeWorks allows you to track your progress towards the completion of your degree program, including the number of credits you have earned and still need to complete, GPA status, and course requirements for your program. It is recommended that you use DegreeWorks in coordination with regular consultation with your academic advisor.​",
-              "https://drexel.edu/drexelcentral/registration/courses/degreeworks/"
+              "DegreeWorks is an online tool available to undergraduate students. DegreeWorks allows you to track your progress towards the completion of your degree program, including the number of credits you have earned and still need to complete, GPA status, and course requirements for your program. It is recommended that you use DegreeWorks in coordination with regular consultation with your academic advisor.",
+              "https://drexel.edu/drexelcentral/registration/courses/degreeworks/",
               True,
               "faculty,students",
               0,
@@ -104,7 +104,7 @@ systemVars = ["McGraw-Hill Connect",
 Systems.append(systemVars)
 
 ##Zoom
-SystemVars = ["Zoom",
+systemVars = ["Zoom",
               20000,
               "Video-conferencing application for business meetings. Licensed at Drexel for faculty, professional staff, and students.",
               "drexel.zoom.us",
@@ -119,10 +119,10 @@ SystemVars = ["Zoom",
 Systems.append(systemVars)
 
 ##PuTTY
-SystemVars = ["PuTTY",
+systemVars = ["PuTTY",
               0,
               "Secure FTP Client.",
-              putty.org,
+              "putty.org",
               False,
               "faculty,professional staff,students",
               0,
@@ -131,9 +131,9 @@ SystemVars = ["PuTTY",
               "windows,linux",
               "N/A",
               "N/A"]
-Systems.append(SystemVars)
+Systems.append(systemVars)
 
-for system in Systems
+for system in Systems:
   software_name = system[0]
   drexel_annual_license_cost = system[1]
   description = system[2]
@@ -168,5 +168,5 @@ with open(currentDirectory + "/Cassandra_Data/Cassandra-software_costs.csv", 'w'
     csvwriter.writerow(cassandraSoftwareCostsHeaders)         
     csvwriter.writerows(cassandraSoftwareCosts)
 
-with open(currentDirectory = "/MongoDB_Data/MongoDB-software.json", "w") as jsonfile
-  json.dump(mongoSoftware, jsonfile)
+with open(currentDirectory + "/MongoDB_Data/MongoDB-software.json", "w") as jsonfile:
+  json.dump(mongoSoftware, jsonfile, indent = 4)
