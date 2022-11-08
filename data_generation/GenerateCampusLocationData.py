@@ -59,11 +59,11 @@ campusLocationRows.append(["Constantine N. Papadakis Integrated Sciences Buildin
                             19104, "University City", False, True])
 
 campusLocationRows.append(["Curtis Hall", "Funded by a Cyrus Hermann Kotzschmar Curtis (publisher of the Ladies' Home Journal and the Saturday Evening Post). The initial three-story concrete and steel structure was built to accommodate four more stories in the future. It provided laboratory and classroom spaces for mechanical, civil, chemical, and electrical engineering as well as a gymnasium on the top floor which included a rifle range and rooftop baseball cage and running track. Curtis also purchased the land adjacent to the site to ensure abundant natural light into the structure.",
-                            "3141 Chestnut St Ste 301, Philadelphia, PA 19104", "", "", "",
+                            "3141 Chestnut St, Philadelphia, PA 19104", "", "", "",
                             19104, "University City", False, True])
 
 campusLocationRows.append(["Randell Hall", "Called East Hall until 1924 when renamed for Lillie Randell and Letitia Garrison, sisters, donated money to the Institute.",
-                            "3141 Chestnut St Ste 301, Philadelphia, PA 19104", "", "", "",
+                            "3141 Chestnut St, Philadelphia, PA 19104", "", "", "",
                             19104, "University City", False, True])
 
 campusLocationRows.append(["Disque Hall", "",
@@ -74,11 +74,33 @@ campusLocationRows.append(["Gerri C. LeBow Hall", "",
                             "3220 Market St. Philadelphia, PA 19104", "215-895-2111", "lcbdeansoffice@drexel.edu", "https://www.lebow.drexel.edu/about",
                             19104, "University City", False, True])          
 
-campusLocationRows.append(["Gerri C. LeBow Hall", "",
-                            "3220 Market St. Philadelphia, PA 19104", "215-895-2111", "lcbdeansoffice@drexel.edu", "https://www.lebow.drexel.edu/about",
+campusLocationRows.append(["Kline Law Building and Library", "",
+                            "3320 Market St, Philadelphia, PA 19104", "", "", "",
                             19104, "University City", False, True])  
 
+campusLocationRows.append(["LeBow Engineering Center", "",
+                            "3141 Chestnut St, Philadelphia, PA 19104", "215-895-1529", "", "",
+                            19104, "University City", False, True])
 
+campusLocationRows.append(["MacAlister Hall", "This structure like the Creese Activities Center and Mandell Theatre has been enveloped by Robert Stern's Chestnut Square pairing that bring the activity to the edge of the sidewalk, but only on the Chestnut Street side. Built as the Educational Activities Center.",
+                            "3250 Chestnut St, Philadelphia, PA 19104", "", "", "",
+                            19104, "University City", False, True])  
+
+campusLocationRows.append(["Main Building", "Drexel University founded in 1891 once consisted of just one central building, this building being the Main Building. When walking into the building one may be sidetracked by the beauty of the artwork and tile of the Great Court, however this building offers a lot for current students and faculty.",
+                            "3141 Chestnut St, Philadelphia, PA 19104", "215-895-1529", "", "",
+                            19104, "University City", False, True])
+
+campusLocationRows.append(["Nesbitt Hall", "",
+                            "3215 Market Street Philadelphia, PA 19104", "", "", "",
+                            19104, "University City", False, True])
+
+campusLocationRows.append(["Stratton Hall", "",
+                            "3201 Chestnut Street Philadelphia, PA 19104", "", "", "",
+                            19104, "University City", False, True])
+
+campusLocationRows.append(["Lincoln Plaza", "",
+                            "3020 Market Street Philadelphia, PA 19104", "", "", "",
+                            19104, "University City", False, True])
 
 #Postgres.campus_life.locations
 with open(currentDirectory + "/Postgres_Data/Postgres-locations.csv", 'w', newline='') as csvfile: 
