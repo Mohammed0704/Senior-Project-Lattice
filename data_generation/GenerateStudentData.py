@@ -41,11 +41,12 @@ studentLocationsRows = []
 #drexelID
 isWaived = False
 provider = ""
-deductible = 0
+deductible = 0.00
+maximumCoverageAmount = 0.00
 
 providerOptions = ["Cigna", "Aetna", "Humana", "Blue Cross", "Molina Healthcare", "UnitedHealthOne", "MagnaCare"]
 deductibleOptions = [200, 500, 1000, 2500, 3000, 5000, 10000]
-healthInsuranceHeaders = ["Drexel ID", "Waived", "Provider", "Deductible"]
+healthInsuranceHeaders = ["Drexel ID", "Waived", "Provider", "Deductible", "Maximum Coverage Amount"]
 healthInsuranceRows = []
 
 #Postgres.education.student_education_choices
@@ -183,6 +184,7 @@ for i in range(100):
         provider = "Aetna"
     
     deductible = random.choice(deductibleOptions)
+    maximumCoverageAmount = deductible + 20000
 
     #Postgres.education.student_education_choices
     areaOfStudy = random.choice(areaOfStudyOptions)
@@ -211,7 +213,7 @@ for i in range(100):
 
     studentLocationsRows.append([drexelID, isInternational, livingAddress, isCommuter, hasParkingPass])
 
-    healthInsuranceRows.append([drexelID, isWaived, provider, deductible])
+    healthInsuranceRows.append([drexelID, isWaived, provider, deductible, maximumCoverageAmount])
 
     studentEducationChoicesRows.append([drexelID, firstName, middleName, lastName, major, minor])
 
