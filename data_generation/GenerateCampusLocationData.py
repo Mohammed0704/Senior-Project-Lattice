@@ -4,6 +4,7 @@ import os
 currentDirectory = os.getcwd()
 
 #Postgres.campus_life.locations
+#variables below are not utilized; only here for reference
 buildingName = ""
 description = ""
 address = ""

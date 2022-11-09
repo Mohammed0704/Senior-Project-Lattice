@@ -7,42 +7,19 @@ import random_address
 currentDirectory = os.getcwd()
 
 #MariaDB.drexel_people.basic_student_info
-drexelID = ""#
-lastName = ""#
-middleName = ""#
-firstName = ""#
-dateOfBirth = ""#
-email = ""#
-chosenName = ""#
-gender = None#
-expectedGraduationYear = ""#
-studentProgramType = ""#
-phone = ""#
-homeAddress = ""#
+drexelID = ""
+lastName = ""
+middleName = ""
+firstName = ""
+dateOfBirth = ""
+email = ""
+chosenName = ""
+gender = None
+expectedGraduationYear = ""
+studentProgramType = ""
+phone = ""
+homeAddress = ""
 
-#MariaDB.locations.student_locations
-isInternational = False#
-livingAddress = ""#
-#drexelID#
-isCommuter = False#
-hasParkingPass = False#
-
-#Cassandra.finances.health_insurance
-#drexelID#
-isWaived = False
-provider = ""
-deductible = 0
-
-#Postgres.education.student_education_choices
-#drexelID#
-#firstName#
-#middleName#
-#lastName#
-areaOfStudy = ""
-major = ""
-minor = ""
-
-#MariaDB.locations.student_locations
 campusAddressOptions = ["115 N. 32nd Street", "203 N. 34th Street", "223 N. 34th Street", "3301 Race Street", "3200 Race Street", "101 N 34th Street", "3320 Powelton Avenue", 
                             "3301 Arch Street", "3400 Lancaster Avenue", "3200 Chestnut Street"]
 studentProgramTypeOptions = ["Undergraduate", "Graduate"]
@@ -51,21 +28,58 @@ basicStudentInfoHeaders = ["Drexel ID", "First Name", "Middle Name", "Last Name"
 basicStudentInfoRows = []
 
 #MariaDB.locations.student_locations
+isInternational = False
+livingAddress = ""
+#drexelID
+isCommuter = False
+hasParkingPass = False
+
 studentLocationsHeaders = ["Drexel ID", "International", "Living Address", "Commuter", "Has Parking Pass"]
 studentLocationsRows = []
 
 #Cassandra.finances.health_insurance
+#drexelID
+isWaived = False
+provider = ""
+deductible = 0
+
 providerOptions = ["Cigna", "Aetna", "Humana", "Blue Cross", "Molina Healthcare", "UnitedHealthOne", "MagnaCare"]
 deductibleOptions = [200, 500, 1000, 2500, 3000, 5000, 10000]
 healthInsuranceHeaders = ["Drexel ID", "Waived", "Provider", "Deductible"]
 healthInsuranceRows = []
 
 #Postgres.education.student_education_choices
+#drexelID
+#firstName
+#middleName
+#lastName
+major = ""
+minor = ""
+
 areaOfStudyOptions = [""]
 minorOptions = [""]
 majorOptions = [""]
-studentEducationChoicesHeaders = ["Drexel ID", "First Name", "Middle Name", "Last Name", "Area of Study", "Major", "Minor"]
+studentEducationChoicesHeaders = ["Drexel ID", "First Name", "Middle Name", "Last Name", "Major", "Minor"]
 studentEducationChoicesRows = []
+
+#Cassandra.finances.tuition
+#drexelID
+year = ""
+tuitionAndFees = 0.00
+annualFinancialAidAward = 0.00
+subsidizedLoanOffered = 0.00
+unsubsidizedLoanOffered = 0.00
+acceptedSubsidized = False
+acceptedUnsubsidized = False
+outstandingBalances = 0.00
+
+tuitionAndFeesChoices = [58965.00, 52300.00, 48980.00, 60000.00]
+annualFinancialAidAwardChoices = [18600.00, 20000.00, 16200.00]
+subsidizedLoanOfferedChoices = [5500.00, 3200.00, 4500.00]
+unsubsidizedLoanOfferedChoices = [2000.00, 1000.00, 0.00]
+tuitionHeaders = ["Drexel ID", "Year", "Tuition And Fees", "Annual Financial Aid Award", "Subsidized Loan Offered", "Unsubsidized Loan Offered",
+                    "Accepted Subsidized", "Accepted Unsubsidized", "Outstanding Balances"]
+tuitionRows = []
 
 rows = []
 
@@ -175,6 +189,23 @@ for i in range(100):
     major = random.choice(majorOptions)
     minor = random.choice(minorOptions)
 
+    #Cassandra.finances.tuition
+    year = expectedGraduationYear
+    tuitionAndFees = random.choice(tuitionAndFeesChoices)
+    annualFinancialAidAward = random.choice(annualFinancialAidAwardChoices)
+    subsidizedLoanOffered = random.choice(subsidizedLoanOfferedChoices)
+    unsubsidizedLoanOffered = random.choice(unsubsidizedLoanOfferedChoices)
+    acceptedSubsidized = bool(random.getrandbits(1))
+    acceptedUnsubsidized = bool(random.getrandbits(1))
+    outstandingBalancesChance = random.randint(1,100)
+    if outstandingBalancesChance <= 60:
+        outstandingBalances = 0
+    elif outstandingBalances >= 61 and outstandingBalances <= 85:
+        outstandingBalances = random.uniform(0.01, 25.00)
+    else:
+        outstandingBalances = random.uniform(25.01, 100.00)
+    outstandingBalances = round(outstandingBalances, 2)
+
     #append current row to be written to CSV later
     basicStudentInfoRows.append([drexelID, firstName, middleName, lastName, dateOfBirth, email, chosenName, gender, expectedGraduationYear, studentProgramType, phone, homeAddress])
 
@@ -182,7 +213,9 @@ for i in range(100):
 
     healthInsuranceRows.append([drexelID, isWaived, provider, deductible])
 
-    studentEducationChoicesRows.append([drexelID, firstName, middleName, lastName, areaOfStudy, major, minor])
+    studentEducationChoicesRows.append([drexelID, firstName, middleName, lastName, major, minor])
+
+    tuitionRows.append([drexelID, year, tuitionAndFees, annualFinancialAidAward, subsidizedLoanOffered, unsubsidizedLoanOffered, acceptedSubsidized, acceptedUnsubsidized, outstandingBalances])
 
 #MariaDB.drexel_people.basic_student_info
 with open(currentDirectory + "/MariaDB_Data/MariaDB-basic_student_info.csv", 'w', newline='') as csvfile: 
@@ -207,3 +240,9 @@ with open(currentDirectory + "/Postgres_Data/Postgres-student_education_choices.
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(studentEducationChoicesHeaders)         
     csvwriter.writerows(studentEducationChoicesRows)
+
+#Cassandra.finances.tuition
+with open(currentDirectory + "/Cassandra_Data/Cassandra-tuition.csv", 'w', newline='') as csvfile: 
+    csvwriter = csv.writer(csvfile) 
+    csvwriter.writerow(tuitionHeaders)         
+    csvwriter.writerows(tuitionRows)
