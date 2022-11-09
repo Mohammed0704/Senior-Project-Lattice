@@ -3,34 +3,47 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
 
-#setting up browser to not open and use firefox
+#set up browser to not open and use firefox
 options = Options()
 options.headless = True
 browser1 = webdriver.Firefox(options=options)
 browser2 = webdriver.Firefox(options=options)
+errorLog = open("GenerateProgramData_ErrorLog.txt", "w")
 
-program_name = ''
-description = ''
-url = ''
-is_grad_program = ''
-area_of_study = ''
-program = ''
-credit_requirement = ''
-is_stem = ''
-url = ''
+counter = 0 ####DELETE
 
-browser1.get('https://catalog.drexel.edu/majors/')
+program_name = ""
+description = ""
+url = ""
+is_grad_program = ""
+area_of_study = ""
+program = ""
+credit_requirement = ""
+is_stem = ""
+url = ""
 
-elemTextContainer = browser1.find_element(By.ID, 'textcontainer')
-elemMajors = elemTextContainer.find_elements(By.XPATH, './/p/a')
+browser1.get("https://catalog.drexel.edu/majors/")
+
+elemTextContainer = browser1.find_element(By.ID, "textcontainer")
+elemMajors = elemTextContainer.find_elements(By.XPATH, ".//p/a")
 
 for p in elemMajors:
-    if (p.text == '' or p.get_attribute('href') == None):
+    if (p.text == "" or p.get_attribute("href") == None):
         continue
-    
-    browser2.get(p.get_attribute('href'))
+    try:
+        browser2.get(p.get_attribute("href"))
 
-    elemTextContainer = browser2.find_element(By.ID, 'textcontainer')
-    elemInfo = elemTextContainer.find_element(By.XPATH, './/p[1]')
-    print(elemInfo.get_attribute('outerHTML'))
-    #browser2.close()
+        elemTextContainer = browser2.find_element(By.ID, "textcontainer")
+        elemInfo = elemTextContainer.find_element(By.XPATH, ".//p[1]")
+        infoBlock = elemInfo.get_attribute("outerHTML") #get block of information in string var
+
+        infoBlock.replace("<p>", "")
+        infoBlock.replace("<em>", "")
+        infoBlock.replace("<br>", "")
+        print(infoBlock + "\n")
+    except:
+        errorLog.write(p.text+"\n")
+    
+    counter += 1
+    if (counter == 3):
+        break
