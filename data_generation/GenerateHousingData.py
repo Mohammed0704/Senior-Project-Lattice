@@ -134,6 +134,14 @@ def main():
     
     cwd = os.getcwd()
     
+    housingCostsPath = cwd + os.sep + "Cassandra_Data" + os.sep + "Postgres-housing-costs.csv"
+    housingOptionsPath = cwd + os.sep + "Postgres_Data" + os.sep + "Postgres-housing-options.csv"
+    
+    if "Cassandra_Data" in os.listdir(cwd) and housingCostsPath not in os.listdir("Elasticsearch_Data"):
+        os.system(f"touch {housingCostsPath}")
+    if "Postgres_Data" in os.listdir(cwd) and housingOptionsPath not in os.listdir("Postgres_Data"):
+        os.system(f"touch {housingOptionsPath}")
+    
     with open(cwd + "/Postgres_Data/Postgres-housing-costs.csv", 'w', newline='') as csvfile: 
         csvwriter = csv.writer(csvfile) 
         csvwriter.writerow(housingCostsHeaders)         
