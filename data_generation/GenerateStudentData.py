@@ -15,6 +15,9 @@ dateOfBirth = ""
 email = ""
 chosenName = ""
 gender = None
+personalPronouns = ""
+ethnicity = ""
+race = ""
 expectedGraduationYear = ""
 studentProgramType = ""
 phone = ""
@@ -23,8 +26,11 @@ homeAddress = ""
 campusAddressOptions = ["115 N. 32nd Street", "203 N. 34th Street", "223 N. 34th Street", "3301 Race Street", "3200 Race Street", "101 N 34th Street", "3320 Powelton Avenue", 
                             "3301 Arch Street", "3400 Lancaster Avenue", "3200 Chestnut Street"]
 studentProgramTypeOptions = ["Undergraduate", "Graduate"]
-basicStudentInfoHeaders = ["Drexel ID", "First Name", "Middle Name", "Last Name", "Date of Birth", "Email", "Chosen Name", "Gender", "Expected Graduation Year",
-                            "Student Program Type", "Phone", "Home Address"]
+personalPronounsOptions = ["She/Her/Hers", "He/Him/His", "They/Them/Theirs"]
+ethnicityOptions = ["Non Hispanic", "Hispanic or Latino"]
+raceOptions = ["African American/Black", "White", "Asian", "Native", "Other"]
+basicStudentInfoHeaders = ["Drexel ID", "First Name", "Middle Name", "Last Name", "Date of Birth", "Email", "Chosen Name", "Gender", "Personal Pronoun", "Ethnicity", "Race",
+                            "Expected Graduation Year", "Student Program Type", "Phone", "Home Address"]
 basicStudentInfoRows = []
 
 #MariaDB.locations.student_locations
@@ -92,10 +98,12 @@ for i in range(100):
         gender = 'M'
         firstName = names.get_first_name(gender="male")
         middleName = names.get_first_name(gender="male")
+        personalPronouns = personalPronounsOptions[1]
     else:
         gender = 'F'
         firstName = names.get_first_name(gender="female")
         middleName = names.get_first_name(gender="female")
+        personalPronouns = personalPronounsOptions[0]
     lastName = names.get_last_name()
     
     unique = False
@@ -115,12 +123,21 @@ for i in range(100):
 
     chosenNameChance = random.randint(1,100)
     if chosenNameChance <= 3:
+        theyThemPronounsChance = random.randint(1,2)
         if gender == 'M':
             gender = 'F'
             chosenName = names.get_first_name(gender="female")
+            if theyThemPronounsChance == 1:
+                personalPronouns = personalPronounsOptions[0]
+            else:
+                personalPronouns = personalPronounsOptions[2]
         else:
             gender = 'M'
             chosenName = names.get_first_name(gender="male")
+            if theyThemPronounsChance == 1:
+                personalPronouns = personalPronounsOptions[1]
+            else:
+                personalPronouns = personalPronounsOptions[2]
     else:
         chosenName = firstName
 
@@ -135,6 +152,16 @@ for i in range(100):
     dateOfBirth = str(month) + "/" + str(day) + "/" + str(year)
 
     studentProgramType = random.choice(studentProgramTypeOptions)
+
+    race = random.choice(raceOptions)
+    if race == raceOptions[1] or race == raceOptions[4]:
+        ethnicity = random.choice(ethnicityOptions)
+    else:
+        ethnicityChance = random.randint(1, 100)
+        if ethnicityChance <= 20:
+            ethnicity = ethnicityOptions[1]
+        else:
+             ethnicity = ethnicityOptions[0]
 
     randomGraduationYearChance = random.randint(1,100)
     if randomGraduationYearChance <= 10 or olderStudentChance <= 3:
@@ -209,7 +236,7 @@ for i in range(100):
     outstandingBalances = round(outstandingBalances, 2)
 
     #append current row to be written to CSV later
-    basicStudentInfoRows.append([drexelID, firstName, middleName, lastName, dateOfBirth, email, chosenName, gender, expectedGraduationYear, studentProgramType, phone, homeAddress])
+    basicStudentInfoRows.append([drexelID, firstName, middleName, lastName, dateOfBirth, email, chosenName, gender, personalPronouns, ethnicity, race, expectedGraduationYear, studentProgramType, phone, homeAddress])
 
     studentLocationsRows.append([drexelID, isInternational, livingAddress, isCommuter, hasParkingPass])
 

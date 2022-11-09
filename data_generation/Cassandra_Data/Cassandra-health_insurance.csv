@@ -1,101 +1,101 @@
-Drexel ID,Waived,Provider,Deductible
-fls61,False,Aetna,3000
-jor21,True,Humana,500
-jkc97,False,Aetna,10000
-svv43,False,Aetna,10000
-shh79,False,Aetna,10000
-vsh766,True,UnitedHealthOne,200
-cwt24,True,Humana,1000
-bhf685,False,Aetna,10000
-eow91,True,Molina Healthcare,1000
-dml45,False,Aetna,3000
-dmp73,False,Aetna,10000
-dcr60,True,UnitedHealthOne,10000
-jsm67,True,Molina Healthcare,5000
-mak28,False,Aetna,1000
-gls653,False,Aetna,1000
-mmd92,False,Aetna,200
-lbm63,True,Humana,10000
-jmb41,False,Aetna,10000
-mhw64,True,Molina Healthcare,1000
-ayb55,True,Humana,200
-rlt23,True,Blue Cross,1000
-ral33,False,Aetna,10000
-jje60,False,Aetna,200
-ljc17,False,Aetna,1000
-bsc45,False,Aetna,200
-llb24,False,Aetna,3000
-rcb95,False,Aetna,2500
-mjb567,True,Molina Healthcare,3000
-jrb32,False,Aetna,10000
-mss78,False,Aetna,3000
-rdw80,True,Blue Cross,3000
-cks72,False,Aetna,3000
-jcm61,False,Aetna,1000
-jbm95,True,Humana,5000
-pmd84,False,Aetna,10000
-mkh84,False,Aetna,2500
-rdc94,False,Aetna,500
-jrl95,True,Aetna,3000
-jns63,True,MagnaCare,10000
-jwj36,True,MagnaCare,2500
-ljo93,True,Blue Cross,1000
-cgh59,False,Aetna,2500
-aal38,False,Aetna,200
-jmn84,False,Aetna,10000
-kmc78,False,Aetna,500
-fkj26,True,Cigna,2500
-jmh22,True,Cigna,5000
-prl87,False,Aetna,3000
-pke17,True,Aetna,500
-jda491,True,UnitedHealthOne,500
-vjf297,True,Aetna,3000
-dtb58,False,Aetna,200
-jim98,True,Blue Cross,5000
-bec40,False,Aetna,5000
-kah29,True,Humana,10000
-gas55,False,Aetna,5000
-keb99,False,Aetna,3000
-jbc90,False,Aetna,2500
-deg55,True,MagnaCare,2500
-jks75,True,Molina Healthcare,3000
-css65,True,Humana,1000
-bcf39,False,Aetna,2500
-rmf84,False,Aetna,3000
-wsm96,True,MagnaCare,10000
-dhm34,True,Aetna,10000
-khb91,True,Humana,3000
-bns11,False,Aetna,1000
-pdn47,True,Aetna,3000
-llc149,False,Aetna,2500
-tpb86,True,UnitedHealthOne,10000
-bdc80,True,Aetna,2500
-edw426,True,Humana,5000
-jcg11,True,UnitedHealthOne,200
-dra749,True,MagnaCare,2500
-mps20,True,MagnaCare,200
-ssc93,True,Molina Healthcare,5000
-rwf95,True,Cigna,200
-mdb36,True,Blue Cross,5000
-kjg44,True,Aetna,10000
-arh309,True,Aetna,200
-hac567,True,Blue Cross,500
-ppp74,True,UnitedHealthOne,5000
-kda255,False,Aetna,10000
-rwg615,True,Molina Healthcare,5000
-rms53,False,Aetna,500
-alf95,True,Cigna,3000
-hes828,True,Cigna,5000
-cef74,True,Molina Healthcare,500
-gmp58,False,Aetna,500
-jef66,True,Aetna,10000
-sso21,False,Aetna,200
-dnl426,True,Blue Cross,200
-vjf39,False,Aetna,2500
-mdw298,True,Blue Cross,2500
-jbb74,True,Aetna,1000
-jjw81,False,Aetna,200
-amd543,True,Blue Cross,1000
-csc31,False,Aetna,200
-mdb35,False,Aetna,2500
-lbj30,True,Molina Healthcare,3000
+Drexel ID,Waived,Provider,Deductible,Maximum Coverage Amount
+jed17,False,Aetna,200,20200
+mhh59,True,Humana,2500,22500
+krl36,True,Molina Healthcare,1000,21000
+scb86,False,Aetna,2500,22500
+pbj35,False,Aetna,200,20200
+jds129,False,Aetna,200,20200
+kmm63,True,MagnaCare,5000,25000
+kjm27,True,Cigna,3000,23000
+law19,False,Aetna,2500,22500
+sga77,False,Aetna,1000,21000
+rwp923,False,Aetna,10000,30000
+ylf80,False,Aetna,3000,23000
+ksm65,True,Aetna,500,20500
+grt711,True,Humana,5000,25000
+nah23,True,MagnaCare,2500,22500
+jjh575,True,Molina Healthcare,2500,22500
+jjm78,True,Cigna,5000,25000
+emw69,False,Aetna,5000,25000
+mjr70,True,Molina Healthcare,10000,30000
+ddq58,True,UnitedHealthOne,5000,25000
+bet25,False,Aetna,1000,21000
+tmg382,True,MagnaCare,2500,22500
+jam27,False,Aetna,200,20200
+jjp689,True,UnitedHealthOne,200,20200
+cmm228,True,Cigna,10000,30000
+ljr29,True,MagnaCare,500,20500
+prm541,True,Humana,2500,22500
+bnh99,True,Cigna,3000,23000
+cjw40,True,Humana,3000,23000
+kts36,False,Aetna,200,20200
+jla69,False,Aetna,200,20200
+lbb60,False,Aetna,3000,23000
+cbb124,False,Aetna,500,20500
+ssm52,True,Molina Healthcare,5000,25000
+sve31,False,Aetna,10000,30000
+ajm31,False,Aetna,200,20200
+pvk90,False,Aetna,1000,21000
+rmp24,False,Aetna,3000,23000
+gnh73,True,UnitedHealthOne,1000,21000
+lef35,True,Humana,500,20500
+mbw80,True,Blue Cross,1000,21000
+tsl82,False,Aetna,200,20200
+sch843,True,Blue Cross,200,20200
+ekd85,True,Blue Cross,2500,22500
+mvv558,False,Aetna,1000,21000
+esm60,True,MagnaCare,200,20200
+jcc61,False,Aetna,3000,23000
+cjr61,False,Aetna,1000,21000
+dpm762,True,Humana,2500,22500
+rlf892,True,Humana,10000,30000
+mkf53,False,Aetna,500,20500
+csc742,False,Aetna,3000,23000
+cmb96,True,Aetna,200,20200
+cdh69,False,Aetna,10000,30000
+jsb77,False,Aetna,1000,21000
+rtg50,False,Aetna,500,20500
+nll418,False,Aetna,3000,23000
+jlr40,False,Aetna,1000,21000
+amm93,False,Aetna,10000,30000
+rcm323,True,Humana,200,20200
+clj84,True,UnitedHealthOne,10000,30000
+cbc63,False,Aetna,500,20500
+rnc93,False,Aetna,200,20200
+gcg71,False,Aetna,500,20500
+dsb281,True,Molina Healthcare,1000,21000
+dec813,False,Aetna,500,20500
+hcr22,False,Aetna,2500,22500
+ttb67,True,UnitedHealthOne,200,20200
+jaw503,False,Aetna,500,20500
+rjh57,True,MagnaCare,5000,25000
+ghr665,True,UnitedHealthOne,2500,22500
+clh61,True,Molina Healthcare,10000,30000
+jgh96,True,Humana,200,20200
+kro35,False,Aetna,200,20200
+ljp65,False,Aetna,500,20500
+rlp87,False,Aetna,200,20200
+rri409,False,Aetna,2500,22500
+pap644,False,Aetna,1000,21000
+ejs81,False,Aetna,500,20500
+bms996,True,Aetna,500,20500
+rsh10,True,Cigna,200,20200
+kwp81,True,Humana,1000,21000
+kcc43,False,Aetna,5000,25000
+apf59,False,Aetna,10000,30000
+sar16,True,MagnaCare,2500,22500
+bll868,False,Aetna,2500,22500
+cbp73,False,Aetna,500,20500
+lww55,True,UnitedHealthOne,200,20200
+wwg61,False,Aetna,500,20500
+sjp97,False,Aetna,10000,30000
+rfa32,False,Aetna,200,20200
+gjh554,False,Aetna,500,20500
+esk314,True,Cigna,500,20500
+djs55,False,Aetna,10000,30000
+lpm50,False,Aetna,1000,21000
+mta63,False,Aetna,5000,25000
+ega22,False,Aetna,2500,22500
+jts37,True,Aetna,2500,22500
+akh51,False,Aetna,2500,22500
+djr996,True,MagnaCare,200,20200
