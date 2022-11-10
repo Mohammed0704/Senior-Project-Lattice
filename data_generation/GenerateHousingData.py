@@ -125,7 +125,7 @@ def main():
     driver = driverSetup()
     
     housingOptionsHeaders = ["Residence Name", "Is Affiliated Housing", "Address", "Owner", "On Campus"]
-    housingCostsHeaders = ["Residence Name", "Eligible Residents", "Room Style", "Monthly Cost"]
+    housingCostsHeaders = ["Residence Name", "Room Style", "Eligible Residents", "Monthly Cost"]
     residencies = ["Bentley Hall", "Caneris Hall", "Millenium Hall", "North Hall", "Race Street Residences", "Towers Hall", 
                     "Van Rensselaer", "Stiles Hall", "Chestnut Square", "The Summit", "University Crossings"]
     
