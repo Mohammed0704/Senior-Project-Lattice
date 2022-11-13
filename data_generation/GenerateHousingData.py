@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+import random
 
 '''
 The two Python packages required here are "selenium" and "Webdriver_manager" which you can download simply using 
@@ -142,6 +143,22 @@ def main():
     
     housingCostsPath = cwd + os.sep + "Cassandra_Data" + os.sep + "Cassandra-housing-costs.csv"
     housingOptionsPath = cwd + os.sep + "Postgres_Data" + os.sep + "Postgres-housing-options.csv"
+
+    #Generate overhead_costs data
+    overheadCostHeaders = ["Name of Building", "Monthly Electricity", "Monthly Heating", "Monthly Water", "Monthly Additional Utilities"]
+    overheadCost = []
+    for residence in residencies:
+        if residence == "The Summit at University City" or residence == "University Crossings" or residence == "Millenium Hall":
+            monthlyElectricity = random.randint(6000, 10000)
+            monthlyHeating = random.randint(5000, 9500)
+            monthlyWater = random.randint(7000, 11000)
+            monthlyAdditionalUtilities = random.randint(4300, 6000)
+        else:
+            monthlyElectricity = random.randint(4000, 6000)
+            monthlyHeating = random.randint(2000, 5000)
+            monthlyWater = random.randint(2500, 7000)
+            monthlyAdditionalUtilities = random.randint(1500, 4300)
+        overheadCost.append([residence, monthlyElectricity, monthlyHeating, monthlyWater, monthlyAdditionalUtilities])
     
     if "Cassandra_Data" in os.listdir(cwd) and housingCostsPath not in os.listdir("Elasticsearch_Data"):
         os.system(f"touch {housingCostsPath}")
@@ -157,6 +174,11 @@ def main():
         csvwriter = csv.writer(csvfile) 
         csvwriter.writerow(housingOptionsHeaders)         
         csvwriter.writerows(housingOptions)
+
+    with open(cwd + "/Cassandra_Data/Cassandra-overhead-costs.csv", 'w', newline='') as csvfile: 
+        csvwriter = csv.writer(csvfile) 
+        csvwriter.writerow(overheadCostHeaders)         
+        csvwriter.writerows(overheadCost)
 
 if __name__ == "__main__":
     main()
