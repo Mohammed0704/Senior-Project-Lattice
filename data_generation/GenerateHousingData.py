@@ -67,6 +67,7 @@ def createHousingCostsList(driver):
                 string = string.replace(u',', u'')
                 string = int(int(string) / 3)
             housingCost.append(string)
+        housingCost.append(housingCost[3]) #I added a second cost since the columns were changed to "Minimum" and "Maximum" -Nathan 11/13/22
         housingCosts.append(housingCost)
     
     return housingCosts
@@ -125,16 +126,21 @@ def main():
     driver = driverSetup()
     
     housingOptionsHeaders = ["Residence Name", "Is Affiliated Housing", "Address", "Owner", "On Campus"]
-    housingCostsHeaders = ["Residence Name", "Room Style", "Eligible Residents", "Monthly Cost"]
+    housingCostsHeaders = ["Residence Name", "Room Style", "Eligible Residents", "Minimum Monthly Cost", "Maxiumum Monthly Cost"]
     residencies = ["Bentley Hall", "Caneris Hall", "Millenium Hall", "North Hall", "Race Street Residences", "Towers Hall", 
-                    "Van Rensselaer", "Stiles Hall", "Chestnut Square", "The Summit", "University Crossings"]
+                    "Van Rensselaer", "Stiles Hall", "Chestnut Square", "The Summit at University City", "University Crossings"]
     
     housingOptions = createHousingOptionsList(residencies)
     housingCosts = createHousingCostsList(driver)
+
+    #Manually appending the affiliated housing to the housing_costs table
+    housingCosts.append(['Chestnut Square', 'Hybrid', 'Returning and Transfers Students', 984, 1968])
+    housingCosts.append(['The Summit at University City', 'Hybrid', 'Returning and Transfers Students', 984, 2069])
+    housingCosts.append(['University Crossings', 'Hybrid', 'Returning and Transfers Students', 899, 1948])
     
     cwd = os.getcwd()
     
-    housingCostsPath = cwd + os.sep + "Cassandra_Data" + os.sep + "Postgres-housing-costs.csv"
+    housingCostsPath = cwd + os.sep + "Cassandra_Data" + os.sep + "Cassandra-housing-costs.csv"
     housingOptionsPath = cwd + os.sep + "Postgres_Data" + os.sep + "Postgres-housing-options.csv"
     
     if "Cassandra_Data" in os.listdir(cwd) and housingCostsPath not in os.listdir("Elasticsearch_Data"):
@@ -142,7 +148,7 @@ def main():
     if "Postgres_Data" in os.listdir(cwd) and housingOptionsPath not in os.listdir("Postgres_Data"):
         os.system(f"touch {housingOptionsPath}")
     
-    with open(cwd + "/Postgres_Data/Postgres-housing-costs.csv", 'w', newline='') as csvfile: 
+    with open(cwd + "/Cassandra_Data/Cassandra-housing-costs.csv", 'w', newline='') as csvfile: 
         csvwriter = csv.writer(csvfile) 
         csvwriter.writerow(housingCostsHeaders)         
         csvwriter.writerows(housingCosts)
