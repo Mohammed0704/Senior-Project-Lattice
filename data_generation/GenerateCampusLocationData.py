@@ -19,6 +19,10 @@ studentAccessible = False
 campusLocationHeaders = ["Building Name", "Description", "Address", "Phone", "Email", "Website", "Zip Code", "Campus", "Sign In Required", "Student Accessible"]
 campusLocationRows = []
 
+#MariaDB.locations.resource_locations
+resourceLocationsHeaders = ["Name of Resource", "Address", "Description"]
+resourceLocations = []
+
 campusLocationRows.append(["W. W. Hagerty Library", "Founded in 1983, W.W. Hagerty Library houses nearly half a million of books, periodicals, DVDs, videos and archival materials.",
                             "3300 Market St, Philadelphia, PA 19104", "215-895-1500", "liaisons@drexel.libanswers.com", "https://www.library.drexel.edu/",
                             19104, "University City", True, True])
@@ -103,8 +107,19 @@ campusLocationRows.append(["Lincoln Plaza", "",
                             "3020 Market Street Philadelphia, PA 19104", "", "", "",
                             19104, "University City", False, True])
 
+#MariaDB.locations.resource_locations
+for campusLocation in campusLocationRows:
+    #for campusLocationColumn in len(range(campusLocation)):
+    resourceLocations.append([campusLocation[0], campusLocation[2], campusLocation[1]])
+
 #Postgres.campus_life.locations
 with open(currentDirectory + "/Postgres_Data/Postgres-locations.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(campusLocationHeaders)         
     csvwriter.writerows(campusLocationRows)
+
+#MariaDB.locations.resource_locations
+with open(currentDirectory + "/MariaDB_Data/MariaDB-resource_locations.csv", 'w', newline='') as csvfile: 
+    csvwriter = csv.writer(csvfile) 
+    csvwriter.writerow(resourceLocationsHeaders)         
+    csvwriter.writerows(resourceLocations)
