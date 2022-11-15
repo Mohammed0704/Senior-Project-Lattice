@@ -8,6 +8,10 @@ import re
 
 currentDirectory = os.getcwd()
 
+#need to get program names in order to check programs against them
+with open(currentDirectory + '/AreaOfStudyProgramNames.txt', 'r') as f:
+    aosNames = f.read().splitlines()
+
 #set up browser to not open and use firefox
 options = Options()
 options.headless = True
@@ -65,7 +69,7 @@ for p in elemPrograms:
         infoList = infoTextBlock.split("\n")
         
         #Need to clean up the data I got
-        infoList[0] = p.text.strip().replace('NEW: ', '')
+        infoList[0] = p.text.strip().replace('NEW: ', '').strip('"')
         if (infoList[0].split()[-1][0] == '(' and infoList[0].split()[-1][-1] == ')'):
             infoList[0] = " ".join(infoList[0].split()[:-1]) #get rid of (BS) or w/e at the end of the degree type
         infoList[0] = infoList[0].strip('"')    
@@ -76,10 +80,10 @@ for p in elemPrograms:
         infoList[2] = infoList[2][14:].strip()
         infoList[3] = infoList[3][25:].strip()
 
-        program_name = (infoList[1] + " in " + infoList[0].replace('NEW: ', '')).strip('"')
+        program_name = infoList[1] + " in " + infoList[0]
         description = elemTextContainer.find_element(By.XPATH, './/p[2]').text.replace("\n", "  ").strip('"')
         is_graduate_program = False #currently scraping undergrad majors
-        area_of_study = ''
+        area_of_study = infoList[0] if (infoList[0] in aosNames) else ''
         credit_requirement = float(infoList[3])
         if (infoList[1] == 'Bachelor of Science'):
             is_stem = True
@@ -111,7 +115,7 @@ for p in elemPrograms:
         description = browser2.find_element(By.ID, 'textcontainer').find_element(By.XPATH, './/p[1]').get_attribute('outerHTML').replace('&nbsp;', '').replace('\n', '')
         description = re.sub('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6})', '' , description) #get description w/o html crap
         is_graduate_program = False
-        area_of_study = ''
+        area_of_study = p.text.replace('NEW: ', '') if (p.text.replace('NEW: ', '') in aosNames) else ''
         credit_requirement = browser2.find_element(By.CLASS_NAME, 'listsum').text[-4:]
         is_stem = True if ('Engineering' in program_name or 'Science' in program_name or 'Mathematics' in program_name or 'STEM' in program_name) else False
         url = p.get_attribute('href')
@@ -170,7 +174,7 @@ for p in elemPrograms:
             program_name = program_name.replace(': ', '', 1)
         description = elemTextContainer.find_element(By.XPATH, './/p[2]').text.replace("\n", "  ").strip('"')
         is_graduate_program = True #currently scraping grad programs
-        area_of_study = ''
+        area_of_study = infoList[0] if (infoList[0] in aosNames) else ''
         credit_requirement = float(infoList[3])
         if ('Engineering' in infoList[1] or 'Science' in infoList[1]):
             is_stem = True
@@ -181,7 +185,6 @@ for p in elemPrograms:
 
         postgres_programs_rows.append([program_name, description, is_graduate_program, area_of_study, credit_requirement, is_stem, url, calendar_type])
         elasticsearch_programs_rows.append([program_name, url, calendar_type])
-
     except Exception:
         print("FAILED ON: " + p.text)
 ###END GRADUATE PROGRAM SCRAPING
