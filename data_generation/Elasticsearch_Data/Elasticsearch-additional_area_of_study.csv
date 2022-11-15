@@ -1,0 +1,77 @@
+Name,Desciption,Has Major,Has Minor,Has Certificate
+Accounting,Accounting,TRUE,TRUE,FALSE
+Brand & Reputation Management ,Brand & Reputation Management ,FALSE,FALSE,TRUE
+Business Administration,Business Administration,FALSE,TRUE,FALSE
+Business Analytics,Business Analytics,TRUE,TRUE,FALSE
+Business Consulting,Business Consulting,FALSE,TRUE,FALSE
+Business & Engineering,Business & Engineering,TRUE,FALSE,FALSE
+Economics,Economics,TRUE,TRUE,FALSE
+Esport Business,Esport Business,TRUE,TRUE,FALSE
+Finance,Finance,TRUE,TRUE,FALSE
+Financial Technology ,Financial Technology ,FALSE,TRUE,FALSE
+General Business,General Business,TRUE,TRUE,FALSE
+International Business,International Business,TRUE,FALSE,FALSE
+Management Information Systems,Management Information Systems,TRUE,TRUE,FALSE
+Marketing,Marketing,TRUE,TRUE,FALSE
+Operations & Supply Chain Management,Operations & Supply Chain Management,TRUE,TRUE,FALSE
+Organizational Management	 ,Organizational Management	 ,TRUE,TRUE,FALSE
+Real Estate Management & Development,Real Estate Management & Development,TRUE,TRUE,FALSE
+Social Responsibility in Business,Social Responsibility in Business,FALSE,FALSE,TRUE
+Sport Business,Sport Business,TRUE,TRUE,FALSE
+Sport Management,Sport Management,FALSE,TRUE,FALSE
+Technology Innovation Management,Technology Innovation Management,TRUE,TRUE,FALSE
+Computer Science,Computer Science,TRUE,TRUE,TRUE
+Software Engineering,Software Engineering,TRUE,FALSE,FALSE
+Data Science,Data Science,TRUE,TRUE,TRUE
+Artificial Intelligence and Machine Learning,Artificial Intelligence and Machine Learning,TRUE,FALSE,TRUE
+Cybersecurity,Cybersecurity,TRUE,FALSE,TRUE
+Software Architecture,Software Architecture,FALSE,FALSE,TRUE
+Software Management,Software Management,FALSE,FALSE,TRUE
+Information Systems,Information Systems,TRUE,TRUE,FALSE
+Human-Computer Interaction & User Experience,Human-Computer Interaction & User Experience,FALSE,TRUE,TRUE
+Computing and Security Technology,Computing and Security Technology,TRUE,FALSE,FALSE
+Health Informatics,Health Informatics,TRUE,FALSE,TRUE
+Information Science,Information Science,FALSE,TRUE,FALSE
+Big Data Analytics,Big Data Analytics,FALSE,FALSE,TRUE
+Architectural Engineering,Architectural Engineering,TRUE,TRUE,TRUE
+Chemical Engineering,Chemical Engineering,TRUE,TRUE,FALSE
+Civil Engineering,Civil Engineering,TRUE,FALSE,FALSE
+Computer Engineering,Computer Engineering,TRUE,TRUE,FALSE
+Construction Management,Construction Management,TRUE,TRUE,TRUE
+Electrical Engineering,Electrical Engineering,TRUE,TRUE,FALSE
+Engineering Technology,Engineering Technology,TRUE,FALSE,FALSE
+Environmental Engineering,Environmental Engineering,TRUE,TRUE,FALSE
+Materials Science and Engineering,Materials Science and Engineering,TRUE,TRUE,FALSE
+Mechanical Engineering,Mechanical Engineering,TRUE,TRUE,FALSE
+Engineering Management,Engineering Management,TRUE,TRUE,TRUE
+Internet of Things,Internet of Things,TRUE,FALSE,FALSE
+Machine Learning Engineering,Machine Learning Engineering,TRUE,FALSE,FALSE
+Nanomaterials,Nanomaterials,TRUE,FALSE,FALSE
+Peace Engineering,Peace Engineering,TRUE,FALSE,TRUE
+Robotics And Autonomy,Robotics And Autonomy,TRUE,TRUE,FALSE
+Systems Engineering,Systems Engineering,TRUE,TRUE,TRUE
+Engineering Leadership,Engineering Leadership,FALSE,TRUE,FALSE
+Hardware Systems Engineering,Hardware Systems Engineering,FALSE,FALSE,TRUE
+Naval Engineering,Naval Engineering,FALSE,FALSE,TRUE
+Pharmaceutical and Medical Device Manufacturing,Pharmaceutical and Medical Device Manufacturing,FALSE,FALSE,TRUE
+Systems Design and Development,Systems Design and Development,FALSE,FALSE,TRUE
+Systems Reliability Engineering,Systems Reliability Engineering,FALSE,FALSE,TRUE
+Animation & Visual Effects,Animation & Visual Effects,TRUE,TRUE,FALSE
+Architecture,Architecture,TRUE,TRUE,FALSE
+Design & Merchandising,Design & Merchandising,TRUE,TRUE,FALSE
+Digital Media & Virtual Production,Digital Media & Virtual Production,TRUE,FALSE,FALSE
+Fashion Design,Fashion Design,TRUE,FALSE,FALSE
+Game Design & Production,Game Design & Production,TRUE,FALSE,FALSE
+Graphic Design,Graphic Design,TRUE,FALSE,FALSE
+Interior Design,Interior Design,TRUE,FALSE,FALSE
+Music Industry,Music Industry,TRUE,TRUE,FALSE
+Photography,Photography,TRUE,FALSE,FALSE
+Product Design,Product Design,TRUE,TRUE,FALSE
+User Experience & Interaction Design,User Experience & Interaction Design,TRUE,TRUE,FALSE
+Digital Research,Digital Research,TRUE,FALSE,FALSE
+Retail & Merchandising,Retail & Merchandising,TRUE,FALSE,TRUE
+Television & Media Management,Television & Media Management,TRUE,TRUE,FALSE
+Entertainment & Arts Management,Entertainment & Arts Management,FALSE,TRUE,FALSE
+Music Performance,Music Performance,FALSE,TRUE,FALSE
+Video Production,Video Production,FALSE,TRUE,FALSE
+Video Production,Video Production,FALSE,TRUE,TRUE

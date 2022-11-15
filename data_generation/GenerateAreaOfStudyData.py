@@ -28,11 +28,11 @@ areaOfStudyRows.append([programNames[0], "Department of Accounting", "NULL", "NU
 
 areaOfStudyRows.append([programNames[1], "Department of Marketing", "NULL", "NULL"]) #Brand & Reputation Management
 
-areaOfStudyRows.append([programNames[2], "NULL", "NULL", "NULL"]) #Business Administration
+areaOfStudyRows.append([programNames[2], "Department of General Business", "NULL", "NULL"]) #Business Administration
 
 areaOfStudyRows.append([programNames[3], "Department of Decision Sciences and MIS", "NULL", "NULL"]) #Business Analytics
 
-areaOfStudyRows.append([programNames[4], "NULL", "NULL", "NULL"]) #Business Consulting
+areaOfStudyRows.append([programNames[4], "Department of Management", "NULL", "NULL"]) #Business Consulting
 
 areaOfStudyRows.append([programNames[5], "Department of Decision Sciences and MIS", "NULL", "NULL"]) #Business & Engineering
 
@@ -66,7 +66,7 @@ areaOfStudyRows.append([programNames[19], "Department of Sport Business", "NULL"
 
 areaOfStudyRows.append([programNames[20], "Department of Management", "NULL", "NULL"]) #Technology Innovation Management
 
-areaOfStudyRows.append([programNames[21], "Department in Computer Science", "NULL"]) #Computer Science
+areaOfStudyRows.append([programNames[21], "Department in Computer Science", "NULL", "NULL"]) #Computer Science
 
 areaOfStudyRows.append([programNames[22], "Department in Computer Science", "NULL", "NULL"]) #Software Engineering
 
@@ -137,6 +137,44 @@ areaOfStudyRows.append([programNames[54], "Department of Chemical and Biological
 areaOfStudyRows.append([programNames[55], "Department of Engineering Leadership and Society", "NULL", "NULL"]) #Systems Design and Development
 
 areaOfStudyRows.append([programNames[56], "Department of Engineering Leadership and Society", "NULL", "NULL"]) #Systems Reliability Engineering
+
+areaOfStudyRows.append([programNames[57], "Department of Animation & Visual Effects", "NULL", "NULL"]) #Animation & Visual Effects
+
+areaOfStudyRows.append([programNames[58], "Department of Architecture", "NULL", "NULL"]) #Architecture
+
+areaOfStudyRows.append([programNames[59], "Department of Design & Merchandising", "NULL", "NULL"]) #Design & Merchandising
+
+areaOfStudyRows.append([programNames[60], "Department of Digital Media", "NULL", "NULL"]) #Digital Media & Virtual Production
+
+areaOfStudyRows.append([programNames[61], "Department of Fashion Design", "NULL", "NULL"]) #Fashion Design
+
+areaOfStudyRows.append([programNames[62], "Department of Game Design & Production", "NULL", "NULL"]) #Game Design & Production
+
+areaOfStudyRows.append([programNames[63], "Department of Digital Media", "NULL", "NULL"]) #Graphic Design
+
+areaOfStudyRows.append([programNames[64], "Department of Interior Design", "NULL", "NULL"]) #Interior Design
+
+areaOfStudyRows.append([programNames[65], "Department of Music Industry", "NULL", "NULL"]) #Music Industry
+
+areaOfStudyRows.append([programNames[66], "Department of Photography", "NULL", "NULL"]) #Photography
+
+areaOfStudyRows.append([programNames[67], "Department of Product Design", "NULL", "NULL"]) #Product Design
+
+areaOfStudyRows.append([programNames[68], "Department of User Experience & Interaction Design", "NULL", "NULL"]) #User Experience & Interaction Design
+
+areaOfStudyRows.append([programNames[69], "Department of Digital Media", "NULL", "NULL"]) #Digital Research
+
+areaOfStudyRows.append([programNames[70], "Department of Retail & Merchandising", "NULL", "NULL"]) #Retail & Merchandising
+
+areaOfStudyRows.append([programNames[71], "Department of TV Production & Media Management", "NULL", "NULL"]) #Television & Media Management
+
+areaOfStudyRows.append([programNames[72], "Department of Entertainment & Arts Management", "NULL", "NULL"]) #Entertainment & Arts Management
+
+areaOfStudyRows.append([programNames[73], "Department of Music", "NULL", "NULL"]) #Music Performance
+
+areaOfStudyRows.append([programNames[74], "Department of Film & Video", "NULL", "NULL"]) #Video Production
+
+areaOfStudyRows.append([programNames[75], "Department of Dance", "NULL", "NULL"]) #Dance
 
 
 
@@ -258,17 +296,55 @@ additionalAreaOfStudyRows.append([programNames[55], programNames[55], "FALSE", "
 
 additionalAreaOfStudyRows.append([programNames[56], programNames[56], "FALSE", "FALSE", "TRUE"]) #Systems Reliability Engineering
 
+additionalAreaOfStudyRows.append([programNames[57], programNames[57], "TRUE", "TRUE", "FALSE"]) #Animation & Visual Effects
+
+additionalAreaOfStudyRows.append([programNames[58], programNames[58], "TRUE", "TRUE", "FALSE"]) #Architecture
+
+additionalAreaOfStudyRows.append([programNames[59], programNames[59], "TRUE", "TRUE", "FALSE"]) #Design & Merchandising
+
+additionalAreaOfStudyRows.append([programNames[60], programNames[60], "TRUE", "FALSE", "FALSE"]) #Design & Merchandising
+
+additionalAreaOfStudyRows.append([programNames[61], programNames[61], "TRUE", "FALSE", "FALSE"]) #Fashion Design
+
+additionalAreaOfStudyRows.append([programNames[62], programNames[62], "TRUE", "FALSE", "FALSE"]) #Game Design & Production
+
+additionalAreaOfStudyRows.append([programNames[63], programNames[63], "TRUE", "FALSE", "FALSE"]) #Graphic Design
+
+additionalAreaOfStudyRows.append([programNames[64], programNames[64], "TRUE", "FALSE", "FALSE"]) #Interior Design
+
+additionalAreaOfStudyRows.append([programNames[65], programNames[65], "TRUE", "TRUE", "FALSE"]) #Music Industry
+
+additionalAreaOfStudyRows.append([programNames[66], programNames[66], "TRUE", "FALSE", "FALSE"]) #Photography
+
+additionalAreaOfStudyRows.append([programNames[67], programNames[67], "TRUE", "TRUE", "FALSE"]) #Product Design
+
+additionalAreaOfStudyRows.append([programNames[68], programNames[68], "TRUE", "TRUE", "FALSE"]) #User Experience & Interaction Design
+
+additionalAreaOfStudyRows.append([programNames[69], programNames[69], "TRUE", "FALSE", "FALSE"]) #Digital Research
+
+additionalAreaOfStudyRows.append([programNames[70], programNames[70], "TRUE", "FALSE", "TRUE"]) #Retail & Merchandising
+
+additionalAreaOfStudyRows.append([programNames[71], programNames[71], "TRUE", "TRUE", "FALSE"]) #Television & Media Management
+
+additionalAreaOfStudyRows.append([programNames[72], programNames[72], "FALSE", "TRUE", "FALSE"]) #Entertainment & Arts Management
+
+additionalAreaOfStudyRows.append([programNames[73], programNames[73], "FALSE", "TRUE", "FALSE"]) #Music Performance
+
+additionalAreaOfStudyRows.append([programNames[74], programNames[74], "FALSE", "TRUE", "FALSE"]) #Video Production
+
+additionalAreaOfStudyRows.append([programNames[74], programNames[74], "FALSE", "TRUE", "TRUE"]) #Dance
+
 
 
 #Postgres.education.areas_of_study
-with open(currentDirectory + "/data_generation", "/Postgres_Data/Postgres-area_of_study.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/data_generation/Postgres_Data/Postgres-area_of_study.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(areaOfStudyHeaders)         
     csvwriter.writerows(areaOfStudyRows)
 
 
 #Elasticsearch.additional_education_info.areas_of_study
-with open(currentDirectory + "/data_generation", "/Elasticsearch_Data/Elasticsearch-additional_area_of_study.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/data_generation/Elasticsearch_Data/Elasticsearch-additional_area_of_study.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(additionalAreaOfStudyHeaders)         
     csvwriter.writerows(additionalAreaOfStudyRows)
