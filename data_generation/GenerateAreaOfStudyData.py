@@ -176,6 +176,26 @@ areaOfStudyRows.append([programNames[74], "Department of Film & Video", "NULL", 
 
 areaOfStudyRows.append([programNames[75], "Department of Dance", "NULL", "NULL"]) #Dance
 
+areaOfStudyRows.append([programNames[76], "Department of ", "NULL", "NULL"]) #Behavaviroral Health Counseling
+
+areaOfStudyRows.append([programNames[77], "Department of ", "NULL", "NULL"]) #Food and Hospitality Management
+
+areaOfStudyRows.append([programNames[78], "Health Administration Department", "NULL", "NULL"]) #Health Administration
+
+areaOfStudyRows.append([programNames[79], "Health Sciences Department", "NULL", "NULL"]) #Health Sciences
+
+areaOfStudyRows.append([programNames[80], "Nutrition Sciences Department", "NULL", "NULL"]) #Nutrition Sciences
+
+areaOfStudyRows.append([programNames[81], "Undergraduate Nursing Department", "NULL", "NULL"]) #Undergraduate Nursing
+
+areaOfStudyRows.append([programNames[82], "Food and Hospitality Management Department", "NULL", "NULL"]) #Food and Hospitality Management
+
+areaOfStudyRows.append([programNames[83], "Graduate Nursing Department", "NULL", "NULL"]) #Graduate Nursing
+
+areaOfStudyRows.append([programNames[84], "Physical Therapy and Rehabilitation Sciences Department", "NULL", "NULL"]) #Physical Therapy and Rehbilitation Science
+
+areaOfStudyRows.append([programNames[85], "Physician Assistant Department", "NULL", "NULL"]) #Physician Assistant
+
 
 
 #Elasticsearch.additional_education_info.areas_of_study
@@ -332,7 +352,27 @@ additionalAreaOfStudyRows.append([programNames[73], programNames[73], "FALSE", "
 
 additionalAreaOfStudyRows.append([programNames[74], programNames[74], "FALSE", "TRUE", "FALSE"]) #Video Production
 
-additionalAreaOfStudyRows.append([programNames[74], programNames[74], "FALSE", "TRUE", "TRUE"]) #Dance
+additionalAreaOfStudyRows.append([programNames[75], programNames[75], "FALSE", "TRUE", "TRUE"]) #Dance
+
+additionalAreaOfStudyRows.append([programNames[76], programNames[76], "TRUE", "TRUE", "FALSE"]) #Behavaviroral Health Counseling
+
+additionalAreaOfStudyRows.append([programNames[77], programNames[77], "TRUE", "TRUE", "TRUE"]) #Food and Hospitality Management
+
+additionalAreaOfStudyRows.append([programNames[78], programNames[78], "TRUE", "TRUE", "FALSE"]) #Health Administration
+
+additionalAreaOfStudyRows.append([programNames[79], programNames[79], "TRUE", "TRUE", "FALSE"]) #Health Sciences
+
+additionalAreaOfStudyRows.append([programNames[80], programNames[80], "TRUE", "TRUE", "FALSE"]) #Nutrition Sciences
+
+additionalAreaOfStudyRows.append([programNames[81], programNames[81], "TRUE", "FALSE", "TRUE"]) #Undergraduate Nursing
+
+additionalAreaOfStudyRows.append([programNames[82], programNames[82], "TRUE", "TRUE", "TRUE"]) #Food and Hospitality Management
+
+additionalAreaOfStudyRows.append([programNames[83], programNames[83], "TRUE", "FALSE", "TRUE"]) #Graduate Nursing
+
+additionalAreaOfStudyRows.append([programNames[84], programNames[84], "TRUE", "TRUE", "TRUE"]) #Physical Therapy and Rehbilitation Science
+
+additionalAreaOfStudyRows.append([programNames[85], programNames[85], "TRUE", "FALSE", "FALSE"]) #Physician Assistant
 
 
 
