@@ -28,7 +28,7 @@ with open('LibraryLogFile.txt', 'w') as f:
         strDateTime = randomTime.strftime("%d-%m-%Y %H:%M:%S")
 
         f.write("[" + strDateTime + "]" + " " + "|" + " " + first + " " + last + " " + "|" + " " 
-        + "Drexel ID:" + " " + ID + " " + "|" + " " + "accessed" + " " + "|" + " " + "W. W. Hagerty Library")
+        + "Drexel ID:" + " " + ID + " " + "|" + " " + "checked-in" + " " + "|" + " " + "W. W. Hagerty Library")
         f.write('\n')
         f.write("---------------------")
         f.write('\n')
