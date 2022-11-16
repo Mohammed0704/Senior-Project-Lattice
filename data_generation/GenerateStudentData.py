@@ -23,9 +23,11 @@ studentProgramType = ""
 phone = ""
 homeAddress = ""
 
-campusAddressOptions = ["115 N. 32nd Street", "203 N. 34th Street", "223 N. 34th Street", "3301 Race Street", "3200 Race Street", "101 N 34th Street", "3320 Powelton Avenue", 
-                            "3301 Arch Street", "3400 Lancaster Avenue", "3200 Chestnut Street"]
-studentProgramTypeOptions = ["Undergraduate", "Graduate"]
+campusAddressOptions = []
+with open(currentDirectory + "/Postgres_Data/Postgres-housing-options.csv", 'r', encoding='utf-8')as file: #pulling from the generated/scraped housing options data
+        csvFile = csv.reader(file)
+        for line in csvFile:
+            campusAddressOptions.append(line[1])
 personalPronounsOptions = ["She/Her/Hers", "He/Him/His", "They/Them/Theirs"]
 ethnicityOptions = ["Non Hispanic", "Hispanic or Latino"]
 raceOptions = ["African American/Black", "White", "Asian", "Native", "Other"]
@@ -63,9 +65,18 @@ healthInsuranceRows = []
 major = ""
 minor = ""
 
-areaOfStudyOptions = [""]
-minorOptions = [""]
-majorOptions = [""]
+minorOptions = []
+undergraduateMajorOptions = []
+graduateMajorOptions = []
+with open(currentDirectory + "/Postgres_Data/Postgres-programs.csv", 'r', encoding='utf-8')as file: #pulling from the generated/scraped programs data
+        csvFile = csv.reader(file)
+        for line in csvFile:
+            if "Minor in" in line[0]:
+                minorOptions.append(line[0])
+            elif "Master of" in line[0] or "Doctor of" in line[0]:
+                graduateMajorOptions.append(line[0])
+            else:
+                undergraduateMajorOptions.append(line[0])
 studentEducationChoicesHeaders = ["Drexel ID", "First Name", "Middle Name", "Last Name", "Major", "Minor"]
 studentEducationChoicesRows = []
 
@@ -90,7 +101,7 @@ tuitionRows = []
 
 rows = []
 
-for i in range(100):
+for i in range(10000):
     #MariaDB.drexel_people.basic_student_info
     genderChance = random.randint(1,2)
 
@@ -151,7 +162,11 @@ for i in range(100):
         year = random.randint(1999, 2004)
     dateOfBirth = str(month) + "/" + str(day) + "/" + str(year)
 
-    studentProgramType = random.choice(studentProgramTypeOptions)
+    studentProgramTypeChance = random.randint(1,100)
+    if studentProgramTypeChance <= 32:
+        studentProgramType = "Graduate"
+    else:
+        studentProgramType = "Undergraduate"
 
     race = random.choice(raceOptions)
     if race == raceOptions[1] or race == raceOptions[4]:
@@ -181,10 +196,10 @@ for i in range(100):
     phone = str(random.randint(200, 989)) + "-" + str(random.randint(100, 999)) + "-" + str(random.randint(1000, 9999))
 
     campusAddressChance = random.randint(1,100)
-    if campusAddressChance <= 50:
-        homeAddress = random.choice(campusAddressOptions)
-    else:
+    if campusAddressChance >= 50 or studentProgramType == 'Graduate':
         homeAddress = random_address.real_random_address_by_state('CA')['address1']
+    else:
+        homeAddress = random.choice(campusAddressOptions)
 
     #MariaDB.locations.student_locations
     internationalChance = random.randint(1,100)
@@ -214,9 +229,17 @@ for i in range(100):
     maximumCoverageAmount = deductible + 20000
 
     #Postgres.education.student_education_choices
-    areaOfStudy = random.choice(areaOfStudyOptions)
-    major = random.choice(majorOptions)
-    minor = random.choice(minorOptions)
+
+    if studentProgramType == "Undergraduate":
+        major = random.choice(undergraduateMajorOptions)
+    elif studentProgramType == "Graduate":
+        major = random.choice(graduateMajorOptions)
+
+    minorChance = random.randint(1,100)
+    if minorChance <= 35:
+        minor = random.choice(minorOptions)
+    else:
+        minor = ""
 
     #Cassandra.finances.tuition
     year = expectedGraduationYear
