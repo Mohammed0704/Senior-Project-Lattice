@@ -1,0 +1,200 @@
+[04-02-2023 00:05:54] | Glenda Pease | Drexel ID: grp31 | checked-in | W. W. Hagerty Library
+---------------------
+[28-01-2023 13:05:45] | Bernice Anderson | Drexel ID: bda61 | checked-in | W. W. Hagerty Library
+---------------------
+[03-03-2023 08:19:57] | Maria Fox | Drexel ID: mvf47 | checked-in | W. W. Hagerty Library
+---------------------
+[23-12-2022 04:15:59] | Frankie Sideris | Drexel ID: fds68 | checked-in | W. W. Hagerty Library
+---------------------
+[13-12-2022 02:41:14] | Laura Matlock | Drexel ID: lkm60 | checked-in | W. W. Hagerty Library
+---------------------
+[26-01-2023 15:41:05] | Mary Devore | Drexel ID: mld70 | checked-in | W. W. Hagerty Library
+---------------------
+[03-03-2023 00:59:10] | Allen Gallegos | Drexel ID: agg61 | checked-in | W. W. Hagerty Library
+---------------------
+[08-03-2023 13:53:52] | Janie Connor | Drexel ID: jkc56 | checked-in | W. W. Hagerty Library
+---------------------
+[31-12-2022 04:47:05] | Kristi Sims | Drexel ID: kbs70 | checked-in | W. W. Hagerty Library
+---------------------
+[22-11-2022 11:04:25] | Christian Nakagawa | Drexel ID: cvn73 | checked-in | W. W. Hagerty Library
+---------------------
+[28-11-2022 11:37:04] | Gloria Bethea | Drexel ID: gbb18 | checked-in | W. W. Hagerty Library
+---------------------
+[18-02-2023 13:48:59] | Robert Nave | Drexel ID: rnn27 | checked-in | W. W. Hagerty Library
+---------------------
+[13-12-2022 14:13:19] | Booker Gorman | Drexel ID: btg10 | checked-in | W. W. Hagerty Library
+---------------------
+[03-03-2023 22:13:32] | Dolores Simonds | Drexel ID: djs82 | checked-in | W. W. Hagerty Library
+---------------------
+[06-12-2022 05:27:54] | Adam Floyd | Drexel ID: aaf64 | checked-in | W. W. Hagerty Library
+---------------------
+[25-11-2022 17:37:40] | Frederick Garcia | Drexel ID: fjg85 | checked-in | W. W. Hagerty Library
+---------------------
+[28-12-2022 01:41:58] | Mandy Williams | Drexel ID: mhw651 | checked-in | W. W. Hagerty Library
+---------------------
+[22-11-2022 17:29:17] | Paul Gutierrez | Drexel ID: pog211 | checked-in | W. W. Hagerty Library
+---------------------
+[08-01-2023 16:32:01] | Margie Mahajan | Drexel ID: mlm95 | checked-in | W. W. Hagerty Library
+---------------------
+[03-01-2023 15:15:08] | Edwin Jones | Drexel ID: erj55 | checked-in | W. W. Hagerty Library
+---------------------
+[19-02-2023 10:30:06] | Jay Atkinson | Drexel ID: jca31 | checked-in | W. W. Hagerty Library
+---------------------
+[02-02-2023 10:26:12] | Charlotte Delapaz | Drexel ID: cid69 | checked-in | W. W. Hagerty Library
+---------------------
+[06-02-2023 19:50:22] | Rod Finch | Drexel ID: rjf11 | checked-in | W. W. Hagerty Library
+---------------------
+[03-03-2023 16:41:56] | Robyn Brewer | Drexel ID: rsb376 | checked-in | W. W. Hagerty Library
+---------------------
+[01-02-2023 04:28:30] | Warren Jennings | Drexel ID: wmj28 | checked-in | W. W. Hagerty Library
+---------------------
+[20-01-2023 13:50:08] | Mamie Holmes | Drexel ID: meh39 | checked-in | W. W. Hagerty Library
+---------------------
+[08-01-2023 13:53:21] | Louann Langehennig | Drexel ID: lwl80 | checked-in | W. W. Hagerty Library
+---------------------
+[30-12-2022 02:52:55] | Lisa Vadasy | Drexel ID: lgv72 | checked-in | W. W. Hagerty Library
+---------------------
+[24-01-2023 08:19:38] | Shawn Lovett | Drexel ID: snl43 | checked-in | W. W. Hagerty Library
+---------------------
+[22-12-2022 14:59:25] | Rigoberto Davis | Drexel ID: rgd61 | checked-in | W. W. Hagerty Library
+---------------------
+[08-02-2023 12:12:39] | Jill Layland | Drexel ID: jml80 | checked-in | W. W. Hagerty Library
+---------------------
+[27-02-2023 11:05:47] | Stanley Mcghee | Drexel ID: skm45 | checked-in | W. W. Hagerty Library
+---------------------
+[05-12-2022 11:15:01] | Philip Strain | Drexel ID: pds691 | checked-in | W. W. Hagerty Library
+---------------------
+[17-01-2023 00:01:23] | Bonnie Yeargin | Drexel ID: bay194 | checked-in | W. W. Hagerty Library
+---------------------
+[09-01-2023 09:18:30] | Bertha Sanford | Drexel ID: bas76 | checked-in | W. W. Hagerty Library
+---------------------
+[15-12-2022 14:47:18] | Patrick Person | Drexel ID: pfp371 | checked-in | W. W. Hagerty Library
+---------------------
+[20-01-2023 07:28:48] | Paul Stone | Drexel ID: pds81 | checked-in | W. W. Hagerty Library
+---------------------
+[02-12-2022 10:50:46] | Eric Davison | Drexel ID: erd67 | checked-in | W. W. Hagerty Library
+---------------------
+[27-02-2023 09:18:54] | Joyce Gourley | Drexel ID: jpg77 | checked-in | W. W. Hagerty Library
+---------------------
+[08-12-2022 21:08:57] | Kimberly Stein | Drexel ID: kas44 | checked-in | W. W. Hagerty Library
+---------------------
+[24-11-2022 09:22:51] | James Cantu | Drexel ID: jgc285 | checked-in | W. W. Hagerty Library
+---------------------
+[02-12-2022 15:58:22] | Emily Moon | Drexel ID: ecm261 | checked-in | W. W. Hagerty Library
+---------------------
+[02-03-2023 21:13:34] | James Corns | Drexel ID: jmc73 | checked-in | W. W. Hagerty Library
+---------------------
+[07-12-2022 21:21:00] | Shirley Oboyle | Drexel ID: sko642 | checked-in | W. W. Hagerty Library
+---------------------
+[25-12-2022 13:41:11] | William Richardson | Drexel ID: wjr34 | checked-in | W. W. Hagerty Library
+---------------------
+[05-03-2023 00:33:03] | Mary Byrne | Drexel ID: mrb358 | checked-in | W. W. Hagerty Library
+---------------------
+[28-01-2023 21:44:19] | Rachel Gracia | Drexel ID: rcg56 | checked-in | W. W. Hagerty Library
+---------------------
+[08-01-2023 04:16:09] | Moshe Block | Drexel ID: mkb19 | checked-in | W. W. Hagerty Library
+---------------------
+[07-03-2023 06:46:53] | Jason Bassetti | Drexel ID: jcb21 | checked-in | W. W. Hagerty Library
+---------------------
+[23-12-2022 11:50:11] | Micheal Jonas | Drexel ID: mdj87 | checked-in | W. W. Hagerty Library
+---------------------
+[19-02-2023 02:52:41] | Belva Lacasse | Drexel ID: bll91 | checked-in | W. W. Hagerty Library
+---------------------
+[07-03-2023 22:56:22] | Barbara Talavera | Drexel ID: bat56 | checked-in | W. W. Hagerty Library
+---------------------
+[16-02-2023 00:35:35] | Lyle Gandolfi | Drexel ID: lmg723 | checked-in | W. W. Hagerty Library
+---------------------
+[29-12-2022 21:19:51] | David Ferguson | Drexel ID: dsf92 | checked-in | W. W. Hagerty Library
+---------------------
+[24-01-2023 23:14:43] | Janet Sobers | Drexel ID: jes25 | checked-in | W. W. Hagerty Library
+---------------------
+[12-03-2023 06:18:48] | Teresa Briggs | Drexel ID: tcb82 | checked-in | W. W. Hagerty Library
+---------------------
+[17-02-2023 22:21:03] | Paula Smith | Drexel ID: pds10 | checked-in | W. W. Hagerty Library
+---------------------
+[04-01-2023 18:11:24] | Megan Jackson | Drexel ID: mfj30 | checked-in | W. W. Hagerty Library
+---------------------
+[01-03-2023 06:04:59] | Roy Carroll | Drexel ID: rcc34 | checked-in | W. W. Hagerty Library
+---------------------
+[20-11-2022 22:46:41] | Carolyn White | Drexel ID: cdw45 | checked-in | W. W. Hagerty Library
+---------------------
+[03-12-2022 11:34:08] | Herlinda Chancellor | Drexel ID: hkc178 | checked-in | W. W. Hagerty Library
+---------------------
+[25-12-2022 17:16:41] | Edna Rodriquez | Drexel ID: ebr59 | checked-in | W. W. Hagerty Library
+---------------------
+[21-01-2023 10:37:48] | Irene Markey | Drexel ID: imm97 | checked-in | W. W. Hagerty Library
+---------------------
+[21-12-2022 06:05:59] | Walter Ziemba | Drexel ID: wcz852 | checked-in | W. W. Hagerty Library
+---------------------
+[26-02-2023 01:02:58] | Tim Jenkins | Drexel ID: tsj87 | checked-in | W. W. Hagerty Library
+---------------------
+[07-02-2023 13:04:58] | Charles Childers | Drexel ID: crc51 | checked-in | W. W. Hagerty Library
+---------------------
+[15-01-2023 04:20:49] | Maria Daugherty | Drexel ID: mld37 | checked-in | W. W. Hagerty Library
+---------------------
+[02-03-2023 08:03:14] | Phillip Kimbrell | Drexel ID: prk76 | checked-in | W. W. Hagerty Library
+---------------------
+[17-12-2022 15:56:33] | Cornelius Plotkin | Drexel ID: crp10 | checked-in | W. W. Hagerty Library
+---------------------
+[05-02-2023 20:19:37] | Michele Oshea | Drexel ID: mjo36 | checked-in | W. W. Hagerty Library
+---------------------
+[09-12-2022 16:00:11] | Thomas Jones | Drexel ID: tmj69 | checked-in | W. W. Hagerty Library
+---------------------
+[26-11-2022 16:40:54] | Edwin Turner | Drexel ID: ekt73 | checked-in | W. W. Hagerty Library
+---------------------
+[30-11-2022 23:47:08] | Paul Denis | Drexel ID: pjd22 | checked-in | W. W. Hagerty Library
+---------------------
+[27-01-2023 22:45:31] | Ellen Harris | Drexel ID: evh76 | checked-in | W. W. Hagerty Library
+---------------------
+[21-12-2022 06:28:06] | Robert Matthews | Drexel ID: rjm761 | checked-in | W. W. Hagerty Library
+---------------------
+[24-11-2022 18:53:51] | Wayne Childers | Drexel ID: wrc99 | checked-in | W. W. Hagerty Library
+---------------------
+[08-01-2023 07:21:59] | James Jefferson | Drexel ID: jdj616 | checked-in | W. W. Hagerty Library
+---------------------
+[23-02-2023 12:41:08] | Josephine Srinvasan | Drexel ID: jks385 | checked-in | W. W. Hagerty Library
+---------------------
+[01-01-2023 03:37:49] | Jean Barbieri | Drexel ID: jcb93 | checked-in | W. W. Hagerty Library
+---------------------
+[03-02-2023 16:48:46] | Cynthia Conkel | Drexel ID: crc77 | checked-in | W. W. Hagerty Library
+---------------------
+[23-01-2023 00:46:19] | Franklin Lawton | Drexel ID: frl28 | checked-in | W. W. Hagerty Library
+---------------------
+[13-12-2022 15:45:12] | Arnold Purdy | Drexel ID: ajp92 | checked-in | W. W. Hagerty Library
+---------------------
+[11-02-2023 18:36:09] | Kevin Gerrity | Drexel ID: kkg19 | checked-in | W. W. Hagerty Library
+---------------------
+[30-12-2022 00:46:07] | Susie Irish | Drexel ID: ssi247 | checked-in | W. W. Hagerty Library
+---------------------
+[07-12-2022 06:04:45] | Georgia Lefever | Drexel ID: gvl87 | checked-in | W. W. Hagerty Library
+---------------------
+[11-03-2023 18:03:32] | Stella Rojas | Drexel ID: swr714 | checked-in | W. W. Hagerty Library
+---------------------
+[12-03-2023 09:12:45] | Benjamin Garza | Drexel ID: blg91 | checked-in | W. W. Hagerty Library
+---------------------
+[15-01-2023 18:11:17] | Bradley Dykes | Drexel ID: bjd856 | checked-in | W. W. Hagerty Library
+---------------------
+[15-02-2023 16:02:24] | Joi Hurdle | Drexel ID: jkh45 | checked-in | W. W. Hagerty Library
+---------------------
+[12-01-2023 06:39:49] | Pamela Davis | Drexel ID: prd487 | checked-in | W. W. Hagerty Library
+---------------------
+[20-02-2023 08:02:38] | Alan Carrier | Drexel ID: aic99 | checked-in | W. W. Hagerty Library
+---------------------
+[27-02-2023 10:58:53] | Timothy Gillman | Drexel ID: tvg40 | checked-in | W. W. Hagerty Library
+---------------------
+[14-01-2023 15:28:24] | Stephen Colton | Drexel ID: sgc55 | checked-in | W. W. Hagerty Library
+---------------------
+[19-12-2022 04:29:32] | Michelle Heilman | Drexel ID: mgh43 | checked-in | W. W. Hagerty Library
+---------------------
+[09-02-2023 08:49:31] | Susan Gray | Drexel ID: sag847 | checked-in | W. W. Hagerty Library
+---------------------
+[02-12-2022 02:20:04] | Priscilla Bailey | Drexel ID: peb88 | checked-in | W. W. Hagerty Library
+---------------------
+[27-12-2022 05:15:55] | Sonia Reed | Drexel ID: slr14 | checked-in | W. W. Hagerty Library
+---------------------
+[31-01-2023 10:39:03] | Emily Cousins | Drexel ID: eec88 | checked-in | W. W. Hagerty Library
+---------------------
+[12-01-2023 23:25:47] | Jennifer Wertheimer | Drexel ID: jtw20 | checked-in | W. W. Hagerty Library
+---------------------
+[29-12-2022 05:51:54] | Jennifer Collins | Drexel ID: jpc38 | checked-in | W. W. Hagerty Library
+---------------------
