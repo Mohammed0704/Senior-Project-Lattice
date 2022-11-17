@@ -77,14 +77,28 @@ collegeRows.append(["Antoinette Westphal College of Media Arts & Design", "At Dr
 collegeRows.append(["Pennoni Honors College", "The Pennoni Honors College is a community for all Drexel Dragons, where they are invited to become explorers of the unknown and plot one's own path through conversation, debate, discovery, intellectual curiosity, self-reflection, and more.",
                             "University City", "3250 Chestnut Street, 5016 MacAlister Hall, Philadelphia, PA 19104", "HonorsProgram@drexel.edu", "https://drexel.edu/pennoni/",
                             1991, "Paula Marantz Cohen", 5, ""])
-                            
-# collegeRows.append(["Biomedical Engineering, Science and Health Systems", "We believe in our mission to educate our students in a culture of scientific discovery and technological innovations.",
-#                             "University City", "3141 Chestnut Street Philadelphia, PA 19104", "biomed@drexel.edu", "https://drexel.edu/biomed/",
-#                             1961, "David S. Brown", ])
+
+collegeRows.append(["Charles D. Close School of Entrepreneurship", "The Close School has pioneered an approach to education that addresses this need by teaching students to be entrepreneurial thinkers and doers, preparing them to be entrepreneurs in new ventures, established companies and organizations, and throughout their personal and professional lives.",
+                            "University City", "3230 Market Street 402 Pearlstein Philadelphia, PA 19104", "decarodm@drexel.edu", "https://drexel.edu/close/",
+                            2013, "Donna de Carolis", 0, "55%"])
+collegeRows.append(["Dornsife School of Public Health", "The Dornsife School of Public Health at Drexel University was founded on the principle of health as a human right and the recognition of the importance of social justice as a means to achieve health for all.",
+                            "University City", "Nesbitt Hall 3215 Market Street Philadelphia, PA 19104", "sphadmissions@drexel.edu", "https://drexel.edu/dornsife/",
+                            1996, "Ana V. Diez Roux", 0, "10%"])
+
+collegeRows.append(["Thomas R. Kline School of Law", "Year after year, we attract students who are both entrepreneurial and cooperative – contributing to a community of focused integrity that is a pleasure to observe and take part in.",
+                            "University City", "3320 Market St, Philadelphia, PA 19104", "lawadmissions@drexel.edu", "https://drexel.edu/law/",
+                            2006, "Daniel M. Filler", 0, "30%"])
+
+collegeRows.append(["School of Education", "Drexel University's School of Education is committed to preparing students with the knowledge and skills needed to succeed in an ever changing educational landscape.",
+                            "University City", "3401 Market St. Suite 3000 Philadelphia,PA 19104", "", "https://drexel.edu/soe/",
+                            2006, "Penny Hammrich", 0, "35%"])
+                       
+collegeRows.append(["Biomedical Engineering, Science and Health Systems", "We believe in our mission to educate our students in a culture of scientific discovery and technological innovations.",
+                            "University City", "3141 Chestnut Street Philadelphia, PA 19104", "biomed@drexel.edu", "https://drexel.edu/biomed/",
+                            1961, "David S. Brown", 0, "25%"])
 
 
 #Postgres.campus_life.locations
-print('running')
 with open(currentDirectory + "/Postgres_Data/Postgres-colleges.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(collegeHeaders)         
