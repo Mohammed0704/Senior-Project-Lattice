@@ -176,9 +176,9 @@ areaOfStudyRows.append([programNames[74], "Department of Film & Video", "NULL", 
 
 areaOfStudyRows.append([programNames[75], "Department of Dance", "NULL", "NULL"]) #Dance
 
-areaOfStudyRows.append([programNames[76], "Department of ", "NULL", "NULL"]) #Behavaviroral Health Counseling
+areaOfStudyRows.append([programNames[76], "", "NULL", "NULL"]) #Behavaviroral Health Counseling
 
-areaOfStudyRows.append([programNames[77], "Department of ", "NULL", "NULL"]) #Food and Hospitality Management
+areaOfStudyRows.append([programNames[77], "", "NULL", "NULL"]) #Food and Hospitality Management
 
 areaOfStudyRows.append([programNames[78], "Health Administration Department", "NULL", "NULL"]) #Health Administration
 
