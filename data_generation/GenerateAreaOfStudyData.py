@@ -2,9 +2,8 @@ import csv
 import os.path
 
 currentDirectory = os.getcwd()
-areaProgram = os.path.join(currentDirectory, 'data_generation', 'AreaOfStudyProgramNames.txt')
 
-with open(areaProgram, 'r') as f:
+with open(currentDirectory + "/AreaOfStudyProgramNames.txt", "r") as f:
     programNames = f.read().splitlines()
 
 #Postgres.education.areas_of_study
@@ -66,19 +65,19 @@ areaOfStudyRows.append([programNames[19], "Department of Sport Business", "NULL"
 
 areaOfStudyRows.append([programNames[20], "Department of Management", "NULL", "NULL"]) #Technology Innovation Management
 
-areaOfStudyRows.append([programNames[21], "Department in Computer Science", "NULL", "NULL"]) #Computer Science
+areaOfStudyRows.append([programNames[21], "Department of Computer Science", "NULL", "NULL"]) #Computer Science
 
-areaOfStudyRows.append([programNames[22], "Department in Computer Science", "NULL", "NULL"]) #Software Engineering
+areaOfStudyRows.append([programNames[22], "Department of Computer Science", "NULL", "NULL"]) #Software Engineering
 
 areaOfStudyRows.append([programNames[23], "Department of Information Science", "NULL", "NULL"]) #Data Science
 
-areaOfStudyRows.append([programNames[24], "Department in Computer Science", "NULL", "NULL"]) #Artificial Intelligence and Machine Learning
+areaOfStudyRows.append([programNames[24], "Department of Computer Science", "NULL", "NULL"]) #Artificial Intelligence and Machine Learning
 
-areaOfStudyRows.append([programNames[25], "Department in Computer Science", "NULL", "NULL"]) #Cybersecurity
+areaOfStudyRows.append([programNames[25], "Department of Computer Science", "NULL", "NULL"]) #Cybersecurity
 
-areaOfStudyRows.append([programNames[26], "Department in Computer Science", "NULL", "NULL"]) #Software Architecture
+areaOfStudyRows.append([programNames[26], "Department of Computer Science", "NULL", "NULL"]) #Software Architecture
 
-areaOfStudyRows.append([programNames[27], "Department in Computer Science", "NULL", "NULL"]) #Software Management
+areaOfStudyRows.append([programNames[27], "Department of Computer Science", "NULL", "NULL"]) #Software Management
 
 areaOfStudyRows.append([programNames[28], "Department of Information Science", "NULL", "NULL"]) #Information Systems
 
@@ -377,14 +376,14 @@ additionalAreaOfStudyRows.append([programNames[85], programNames[85], "TRUE", "F
 
 
 #Postgres.education.areas_of_study
-with open(currentDirectory + "/data_generation/Postgres_Data/Postgres-area_of_study.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/Postgres_Data/Postgres-area_of_study.csv", "w", newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(areaOfStudyHeaders)         
     csvwriter.writerows(areaOfStudyRows)
 
 
 #Elasticsearch.additional_education_info.areas_of_study
-with open(currentDirectory + "/data_generation/Elasticsearch_Data/Elasticsearch-additional_area_of_study.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/Elasticsearch_Data/Elasticsearch-additional_area_of_study.csv", "w", newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(additionalAreaOfStudyHeaders)         
     csvwriter.writerows(additionalAreaOfStudyRows)
