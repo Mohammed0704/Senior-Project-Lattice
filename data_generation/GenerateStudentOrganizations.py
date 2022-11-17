@@ -20,7 +20,7 @@ campusOrganizationsRows.append(["https://dragonlink.drexel.edu/organization/alph
 
 campusOrganizationsRows.append(["https://dragonlink.drexel.edu/organization/alpha-omega-epsilon", "aoe.drexel.president@gmail.com", "3141 Chestnut Street", "", "Alpha Omega Epsilon"])
 
-campusOrganizationsRows.append(["https://dragonlink.drexel.edu/organization/anime-and-gaming-organization", "ak3933@drexel.edu", "115 N 32nd St", "4108121013", "Anime and Gaming Organization"])
+campusOrganizationsRows.append(["https://dragonlink.drexel.edu/organization/anime-and-gaming-organization", "ak3933@drexel.edu", "115 N 32nd St", "410-812-1013", "Anime and Gaming Organization"])
 
 campusOrganizationsRows.append(["https://dragonlink.drexel.edu/organization/bgsa", "jmc662@drexel.edu", "3245 Chestnut St", "", "Biology Graduate Student Association"])
 
