@@ -1,6 +1,5 @@
 import csv
 import os
-import itertools
 import random
 from datetime import datetime
 from datetime import timedelta
@@ -29,7 +28,6 @@ isFirstIteration = True
 #Writing to text file, iterating over multiple lists simultaneously
 #zip_longest stops when all lists are exhausted. When the shorter iterator(s) are exhausted, zip_longest yields a tuple with None value.
 with open(currentDirectory + "/Elasticsearch_Data/LibraryLogFile.txt", "w") as f:
-    #for (ID, first, last) in itertools.zip_longest(drexelID, firstName, lastName):
     for line in range(8500):
         randomStudentChoice = random.randint(0, len(drexelIDList) - 1)
         if not isFirstIteration:
