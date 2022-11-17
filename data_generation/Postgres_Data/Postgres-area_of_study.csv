@@ -1,0 +1,87 @@
+Name,Department,Act,Plan
+Accounting,Department of Accounting,NULL,NULL
+Brand & Reputation Management ,Department of Marketing,NULL,NULL
+Business Administration,Department of General Business,NULL,NULL
+Business Analytics,Department of Decision Sciences and MIS,NULL,NULL
+Business Consulting,Department of Management,NULL,NULL
+Business & Engineering,Department of Decision Sciences and MIS,NULL,NULL
+Economics,School of Economics,NULL,NULL
+Esport Business,Department of Sport Business,NULL,NULL
+Finance,Department of Finance,NULL,NULL
+Financial Technology ,Department of Finance,NULL,NULL
+General Business,Department of General Business,NULL,NULL
+International Business,Department of General Business,NULL,NULL
+Management Information Systems,Department of Decision Sciences and MIS,NULL,NULL
+Marketing,Department of Marketing,NULL,NULL
+Operations & Supply Chain Management,Department of Decision Sciences and MIS,NULL,NULL
+Organizational Management	 ,Department of Management,NULL,NULL
+Real Estate Management & Development,Department of Finance,NULL,NULL
+Social Responsibility in Business,Department of Marketing,NULL,NULL
+Sport Business,Department of Sport Business,NULL,NULL
+Sport Management,Department of Sport Business,NULL,NULL
+Technology Innovation Management,Department of Management,NULL,NULL
+Computer Science,Department in Computer Science,NULL,NULL
+Software Engineering,Department in Computer Science,NULL,NULL
+Data Science,Department of Information Science,NULL,NULL
+Artificial Intelligence and Machine Learning,Department in Computer Science,NULL,NULL
+Cybersecurity,Department in Computer Science,NULL,NULL
+Software Architecture,Department in Computer Science,NULL,NULL
+Software Management,Department in Computer Science,NULL,NULL
+Information Systems,Department of Information Science,NULL,NULL
+Human-Computer Interaction & User Experience,Department of Information Science,NULL,NULL
+Computing and Security Technology,Department of Information Science,NULL,NULL
+Health Informatics,Department of Information Science,NULL,NULL
+Information Science,Department of Information Science,NULL,NULL
+Big Data Analytics,Department of Information Science,NULL,NULL
+Architectural Engineering,"Department of Civil, Architectural and Environmental Engineering",NULL,NULL
+Chemical Engineering,Department of Chemical and Biological Engineering,NULL,NULL
+Civil Engineering,"Department of Civil, Architectural and Environmental Engineering",NULL,NULL
+Computer Engineering,Department of Electrical and Computer Engineering,NULL,NULL
+Construction Management,Department of Engineering Leadership and Society,NULL,NULL
+Electrical Engineering,Department of Electrical and Computer Engineering,NULL,NULL
+Engineering Technology,Department of Engineering Leadership and Society,NULL,NULL
+Environmental Engineering,"Department of Civil, Architectural and Environmental Engineering",NULL,NULL
+Materials Science and Engineering,Department of Materials Science and Engineering,NULL,NULL
+Mechanical Engineering,Department of Mechanical Engineering and Mechanics,NULL,NULL
+Engineering Management,Department of Engineering Leadership and Society,NULL,NULL
+Internet of Things,Department of Electrical and Computer Engineering,NULL,NULL
+Machine Learning Engineering,Department of Electrical and Computer Engineering,NULL,NULL
+Nanomaterials,Department of Materials Science and Engineering,NULL,NULL
+Peace Engineering,Department of Engineering Leadership and Society,NULL,NULL
+Robotics And Autonomy,"Department of Electrical and Computer Engineering, Department of Mechanical Engineering and Mechanics",NULL,NULL
+Systems Engineering,Department of Engineering Leadership and Society,NULL,NULL
+Engineering Leadership,Department of Engineering Leadership and Society,NULL,NULL
+Hardware Systems Engineering,Department of Engineering Leadership and Society,NULL,NULL
+Naval Engineering,Department of Engineering Leadership and Society,NULL,NULL
+Pharmaceutical and Medical Device Manufacturing,Department of Chemical and Biological Engineering,NULL,NULL
+Systems Design and Development,Department of Engineering Leadership and Society,NULL,NULL
+Systems Reliability Engineering,Department of Engineering Leadership and Society,NULL,NULL
+Animation & Visual Effects,Department of Animation & Visual Effects,NULL,NULL
+Architecture,Department of Architecture,NULL,NULL
+Design & Merchandising,Department of Design & Merchandising,NULL,NULL
+Digital Media & Virtual Production,Department of Digital Media,NULL,NULL
+Fashion Design,Department of Fashion Design,NULL,NULL
+Game Design & Production,Department of Game Design & Production,NULL,NULL
+Graphic Design,Department of Digital Media,NULL,NULL
+Interior Design,Department of Interior Design,NULL,NULL
+Music Industry,Department of Music Industry,NULL,NULL
+Photography,Department of Photography,NULL,NULL
+Product Design,Department of Product Design,NULL,NULL
+User Experience & Interaction Design,Department of User Experience & Interaction Design,NULL,NULL
+Digital Research,Department of Digital Media,NULL,NULL
+Retail & Merchandising,Department of Retail & Merchandising,NULL,NULL
+Television & Media Management,Department of TV Production & Media Management,NULL,NULL
+Entertainment & Arts Management,Department of Entertainment & Arts Management,NULL,NULL
+Music Performance,Department of Music,NULL,NULL
+Video Production,Department of Film & Video,NULL,NULL
+Dance,Department of Dance,NULL,NULL
+Behavaviroral Health Counseling,,NULL,NULL
+Food and Hospitality Management,,NULL,NULL
+Health Administration,Health Administration Department,NULL,NULL
+Health Sciences,Health Sciences Department,NULL,NULL
+Nutrition Sciences,Nutrition Sciences Department,NULL,NULL
+Undergraduate Nursing,Undergraduate Nursing Department,NULL,NULL
+Food and Hospitality Management,Food and Hospitality Management Department,NULL,NULL
+Graduate Nursing,Graduate Nursing Department,NULL,NULL
+Physical Therapy and Rehbilitation Science,Physical Therapy and Rehabilitation Sciences Department,NULL,NULL
+Physician Assistant,Physician Assistant Department,NULL,NULL
