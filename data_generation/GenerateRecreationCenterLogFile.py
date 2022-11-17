@@ -27,7 +27,7 @@ lastNameList = [row["Last Name"] for row in data]
 isFirstIteration = True
 #Writing to text file, iterating over multiple lists simultaneously
 #zip_longest stops when all lists are exhausted. When the shorter iterator(s) are exhausted, zip_longest yields a tuple with None value.
-with open(currentDirectory + "/Elasticsearch_Data/LibraryLogs.txt", "w") as f:
+with open(currentDirectory + "/Elasticsearch_Data/RecreationCenterLogs.txt", "w") as f:
     for line in range(7500):
         randomStudentChoice = random.randint(0, len(drexelIDList) - 1)
         if not isFirstIteration:
@@ -37,7 +37,7 @@ with open(currentDirectory + "/Elasticsearch_Data/LibraryLogs.txt", "w") as f:
             isFirstIteration = False
 
         f.write("[" + str(lineDateTime) + "]" + " " + "|" + " " + firstNameList[randomStudentChoice] + " " + lastNameList[randomStudentChoice] + " " + "|" + " " 
-        + "Drexel ID:" + " " + drexelIDList[randomStudentChoice] + " " + "|" + " " + "scanned in to" + " " + "|" + " " + "W. W. Hagerty Library")
+        + "Drexel ID:" + " " + drexelIDList[randomStudentChoice] + " " + "|" + " " + "scanned in to" + " " + "|" + " " + "Drexel Recreation Center")
         f.write('\n')
         f.write("---------------------")
         f.write('\n')
