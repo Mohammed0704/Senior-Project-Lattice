@@ -89,5 +89,18 @@
         "operating_systems": "windows,linux",
         "support_team": "N/A",
         "support_contact": "N/A"
+    },
+    {
+        "name": "Tux",
+        "description": "CCI maintains a compute environment to support class requirements. Typically referred to as Tux, this environment provides various services.",
+        "link": "https://www.cs.drexel.edu/~kschmidt/Ref/csLogin.html",
+        "licensed_by_drexel": false,
+        "license_availability": "faculty,professional staff,students",
+        "student_cost_per_term": 0,
+        "software_type": "compute environment",
+        "is_downloadable": true,
+        "operating_systems": "windows,linux,mac",
+        "support_team": "N/A",
+        "support_contact": "N/A"
     }
 ]
