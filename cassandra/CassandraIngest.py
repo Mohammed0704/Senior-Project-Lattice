@@ -30,25 +30,31 @@ session.execute('''CREATE TABLE employee_salaries(
     )'''
 )
 
-with open(currentDirectory + "/cassandra/Cassandra-employee_salaries.csv", "r") as csvFile:
-    reader = csv.reader(csvFile)
-    next(csvFile)
+def InsertToCassandraFromCSV(csvToReadFrom, headersAsString, cassandraSchemaTable):
+    with open(csvToReadFrom, "r") as csvFile:
+        insertHeaders = "(" + headersAsString + ")"
 
-    for row in reader:
-        insertValues = "("
-        for column in row:
-            isNumber = False
-            try:
-                castedColumn = int(column)
-                isNumber = True
-            except:
-                if column.lower() == "true" or column.lower() == "false":
+        reader = csv.reader(csvFile)
+        next(csvFile)
+
+        for row in reader:
+            insertValues = "("
+            for column in row:
+                isNumber = False
+                try:
+                    int(column)
+                    isNumber = True
+                except:
+                    if column.lower() == "true" or column.lower() == "false":
+                        insertValues = insertValues + column + ", "
+                    elif type(column) == str:
+                        insertValues = insertValues + "\'" + column + "\', "
+                if (isNumber):
                     insertValues = insertValues + column + ", "
-                elif type(column) == str:
-                    insertValues = insertValues + "\'" + column + "\', "
-            if (isNumber):
-                insertValues = insertValues + column + ", "
-        insertValues = insertValues[:-2] + ")"
+            insertValues = insertValues[:-2] + ")"
 
-        insertHeaders = "(drexel_id, annual_salary, date_of_birth, full_name, job_title, year_started, employer, time_reporting_period, direct_deposit, electronic_w2_form, turbo_tax_option)"
-        session.execute("INSERT INTO finances.employee_salaries " + insertHeaders + " VALUES " + insertValues)
+            session.execute("INSERT INTO " + cassandraSchemaTable + " " + insertHeaders + " VALUES " + insertValues)
+
+InsertToCassandraFromCSV(currentDirectory + "/cassandra/Cassandra-employee_salaries.csv", 
+                            "drexel_id, annual_salary, date_of_birth, full_name, job_title, year_started, employer, time_reporting_period, direct_deposit, electronic_w2_form, turbo_tax_option", 
+                            "finances.employee_salaries")
