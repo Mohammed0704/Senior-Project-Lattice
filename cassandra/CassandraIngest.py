@@ -4,33 +4,7 @@ import os
 
 currentDirectory = os.getcwd()
 
-cluster = Cluster(["localhost"], port=9042)
-session = cluster.connect()
-
-try:
-    session.execute("DROP KEYSPACE finances")
-except:
-    pass
-
-session.execute("CREATE KEYSPACE finances WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 }")
-session.execute("USE finances")
-
-session.execute('''CREATE TABLE employee_salaries(
-    drexel_id text PRIMARY KEY, 
-    annual_salary varint, 
-    date_of_birth text,
-    full_name text,
-    job_title text,
-    year_started varint,
-    employer text,
-    time_reporting_period text,
-    direct_deposit boolean,
-    electronic_w2_form boolean,
-    turbo_tax_option text
-    )'''
-)
-
-def InsertToCassandraFromCSV(csvToReadFrom, headersAsString, cassandraSchemaTable):
+'''def InsertToCassandraFromCSV(csvToReadFrom, headersAsString, cassandraSchemaTable):
     with open(csvToReadFrom, "r") as csvFile:
         insertHeaders = "(" + headersAsString + ")"
 
@@ -53,8 +27,50 @@ def InsertToCassandraFromCSV(csvToReadFrom, headersAsString, cassandraSchemaTabl
                     insertValues = insertValues + column + ", "
             insertValues = insertValues[:-2] + ")"
 
-            session.execute("INSERT INTO " + cassandraSchemaTable + " " + insertHeaders + " VALUES " + insertValues)
+            session.execute("INSERT INTO " + cassandraSchemaTable + " " + insertHeaders + " VALUES " + insertValues)'''
 
-InsertToCassandraFromCSV(currentDirectory + "/cassandra/Cassandra-employee_salaries.csv", 
+cluster = Cluster(["localhost"], port=9042)
+session = cluster.connect()
+
+try:
+    session.execute("DROP KEYSPACE finances")
+except:
+    pass
+
+session.execute("CREATE KEYSPACE finances WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 }")
+session.execute("USE finances")
+
+#employee_salaries
+session.execute('''CREATE TABLE employee_salaries(
+    drexel_id text PRIMARY KEY, 
+    annual_salary varint, 
+    date_of_birth text,
+    full_name text,
+    job_title text,
+    year_started varint,
+    employer text,
+    time_reporting_period text,
+    direct_deposit boolean,
+    electronic_w2_form boolean,
+    turbo_tax_option text
+    )'''
+)
+
+'''InsertToCassandraFromCSV(currentDirectory + "/cassandra/Cassandra-employee_salaries.csv", 
                             "drexel_id, annual_salary, date_of_birth, full_name, job_title, year_started, employer, time_reporting_period, direct_deposit, electronic_w2_form, turbo_tax_option", 
-                            "finances.employee_salaries")
+                            "finances.employee_salaries")'''
+
+
+#
+session.execute('''CREATE TABLE health_insurance(
+    drexel_id text PRIMARY KEY, 
+    waived boolean, 
+    provider text,
+    deductible varint,
+    maximum_coverage_amount varint
+    )'''
+)
+
+'''InsertToCassandraFromCSV(currentDirectory + "/cassandra/Cassandra-health_insurance.csv", 
+                            "drexel_id, waived, provider, deductible, maximum_coverage_amount", 
+                            "finances.health_insurance")'''
