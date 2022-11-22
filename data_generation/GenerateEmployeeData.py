@@ -77,7 +77,7 @@ turboTaxOptOutOptions = ["Included", "Opt Out"]
 
 employeeSalariesRows = [] 
 
-for i in range(100):
+for i in range(3000):
     #MariaDB.drexel_people.basic_employee_info
     genderChance = random.randint(1,2)
 
@@ -133,12 +133,21 @@ for i in range(100):
     #Generate Chosen Name
     chosenNameChance = random.randint(1,100)
     if chosenNameChance <= 3:
+        theyThemPronounsChance = random.randint(1,2)
         if gender == 'M':
             gender = 'F'
             chosenName = names.get_first_name(gender="female")
+            if theyThemPronounsChance == 1:
+                personalPronouns = personalPronounsOptions[0]
+            else:
+                personalPronouns = personalPronounsOptions[2]
         else:
             gender = 'M'
             chosenName = names.get_first_name(gender="male")
+            if theyThemPronounsChance == 1:
+                personalPronouns = personalPronounsOptions[1]
+            else:
+                personalPronouns = personalPronounsOptions[2]
     else:
         chosenName = firstName
 
