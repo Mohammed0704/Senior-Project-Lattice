@@ -190,13 +190,13 @@ for p in elemPrograms:
 ###END GRADUATE PROGRAM SCRAPING
 
 #Postgres.education.programs
-with open(currentDirectory + "/Postgres_Data/Postgres-programs.csv", 'w', encoding='utf-8', newline='') as csvfile: 
+with open(currentDirectory + "/../postgres/data_files/Postgres-programs.csv", 'w', encoding='utf-8', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(postgres_programs_headers)
     csvwriter.writerows(postgres_programs_rows)
 
 #Elasticsearch.drexel_additional_education_info.programs
-with open(currentDirectory + "/Elasticsearch_Data/Elasticsearch-programs.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../elasticsearch/data_files/Elasticsearch-programs.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(elasticsearch_programs_headers)
     csvwriter.writerows(elasticsearch_programs_rows)

@@ -15,7 +15,7 @@ second = random.randint(1, 59)
 lineDateTime = datetime(year, month, day, hour, minute, second)
 
 #Reading csv file with student data into a list of lists
-file = open(currentDirectory + "/MariaDB_Data/MariaDB-basic_student_info.csv", 'r')
+file = open(currentDirectory + "/../mariadb/data_files/MariaDB-basic_student_info.csv", 'r')
 data = list(csv.DictReader(file, delimiter=","))
 file.close()
 
@@ -27,7 +27,7 @@ lastNameList = [row["Last Name"] for row in data]
 isFirstIteration = True
 #Writing to text file, iterating over multiple lists simultaneously
 #zip_longest stops when all lists are exhausted. When the shorter iterator(s) are exhausted, zip_longest yields a tuple with None value.
-with open(currentDirectory + "/Elasticsearch_Data/RecreationCenterLogs.txt", "w") as f:
+with open(currentDirectory + "/../elasticsearch/data_files/RecreationCenterLogs.txt", "w") as f:
     for line in range(7500):
         randomStudentChoice = random.randint(0, len(drexelIDList) - 1)
         if not isFirstIteration:

@@ -24,7 +24,7 @@ phone = ""
 homeAddress = ""
 
 campusAddressOptions = []
-with open(currentDirectory + "/Postgres_Data/Postgres-housing-options.csv", 'r', encoding='utf-8')as file: #pulling from the generated/scraped housing options data
+with open(currentDirectory + "/../postgres/data_files/Postgres-housing-options.csv", 'r', encoding='utf-8')as file: #pulling from the generated/scraped housing options data
         csvFile = csv.reader(file)
         for line in csvFile:
             campusAddressOptions.append(line[1])
@@ -68,7 +68,7 @@ minor = ""
 minorOptions = []
 undergraduateMajorOptions = []
 graduateMajorOptions = []
-with open(currentDirectory + "/Postgres_Data/Postgres-programs.csv", 'r', encoding='utf-8')as file: #pulling from the generated/scraped programs data
+with open(currentDirectory + "/../postgres/data_files/Postgres-programs.csv", 'r', encoding='utf-8')as file: #pulling from the generated/scraped programs data
         csvFile = csv.reader(file)
         for line in csvFile:
             if "Minor in" in line[0]:
@@ -270,31 +270,31 @@ for i in range(10000):
     tuitionRows.append([drexelID, year, tuitionAndFees, annualFinancialAidAward, subsidizedLoanOffered, unsubsidizedLoanOffered, acceptedSubsidized, acceptedUnsubsidized, outstandingBalances])
 
 #MariaDB.drexel_people.basic_student_info
-with open(currentDirectory + "/MariaDB_Data/MariaDB-basic_student_info.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../mariadb/data_files/MariaDB-basic_student_info.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(basicStudentInfoHeaders)         
     csvwriter.writerows(basicStudentInfoRows)
 
 #MariaDB.locations.student_locations
-with open(currentDirectory + "/MariaDB_Data/MariaDB-student_locations.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../mariadb/data_files/MariaDB-student_locations.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(studentLocationsHeaders)         
     csvwriter.writerows(studentLocationsRows)
 
 #Cassandra.finances.health_insurance
-with open(currentDirectory + "/Cassandra_Data/Cassandra-health_insurance.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../cassandra/data_files/Cassandra-health_insurance.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(healthInsuranceHeaders)         
     csvwriter.writerows(healthInsuranceRows)
 
 #Postgres.education.student_education_choices
-with open(currentDirectory + "/Postgres_Data/Postgres-student_education_choices.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../postgres/data_files/Postgres-student_education_choices.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(studentEducationChoicesHeaders)         
     csvwriter.writerows(studentEducationChoicesRows)
 
 #Cassandra.finances.tuition
-with open(currentDirectory + "/Cassandra_Data/Cassandra-tuition.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../cassandra/data_files/Cassandra-tuition.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(tuitionHeaders)         
     csvwriter.writerows(tuitionRows)

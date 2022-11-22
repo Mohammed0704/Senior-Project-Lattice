@@ -113,13 +113,13 @@ for campusLocation in campusLocationRows:
     resourceLocations.append([campusLocation[0], campusLocation[2], campusLocation[1]])
 
 #Postgres.campus_life.locations
-with open(currentDirectory + "/Postgres_Data/Postgres-locations.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../postgres/data_files/Postgres-locations.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(campusLocationHeaders)         
     csvwriter.writerows(campusLocationRows)
 
 #MariaDB.locations.resource_locations
-with open(currentDirectory + "/MariaDB_Data/MariaDB-resource_locations.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../mariadb/data_files/MariaDB-resource_locations.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(resourceLocationsHeaders)         
     csvwriter.writerows(resourceLocations)

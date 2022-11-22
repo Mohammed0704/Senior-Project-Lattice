@@ -10,9 +10,6 @@ services:
       MYSQL_USER: user
       MYSQL_PASSWORD: user
 
-    volumes:
-      - ./mariadb/init:/docker-entrypoint-initdb.d
-
   mongo:
     image: mongo:latest
     container_name: mongo
@@ -51,18 +48,6 @@ services:
     image: "docker.elastic.co/kibana/kibana:8.4.3"
     ports:
       - 5601:5601
-    depends_on:
-      - 'elasticsearch'
-
-  logstash:
-    container_name: logstash
-    image: "docker.elastic.co/logstash/logstash:8.4.3"
-    ports:
-      - 5000:5000
-      - 5044:5044
-    environment:
-      - username=elasticsearch
-      - password=changeme
     depends_on:
       - 'elasticsearch'
 
