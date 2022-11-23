@@ -299,13 +299,13 @@ employeeSalariesRows.append(["jes53", 104876, "8/29/1975", "Jonathan E. Spanier"
 #Dean to only be picked to one department
 
 #MariaDB.drexel_people.basic_employee_info
-with open(currentDirectory + "/MariaDB_Data/MariaDB-basic_employee_info.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../mariadb/data_files/MariaDB-basic_employee_info.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(basicEmployeeInfoHeaders)         
     csvwriter.writerows(basicEmployeeInfoRows)
 
 #Cassandra.finances.employee_salaries
-with open(currentDirectory + "/Cassandra_Data/Cassandra-employee_salaries.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../cassandra/data_files/Cassandra-employee_salaries.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(employeeSalariesHeaders)       
     csvwriter.writerows(employeeSalariesRows)

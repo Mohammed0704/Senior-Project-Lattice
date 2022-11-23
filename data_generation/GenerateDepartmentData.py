@@ -100,13 +100,8 @@ def main():
     
     cwd = os.getcwd()
     
-    educationInfoPath = cwd + os.sep + "Postgres_Data" + os.sep + "Postgres-education-departments.csv"
-    additionalInfoPath = cwd + os.sep + "Elasticsearch_Data" + os.sep + "Elasticsearch-drexel_additional_education_info-departments.csv"
-    
-    if "Postgres_Data" in os.listdir(cwd) and educationInfoPath not in os.listdir("Postgres_Data"):
-        os.system(f"touch {educationInfoPath}")
-    if "Elasticsearch_Data" in os.listdir(cwd) and additionalInfoPath not in os.listdir("Elasticsearch_Data"):
-        os.system(f"touch {additionalInfoPath}")
+    educationInfoPath = cwd + os.sep + ".." + os.sep + "postgres" + os.sep + "data_files" + os.sep + "Postgres-education-departments.csv"
+    additionalInfoPath = cwd + os.sep + ".." + os.sep + "elasticsearch" + os.sep + "data_files" + os.sep + "Elasticsearch-drexel_additional_education_info-departments.csv"
     
     with open(educationInfoPath, 'w', newline='') as csvfile: 
         csvwriter = csv.writer(csvfile) 

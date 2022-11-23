@@ -163,10 +163,10 @@ for system in Systems:
                         "support_contact": support_contact})
 
 #Cassandra.finances.software_costs
-with open(currentDirectory + "/Cassandra_Data/Cassandra-software_costs.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../cassandra/data_files/Cassandra-software_costs.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(cassandraSoftwareCostsHeaders)         
     csvwriter.writerows(cassandraSoftwareCosts)
 
-with open(currentDirectory + "/MongoDB_Data/MongoDB-software.json", "w") as jsonfile:
+with open(currentDirectory + "/../mongodb/data_files/MongoDB-software.json", "w") as jsonfile:
   json.dump(mongoSoftware, jsonfile, indent = 4)

@@ -133,8 +133,8 @@ def main():
     
     cwd = os.getcwd()
     
-    courseInfoPath = cwd + os.sep + "MongoDB_Data" + os.sep + "MongoDB-course-info.json"
-    courseRestrictionsPath = cwd + os.sep + "MongoDB_Data" + os.sep + "MongoDB-course-restrictions.json"
+    courseInfoPath = cwd + os.sep + ".." + os.sep + "mongodb" + os.sep + "data_files" + os.sep + "MongoDB-course-info.json"
+    courseRestrictionsPath = cwd + os.sep + ".." + os.sep + "mongodb" + os.sep + "data_files" + os.sep + "MongoDB-course-restrictions.json"
     
     with open(courseInfoPath, "w") as jsonFile:
         json.dump(courseInfoList, jsonFile, indent=4)

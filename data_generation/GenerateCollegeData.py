@@ -99,7 +99,7 @@ collegeRows.append(["Biomedical Engineering, Science and Health Systems", "We be
 
 
 #Postgres.campus_life.locations
-with open(currentDirectory + "/Postgres_Data/Postgres-colleges.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../postgres/data_files/Postgres-colleges.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(collegeHeaders)         
     csvwriter.writerows(collegeRows)
