@@ -7,7 +7,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: user
       MYSQL_DATABASE: mariadb
-      MYSQL_USER: user
+      MYSQL_USER: root
       MYSQL_PASSWORD: user
 
   mongo:
