@@ -50,10 +50,12 @@ docker exec -it postgres psql -U postgres -c "CREATE TABLE education.programs (
                                                 is_graduate_program boolean,
                                                 area_of_study text,
                                                 credit_requirement decimal,
-                                                is_stem boolean
+                                                is_stem boolean,
+                                                url text,
+                                                term text
                                             );"
 
-docker exec -it postgres psql -U postgres -c "\copy education.programs (program_name, description, is_graduate_program, area_of_study, credit_requirement, is_stem) from '/data_files/Postgres-programs.csv' DELIMITER ',' CSV HEADER encoding 'windows-1251';"
+docker exec -it postgres psql -U postgres -c "\copy education.programs from '/data_files/Postgres-programs.csv' DELIMITER ',' CSV HEADER encoding 'windows-1251';"
 
 #Create table and ingest into education.areas_of_study
 docker exec -it postgres psql -U postgres -c "CREATE TABLE education.areas_of_study (
