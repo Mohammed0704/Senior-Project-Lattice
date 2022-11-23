@@ -376,14 +376,14 @@ additionalAreaOfStudyRows.append([programNames[85], programNames[85], "TRUE", "F
 
 
 #Postgres.education.areas_of_study
-with open(currentDirectory + "/Postgres_Data/Postgres-area_of_study.csv", "w", newline='') as csvfile: 
+with open(currentDirectory + "/../postgres/data_files/Postgres-area_of_study.csv", "w", newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(areaOfStudyHeaders)         
     csvwriter.writerows(areaOfStudyRows)
 
 
 #Elasticsearch.additional_education_info.areas_of_study
-with open(currentDirectory + "/Elasticsearch_Data/Elasticsearch-additional_area_of_study.csv", "w", newline='') as csvfile: 
+with open(currentDirectory + "/../elasticsearch/data_files/Elasticsearch-additional_area_of_study.csv", "w", newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(additionalAreaOfStudyHeaders)         
     csvwriter.writerows(additionalAreaOfStudyRows)

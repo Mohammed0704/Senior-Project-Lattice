@@ -50,7 +50,7 @@ campusOrganizationsRows.append(["https://dragonlink.drexel.edu/organization/zeta
 
 
 #Postgres.campus_life.locations
-with open(currentDirectory + "/data_generation/Postgres_Data/Postgres-organizations.csv", 'w', newline='') as csvfile: 
+with open(currentDirectory + "/../postgres/data_files/Postgres-organizations.csv", 'w', newline='') as csvfile: 
     csvwriter = csv.writer(csvfile) 
     csvwriter.writerow(campusOrganizationsHeaders)         
     csvwriter.writerows(campusOrganizationsRows)

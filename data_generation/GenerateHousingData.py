@@ -141,8 +141,8 @@ def main():
     
     cwd = os.getcwd()
     
-    housingCostsPath = cwd + os.sep + "Cassandra_Data" + os.sep + "Cassandra-housing-costs.csv"
-    housingOptionsPath = cwd + os.sep + "Postgres_Data" + os.sep + "Postgres-housing-options.csv"
+    housingCostsPath = cwd + os.sep + ".." + os.sep + "cassandra" + os.sep + "data_files" + os.sep + "Cassandra-housing-costs.csv"
+    housingOptionsPath = cwd + os.sep + ".." + os.sep + "postgres" + os.sep + "data_files" + os.sep + "Postgres-housing-options.csv"
 
     #Generate overhead_costs data
     overheadCostHeaders = ["Name of Building", "Monthly Electricity", "Monthly Heating", "Monthly Water", "Monthly Additional Utilities"]
@@ -160,22 +160,17 @@ def main():
             monthlyAdditionalUtilities = random.randint(1500, 4300)
         overheadCost.append([residence, monthlyElectricity, monthlyHeating, monthlyWater, monthlyAdditionalUtilities])
     
-    if "Cassandra_Data" in os.listdir(cwd) and housingCostsPath not in os.listdir("Elasticsearch_Data"):
-        os.system(f"touch {housingCostsPath}")
-    if "Postgres_Data" in os.listdir(cwd) and housingOptionsPath not in os.listdir("Postgres_Data"):
-        os.system(f"touch {housingOptionsPath}")
-    
-    with open(cwd + "/Cassandra_Data/Cassandra-housing-costs.csv", 'w', newline='') as csvfile: 
+    with open(cwd + "/../elasticsearch/data_files/Cassandra-housing-costs.csv", 'w', newline='') as csvfile: 
         csvwriter = csv.writer(csvfile) 
         csvwriter.writerow(housingCostsHeaders)         
         csvwriter.writerows(housingCosts)
     
-    with open(cwd + "/Postgres_Data/Postgres-housing-options.csv", 'w', newline='') as csvfile: 
+    with open(cwd + "/../elasticsearch/data_files/Postgres-housing-options.csv", 'w', newline='') as csvfile: 
         csvwriter = csv.writer(csvfile) 
         csvwriter.writerow(housingOptionsHeaders)         
         csvwriter.writerows(housingOptions)
 
-    with open(cwd + "/Cassandra_Data/Cassandra-overhead-costs.csv", 'w', newline='') as csvfile: 
+    with open(cwd + "/../elasticsearch/data_files/Cassandra-overhead-costs.csv", 'w', newline='') as csvfile: 
         csvwriter = csv.writer(csvfile) 
         csvwriter.writerow(overheadCostHeaders)         
         csvwriter.writerows(overheadCost)
