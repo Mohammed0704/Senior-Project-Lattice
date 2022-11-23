@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
 
-#copy MariaDB data into the MariaDB container
-docker cp ./MariaDB/data_files MariaDB:/
+#copy mariadb data into the mariadb container
+docker cp ./mariadb/data_files mariadb:/
 
-#docker exec -it cassandra cqlsh -e "DROP KEYSPACE drexel_people;"
-#docker exec -it cassandra cqlsh -e "CREATE KEYSPACE drexel_people WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };"
+docker exec -it mariadb mariadb --user root -puser mariadb -e "DROP SCHEMA IF EXISTS drexel_people;"
+docker exec -it mariadb mariadb --user root -puser mariadb -e "CREATE SCHEMA drexel_people"
 
-#docker exec -it cassandra cqlsh -e "DROP KEYSPACE locations;"
-#docker exec -it cassandra cqlsh -e "CREATE KEYSPACE locations WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };"
+docker exec -it mariadb mariadb --user root -puser mariadb -e "DROP SCHEMA IF EXISTS locations;"
+docker exec -it mariadb mariadb --user root -puser mariadb -e "CREATE SCHEMA locations"
 
 #basic_employee_info
-docker exec -it MariaDB cqlsh -e "CREATE TABLE drexel_people.basic_employee_info(
+docker exec -it mariadb mariadb --user root -puser mariadb -e "CREATE TABLE drexel_people.basic_employee_info(
                                   drexel_id varchar(16) PRIMARY KEY,
                                   last_name varchar(64),
                                   first_name varchar(64),
@@ -20,7 +20,7 @@ docker exec -it MariaDB cqlsh -e "CREATE TABLE drexel_people.basic_employee_info
                                   personal_pronouns varchar(16),
                                   email varchar(64),
                                   primary_department varchar(128),
-                                  gender varchar(!6),
+                                  gender varchar(16),
                                   marital_status varchar(16),
                                   ethnicity varchar(16),
                                   race varchar(16),
@@ -31,12 +31,17 @@ docker exec -it MariaDB cqlsh -e "CREATE TABLE drexel_people.basic_employee_info
                                   );"
 
 
-docker exec -it MariaDB cqlsh -e "COPY drexel_people.basic_employee_info (drexel_id, last_name, first_name, middle_name, date_of_birth, chosen_name, personal_pronouns, email, primary_department, gender, marital_status, ethnicity, race, living_address, mail_address, phone_number, role)
-                FROM '/data_files/MariaDB-basic_employee_info.csv' 
-                WITH HEADER = TRUE;"
+docker exec -it mariadb mariadb --user root -puser mariadb -e "LOAD DATA LOCAL INFILE '/data_files/MariaDB-basic_employee_info.csv' 
+                                                               INTO table drexel_people.basic_employee_info 
+                                                               FIELDS TERMINATED BY ','  
+                                                               LINES TERMINATED BY '\r\n'
+                                                               IGNORE 1 lines
+                                                               (drexel_id, last_name, first_name, middle_name, date_of_birth, chosen_name, personal_pronouns, email, primary_department, gender, marital_status, ethnicity, race, living_address, mail_address, phone_number, role)
+                                                               ;"
 
+<<asdf
 #basic_student_info
-docker exec -it MariaDB cqlsh -e "CREATE TABLE drexel_people.basic_student_info(
+docker exec -it mariadb mariadb --user root -puser mariadb -e "CREATE TABLE drexel_people.basic_student_info(
                                   drexel_id varchar(16) PRIMARY KEY, 
                                   first_name varchar(64), 
                                   middle_name varchar(64),
@@ -54,31 +59,31 @@ docker exec -it MariaDB cqlsh -e "CREATE TABLE drexel_people.basic_student_info(
                                   home_address varchar(64)
                                   );"
 
-docker exec -it MariaDB cqlsh -e "COPY drexel_people.basic_student_info (drexel_id, first_name, middle_name, last_name, date_of_birth, email, chosen_name, gender, personal_pronoun, ethnicity, race, expected_graduation_year, student_program_type, phone, home_address) 
+docker exec -it mariadb mariadb --user root -puser mariadb -e "COPY drexel_people.basic_student_info (drexel_id, first_name, middle_name, last_name, date_of_birth, email, chosen_name, gender, personal_pronoun, ethnicity, race, expected_graduation_year, student_program_type, phone, home_address) 
                 FROM '/data_files/MariaDB-basic_student_info.csv' 
                 WITH HEADER = TRUE;"
 
 #resource_locations
-docker exec -it MariaDB cqlsh -e "CREATE TABLE location.resource_locations(
-                                  name_of_resource varchar(64)
-                                  address varchar(128)
+docker exec -it mariadb mariadb --user root -puser mariadb -e "CREATE TABLE location.resource_locations(
+                                  name_of_resource varchar(64) PRIMARY KEY,
+                                  address varchar(128),
                                   description varchar(256)
                                   );"
 
-docker exec -it MariaDB cqlsh -e "COPY location.resource_locations (name_of_resource, address, description)
+docker exec -it mariadb mariadb --user root -puser mariadb -e "COPY location.resource_locations (name_of_resource, address, description)
                 FROM '/data_files/MariaDB-resource_locations.csv'
                 WITH HEADER = TRUE;"
 
 #student_locations
-docker exec -it MariaDB cqlsh -e "CREATE TABLE location.student_locations(
-                                  drexel_id varchar(16),
+docker exec -it mariadb mariadb --user root -puser mariadb -e "CREATE TABLE location.student_locations(
+                                  drexel_id varchar(16) PRIMARY KEY,
                                   is_international boolean,
                                   living_address varchar(64),
                                   is_communter boolean,
                                   has_parking_pass boolean
                                   );"
 
-docker exec -it MariaDB cqlsh -e "COPY location.student_locations (name_of_resource, address, description)
+docker exec -it mariadb mariadb --user root -puser mariadb -e "COPY location.student_locations (name_of_resource, address, description)
                 FROM '/data_files/MariaDB-student_locations.csv' 
-                WITH HEADER = TRUE;"
-                
+                WITH HEADER = TRUE;" 
+               
