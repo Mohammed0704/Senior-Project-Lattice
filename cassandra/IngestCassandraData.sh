@@ -3,7 +3,7 @@
 #copy cassandra data into the cassandra container
 docker cp ./cassandra/data_files cassandra:/
 
-docker exec -it cassandra cqlsh -e "DROP KEYSPACE finances;"
+docker exec -it cassandra cqlsh -e "DROP KEYSPACE IF EXISTS finances;"
 docker exec -it cassandra cqlsh -e "CREATE KEYSPACE finances WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };"
 
 #employee_salaries
