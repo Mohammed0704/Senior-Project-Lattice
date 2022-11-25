@@ -133,6 +133,21 @@ systemVars = ["PuTTY",
               "N/A"]
 Systems.append(systemVars)
 
+##Tux
+systemVars = ["Tux",
+              0,
+              "CCI maintains a compute environment to support class requirements. Typically referred to as Tux, this environment provides various services.",
+              "https://www.cs.drexel.edu/~kschmidt/Ref/csLogin.html",
+              False,
+              "faculty,professional staff,students",
+              0,
+              "compute environment",
+              True,
+              "windows,linux,mac",
+              "N/A",
+              "N/A"]
+Systems.append(systemVars)
+
 for system in Systems:
   software_name = system[0]
   drexel_annual_license_cost = system[1]
