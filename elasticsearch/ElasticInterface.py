@@ -4,6 +4,9 @@ class Elastic:
     
     def __init__(self):
         self.es = Elasticsearch(hosts=["http://localhost:9200"], basic_auth=('elastic', 'Aouf7oHRS6pac2frrC5a'))
+
+    def getESClient(self):
+        return self.es
         
     def createIndex(self, indexName: str, properties: list):
         mappings={ "properties": {} }
