@@ -1,8 +1,5 @@
 import csv 
 import json 
-import collections
-orderedDict = collections.OrderedDict()
-from collections import OrderedDict
 
 def ConvertCSVToESJSON(indexName, csvFilePath, jsonFilePath):
     with open(csvFilePath, encoding='utf-8') as csvf: 
@@ -23,6 +20,38 @@ def ConvertCSVToESJSON(indexName, csvFilePath, jsonFilePath):
                 jsonf.write(rowJSON)
                 jsonf.write("\n")
                 currentIndex += 1
+
+def ConvertTextLogToESJSON(indexName, actionedObject, logFilePath, jsonFilePath):
+    logFileLogs = open(logFilePath, "r")
+    logs = logFileLogs.readlines()
+
+    with open(jsonFilePath, 'w', encoding='utf-8') as jsonf:
+        currentIndex = 1
+        for line in logs:
+            if line.startswith("----"):
+                continue
+            else:
+                jsonf.write("{ \"index\":{\"_index\": \"" + indexName + "\", \"_id\": \"" + str(currentIndex) + "\" }}")
+                jsonf.write("\n")
+                currentIndex += 1
+            
+            log = line.split(" | ")
+            date_time = log[0].strip(r"[|]").split(" ")
+            date = date_time[0]
+            time = date_time[1]
+
+            doc = {
+                "drexelID": log[2][log[2].index(":")+2:],
+                "name": log[1],
+                "action": log[3],
+                actionedObject: log[4].strip(),
+                "date": date,
+                "time": time
+            }
+
+            rowJSON = json.dumps(doc)
+            jsonf.write(rowJSON)
+            jsonf.write("\n")
           
 csvFilePath = r'./elasticsearch/data_files/Elasticsearch-additional_area_of_study.csv'
 jsonFilePath = r'./elasticsearch/data_files/Elasticsearch-additional_area_of_study.json'
@@ -35,3 +64,15 @@ ConvertCSVToESJSON("departments", csvFilePath, jsonFilePath)
 csvFilePath = r'./elasticsearch/data_files/Elasticsearch-programs.csv'
 jsonFilePath = r'./elasticsearch/data_files/Elasticsearch-programs.json'
 ConvertCSVToESJSON("programs", csvFilePath, jsonFilePath)
+
+logTextFilePath = r'./elasticsearch/data_files/logs/LibraryLogs.txt'
+jsonFilePath = r'./elasticsearch/data_files/logs/LibraryLogs.json'
+ConvertTextLogToESJSON("hagerty_library_log", "location", logTextFilePath, jsonFilePath)
+
+logTextFilePath = r'./elasticsearch/data_files/logs/RecreationCenterLogs.txt'
+jsonFilePath = r'./elasticsearch/data_files/logs/RecreationCenterLogs.json'
+ConvertTextLogToESJSON("recreation_center_logs", "location", logTextFilePath, jsonFilePath)
+
+logTextFilePath = r'./elasticsearch/data_files/logs/SystemsLogs.txt'
+jsonFilePath = r'./elasticsearch/data_files/logs/SystemsLogs.json'
+ConvertTextLogToESJSON("systems_logs", "system", logTextFilePath, jsonFilePath)
