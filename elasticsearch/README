@@ -5,7 +5,7 @@ curl -X DELETE 'http://localhost:9200/samples'
 curl -X GET 'http://localhost:9200/_cat/indices?v'
 
 ----List all docs in index
-url -X GET 'http://localhost:9200/sample/_search'c
+curl -X GET 'http://localhost:9200/sample/_search'
 
 ----Query using URL parameters
 curl -X GET http://localhost:9200/samples/_search?q=school:Harvard
@@ -29,7 +29,6 @@ curl -XPOST --header 'Content-Type: application/json' http://localhost:9200/samp
 }'
 
 ----Bulk load JSON data
-export pwd="elastic:"
 curl --user $pwd  -H 'Content-Type: application/x-ndjson' -XPOST 'https://58571402f5464923883e7be42a037917.eu-central-1.aws.cloud.es.io:9243/0/_bulk?pretty' --data-binary @<file>
 
 

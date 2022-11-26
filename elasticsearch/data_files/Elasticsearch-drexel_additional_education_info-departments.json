@@ -1,0 +1,38 @@
+{ "index":{"_index": "departments", "_id": "1" }}
+{"Department Name": "Biodiversity, Earth & Environmental Science", "Has Field Sites": true, "URL": "https://drexel.edu/coas/academics/departments-centers/bees/"}
+{ "index":{"_index": "departments", "_id": "2" }}
+{"Department Name": "Biology", "Has Field Sites": false, "URL": "https://drexel.edu/coas/academics/departments-centers/biology/"}
+{ "index":{"_index": "departments", "_id": "3" }}
+{"Department Name": "Chemistry", "Has Field Sites": true, "URL": "https://drexel.edu/coas/academics/departments-centers/chemistry/"}
+{ "index":{"_index": "departments", "_id": "4" }}
+{"Department Name": "Communication", "Has Field Sites": false, "URL": "https://drexel.edu/coas/academics/departments-centers/communication/"}
+{ "index":{"_index": "departments", "_id": "5" }}
+{"Department Name": "Criminology & Justice Studies", "Has Field Sites": true, "URL": "https://drexel.edu/coas/academics/departments-centers/criminology-justice-studies/"}
+{ "index":{"_index": "departments", "_id": "6" }}
+{"Department Name": "English & Philosophy", "Has Field Sites": true, "URL": "https://drexel.edu/coas/academics/departments-centers/english-philosophy/"}
+{ "index":{"_index": "departments", "_id": "7" }}
+{"Department Name": "Global Studies and Modern Languages", "Has Field Sites": true, "URL": "https://drexel.edu/coas/academics/departments-centers/global-studies-modern-languages/"}
+{ "index":{"_index": "departments", "_id": "8" }}
+{"Department Name": "History", "Has Field Sites": true, "URL": "https://drexel.edu/coas/academics/departments-centers/history/"}
+{ "index":{"_index": "departments", "_id": "9" }}
+{"Department Name": "Mathematics", "Has Field Sites": false, "URL": "https://drexel.edu/coas/academics/departments-centers/mathematics/"}
+{ "index":{"_index": "departments", "_id": "10" }}
+{"Department Name": "Physics", "Has Field Sites": true, "URL": "https://drexel.edu/coas/academics/departments-centers/physics/"}
+{ "index":{"_index": "departments", "_id": "11" }}
+{"Department Name": "Politics", "Has Field Sites": true, "URL": "https://drexel.edu/coas/academics/departments-centers/politics/"}
+{ "index":{"_index": "departments", "_id": "12" }}
+{"Department Name": "Psychological and Brain Sciences", "Has Field Sites": true, "URL": "https://drexel.edu/coas/academics/departments-centers/psychology/"}
+{ "index":{"_index": "departments", "_id": "13" }}
+{"Department Name": "Sociology", "Has Field Sites": true, "URL": "https://drexel.edu/coas/academics/departments-centers/sociology/"}
+{ "index":{"_index": "departments", "_id": "14" }}
+{"Department Name": "Chemical and Biological Engineering", "Has Field Sites": true, "URL": "https://drexel.edu/engineering/academics/departments/chemical-biological-engineering/"}
+{ "index":{"_index": "departments", "_id": "15" }}
+{"Department Name": "Civil, Architectural and Environmental Engineering", "Has Field Sites": true, "URL": "https://drexel.edu/engineering/academics/departments/civil-architectural-environmental-engineering/"}
+{ "index":{"_index": "departments", "_id": "16" }}
+{"Department Name": "Electrical and Computer Engineering", "Has Field Sites": true, "URL": "https://drexel.edu/engineering/academics/departments/electrical-computer-engineering/"}
+{ "index":{"_index": "departments", "_id": "17" }}
+{"Department Name": "Engineering Leadership and Society", "Has Field Sites": true, "URL": "https://drexel.edu/engineering/academics/departments/engineering-leadership-society/"}
+{ "index":{"_index": "departments", "_id": "18" }}
+{"Department Name": "Materials Science and Engineering", "Has Field Sites": true, "URL": "https://drexel.edu/engineering/academics/departments/materials-science-engineering/"}
+{ "index":{"_index": "departments", "_id": "19" }}
+{"Department Name": "Mechanical Engineering and Mechanics", "Has Field Sites": true, "URL": "https://drexel.edu/engineering/academics/departments/mechanical-engineering/"}

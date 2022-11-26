@@ -1,0 +1,172 @@
+{ "index":{"_index": "area_of_study", "_id": "1" }}
+{"Name": "Accounting", "Description": "Accounting", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "2" }}
+{"Name": "Brand & Reputation Management", "Description": "Brand & Reputation Management", "Has Major": false, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "3" }}
+{"Name": "Business Administration", "Description": "Business Administration", "Has Major": false, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "4" }}
+{"Name": "Business Analytics", "Description": "Business Analytics", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "5" }}
+{"Name": "Business Consulting", "Description": "Business Consulting", "Has Major": false, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "6" }}
+{"Name": "Business & Engineering", "Description": "Business & Engineering", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "7" }}
+{"Name": "Economics", "Description": "Economics", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "8" }}
+{"Name": "Esport Business", "Description": "Esport Business", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "9" }}
+{"Name": "Finance", "Description": "Finance", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "10" }}
+{"Name": "Financial Technology", "Description": "Financial Technology", "Has Major": false, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "11" }}
+{"Name": "General Business", "Description": "General Business", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "12" }}
+{"Name": "International Business", "Description": "International Business", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "13" }}
+{"Name": "Management Information Systems", "Description": "Management Information Systems", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "14" }}
+{"Name": "Marketing", "Description": "Marketing", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "15" }}
+{"Name": "Operations & Supply Chain Management", "Description": "Operations & Supply Chain Management", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "16" }}
+{"Name": "Organizational Management", "Description": "Organizational Management", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "17" }}
+{"Name": "Real Estate Management & Development", "Description": "Real Estate Management & Development", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "18" }}
+{"Name": "Social Responsibility in Business", "Description": "Social Responsibility in Business", "Has Major": false, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "19" }}
+{"Name": "Sport Business", "Description": "Sport Business", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "20" }}
+{"Name": "Sport Management", "Description": "Sport Management", "Has Major": false, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "21" }}
+{"Name": "Technology Innovation Management", "Description": "Technology Innovation Management", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "22" }}
+{"Name": "Computer Science", "Description": "Computer Science", "Has Major": true, "Has Minor": true, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "23" }}
+{"Name": "Software Engineering", "Description": "Software Engineering", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "24" }}
+{"Name": "Data Science", "Description": "Data Science", "Has Major": true, "Has Minor": true, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "25" }}
+{"Name": "Artificial Intelligence and Machine Learning", "Description": "Artificial Intelligence and Machine Learning", "Has Major": true, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "26" }}
+{"Name": "Cybersecurity", "Description": "Cybersecurity", "Has Major": true, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "27" }}
+{"Name": "Software Architecture", "Description": "Software Architecture", "Has Major": false, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "28" }}
+{"Name": "Software Management", "Description": "Software Management", "Has Major": false, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "29" }}
+{"Name": "Information Systems", "Description": "Information Systems", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "30" }}
+{"Name": "Human-Computer Interaction & User Experience", "Description": "Human-Computer Interaction & User Experience", "Has Major": false, "Has Minor": true, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "31" }}
+{"Name": "Computing and Security Technology", "Description": "Computing and Security Technology", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "32" }}
+{"Name": "Health Informatics", "Description": "Health Informatics", "Has Major": true, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "33" }}
+{"Name": "Information Science", "Description": "Information Science", "Has Major": false, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "34" }}
+{"Name": "Big Data Analytics", "Description": "Big Data Analytics", "Has Major": false, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "35" }}
+{"Name": "Architectural Engineering", "Description": "Architectural Engineering", "Has Major": true, "Has Minor": true, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "36" }}
+{"Name": "Chemical Engineering", "Description": "Chemical Engineering", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "37" }}
+{"Name": "Civil Engineering", "Description": "Civil Engineering", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "38" }}
+{"Name": "Computer Engineering", "Description": "Computer Engineering", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "39" }}
+{"Name": "Construction Management", "Description": "Construction Management", "Has Major": true, "Has Minor": true, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "40" }}
+{"Name": "Electrical Engineering", "Description": "Electrical Engineering", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "41" }}
+{"Name": "Engineering Technology", "Description": "Engineering Technology", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "42" }}
+{"Name": "Environmental Engineering", "Description": "Environmental Engineering", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "43" }}
+{"Name": "Materials Science and Engineering", "Description": "Materials Science and Engineering", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "44" }}
+{"Name": "Mechanical Engineering", "Description": "Mechanical Engineering", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "45" }}
+{"Name": "Engineering Management", "Description": "Engineering Management", "Has Major": true, "Has Minor": true, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "46" }}
+{"Name": "Internet of Things", "Description": "Internet of Things", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "47" }}
+{"Name": "Machine Learning Engineering", "Description": "Machine Learning Engineering", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "48" }}
+{"Name": "Nanomaterials", "Description": "Nanomaterials", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "49" }}
+{"Name": "Peace Engineering", "Description": "Peace Engineering", "Has Major": true, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "50" }}
+{"Name": "Robotics And Autonomy", "Description": "Robotics And Autonomy", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "51" }}
+{"Name": "Systems Engineering", "Description": "Systems Engineering", "Has Major": true, "Has Minor": true, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "52" }}
+{"Name": "Engineering Leadership", "Description": "Engineering Leadership", "Has Major": false, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "53" }}
+{"Name": "Hardware Systems Engineering", "Description": "Hardware Systems Engineering", "Has Major": false, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "54" }}
+{"Name": "Naval Engineering", "Description": "Naval Engineering", "Has Major": false, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "55" }}
+{"Name": "Pharmaceutical and Medical Device Manufacturing", "Description": "Pharmaceutical and Medical Device Manufacturing", "Has Major": false, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "56" }}
+{"Name": "Systems Design and Development", "Description": "Systems Design and Development", "Has Major": false, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "57" }}
+{"Name": "Systems Reliability Engineering", "Description": "Systems Reliability Engineering", "Has Major": false, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "58" }}
+{"Name": "Animation & Visual Effects", "Description": "Animation & Visual Effects", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "59" }}
+{"Name": "Architecture", "Description": "Architecture", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "60" }}
+{"Name": "Design & Merchandising", "Description": "Design & Merchandising", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "61" }}
+{"Name": "Digital Media & Virtual Production", "Description": "Digital Media & Virtual Production", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "62" }}
+{"Name": "Fashion Design", "Description": "Fashion Design", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "63" }}
+{"Name": "Game Design & Production", "Description": "Game Design & Production", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "64" }}
+{"Name": "Graphic Design", "Description": "Graphic Design", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "65" }}
+{"Name": "Interior Design", "Description": "Interior Design", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "66" }}
+{"Name": "Music Industry", "Description": "Music Industry", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "67" }}
+{"Name": "Photography", "Description": "Photography", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "68" }}
+{"Name": "Product Design", "Description": "Product Design", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "69" }}
+{"Name": "User Experience & Interaction Design", "Description": "User Experience & Interaction Design", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "70" }}
+{"Name": "Digital Research", "Description": "Digital Research", "Has Major": true, "Has Minor": false, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "71" }}
+{"Name": "Retail & Merchandising", "Description": "Retail & Merchandising", "Has Major": true, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "72" }}
+{"Name": "Television & Media Management", "Description": "Television & Media Management", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "73" }}
+{"Name": "Entertainment & Arts Management", "Description": "Entertainment & Arts Management", "Has Major": false, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "74" }}
+{"Name": "Music Performance", "Description": "Music Performance", "Has Major": false, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "75" }}
+{"Name": "Video Production", "Description": "Video Production", "Has Major": false, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "76" }}
+{"Name": "Dance", "Description": "Dance", "Has Major": false, "Has Minor": true, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "77" }}
+{"Name": "Behavaviroral Health Counseling", "Description": "Behavaviroral Health Counseling", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "78" }}
+{"Name": "Food and Hospitality Management", "Description": "Food and Hospitality Management", "Has Major": true, "Has Minor": true, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "79" }}
+{"Name": "Health Administration", "Description": "Health Administration", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "80" }}
+{"Name": "Health Sciences", "Description": "Health Sciences", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "81" }}
+{"Name": "Nutrition Sciences", "Description": "Nutrition Sciences", "Has Major": true, "Has Minor": true, "Has Certificate": false}
+{ "index":{"_index": "area_of_study", "_id": "82" }}
+{"Name": "Undergraduate Nursing", "Description": "Undergraduate Nursing", "Has Major": true, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "83" }}
+{"Name": "Food and Hospitality Management", "Description": "Food and Hospitality Management", "Has Major": true, "Has Minor": true, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "84" }}
+{"Name": "Graduate Nursing", "Description": "Graduate Nursing", "Has Major": true, "Has Minor": false, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "85" }}
+{"Name": "Physical Therapy and Rehbilitation Science", "Description": "Physical Therapy and Rehbilitation Science", "Has Major": true, "Has Minor": true, "Has Certificate": true}
+{ "index":{"_index": "area_of_study", "_id": "86" }}
+{"Name": "Physician Assistant", "Description": "Physician Assistant", "Has Major": true, "Has Minor": false, "Has Certificate": false}

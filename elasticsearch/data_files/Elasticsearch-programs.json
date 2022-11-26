@@ -1,0 +1,836 @@
+{ "index":{"_index": "programs", "_id": "1" }}
+{"program_name": "Bachelor of Science in Business Administration in Accounting", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/accounting/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "2" }}
+{"program_name": "Bachelor of Science in Animation & Visual Effects", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/animationandvisualeffects/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "3" }}
+{"program_name": "Bachelor of Science in Architectural Engineering in Architectural Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/architecturalengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "4" }}
+{"program_name": "Bachelor of Science in Architectural Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/architecturalstudiesbs/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "5" }}
+{"program_name": "Bachelor of Architecture in Architecture", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/architecture/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "6" }}
+{"program_name": "Bachelor of Arts in Art History", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/arthistory/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "7" }}
+{"program_name": "Bachelor of Science in Art History", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/arthistorybs/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "8" }}
+{"program_name": "Bachelor of Science in Behavioral Economics, Business and Organizations", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/behavioraleconomicsbusinessandorganizations/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "9" }}
+{"program_name": "Bachelor of Science in Behavioral Health Counseling", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/behavorialhealthcounseling/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "10" }}
+{"program_name": "Bachelor of Science in Biological Sciences", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/biologicalsciences/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "11" }}
+{"program_name": "Bachelor of Science in Biomedical Engineering in Biomedical Engineering", "url": "https://catalog.drexel.edu/undergraduate/schoolofbioengscienceandhealthsystems/biomedicalengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "12" }}
+{"program_name": "Bachelor of Science in Business Administration in Business (General)", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/generalbusiness/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "13" }}
+{"program_name": "Bachelor of Science in Business and Engineering in Business and Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/businessandengineering/", "calendar_type": "ter"}
+{ "index":{"_index": "programs", "_id": "14" }}
+{"program_name": "Bachelor of Science in Business Administration in Business Analytics (co-major)", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/businessanalytics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "15" }}
+{"program_name": "Bachelor of Science in Business Administration in Business Administration", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/generalbusiness/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "16" }}
+{"program_name": "Bachelor of Science in Business Administration in Business Economics (co-major)", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/businesseconomics/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "17" }}
+{"program_name": "Bachelor of Science in Chemical Engineering in Chemical Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/chemicalengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "18" }}
+{"program_name": "Bachelor of Arts in Chemistry", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/chemistry/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "19" }}
+{"program_name": "Bachelor of Science in Chemistry", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/chemistrybs/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "20" }}
+{"program_name": "Bachelor of Science in Chemistry-Biochemistry Concentration", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/chemistrybs/#biochemistryconcentrationrequirementstext", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "21" }}
+{"program_name": "Bachelor of Science in Civil Engineering in Civil Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/civilengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "22" }}
+{"program_name": "Bachelor of Arts in Communication", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/communication/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "23" }}
+{"program_name": "Bachelor of Science in Computer Engineering in Computer Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/computerengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "24" }}
+{"program_name": "Bachelor of Arts in Computer Science in Computer Science", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/computerscienceba/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "25" }}
+{"program_name": "Bachelor of Science in Computer Science in Computer Science", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/computerscience/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "26" }}
+{"program_name": "Bachelor of Science in Computing and Security Technology in Computing and Security Technology", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/computingandsecuritytechnology/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "27" }}
+{"program_name": "Bachelor of Science in Construction Management in Construction Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/constructionmanagement/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "28" }}
+{"program_name": "Bachelor of Science in Custom-Designed Major", "url": "https://catalog.drexel.edu/undergraduate/honorscollege/custom-designedmajor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "29" }}
+{"program_name": "Bachelor of Science in Dance", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/dance/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "30" }}
+{"program_name": "Bachelor of Science in Dance - Part-time Professional", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/dance_parttimeprofessional/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "31" }}
+{"program_name": "Bachelor of Science in Data Science in Data Science", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/datascience", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "32" }}
+{"program_name": "Bachelor of Science in Design and Merchandising", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/designandmerchandising/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "33" }}
+{"program_name": "Bachelor of Science in Digital Media and Virtual Production", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/digitalmediaandvirtualproduction/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "34" }}
+{"program_name": "Bachelor of Arts in Economics in Economic Analysis", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/economics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "35" }}
+{"program_name": "Bachelor of Science in Economics in Economics", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/economicsbs/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "36" }}
+{"program_name": "Bachelor of Science in Economics and Business", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/economicsandbusiness/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "37" }}
+{"program_name": "Bachelor of Science in Economics and Data Science", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/economicsanddatascience/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "38" }}
+{"program_name": "Bachelor of Science in Economics and Mathematics", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/economicsandmathematics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "39" }}
+{"program_name": "Bachelor of Science in Economics and Public Health", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/economicsandpublichealth/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "40" }}
+{"program_name": "Bachelor of Science in Education: Non-Certification", "url": "https://catalog.drexel.edu/undergraduate/schoolofeducation/education-noncertification/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "41" }}
+{"program_name": "Bachelor of Science in Electrical Engineering in Electrical Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/electricalengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "42" }}
+{"program_name": "Bachelor of Science in Engineering in Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/engineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "43" }}
+{"program_name": "Bachelor of Science in Engineering Technology in Engineering Technology", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/engineeringtechnology", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "44" }}
+{"program_name": "Bachelor of Arts in English, Literary Studies Concentration", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/english-literaryconcentration/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "45" }}
+{"program_name": "Bachelor of Arts in English, Writing Concentration", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/english-writingconcentration/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "46" }}
+{"program_name": "Bachelor of Arts in English, Secondary Education Concentration", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/english-secondaryeducation-concentration/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "47" }}
+{"program_name": "Bachelor of Science in Entertainment and Arts Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/entertainmentartmgmt/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "48" }}
+{"program_name": "Bachelor of Arts in Entrepreneurship and Innovation", "url": "https://catalog.drexel.edu/undergraduate/schoolofentrepreneurship/entrepreneurshipandinnovation/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "49" }}
+{"program_name": "Bachelor of Arts in Entrepreneurship & Innovation 3-year Option", "url": "https://catalog.drexel.edu/undergraduate/schoolofentrepreneurship/entrepreneurshipandinnovation-3year/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "50" }}
+{"program_name": "Bachelor of Science in Environmental Engineering in Environmental Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/environmentalengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "51" }}
+{"program_name": "Bachelor of Science in Environmental Science", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/environmentalscience/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "52" }}
+{"program_name": "Bachelor of Arts in Environmental Studies and Sustainability", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/environmentalstudiesandsustainability", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "53" }}
+{"program_name": "Bachelor of Science in Business Administration in Esport Business", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/esportbusiness/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "54" }}
+{"program_name": "Bachelor of Science in Exercise Science", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/exercisescience/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "55" }}
+{"program_name": "Bachelor of Science in Fashion Design", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/fashiondesign/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "56" }}
+{"program_name": "Bachelor of Science in Film & Television", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/filmandtvproduction/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "57" }}
+{"program_name": "Bachelor of Science in Business Administration in Finance", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/finance/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "58" }}
+{"program_name": "Bachelor of Science in Game Design & Production", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/gamedesignandproduction/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "59" }}
+{"program_name": "Bachelor of Science in Business Administration in General Business", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/generalbusiness/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "60" }}
+{"program_name": "Bachelor of Science in General Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofprofessionalstudies/generalstudies", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "61" }}
+{"program_name": "Bachelor of Science in Geoscience", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/geoscience/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "62" }}
+{"program_name": "Bachelor of Arts in Global Public Health", "url": "https://catalog.drexel.edu/undergraduate/schoolofpublichealth/globalpublichealth/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "63" }}
+{"program_name": "Bachelor of Arts in Global Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/globalstudies/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "64" }}
+{"program_name": "Bachelor of Science in Graphic Design", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/graphicdesign/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "65" }}
+{"program_name": "Bachelor of Science in Health Data Analytics", "url": "https://catalog.drexel.edu/undergraduate/schoolofpublichealth/healthdataanalytics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "66" }}
+{"program_name": "Bachelor of Science in Health Sciences", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/healthsciences/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "67" }}
+{"program_name": "Bachelor of Science in Health Services Administration", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/healthservicesadministration/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "68" }}
+{"program_name": "Bachelor of Arts in History", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/history/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "69" }}
+{"program_name": "Bachelor of Science in Hospitality Management in Hospitality Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/hospitalitymanagement/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "70" }}
+{"program_name": "Bachelor of Science in Information Systems in Information Systems", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/informationsystems/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "71" }}
+{"program_name": "Bachelor of Science in Business Administration(BSBA) in International Business", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/internationalbusiness", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "72" }}
+{"program_name": "Bachelor of Science in Business Administration in International Business Co-Major", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/internationalbusinesscomajor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "73" }}
+{"program_name": "Bachelor of Science in Interior Design", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/interiordesign/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "74" }}
+{"program_name": "Bachelor of Arts in Law", "url": "https://catalog.drexel.edu/undergraduate/schooloflaw/law", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "75" }}
+{"program_name": "Bachelor of Science in Learning Sciences, Experience Design, and Technology", "url": "https://catalog.drexel.edu/undergraduate/schoolofeducation/learningsciencesexperiencedesigntechnology/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "76" }}
+{"program_name": "Bachelor of Science in Business Administration in Legal Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/legalstudies/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "77" }}
+{"program_name": "Bachelor of Science in Business Administration in Management Information Systems", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/managementinformationsystems/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "78" }}
+{"program_name": "Bachelor of Science in Business Administration in Marketing", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/marketing/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "79" }}
+{"program_name": "Bachelor of Science in Materials Science and Engineering in Materials Science and Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/materialsscienceandengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "80" }}
+{"program_name": "Bachelor of Arts in Mathematics", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/mathematics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "81" }}
+{"program_name": "Bachelor of Science in Mathematics", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/mathematicsbs/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "82" }}
+{"program_name": "Bachelor of Science in Mechanical Engineering in Mechanical Engineering & Mechanics", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/mechanicalengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "83" }}
+{"program_name": "Bachelor of Science in Music Industry", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/musicindustry/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "84" }}
+{"program_name": "Bachelor of Science Degree inNursing in Nursing", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/nursing/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "85" }}
+{"program_name": "Bachelor of Science in Nutrition and Foods", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/nutritionandfoods/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "86" }}
+{"program_name": "Bachelor of Science in Business Administration in Operations and Supply Chain Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/operationandsupplychainmanagement/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "87" }}
+{"program_name": "Bachelor of Science in Business Administration in Organizational Management (co-major)", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/organizationalmanagement", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "88" }}
+{"program_name": "Bachelor of Arts in Philosophy", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/philosophy/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "89" }}
+{"program_name": "Bachelor of Arts in Philosophy, Politics and Economics", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/philosophypoliticseconomics/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "90" }}
+{"program_name": "Bachelor of Science in Photography", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/photography/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "91" }}
+{"program_name": "Bachelor of Science in Physics", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/physics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "92" }}
+{"program_name": "Bachelor of Arts in Political Science", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/politicalscience/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "93" }}
+{"program_name": "Bachelor of Science in Product Design", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/productdesign/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "94" }}
+{"program_name": "Bachelor of Science in Psychology", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/psychology/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "95" }}
+{"program_name": "Bachelor of Science in Public Health", "url": "https://catalog.drexel.edu/undergraduate/schoolofpublichealth/publichealth/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "96" }}
+{"program_name": "Bachelor of Science in Business Administration in Real Estate Management and Development", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/realestatemanagementanddevelopment", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "97" }}
+{"program_name": "Bachelor of Science in Screenwriting and Playwriting", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/screenwritingandplaywriting/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "98" }}
+{"program_name": "Bachelor of Arts in Sociology", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/sociology/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "99" }}
+{"program_name": "Bachelor of Science in Software Engineering in Software Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/softwareengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "100" }}
+{"program_name": "Bachelor of Science in Special Education (PK-12)", "url": "https://catalog.drexel.edu/undergraduate/schoolofeducation/specialeducationpk-12/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "101" }}
+{"program_name": "Bachelor of Science in Business Administration in Sport Business", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/sportbusiness/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "102" }}
+{"program_name": "Bachelor of Science in Sustainability and Innovation", "url": "https://catalog.drexel.edu/undergraduate/schoolofentrepreneurship/sustainabilityandinnovationbs/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "103" }}
+{"program_name": "Bachelor of Science in Business Administration in Technology Innovation Management (co-major)", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/technologyinnovationmanagement", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "104" }}
+{"program_name": "Bachelor of Science in User Experience and Interaction Design", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/userexperienceandinteractiondesign/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "105" }}
+{"program_name": "Bachelor of Science in Westphal Studies Program", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/westphalstudiesprogram/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "106" }}
+{"program_name": "Minor in Accounting", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/accountingminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "107" }}
+{"program_name": "Minor in Actuarial Science", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/actuarialscienceminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "108" }}
+{"program_name": "Minor in Addictions Counseling", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/addictionscounseling/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "109" }}
+{"program_name": "Minor in Africana Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/africanastudies/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "110" }}
+{"program_name": "Minor in Animation and Visual Effects", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/animationandvisualeffectsminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "111" }}
+{"program_name": "Minor in Architectural Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/architecturalengineeringminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "112" }}
+{"program_name": "Minor in Architecture", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/architectureminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "113" }}
+{"program_name": "Minor in Art History", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/arthistoryminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "114" }}
+{"program_name": "Minor in Artificial Intelligence and Learning", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/artificialintellicenceandlearningminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "115" }}
+{"program_name": "Minor in Asian Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/asianstudiesminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "116" }}
+{"program_name": "Minor in Astrophysics", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/astrophysicsminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "117" }}
+{"program_name": "Minor in Behavioral Economics and Business", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/behavioraleconomicsandbusinessminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "118" }}
+{"program_name": "Minor in Biochemistry", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/biochemistryminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "119" }}
+{"program_name": "Minor in Bioinformatics", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/bioinformatics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "120" }}
+{"program_name": "Minor in Biological Sciences", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/biologicalsciencesminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "121" }}
+{"program_name": "Minor in Biophysics", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/biophysicsminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "122" }}
+{"program_name": "Minor in Bioscience and Society", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/bioscienceandsociety/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "123" }}
+{"program_name": "Minor in Business Administration", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/businessadministrationminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "124" }}
+{"program_name": "Minor in Business Analytics", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/businessanalyticsminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "125" }}
+{"program_name": "Minor in Business Consulting", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/businessconsultingminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "126" }}
+{"program_name": "Minor in Chemical Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/chemicalengineeringminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "127" }}
+{"program_name": "Minor in Chemistry", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/chemistryminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "128" }}
+{"program_name": "Minor in Client Development and Customer Service", "url": "https://catalog.drexel.edu/undergraduate/collegeofprofessionalstudies/clientdevelopmentandcustomerserviceminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "129" }}
+{"program_name": "Minor in Climate Change", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/climatechange", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "130" }}
+{"program_name": "Minor in Communication", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/communicationminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "131" }}
+{"program_name": "Minor in Computer Crime", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/computercrimeminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "132" }}
+{"program_name": "Minor in Computer Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/computerengineeringminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "133" }}
+{"program_name": "Minor in Computer Science", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/computerscienceminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "134" }}
+{"program_name": "Minor in Computing Technology", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/computingtechnologyminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "135" }}
+{"program_name": "Minor in Construction Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/constructionmanagementminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "136" }}
+{"program_name": "Minor in Corporate Entrepreneurship", "url": "https://catalog.drexel.edu/undergraduate/schoolofentrepreneurship/corporateentrepreneurship", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "137" }}
+{"program_name": "Minor in Criminal Justice", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/criminaljusticeminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "138" }}
+{"program_name": "Minor in Culinary Arts", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/culinaryartsminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "139" }}
+{"program_name": "Minor in Dance", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/danceminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "140" }}
+{"program_name": "Minor in Data Science", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/datascienceminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "141" }}
+{"program_name": "Minor in DragonsTeach Certification Minor", "url": "https://catalog.drexel.edu/undergraduate/schoolofeducation/dragonsteachcertificationminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "142" }}
+{"program_name": "Minor in DragonsTeach Math Certification Minor", "url": "https://catalog.drexel.edu/undergraduate/schoolofeducation/dragonsteachmathcertificationminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "143" }}
+{"program_name": "Minor in DragonsTeach Middle Years Minor", "url": "https://catalog.drexel.edu/undergraduate/schoolofeducation/dragonsteachmiddleyearsminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "144" }}
+{"program_name": "Minor in DragonsTeach Middle Years Certification Minor", "url": "https://catalog.drexel.edu/undergraduate/schoolofeducation/dragonsteachmiddleyearscertificationminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "145" }}
+{"program_name": "Minor in Ecology", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/ecology/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "146" }}
+{"program_name": "Minor in Economics", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/economicsminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "147" }}
+{"program_name": "Minor in Education", "url": "https://catalog.drexel.edu/undergraduate/schoolofeducation/education/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "148" }}
+{"program_name": "Minor in Electrical Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/electricalengineeringminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "149" }}
+{"program_name": "Minor in Engineering Leadership", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/engineeringleadership/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "150" }}
+{"program_name": "Minor in Engineering Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/engineeringmanagement/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "151" }}
+{"program_name": "Minor in Engineering Policy Analysis", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/engineeringpolicyanalysis/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "152" }}
+{"program_name": "Minor in Engineering Product Development", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/engineeringproductdevelopmentminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "153" }}
+{"program_name": "Minor in English", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/englishminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "154" }}
+{"program_name": "Minor in Entertainment & Arts Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/entertainmentandartsmanagementminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "155" }}
+{"program_name": "Minor in Entertainment Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/entertainmentengineeringminor", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "156" }}
+{"program_name": "Minor in Entrepreneurship and Innovation", "url": "https://catalog.drexel.edu/undergraduate/schoolofentrepreneurship/entrepreneurshipandinnovationminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "157" }}
+{"program_name": "Minor in Environmental Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/environmentalengineeringminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "158" }}
+{"program_name": "Minor in Environmental Public Health", "url": "https://catalog.drexel.edu/undergraduate/schoolofpublichealth/environmentalpublichealthminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "159" }}
+{"program_name": "Minor in Environmental Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/environmentalstudiesminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "160" }}
+{"program_name": "Minor in Epidemiology", "url": "https://catalog.drexel.edu/undergraduate/schoolofpublichealth/epidemiologyminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "161" }}
+{"program_name": "Minor in Esports", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/esportsminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "162" }}
+{"program_name": "Minor in Exercise Science", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/exercisescienceminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "163" }}
+{"program_name": "Minor in Film Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/filmstudiesminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "164" }}
+{"program_name": "Minor in Finance", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/financeminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "165" }}
+{"program_name": "Minor in Financial Technology", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/financialtechnologyminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "166" }}
+{"program_name": "Minor in Fine Arts", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/fineart/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "167" }}
+{"program_name": "Minor in Food Science", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/foodscienceminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "168" }}
+{"program_name": "Minor in Food Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/foodstudiesminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "169" }}
+{"program_name": "Minor in Geoscience", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/geoscienceminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "170" }}
+{"program_name": "Minor in Global Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/globalengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "171" }}
+{"program_name": "Minor in Global Public Health", "url": "https://catalog.drexel.edu/undergraduate/schoolofpublichealth/globalpublichealthminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "172" }}
+{"program_name": "Minor in Global Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/globalstudiesminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "173" }}
+{"program_name": "Minor in Graphic Design", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/graphicdesignminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "174" }}
+{"program_name": "Minor in Green Energy and Sustainability", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/greenenergyandsustainabilityminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "175" }}
+{"program_name": "Minor in Health and Social Justice", "url": "https://catalog.drexel.edu/undergraduate/schoolofpublichealth/healthandsocialjusticeminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "176" }}
+{"program_name": "Minor in Health Services Administration", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/healthservicesadministrationminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "177" }}
+{"program_name": "Minor in History", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/historyminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "178" }}
+{"program_name": "Minor in History of Capitalism", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/historyofcapitalismminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "179" }}
+{"program_name": "Minor in Human Computer Interaction", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/humancomputerinteractionminor", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "180" }}
+{"program_name": "Minor in Information Systems", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/informationsystemsminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "181" }}
+{"program_name": "Minor in Interdisciplinary Problem Solving", "url": "https://catalog.drexel.edu/undergraduate/honorscollege/interdisciplinaryproblemsolving/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "182" }}
+{"program_name": "Minor in International Economics", "url": "https://catalog.drexel.edu/undergraduate/schoolofeconomics/internationaleconomicsminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "183" }}
+{"program_name": "Minor in Italian Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/italianstudies/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "184" }}
+{"program_name": "Minor in Jazz and African-American Music", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/jazzandafricanamericanmusicminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "185" }}
+{"program_name": "Minor in Jewish Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/jewishstudiesminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "186" }}
+{"program_name": "Minor in Justice Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/justicestudiesminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "187" }}
+{"program_name": "Minor in Law", "url": "https://catalog.drexel.edu/undergraduate/schooloflaw/lawminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "188" }}
+{"program_name": "Minor in Legal Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/legalstudiesminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "189" }}
+{"program_name": "Minor in Linguistics", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/linguisticsminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "190" }}
+{"program_name": "Minor in Management Information Systems", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/managementinformationsystemsminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "191" }}
+{"program_name": "Minor in Marketing", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/marketing/marketingminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "192" }}
+{"program_name": "Minor in Materials Science and Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/materialsscienceandengineeringminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "193" }}
+{"program_name": "Minor in Mathematics", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/mathematicsminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "194" }}
+{"program_name": "Minor in Mechanical Engineering and Mechanics", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/mechanicalengineeringminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "195" }}
+{"program_name": "Minor in Medical Sociology", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/medicalsociologyminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "196" }}
+{"program_name": "Minor in Merchandising", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/merchandisingminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "197" }}
+{"program_name": "Minor in Middle East and North Africa Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/menaminor", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "198" }}
+{"program_name": "Minor in Military Science", "url": "https://catalog.drexel.edu/additionalacademicprograms/armyrotc/#militaryscienceminortext", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "199" }}
+{"program_name": "Minor in Music", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/musicminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "200" }}
+{"program_name": "Minor in Music Performance", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/musicperformanceminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "201" }}
+{"program_name": "Minor in Music Theory and Composition", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/musictheoryandcomposition/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "202" }}
+{"program_name": "Minor in Neuroscience", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/neuroscienceminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "203" }}
+{"program_name": "Minor in Nonprofit Communication", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/nonprofitcommunication/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "204" }}
+{"program_name": "Minor in Nuclear Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/nuclearengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "205" }}
+{"program_name": "Minor in Nutrition", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/nutritionminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "206" }}
+{"program_name": "Minor in Operations and Supply Chain Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/operationsandsupplychainmanagementminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "207" }}
+{"program_name": "Minor in Organizational Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/organizationalmanagementminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "208" }}
+{"program_name": "Minor in Performing Arts", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/performingarts/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "209" }}
+{"program_name": "Minor in Philosophy", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/philosophyminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "210" }}
+{"program_name": "Minor in Photography", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/photographyminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "211" }}
+{"program_name": "Minor in Physics", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/physicsminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "212" }}
+{"program_name": "Minor in Playwriting", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/playwritingminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "213" }}
+{"program_name": "Minor in Politics", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/politics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "214" }}
+{"program_name": "Minor in Product Design", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/productdesignminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "215" }}
+{"program_name": "Minor in Psychiatric Rehabilitation", "url": "https://catalog.drexel.edu/undergraduate/collegeofnursingandhealthprofessions/psychiatricrehabilitation/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "216" }}
+{"program_name": "Minor in Psychology", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/pychologyminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "217" }}
+{"program_name": "Minor in Public Health", "url": "https://catalog.drexel.edu/undergraduate/schoolofpublichealth/publichealthminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "218" }}
+{"program_name": "Minor in Real Estate Management and Development", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/realestatemanagementanddevelopmentminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "219" }}
+{"program_name": "Minor in Religious Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/religiousstudiesminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "220" }}
+{"program_name": "Minor in Robotics and Automation", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/roboticsandautomationminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "221" }}
+{"program_name": "Minor in Science, Technology and Society", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/sciencetechnologysociety", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "222" }}
+{"program_name": "Minor in Screenwriting", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/screenwritingminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "223" }}
+{"program_name": "Minor in Security Technology", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/securitytechnologyminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "224" }}
+{"program_name": "Minor in Social Entrepreneurship", "url": "https://catalog.drexel.edu/undergraduate/schoolofentrepreneurship/socialentrepreneurship/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "225" }}
+{"program_name": "Minor in Sociology", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/sociologyminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "226" }}
+{"program_name": "Minor in Software Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofcomputingandinformatics/softwareengineeringminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "227" }}
+{"program_name": "Minor in Somatics", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/somatics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "228" }}
+{"program_name": "Minor in Sport Coaching Leadership", "url": "https://catalog.drexel.edu/undergraduate/schoolofeducation/sportcoachingleadershipminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "229" }}
+{"program_name": "Minor in Sport Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/sportmanagementminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "230" }}
+{"program_name": "Minor in Sport Regulation & Compliance", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/sportregulationcomplianceminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "231" }}
+{"program_name": "Minor in Sports Media Production", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/sportsmediaproduction/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "232" }}
+{"program_name": "Minor in STEM Education", "url": "https://catalog.drexel.edu/undergraduate/schoolofeducation/stemeducationminor", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "233" }}
+{"program_name": "Minor in Sustainability in the Built Environment", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/sustainabilitybuiltminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "234" }}
+{"program_name": "Minor in Systems Engineering", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/systemsengineering", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "235" }}
+{"program_name": "Minor in Technology", "url": "https://catalog.drexel.edu/undergraduate/collegeofengineering/technologyminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "236" }}
+{"program_name": "Minor in Technology Innovation Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofbusiness/technologyinnovationmanagementminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "237" }}
+{"program_name": "Minor in Television Industry and Enterprise", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/televisionindustryandenterprise/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "238" }}
+{"program_name": "Minor in TV Production and Media Management", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/tvproductionmediamanagementminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "239" }}
+{"program_name": "Minor in Theatre", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/theatre/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "240" }}
+{"program_name": "Minor in User Experience and Interaction Design", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/userexperienceandinteractiondesignminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "241" }}
+{"program_name": "Minor in Virtual Reality & Immersive Media", "url": "https://catalog.drexel.edu/undergraduate/collegeofmediaartsanddesign/virtualrealityandimmersivemediaminor/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "242" }}
+{"program_name": "Minor in War and Society", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/warandsocietyminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "243" }}
+{"program_name": "Minor in Women's and Gender Studies", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/womensgenderstudies/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "244" }}
+{"program_name": "Minor in Writing", "url": "https://catalog.drexel.edu/undergraduate/collegeofartsandsciences/writingminor/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "245" }}
+{"program_name": "Master of Science in Accounting in Accounting", "url": "https://catalog.drexel.edu/graduate/collegeofbusiness/accounting/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "246" }}
+{"program_name": "Master of Science in Addictions Counseling", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/addictionscounseling/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "247" }}
+{"program_name": "Master of Science in Applied Behavior Analysis", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/appliedbehavioranalysis/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "248" }}
+{"program_name": "Master of Science in Applied Behavior Analysis and Special Education", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/appliedbehavioranalysisandspecialeducation/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "249" }}
+{"program_name": "Doctor of Philosophy in Architectural Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/architecturalengineeringphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "250" }}
+{"program_name": "Master of Arts in Art Therapy and Counseling", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/arttherapyandcounseling", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "251" }}
+{"program_name": "Master of Science in Artificial Intelligence and Machine Learning in Artificial Intelligence and Machine Learning", "url": "https://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/artificialintelligenceandmachinelearning/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "252" }}
+{"program_name": "Master of Science in Arts Administration and Museum Leadership", "url": "https://catalog.drexel.edu/graduate/collegeofmediaartsanddesign/artsadministrationandmuseumleadership/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "253" }}
+{"program_name": "Doctor of Philosophy in Biochemistry of Health & Disease", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/biochemistryofhealthanddiseasephd/index.html", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "254" }}
+{"program_name": "Master of Science in Bioinformatics", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalengineeringscienceandhealthsystems/bioinformaticsindex.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "255" }}
+{"program_name": "Master of Science in Biological Sciences (MS: College of Arts and Sciences)", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/biologicalsciences/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "256" }}
+{"program_name": "Master of Science in Biomedical Engineering (MS: School of Biomedical Engineering, Science and Health Systems)", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalengineeringscienceandhealthsystems/biomedicalengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "257" }}
+{"program_name": "Doctor of Philosophy in Biomedical Engineering (PhD: School of Biomedical Engineering, Science and Health Systems)", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalengineeringscienceandhealthsystems/biomedicalengineering-phd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "258" }}
+{"program_name": "Master of Science in Biomedical Science (MS: School of Biomedical Engineering, Science and Health Systems)", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalengineeringscienceandhealthsystems/biomedicalscience/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "259" }}
+{"program_name": "Doctor of Philosophy in Biomedical Science (PhD: School of Biomedical Engineering, Science and Health Systems)", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalengineeringscienceandhealthsystems/biomedicalsciences-phd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "260" }}
+{"program_name": "Master of Science in Biomedicine and Business", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/biomedicinebusiness/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "261" }}
+{"program_name": "Master of Science in Biomedicine and Digital Media", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/biomedicinedigitalmedia", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "262" }}
+{"program_name": "Master of Science in Biomedicine and Entrepreneurship", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/biomedicineentrepreneurship", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "263" }}
+{"program_name": "Master of Science in Biostatistics", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/biostatistics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "264" }}
+{"program_name": "Master of Science in Biotechnology", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/biotechnology/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "265" }}
+{"program_name": "Doctor of Business Administration in Business Administration", "url": "https://catalog.drexel.edu/graduate/collegeofbusiness/businessadministrationdba/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "266" }}
+{"program_name": "Master of Business Administration in Business Administration", "url": "https://catalog.drexel.edu/graduate/collegeofbusiness/businessadministration/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "267" }}
+{"program_name": "Master of Science in Business Analytics in Business Analytics", "url": "https://catalog.drexel.edu/graduate/collegeofbusiness/businessanalytics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "268" }}
+{"program_name": "Master of Science in Business Information Technology in Business Information Technology (MSBIT), partnership of College of Computing & Informatics and the LeBow College of Business", "url": "https://catalog.drexel.edu/graduateprograms/businessinformationtechnology", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "269" }}
+{"program_name": "Master of Science in Chemical Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/chemicalengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "270" }}
+{"program_name": "Doctor of Philosophy in Chemical Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/chemicalengineeringphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "271" }}
+{"program_name": "Master of Science in Chemistry", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/chemistry/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "272" }}
+{"program_name": "Doctor of Philosophy in Chemistry", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/chemistryphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "273" }}
+{"program_name": "Doctor of Philosophy in Civil Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/civilengineeringphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "274" }}
+{"program_name": "Master of Science in Clinical Research for Health Professionals", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/clinicalresearchforhealthprofessionals/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "275" }}
+{"program_name": "Master of Science in Clinical Research Organization & Management", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/clinicalresearchorganizationandmanagement/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "276" }}
+{"program_name": "Master of Science in Communication, Culture and Media", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/communicationcultureandmedia/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "277" }}
+{"program_name": "Master of Public Health in Community Health and Prevention", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/communityhealthandprevention/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "278" }}
+{"program_name": "Doctor of Philosophy in Community Health and Prevention", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/communityhealthandpreventionphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "279" }}
+{"program_name": "Master of Science in Complementary and Integrative Health", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/complementaryandintegrativehealth/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "280" }}
+{"program_name": "Master of Science in Computer Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/computerengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "281" }}
+{"program_name": "Doctor of Philosophy in Computer Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/computerengineeringphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "282" }}
+{"program_name": "Master of Science in Computer Security and Privacy in Computer Security and Privacy", "url": "https://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/computersecurityandprivacy/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "283" }}
+{"program_name": "Master of Science in Computer Science in Computer Science", "url": "https://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/computerscience/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "284" }}
+{"program_name": "Doctor of Philosophy in Computer Science", "url": "https://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/computersciencephd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "285" }}
+{"program_name": "Master of Science in Construction Management", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/constructionmanagement/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "286" }}
+{"program_name": "Doctor in Couple and Family Therapy in Couple and Family Therapy", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/coupleandfamilytherapydcft/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "287" }}
+{"program_name": "Doctor of Philosophy in Couple and Family Therapy", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/coupleandfamilytherapy/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "288" }}
+{"program_name": "Doctor of Philosophy in Creative Arts in Therapy", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/creativeartstherapies/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "289" }}
+{"program_name": "Master of Science in Creative Education and Entrepreneurship", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/creativeeducationandentrepreneurship/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "290" }}
+{"program_name": "Master of Fine Arts in Creative Writing", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/creativewriting/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "291" }}
+{"program_name": "Master of Science in Creativity and Innovation", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/creativityandinnovation/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "292" }}
+{"program_name": "Master of Science in Culinary Arts and Science", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/culinaryartsandscience/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "293" }}
+{"program_name": "Master of Laws in Cyber Law and Data Privacy (LLM) - Quarter Calendar", "url": "https://catalog.drexel.edu/graduate/schooloflaw/cyberlawanddataprivacyllm-qtr/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "294" }}
+{"program_name": "Master of Science in Cybersecurity", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/cybersecurity", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "295" }}
+{"program_name": "Master of Arts in Dance/Movement Therapy and Counseling", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/dancemovementtherapyandcounseling/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "296" }}
+{"program_name": "Master of Science in Data Science in Data Science", "url": "https://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/datascience/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "297" }}
+{"program_name": "Master of Science in Design Research in Design Research", "url": "https://catalog.drexel.edu/graduate/collegeofmediaartsanddesign/designresearch/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "298" }}
+{"program_name": "Master of Science in Digital Media", "url": "https://catalog.drexel.edu/graduate/collegeofmediaartsanddesign/digitalmedia/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "299" }}
+{"program_name": "Master of Science in Drexel Pathway to Medical School", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/drexelpathwaytomedicalschool/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "300" }}
+{"program_name": "Master of Science in Drug Discovery and Development", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/drugdiscoveryanddevelopment/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "301" }}
+{"program_name": "Master of Science(MS) in Ecology, Evolution, and Earth Systems", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/ecologyevolutionandearthsystems/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "302" }}
+{"program_name": "Doctor of Philosophy in Ecology, Evolution, and Earth Systems", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/ecologyevolutionandearthsystemsphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "303" }}
+{"program_name": "Master of Science in Economics in Economics", "url": "https://catalog.drexel.edu/graduate/schoolofeconomics/economicsms/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "304" }}
+{"program_name": "Master of Science in Economics &amp; Computer Science in Economics and Computer Science", "url": "https://catalog.drexel.edu/graduate/schoolofeconomics/economicsandcomputerscience/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "305" }}
+{"program_name": "Doctor of Philosophy in Education", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/educationphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "306" }}
+{"program_name": "Master of Science in Education Improvement and Transformation", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/educationimprovement/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "307" }}
+{"program_name": "Master of Science in Educational Administration", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/educationaladministration/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "308" }}
+{"program_name": "Doctor of Education in Educational Leadership and Management", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/educationalleadershipandmanagement/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "309" }}
+{"program_name": "Master of Science in Electrical Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/electricalengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "310" }}
+{"program_name": "Doctor of Philosophy in Electrical Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/electricalengineeringphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "311" }}
+{"program_name": "Master of Engineering in Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/engineeringmasterofengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "312" }}
+{"program_name": "Master of Science in Engineering Management", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/engineeringmanagement/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "313" }}
+{"program_name": "Master of Science in Engineering Technology", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/engineeringtechnology", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "314" }}
+{"program_name": "Master of Science in Entrepreneurship and Innovation", "url": "https://catalog.drexel.edu/graduate/schoolofentrepreneurship/entrepreneurshipandinnovation/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "315" }}
+{"program_name": "Master of Public Health in Environmental and Occupational Health", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/environmentalandoccupationalhealth", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "316" }}
+{"program_name": "Doctor of Philosophy in Environmental and Occupational Health", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/eohphd/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "317" }}
+{"program_name": "Master of Science in Environmental and Occupational Health Sciences", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/environmentalandoccupationalhealthsciences/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "318" }}
+{"program_name": "Master of Science in Environmental Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/environmentalengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "319" }}
+{"program_name": "Doctor of Philosophy in Environmental Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/environmentalengineeringphd", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "320" }}
+{"program_name": "Master of Science in Environmental Policy in Environmental Policy", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/environmentalpolicy/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "321" }}
+{"program_name": "Master of Science in Epidemiology", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/epidemiologyms/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "322" }}
+{"program_name": "Master of Public Health in Epidemiology", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/epidemiology/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "323" }}
+{"program_name": "Doctor of Philosophy in Epidemiology", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/epidemiologyphd/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "324" }}
+{"program_name": "Master of Family Therapy in Family Therapy", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/familytherapy/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "325" }}
+{"program_name": "Master of Science in Fashion Design", "url": "https://catalog.drexel.edu/graduate/collegeofmediaartsanddesign/fashiondesign/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "326" }}
+{"program_name": "Master of Science in Finance in Finance", "url": "https://catalog.drexel.edu/graduate/collegeofbusiness/finance/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "327" }}
+{"program_name": "Master of Science in Food Science", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/foodscience/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "328" }}
+{"program_name": "Master of Science in Global and International Education", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/globalandinternationaleducation/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "329" }}
+{"program_name": "Master of Science in Global Health", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/globalhealthms/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "330" }}
+{"program_name": "Master of Public Health in Global Health", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/globalhealthmph/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "331" }}
+{"program_name": "Master of Science in Health and Rehabilitation Sciences", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/healthandrehabilitationsciences/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "332" }}
+{"program_name": "Doctor of Philosophy in Health and Rehabilitation Sciences", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/healthandrehabilitationsciencesphd", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "333" }}
+{"program_name": "Master of Health Administration in Health Administration", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/healthadministration", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "334" }}
+{"program_name": "Master of Laws in Health Care and Pharmaceutical Compliance (LLM) - Quarter Calendar", "url": "https://catalog.drexel.edu/graduate/schooloflaw/healthcareandpharmaceuticalcompliancellm-qtr/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "335" }}
+{"program_name": "Master of Science in Health Informatics in Health Informatics", "url": "https://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/healthinformatics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "336" }}
+{"program_name": "Master of Public Health in Health Management and Policy", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/healthmanagementandpolicy/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "337" }}
+{"program_name": "Doctor of Health Science in Health Sciences", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/healthsciencesdhsc/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "338" }}
+{"program_name": "Doctor of Philosophy in Health Services Research and Policy", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/healthservicesresearchandpolicy/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "339" }}
+{"program_name": "Master of Science in Healthcare Simulation", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/healthcaresimulationms/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "340" }}
+{"program_name": "Master of Science in Higher Education Leadership", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/highereducationleadership/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "341" }}
+{"program_name": "Master of Science in Histotechnology", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/histotechology/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "342" }}
+{"program_name": "Master of Science in Information in Human-Computer Interaction and User Experience", "url": "https://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/humancomputerinteractionanduserexperience/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "343" }}
+{"program_name": "Master of Science in Human Nutrition", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/humannutrition/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "344" }}
+{"program_name": "Master of Science in Human Resource Development", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/humanresourcedevelopment/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "345" }}
+{"program_name": "Master of Science in Immunology", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/immunology/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "346" }}
+{"program_name": "Master of Science in Infectious Disease", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/infectiousdisease/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "347" }}
+{"program_name": "Doctor of Philosophy in Information Science", "url": "https://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/informationsciencephd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "348" }}
+{"program_name": "Master of Science in Information Systems in Information Systems", "url": "https://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/informationsystems/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "349" }}
+{"program_name": "Master of Science in Integrated Biomedical Engineering and Business", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalengineeringscienceandhealthsystems/integratedbiomedicalengineeringbusiness/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "350" }}
+{"program_name": "Master of Science in Intensive Medical Sciences", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/intensivemedicalsciences/index.html", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "351" }}
+{"program_name": "Master of Science in Interdisciplinary Health Sciences", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/interdisciplinaryhealthscience/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "352" }}
+{"program_name": "Master of Science in Interior Architecture", "url": "https://catalog.drexel.edu/graduate/collegeofmediaartsanddesign/interiorarchitecture/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "353" }}
+{"program_name": "Master of Science in Interior Architecture and Design", "url": "https://catalog.drexel.edu/graduate/collegeofmediaartsanddesign/interiorarchitectureanddesign/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "354" }}
+{"program_name": "Master of Laboratory Animal Science in Laboratory Animal Science", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/laboratoryanimalsciences/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "355" }}
+{"program_name": "Master of Science in Learning Technologies", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/learningtechnologies/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "356" }}
+{"program_name": "Master of Legal Studies in Legal Studies (MLS) - Quarter Calendar", "url": "https://catalog.drexel.edu/graduate/schooloflaw/legalstudiesmls-qtr", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "357" }}
+{"program_name": "Master of Science in Information in Library and Information Science", "url": "https://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/libraryandinformationscience/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "358" }}
+{"program_name": "Master of Science in Machine Learning Engineering in Machine Learning Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/machinelearningengineering/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "359" }}
+{"program_name": "Master of Science in Marketing in Marketing", "url": "https://catalog.drexel.edu/graduate/collegeofbusiness/marketing/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "360" }}
+{"program_name": "Master of Science in Materials Science and Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/materialsscienceandengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "361" }}
+{"program_name": "Doctor of Philosophy in Materials Science and Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/materialsscienceandengineeringphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "362" }}
+{"program_name": "Master of Science in Mathematics", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/mathematics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "363" }}
+{"program_name": "Doctor of Philosophy in Mathematics", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/mathematicsphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "364" }}
+{"program_name": "Master of Science in Mathematics Learning and Teaching", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/mathematicslearningandteaching/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "365" }}
+{"program_name": "Master of Business Administration in MBA", "url": "https://catalog.drexel.edu/graduate/collegeofbusiness/businessadministration/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "366" }}
+{"program_name": "Master of Science in Mechanical Engineering and Mechanics", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/mechanicalengineeringandmechanics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "367" }}
+{"program_name": "Doctor of Philosophy in Mechanical Engineering and Mechanics", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/mechanicalengineeringandmechanicsphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "368" }}
+{"program_name": "Master of Science in Medical Science", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/medicalscience/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "369" }}
+{"program_name": "Doctor of Medicine (MD) and Doctor of Philosophy in Medicine (MD) / PhD", "url": "https://catalog.drexel.edu/graduate/collegeofmedicine/mdphd/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "370" }}
+{"program_name": "Doctor of Philosophy in Microbiology and Immunology", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/microbiologyandimmunologyphd/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "371" }}
+{"program_name": "Doctor of Philosophy in Molecular and Cell Biology and Genetics", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/molecularandcellbiologyandgeneticsphd/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "372" }}
+{"program_name": "Master of Science in Molecular Medicine", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/molecularmedicine/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "373" }}
+{"program_name": "Master of Arts in Music Therapy and Counseling", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/musictherapyandcounseling/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "374" }}
+{"program_name": "Master of Science in Nanomaterials", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/nanomaterials/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "375" }}
+{"program_name": "Doctor of Philosophy in Neuroscience", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/neurosciencephd/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "376" }}
+{"program_name": "Master of Science in Nonprofit Management: Public, Professional & Social Sectors", "url": "https://catalog.drexel.edu/graduate/collegeofprofessionalstudies/nonprofitmanagement/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "377" }}
+{"program_name": "Doctor of Nursing Practice in Nurse Anesthesia", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/nurseanesthesiadnp/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "378" }}
+{"program_name": "Master of Science in Nursing (MSN) and Doctor of Philosophy in Nursing: MSN/PhD joint degree", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/nursingmsnphd/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "379" }}
+{"program_name": "Doctor of Philosophy in Nursing", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/nursingphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "380" }}
+{"program_name": "Master of Science in Nursing (MSN) and Master of Science in Business Administration in Nursing Leadership in Health Systems Management (MSN) / Business Administration", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/nursingleadershiphealthsystemsmgmtmsn-mba/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "381" }}
+{"program_name": "Master of Science in Nutrition and Dietetics", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/nutritionanddietetics/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "382" }}
+{"program_name": "Doctor of Philosophy in Nutrition Sciences", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/nutritionsciences/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "383" }}
+{"program_name": "Master of Science in Pathologists' Assistant", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/pathologistsassistant/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "384" }}
+{"program_name": "Master of Science in Peace Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/peaceengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "385" }}
+{"program_name": "Doctor of Philosophy in Pharmacology & Physiology", "url": "https://catalog.drexel.edu/graduate/schoolofbiomedicalsciences/pharmacologyandphysiologyphd/", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "386" }}
+{"program_name": "Doctor of Physical Therapy in Physical Therapy", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/professionaldoctorofphysicaltherapycon/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "387" }}
+{"program_name": "Master of Health Science in Physician Assistant", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/physicianassistantcon", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "388" }}
+{"program_name": "Master of Science in Physics", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/physics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "389" }}
+{"program_name": "Doctor of Philosophy in Physics", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/physicsphd/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "390" }}
+{"program_name": "Master of Science in Population Health Science", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/populationhealthscience/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "391" }}
+{"program_name": "Master of Science in Professional Studies", "url": "https://catalog.drexel.edu/graduate/collegeofprofessionalstudies/professionalstudies", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "392" }}
+{"program_name": "Master of Science in Project Management", "url": "https://catalog.drexel.edu/graduate/collegeofbusiness/projectmanagementms/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "393" }}
+{"program_name": "Master of Public Health in Public Health", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/publichealth/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "394" }}
+{"program_name": "Master of Public Health in Public Health - Executive Program", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/publichealthexecutive/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "395" }}
+{"program_name": "Master of Science in Public Policy", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/publicpolicy/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "396" }}
+{"program_name": "Master of Arts in Publishing", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/publishing", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "397" }}
+{"program_name": "Master of Science in Quality, Safety and Risk Management in Health Care", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/qualitysafetyandriskmanagementinhealthcare/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "398" }}
+{"program_name": "Master of Health Science in Rehabilitation Sciences", "url": "https://catalog.drexel.edu/graduate/collegeofnursingandhealthprofessions/rehabilitationsciences/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "399" }}
+{"program_name": "Master of Science in Retail & Merchandising", "url": "https://catalog.drexel.edu/graduate/collegeofmediaartsanddesign/retailmerchandising/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "400" }}
+{"program_name": "Master of Science in Robotics and Autonomy", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/roboticsandautonomy/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "401" }}
+{"program_name": "Education Specialist in School Psychology", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/schoolpsychology/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "402" }}
+{"program_name": "Master of Science in Science, Technology, and Society", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/sciencetechnologyandsociety/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "403" }}
+{"program_name": "Master of Science in Software Engineering in Software Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofcomputingandinformatics/softwareengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "404" }}
+{"program_name": "Master of Science in Special Education", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/specialeducation/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "405" }}
+{"program_name": "Master of Science in Sport Coaching Leadership", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/sportcoachingleadership/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "406" }}
+{"program_name": "Master of Science in Sport Business", "url": "https://catalog.drexel.edu/graduate/collegeofbusiness/sportbusinessms/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "407" }}
+{"program_name": "Master of Science in Strategic and Digital Communication", "url": "https://catalog.drexel.edu/graduate/collegeofartsandsciences/strategicanddigitalcommunication/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "408" }}
+{"program_name": "Master of Science in Supply Chain Management and Logistics(MSSCML) in Supply Chain Management and Logistics", "url": "https://catalog.drexel.edu/graduate/collegeofbusiness/supplychainmanagementandlogistics/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "409" }}
+{"program_name": "Master of Science in Systems Engineering", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/systemsengineering/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "410" }}
+{"program_name": "Master of Science in Teaching, Learning and Curriculum", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/teachinglearningandcurriculum/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "411" }}
+{"program_name": "Master of Science in Television & Media Management", "url": "https://catalog.drexel.edu/graduate/collegeofmediaartsanddesign/televisionandmediamanagement/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "412" }}
+{"program_name": "Master of Science/Master of Business Administration in Television & Media Management (MS) / Business Administration", "url": "https://catalog.drexel.edu/graduate/collegeofmediaartsanddesign/televisionandmediamanagementms-mba/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "413" }}
+{"program_name": "Master of Science in the Internet of Things", "url": "https://catalog.drexel.edu/graduate/collegeofengineering/theinternetofthings/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "414" }}
+{"program_name": "Master of Science in Transdisciplinary Science, Computing, and Engineering Design", "url": "https://catalog.drexel.edu/graduate/schoolofentrepreneurship/transcend/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "415" }}
+{"program_name": "Master of Laws in Trial Advocacy and Dispute Resolution", "url": "https://catalog.drexel.edu/graduate/schooloflaw/trialadvocacyllm", "calendar_type": "Semester"}
+{ "index":{"_index": "programs", "_id": "416" }}
+{"program_name": "Master of Science in Undergraduate STEM Education", "url": "https://catalog.drexel.edu/graduate/schoolofeducation/undergraduatestemeducation/", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "417" }}
+{"program_name": "Master of Public Health in Urban Health", "url": "https://catalog.drexel.edu/graduate/schoolofpublichealth/urbanhealthmph/index.html", "calendar_type": "Quarter"}
+{ "index":{"_index": "programs", "_id": "418" }}
+{"program_name": "Master of Science in Urban Strategy", "url": "https://catalog.drexel.edu/graduate/collegeofmediaartsanddesign/urbanstrategy/index.html", "calendar_type": "Quarter"}

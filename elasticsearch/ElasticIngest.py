@@ -47,7 +47,7 @@ def createIndices(es):
     properties.append(("description", { "type": "text" }))
     properties.append(("hasmajor", { "type": "boolean"}))
     properties.append(("hasminor", { "type": "boolean"}))
-    properties.append(("hascirtificate", { "type": "boolean"}))
+    properties.append(("hascertificate", { "type": "boolean"}))
     es.createIndex("areas_of_study", properties)
     
     #es.post(index, "ves35", "Vincent Savarese", "signed-in", "11/20/2022", "09:30:00", "gym")
@@ -59,9 +59,14 @@ def main():
     es = Elastic()
     
     createIndices(es)
+
+    csvtimer = datetime.datetime.today()
+    #NEW
     
-    '''csvtimer = datetime.datetime.today()
-    areasOfStudy = pd.read_csv("./elasticsearch/data_files/Elasticsearch-additional_area_of_study.csv")
+    
+    
+    
+    '''areasOfStudy = pd.read_csv("./elasticsearch/data_files/Elasticsearch-additional_area_of_study.csv")
     areasOfStudyDict = areasOfStudy.to_dict(orient='records')
     for row in areasOfStudyDict:
         es.post("areas_of_study", {
