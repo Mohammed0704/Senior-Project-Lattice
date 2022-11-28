@@ -29,6 +29,15 @@ else
     exit 1
 fi
 
+./mongodb/IngestMongoData.sh
+RESULT=$?
+if [ $RESULT -eq 0 ]; then
+    echo -e "\nData successfully ingested into Mongo!"
+else
+    echo -e "\nData failed to ingest into Mongo! Exiting..."
+    exit 1
+fi
+
 ./elasticsearch/IngestElasticsearchData.sh
 RESULT=$?
 if [ $RESULT -eq 0 ]; then
