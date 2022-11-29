@@ -52,3 +52,11 @@ services:
       - 5432:5432
     environment:
       POSTGRES_PASSWORD: user
+
+  trino:
+    image: 'trinodb/trino:latest'
+    container_name: trino
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./trino/etc:/etc/trino
