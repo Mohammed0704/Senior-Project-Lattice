@@ -26,7 +26,6 @@ lastNameList = [row["Last Name"] for row in data]
 
 isFirstIteration = True
 #Writing to text file, iterating over multiple lists simultaneously
-#zip_longest stops when all lists are exhausted. When the shorter iterator(s) are exhausted, zip_longest yields a tuple with None value.
 with open(currentDirectory + "/../elasticsearch/data_files/LibraryLogs.txt", "w") as f:
     for line in range(7500):
         randomStudentChoice = random.randint(0, len(drexelIDList) - 1)
