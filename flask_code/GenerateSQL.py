@@ -4,6 +4,7 @@ import pandas as pd
 class GenerateSQL:
     trinoCursor = None
 
+    #example of tagged columns after being deserialized and parsed
     taggedColumnsList = [
                             {"tag_name": "Housing",
                             "all_columns": 
@@ -38,15 +39,17 @@ class GenerateSQL:
             port=8080,
             user="trino"
         )
-        self.trinoCursor = trinoConnection.cursor()
+        self.trinoCursor = trinoConnection.cursor() #what is being used to send queries to Trino
 
+    #Trino has a query sent to it and the results are stored in a Pandas dataframe
     def ExecuteTrinoQuery(self, query):
         self.trinoCursor.execute(query)
         rows = self.trinoCursor.fetchall()
         columns = [column[0] for column in self.trinoCursor.description]
         queryResult = pd.DataFrame(rows, columns=columns)
-        print(queryResult)
+        print(queryResult) #results are currently printed but will be written to CSVs later
 
+    #the different portions of a SQL query are configured and added together as a string
     def ConvertColumnsToSQL(self, tag):
         taggedColumnsDict = {}
         
@@ -55,25 +58,28 @@ class GenerateSQL:
         sqlFrom = ""
         sqlInnerJoin = ""
 
+        #specified tag is found in the dictionary
         for taggedColumnsListElement in self.taggedColumnsList:
             if taggedColumnsListElement["tag_name"] == tag:
                 taggedColumnsDict = taggedColumnsListElement
                 break
 
+        #columns to SELECT are constructed
         for column in taggedColumnsDict["all_columns"]:
             sqlColumns = sqlColumns + column + ", "
         sqlColumns = sqlColumns[:-2]
         
+        #FROM text is configured
         sqlFrom = sqlFrom + "\nFROM " + taggedColumnsDict["all_tables"][0]
 
-        isFirstIteration = True
+        isFirstIteration = True #utilized to skip the first iteration
         if len(taggedColumnsDict["all_tables"]) > 1:
             taggedColumnsTables = taggedColumnsDict["all_tables"]
             for table in taggedColumnsTables:
                 if isFirstIteration:
                     isFirstIteration = False
                     continue
-                sqlInnerJoin = sqlInnerJoin + "\nINNER JOIN "
+                sqlInnerJoin = sqlInnerJoin + "\nINNER JOIN " #inner joins are constructed for as many joins are set to take place
                 sqlOn = "ON "
                 for joinColumn in taggedColumnsDict["join_columns"]:
                     if joinColumn[:-(joinColumn[::-1].index(".")+1)] == table:
@@ -85,14 +91,13 @@ class GenerateSQL:
                         break
                 sqlInnerJoin = sqlInnerJoin + table + " " + sqlOn
 
-            generatedSQLStatement = generatedSQLStatement + sqlColumns + sqlFrom + sqlInnerJoin
+            generatedSQLStatement = generatedSQLStatement + sqlColumns + sqlFrom + sqlInnerJoin #the final SQL statement is constructed
         else:
-            generatedSQLStatement = generatedSQLStatement + sqlColumns + sqlFrom
+            generatedSQLStatement = generatedSQLStatement + sqlColumns + sqlFrom #the final SQL statement is constructed
 
         return generatedSQLStatement
         
     def Main(self):
-        #pass
         self.ConnectToTrino()
         self.ExecuteTrinoQuery(self.ConvertColumnsToSQL("Housing"))
 
