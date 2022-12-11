@@ -19,5 +19,10 @@ def about():
     sites = ['twitter', 'facebook', 'instagram', 'whatsapp']
     return render_template("about.html", sites=sites)
 
+@app.route("/dropdown")
+def dropdown():
+    colors = ['Red', 'Blue', 'Black', 'Orange']
+    return render_template('dropdown.html', colors=colors)
+
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 5000)
