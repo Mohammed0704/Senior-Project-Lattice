@@ -63,6 +63,9 @@ services:
 
   etl-service:
     image: etl-service:latest
+    #build:
+    #     context: ./etl_service
+    #     dockerfile: Dockerfile
     container_name: etl-service
     ports: 
       - '5000:5000'

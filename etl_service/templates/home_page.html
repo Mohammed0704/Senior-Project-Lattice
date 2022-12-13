@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html style="background-color:rgb(136, 160, 244);">
+<html>
+<link rel="stylesheet" href='/static_files/main.css' />
  
 <center>
     <head>
         <title>Lattice - Home</title>
         <b>
-            <h1 style="font-size: 66px;">Lattice</h1>
+            <h1>Lattice</h1>
             <p></p>
-            <h1 style="font-size: 45px;">Home Page</h1>
+            <h2>Home Page</h2>
         </b>
     </head>
     
     <body>
         <br></br>
-        <a style="font-size: 35px; line-height: 1.8;">What would you like to do?</a>
-        <br></br>
-        <a style="font-size: 30px; line-height: 2;" href="{{ url_for('connections') }}">Data Source Connections Portal</a>
-        <br></br>
-        <a style="font-size: 30px; line-height: 2;" href="{{ url_for('tags') }}">Tag Management Portal</a>
-        <br></br>
-        <a style="font-size: 30px; line-height: 2;" href="{{ url_for('metadata') }}">Data Object Management Portal</a>
-        <br></br>
-        <a style="font-size: 30px; line-height: 2;" href="{{ url_for('loader') }}">Graph Loader Portal</a>
+        <h3>What would you like to do?</h3>
+        <h4><a href="{{ url_for('connections') }}">Data Source Connections Portal</a></h4>
+        <h4><a href="{{ url_for('tags') }}">Tag Management Portal</a></h4>
+        <h4><a href="{{ url_for('metadata') }}">Data Object Management Portal</a></h4>
+        <h4><a href="{{ url_for('loader') }}">Graph Loader Portal</a></h4>
         <!--{% block body %}
         
         
