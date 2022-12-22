@@ -34,7 +34,7 @@ docker exec -it mariadb mariadb --user root -puser mariadb -e "CREATE TABLE drex
 docker exec -it mariadb mariadb --user root -puser mariadb -e "LOAD DATA LOCAL INFILE '/data_files/MariaDB-basic_employee_info.csv' 
                                                                INTO table drexel_people.basic_employee_info 
                                                                FIELDS TERMINATED BY ','  
-                                                               LINES TERMINATED BY '\r\n'
+                                                               LINES TERMINATED BY '\n'
                                                                IGNORE 1 lines
                                                                (drexel_id, last_name, first_name, middle_name, date_of_birth, chosen_name, personal_pronouns, email, primary_department, gender, marital_status, ethnicity, race, living_address, mail_address, phone_number, role)
                                                                ;"
@@ -61,7 +61,7 @@ docker exec -it mariadb mariadb --user root -puser mariadb -e "CREATE TABLE drex
 docker exec -it mariadb mariadb --user root -puser mariadb -e "LOAD DATA LOCAL INFILE '/data_files/MariaDB-basic_student_info.csv' 
                                                                INTO table drexel_people.basic_student_info 
                                                                FIELDS TERMINATED BY ','  
-                                                               LINES TERMINATED BY '\r\n'
+                                                               LINES TERMINATED BY '\n'
                                                                IGNORE 1 lines
                                                                (drexel_id, first_name, middle_name, last_name, date_of_birth, email, chosen_name, gender, personal_pronoun, ethnicity, race, expected_graduation_year, student_program_type, phone, home_address) 
                                                                ;"
@@ -76,7 +76,7 @@ docker exec -it mariadb mariadb --user root -puser mariadb -e "CREATE TABLE loca
 docker exec -it mariadb mariadb --user root -puser mariadb -e "LOAD DATA LOCAL INFILE '/data_files/MariaDB-resource_locations.csv' 
                                                                INTO table locations.resource_locations 
                                                                FIELDS TERMINATED BY ','  
-                                                               LINES TERMINATED BY '\r\n'
+                                                               LINES TERMINATED BY '\n'
                                                                IGNORE 1 lines
                                                                (name_of_resource, address, description)
                                                                ;"
@@ -93,7 +93,7 @@ docker exec -it mariadb mariadb --user root -puser mariadb -e "CREATE TABLE loca
 docker exec -it mariadb mariadb --user root -puser mariadb -e "LOAD DATA LOCAL INFILE '/data_files/MariaDB-student_locations.csv' 
                                                                INTO table locations.student_locations 
                                                                FIELDS TERMINATED BY ','  
-                                                               LINES TERMINATED BY '\r\n'
+                                                               LINES TERMINATED BY '\n'
                                                                IGNORE 1 lines
                                                                (drexel_id, is_international, living_address, is_communter, has_parking_pass)
                                                                ;"
