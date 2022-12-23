@@ -1,2 +1,2 @@
 ---Entering Cassandra CLI Client
-docker-compose exec -it cassandra cqlsh
+docker exec -it cassandra cqlsh

@@ -1,9 +1,11 @@
 #!/usr/bin/env bash
 
+set isWindows = 0
+
 #checks if the machine is Windows and provides alternate commands if so
-test winpty
+winpty || set isWindows = 1
 RESULT=$?
-if [ $RESULT -eq 0 ]; then
+if [[ $isWindows == 0 ]]; then
 
     #copy postgres data into the postgres container
     docker cp ./postgres/data_files postgres:/
