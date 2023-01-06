@@ -15,8 +15,11 @@ docker stop [container_name]
 ---Removing an instance of a container (wipes all attached data unless a volume is configured)
 docker rm [container_name]
 
----Starting up entire environment
+---Starting up entire environment (in a directory that contains a docker-compose.yml file)
 docker-compose up -d
 
 ---Stopping/Pulling down entire environment (stops and removes all containers present in docker-compose.yml)
 docker-compose down
+
+---Starts up all database and system architecture Docker containers (custom script)
+./docker-compose-all.sh

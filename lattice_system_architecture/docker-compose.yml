@@ -1,0 +1,21 @@
+#docker-compose file for starting up system architecture containers
+
+version: "3.1"
+
+services:
+  trino:
+    image: 'trinodb/trino:latest'
+    container_name: trino
+    ports:
+      - '8080:8080'
+    volumes:
+      - ./trino/etc:/etc/trino
+
+  etl-service:
+    image: etl-service:latest
+    #build:
+    #     context: ./etl_service
+    #     dockerfile: Dockerfile
+    container_name: etl-service
+    ports: 
+      - '5000:5000'

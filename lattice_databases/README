@@ -1,0 +1,1 @@
+Once all database containers are running, 'IngestDataIntoDatabases.sh' must be run to populate the database containers with data
