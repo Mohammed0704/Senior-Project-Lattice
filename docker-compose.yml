@@ -4,6 +4,8 @@ services:
   mariadb:
     image: mariadb:latest
     container_name: mariadb
+    ports:
+      - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: user
       MYSQL_DATABASE: mariadb
@@ -32,13 +34,9 @@ services:
       - 9200:9200
       - 9300:9300
     environment:
-      - cluster.name=es-cluster
-      - node.name=es-node-1
-      - path.data=/usr/share/elasticsearch/data
-      - http.port=9200
-      - http.host=0.0.0.0
-      - transport.host=127.0.0.1
       - bootstrap.memory_lock=true
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
       - xpack.security.enabled=false
     ulimits:
       memlock:
