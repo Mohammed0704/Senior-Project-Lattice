@@ -3,6 +3,9 @@ import pandas as pd
 
 class GenerateSQL:
     trinoCursor = None
+    trinoHost = "localhost"
+    trinoPort = 8080
+    trinoUser = "user"
 
     #example of tagged columns after being deserialized and parsed
     taggedColumnsList = [
@@ -18,12 +21,7 @@ class GenerateSQL:
                                 "postgres.campus_life.housing_options.address",
                                 "postgres.campus_life.housing_options.is_affiliated_housing"
                             ],
-                            "join_columns":
-                            [
-                                "cassandra.finances.housing_costs.residence_name",
-                                "postgres.campus_life.housing_options.residence_name"
-                            ],
-                            "concat":
+                            "all_concat_columns":
                             [
                                 {
                                     "concat_name": "test", "concat_columns": 
@@ -37,8 +35,25 @@ class GenerateSQL:
                                         "concat_column_order": 2
                                     }
                                 ]
+                                },
+                                {
+                                    "concat_name": "another_test", "concat_columns": 
+                                [
+                                    {
+                                        "concat_column": "postgres.campus_life.housing_options.address",
+                                        "concat_column_order": 1
+                                    },
+                                    {
+                                        "concat_column": "postgres.campus_life.housing_options.residence_name",
+                                        "concat_column_order": 2
+                                    }
+                                ]
                                 }
-                                
+                            ],
+                            "join_columns":
+                            [
+                                "cassandra.finances.housing_costs.residence_name",
+                                "postgres.campus_life.housing_options.residence_name"
                             ],
                             "all_tables":
                             [
@@ -53,9 +68,9 @@ class GenerateSQL:
 
     def ConnectToTrino(self):
         trinoConnection = trino.dbapi.connect(
-            host="localhost",
-            port=8080,
-            user="trino"
+            host=self.trinoHost,
+            port=self.trinoPort,
+            user=self.trinoUser
         )
         self.trinoCursor = trinoConnection.cursor() #what is being used to send queries to Trino
 
@@ -87,13 +102,13 @@ class GenerateSQL:
             sqlColumns = sqlColumns + column + ", "
 
         #add concatenated columns to the SELECT if requested
-        if len(taggedColumnsDict["concat"]) > 0:
-            for concat in taggedColumnsDict["concat"]:
+        if len(taggedColumnsDict["all_concat_columns"]) > 0:
+            for allConcatColumns in taggedColumnsDict["all_concat_columns"]:
                 sqlColumns = sqlColumns + "concat("
-                for concatColumns in concat["concat_columns"]:
+                for concatColumns in allConcatColumns["concat_columns"]:
                     sqlColumns = sqlColumns + concatColumns["concat_column"] + ", \' \', "
                 sqlColumns = sqlColumns[:-7] #removes remaining space and commas
-                sqlColumns = sqlColumns + ") AS " + concat["concat_name"] + ", "
+                sqlColumns = sqlColumns + ") AS " + allConcatColumns["concat_name"] + ", "
 
         sqlColumns = sqlColumns[:-2] #removes remaining comma
 
@@ -125,12 +140,12 @@ class GenerateSQL:
         else:
             generatedSQLStatement = generatedSQLStatement + sqlColumns + sqlFrom #the final SQL statement is constructed
 
+        print("\nGenerated SQL Statement:\n" + generatedSQLStatement + "\n")
         return generatedSQLStatement
         
     def Main(self):
         self.ConnectToTrino()
         self.ExecuteTrinoQuery(self.ConvertColumnsToSQL("Housing"))
-        #print(self.ConvertColumnsToSQL("Housing"))
 
 if __name__=="__main__":
     generateSQL = GenerateSQL()
