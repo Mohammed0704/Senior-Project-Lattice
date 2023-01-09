@@ -3,10 +3,14 @@ import pandas as pd
 
 class GenerateSQL:
     trinoCursor = None
+    trinoHost = "localhost"
+    trinoPort = 8080
+    trinoUser = "user"
 
     #example of tagged columns after being deserialized and parsed
     taggedColumnsList = [
-                            {"tag_name": "Housing",
+                            {
+                            "tag_name": "Housing",
                             "all_columns": 
                             [
                                 "cassandra.finances.housing_costs.residence_name", 
@@ -16,6 +20,35 @@ class GenerateSQL:
                                 "postgres.campus_life.housing_options.residence_name",
                                 "postgres.campus_life.housing_options.address",
                                 "postgres.campus_life.housing_options.is_affiliated_housing"
+                            ],
+                            "all_concat_columns":
+                            [
+                                {
+                                    "concat_name": "test", "concat_columns": 
+                                [
+                                    {
+                                        "concat_column": "cassandra.finances.housing_costs.room_style",
+                                        "concat_column_order": 1
+                                    },
+                                    {
+                                        "concat_column": "cassandra.finances.housing_costs.maximum_monthly_cost",
+                                        "concat_column_order": 2
+                                    }
+                                ]
+                                },
+                                {
+                                    "concat_name": "another_test", "concat_columns": 
+                                [
+                                    {
+                                        "concat_column": "postgres.campus_life.housing_options.address",
+                                        "concat_column_order": 1
+                                    },
+                                    {
+                                        "concat_column": "postgres.campus_life.housing_options.residence_name",
+                                        "concat_column_order": 2
+                                    }
+                                ]
+                                }
                             ],
                             "join_columns":
                             [
@@ -35,9 +68,9 @@ class GenerateSQL:
 
     def ConnectToTrino(self):
         trinoConnection = trino.dbapi.connect(
-            host="localhost",
-            port=8080,
-            user="trino"
+            host=self.trinoHost,
+            port=self.trinoPort,
+            user=self.trinoUser
         )
         self.trinoCursor = trinoConnection.cursor() #what is being used to send queries to Trino
 
@@ -67,7 +100,19 @@ class GenerateSQL:
         #columns to SELECT are constructed
         for column in taggedColumnsDict["all_columns"]:
             sqlColumns = sqlColumns + column + ", "
-        sqlColumns = sqlColumns[:-2]
+
+        #add concatenated columns to the SELECT if requested
+        if len(taggedColumnsDict["all_concat_columns"]) > 0:
+            for allConcatColumns in taggedColumnsDict["all_concat_columns"]:
+                sqlColumns = sqlColumns + "concat("
+                for concatColumns in allConcatColumns["concat_columns"]:
+                    sqlColumns = sqlColumns + concatColumns["concat_column"] + ", \' \', "
+                sqlColumns = sqlColumns[:-7] #removes remaining space and commas
+                sqlColumns = sqlColumns + ") AS " + allConcatColumns["concat_name"] + ", "
+
+        sqlColumns = sqlColumns[:-2] #removes remaining comma
+
+
         
         #FROM text is configured
         sqlFrom = sqlFrom + "\nFROM " + taggedColumnsDict["all_tables"][0]
@@ -95,6 +140,7 @@ class GenerateSQL:
         else:
             generatedSQLStatement = generatedSQLStatement + sqlColumns + sqlFrom #the final SQL statement is constructed
 
+        print("\nGenerated SQL Statement:\n" + generatedSQLStatement + "\n")
         return generatedSQLStatement
         
     def Main(self):
