@@ -6,7 +6,8 @@ class GenerateSQL:
 
     #example of tagged columns after being deserialized and parsed
     taggedColumnsList = [
-                            {"tag_name": "Housing",
+                            {
+                            "tag_name": "Housing",
                             "all_columns": 
                             [
                                 "cassandra.finances.housing_costs.residence_name", 
@@ -21,6 +22,23 @@ class GenerateSQL:
                             [
                                 "cassandra.finances.housing_costs.residence_name",
                                 "postgres.campus_life.housing_options.residence_name"
+                            ],
+                            "concat":
+                            [
+                                {
+                                    "concat_name": "test", "concat_columns": 
+                                [
+                                    {
+                                        "concat_column": "cassandra.finances.housing_costs.room_style",
+                                        "concat_column_order": 1
+                                    },
+                                    {
+                                        "concat_column": "cassandra.finances.housing_costs.maximum_monthly_cost",
+                                        "concat_column_order": 2
+                                    }
+                                ]
+                                }
+                                
                             ],
                             "all_tables":
                             [
@@ -67,7 +85,19 @@ class GenerateSQL:
         #columns to SELECT are constructed
         for column in taggedColumnsDict["all_columns"]:
             sqlColumns = sqlColumns + column + ", "
-        sqlColumns = sqlColumns[:-2]
+
+        #add concatenated columns to the SELECT if requested
+        if len(taggedColumnsDict["concat"]) > 0:
+            for concat in taggedColumnsDict["concat"]:
+                sqlColumns = sqlColumns + "concat("
+                for concatColumns in concat["concat_columns"]:
+                    sqlColumns = sqlColumns + concatColumns["concat_column"] + ", \' \', "
+                sqlColumns = sqlColumns[:-7] #removes remaining space and commas
+                sqlColumns = sqlColumns + ") AS " + concat["concat_name"] + ", "
+
+        sqlColumns = sqlColumns[:-2] #removes remaining comma
+
+
         
         #FROM text is configured
         sqlFrom = sqlFrom + "\nFROM " + taggedColumnsDict["all_tables"][0]
@@ -100,6 +130,7 @@ class GenerateSQL:
     def Main(self):
         self.ConnectToTrino()
         self.ExecuteTrinoQuery(self.ConvertColumnsToSQL("Housing"))
+        #print(self.ConvertColumnsToSQL("Housing"))
 
 if __name__=="__main__":
     generateSQL = GenerateSQL()
