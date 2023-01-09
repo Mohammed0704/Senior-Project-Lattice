@@ -55,6 +55,9 @@ class GenerateSQL:
                                 "cassandra.finances.housing_costs.residence_name",
                                 "postgres.campus_life.housing_options.residence_name"
                             ],
+                            "join_concat_columns":
+                            [
+                            ],
                             "all_tables":
                             [
                                 "cassandra.finances.housing_costs",
@@ -63,6 +66,49 @@ class GenerateSQL:
                             }
                         ]
     
+    #second example of tagged columns after being deserialized and parsed
+    taggedColumnsList2 = [
+                            {
+                            "tag_name": "Employee",
+                            "all_columns": 
+                            [
+                                "mariadb.drexel_people.basic_employee_info.first_name", 
+                                "mariadb.drexel_people.basic_employee_info.last_name", 
+                                "mariadb.drexel_people.basic_employee_info.email", 
+                                "cassandra.finances.employee_salaries.full_name",
+                                "cassandra.finances.employee_salaries.job_title"
+                            ],
+                            "all_concat_columns":
+                            [
+                            ],
+                            "join_columns":
+                            [
+                                "cassandra.finances.employee_salaries.full_name"
+                            ],
+                            "join_concat_columns":
+                            [
+                                {
+                                    "concat_name": "f_name", "concat_columns": 
+                                [
+                                    {
+                                        "concat_column": "mariadb.drexel_people.basic_employee_info.first_name",
+                                        "concat_column_order": 1
+                                    },
+                                    {
+                                        "concat_column": "mariadb.drexel_people.basic_employee_info.last_name",
+                                        "concat_column_order": 2
+                                    }
+                                ]
+                                }
+                            ],
+                            "all_tables":
+                            [
+                                "mariadb.drexel_people.basic_employee_info",
+                                "cassandra.finances.employee_salaries"
+                            ]
+                            }
+                        ]
+
     def __init__(self):
         pass
 
@@ -92,7 +138,7 @@ class GenerateSQL:
         sqlInnerJoin = ""
 
         #specified tag is found in the dictionary
-        for taggedColumnsListElement in self.taggedColumnsList:
+        for taggedColumnsListElement in self.taggedColumnsList2:
             if taggedColumnsListElement["tag_name"] == tag:
                 taggedColumnsDict = taggedColumnsListElement
                 break
@@ -127,13 +173,32 @@ class GenerateSQL:
                 sqlInnerJoin = sqlInnerJoin + "\nINNER JOIN " #inner joins are constructed for as many joins are set to take place
                 sqlOn = "ON "
                 for joinColumn in taggedColumnsDict["join_columns"]:
-                    if joinColumn[:-(joinColumn[::-1].index(".")+1)] == table:
+                    if joinColumn[:-(joinColumn[::-1].index(".")+1)] == table: #parses the column name out and compares to the current table
                         sqlOn = sqlOn + joinColumn + " = "
                         break
+                
+                fromTableJoinColumn = ""
                 for joinColumn in taggedColumnsDict["join_columns"]:
                     if joinColumn[:-(joinColumn[::-1].index(".")+1)] == taggedColumnsTables[0]: #retrives the FROM table's join column
                         sqlOn = sqlOn + joinColumn
+                        fromTableJoinColumn = joinColumn
                         break
+
+                for joinConcatColumns in taggedColumnsDict["join_concat_columns"]:
+                    sqlOn = sqlOn + "concat("
+                    for concatColumns in joinConcatColumns["concat_columns"]:
+                        concatColumn = concatColumns["concat_column"]
+                        print("----")
+                        print(concatColumn[:-(concatColumn[::-1].index(".")+1)])
+                        print(table)
+                        print("----\n----")
+                        #if concatColumn[:-(concatColumn[::-1].index(".")+1)] == table:
+                        for concatColumns in joinConcatColumns["concat_columns"]:
+                            sqlOn = sqlOn + concatColumns["concat_column"] + ", \' \', "
+                        sqlOn = sqlOn[:-7] #removes remaining space and commas
+                        sqlOn = sqlOn + ") AS " + joinConcatColumns["concat_name"] + " = " + fromTableJoinColumn + ", "
+
+                
                 sqlInnerJoin = sqlInnerJoin + table + " " + sqlOn
 
             generatedSQLStatement = generatedSQLStatement + sqlColumns + sqlFrom + sqlInnerJoin #the final SQL statement is constructed
@@ -145,7 +210,8 @@ class GenerateSQL:
         
     def Main(self):
         self.ConnectToTrino()
-        self.ExecuteTrinoQuery(self.ConvertColumnsToSQL("Housing"))
+        #self.ExecuteTrinoQuery(self.ConvertColumnsToSQL("Housing"))
+        self.ExecuteTrinoQuery(self.ConvertColumnsToSQL("Employee"))
 
 if __name__=="__main__":
     generateSQL = GenerateSQL()
