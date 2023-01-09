@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-python ./elasticsearch/ElasticFileConversion.py
+python3 ./elasticsearch/ElasticFileConversion.py || python ./elasticsearch/ElasticFileConversion.py
 
 ./cassandra/IngestCassandraData.sh
 RESULT=$?
