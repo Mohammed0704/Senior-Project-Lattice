@@ -1,11 +1,7 @@
 #!/usr/bin/env bash
 
-set isWindows = 0
-
-#checks if the machine is Windows and provides alternate commands if so
-winpty || set isWindows = 1
-RESULT=$?
-if [[ $isWindows == 0 ]]; then
+windowsDir=/c/'Program Files'
+if [ -d "$windowsDir" ]; then #checks if the machine is Windows and provides alternate commands if so
 
     #copy cassandra data into the cassandra container
     docker cp ./cassandra/data_files cassandra:/
