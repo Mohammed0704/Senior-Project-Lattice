@@ -18,4 +18,4 @@ services:
     #     dockerfile: Dockerfile
     container_name: etl-service
     ports: 
-      - '5000:5000'
+      - '4999:4999'
