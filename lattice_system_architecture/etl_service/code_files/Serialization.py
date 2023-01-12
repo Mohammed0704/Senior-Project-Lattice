@@ -1,6 +1,6 @@
 #import csv
 import json
-import yaml #pip install pyyaml
+#import yaml #pip install pyyaml
 
 taggedColumnsList = [
                             {
@@ -74,17 +74,16 @@ def Serialize(data, filePath):
 #         dict_writer.writeheader()
 #         dict_writer.writerows(data)
 
-#deserializeYamlDictList
+#def deserializeYamlDictList(filePath):
+#    with open(filePath, 'r') as yamlFile:
+#        data = yaml.safe_load(yamlFile)
+#        return data
+
+#deserializeTextDictList
 def Deserialize(filePath):
-    with open(filePath, 'r') as yamlFile:
-        data = yaml.safe_load(yamlFile)
+    with open(filePath, 'r') as file:
+        data = json.load(file)
     return data
-
-
-#def deserializeTextDictList(filePath):
-#    with open(filePath, 'r') as file:
-#        data = json.load(file)
-#    return data
 
 if __name__=="__main__":
     Serialize(taggedColumnsList, "./serialize_test.txt")
