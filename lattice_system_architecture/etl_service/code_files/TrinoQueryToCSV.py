@@ -1,6 +1,7 @@
 import trino
 import pandas as pd
 import os.path
+import datetime
 
 currentDirectory = os.getcwd()
 
@@ -26,13 +27,14 @@ class GenerateSQL:
         columns = [column[0] for column in self.trinoCursor.description]
         queryResult = pd.DataFrame(rows, columns=columns)
         print(queryResult)
-        queryResult.to_csv(currentDirectory + '/etl_service/TrinoQueryToCSVOutput/TrinoQuery{}.csv'.format(pd.datetime.now().strftime("%Y-%m-%d %H%M%S")))
+        dataObjectTag = "Test"
+        queryResult.to_csv(currentDirectory + "/etl_service/" + dataObjectTag + "_{}.csv".format(datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))) #writes the query to a CSV file
 
         
     def Main(self):
-        UserQuery = input('Enter in TrinoDB Query to Output to a CSV file:')
+        query = "select * from mariadb.drexel_people.basic_employee_info"
         self.ConnectToTrino()
-        self.ExecuteTrinoQuery(UserQuery)
+        self.ExecuteTrinoQuery(query)
 
 
 if __name__=="__main__":
