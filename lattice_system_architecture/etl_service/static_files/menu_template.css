@@ -1,7 +1,9 @@
 h6
 {
-    font-size: 15px;
-    line-height: 2;
+    font-size: 20px;
+    line-height: 0px;
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .box
@@ -12,4 +14,32 @@ h6
     border: 2px solid black;
     margin: 0;
     padding: 0;
+}
+
+html
+{
+    background-color: lightgrey;
+    position: sticky;
+    top: 0px;
+    padding-top: 0px;
+}
+
+body
+{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.header_box
+{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.header_box_element
+{
+    display:inline-block;
+    padding-right: 19px;
+    height:10px;
 }

@@ -8,7 +8,7 @@ def base():
 
 @app.route("/home")
 def home():
-    return render_template("home_page.html")# + render_template("menu_template.html")
+    return render_template("home_page.html")
 
 @app.route("/connections")
 def connections():
