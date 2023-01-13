@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="/static_files/main.css" />
+ 
+<center>
+    <head>
+        <title>Lattice - Home</title>
+        <b>
+            <h1>Lattice</h1>
+            <p></p>
+            <h2>Home Page</h2>
+        </b>
+    </head>
+    <body>
+        <div class="grid">
+            <br></br>
+            <h3>What would you like to do?</h3>
+            <h4><a href="{{ url_for('connections') }}">Data Source Connections Portal</a></h4>
+            <h4><a href="{{ url_for('tags') }}">Tag Management Portal</a></h4>
+            <h4><a href="{{ url_for('metadata') }}">Data Object Management Portal</a></h4>
+            <h4><a href="{{ url_for('loader') }}">Graph Loader Portal</a></h4>
+        </div>
+        <div class="grid">
+            <object class="menu_template" data="/static_files/templates/menu_template.html"></object>
+        </div>
+
+        <!--{% block body %}
+        
+        
+    <p>This is a Flask application.</p>
+        
+    
+        {% endblock %}-->
+    </body>
+</center>
+ 
+</html>

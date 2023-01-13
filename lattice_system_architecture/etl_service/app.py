@@ -1,6 +1,6 @@
 #JUST SOME DEFAULT TESTING THING, CALLED IN etl-flask-dockerfile
 from flask import Flask, render_template, redirect, url_for
-app = Flask(__name__, template_folder="templates", static_folder='static_files')
+app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
 @app.route('/')
 def base():
@@ -8,7 +8,7 @@ def base():
 
 @app.route("/home")
 def home():
-    return render_template("home_page.html")
+    return render_template("home_page.html")# + render_template("menu_template.html")
 
 @app.route("/connections")
 def connections():
@@ -41,4 +41,4 @@ def dropdown():
     return render_template('dropdown.html', colors=colors)
 
 if __name__ == "__main__":
-    app.run(host = "0.0.0.0", port = 5000)
+    app.run(host = "0.0.0.0", port = 4999)

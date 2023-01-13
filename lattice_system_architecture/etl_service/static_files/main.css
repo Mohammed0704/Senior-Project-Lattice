@@ -25,3 +25,18 @@ h4
     font-size: 30px;
     line-height: 2;
 }
+
+body
+{
+    display:inline;
+}
+
+.grid
+{
+    display:inline-block;
+}
+
+.menu_template
+{
+    height:375px
+}

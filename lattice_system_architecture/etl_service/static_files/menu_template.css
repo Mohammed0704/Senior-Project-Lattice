@@ -1,0 +1,15 @@
+h6
+{
+    font-size: 15px;
+    line-height: 2;
+}
+
+.box
+{
+    width: 250px;
+    height: 350px;
+    overflow: hidden;
+    border: 2px solid black;
+    margin: 0;
+    padding: 0;
+}

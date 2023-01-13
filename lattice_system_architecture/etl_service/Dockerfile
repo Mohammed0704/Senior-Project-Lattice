@@ -6,7 +6,7 @@ FROM python:3.8
 
 ADD app.py /
 ADD requirements.txt /
-ADD /templates/ /templates/
+#ADD /templates/ /templates/
 ADD /static_files /static_files/
 
 RUN pip3 install -r requirements.txt
