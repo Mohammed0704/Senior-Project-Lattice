@@ -11,11 +11,11 @@ def home():
 
 @app.route("/connections")
 def connections():
-    connectionsDict = {
-        "testMaria" : ["testType", "www.testURL.com", "dummy name"],
-        "testMongo" : ["testtype2diabetes", "drexel.edu", "moe"]
-    }
-    return render_template("portal_data_source_connections.html", connectionsDict=connectionsDict)
+    connectionsList = [
+        ["testMaria", "testType", "www.testURL.com", "dummy name"],
+        ["testMongo", "testtype2: diabetes", "drexel.edu", "moe"]
+    ]
+    return render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
 @app.route("/tags")
 def tags():
