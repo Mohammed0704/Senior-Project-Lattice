@@ -1,6 +1,5 @@
-#JUST SOME DEFAULT TESTING THING, CALLED IN etl-flask-dockerfile
 from flask import Flask, render_template, redirect, url_for
-app = Flask(__name__, template_folder="templates", static_folder='static_files')
+app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
 @app.route('/')
 def base():
@@ -12,7 +11,11 @@ def home():
 
 @app.route("/connections")
 def connections():
-    return "connections"
+    connectionsList = [
+        ["testMaria", "testType", "www.testURL.com", "dummy name"],
+        ["testMongo", "testtype2: diabetes", "drexel.edu", "moe"]
+    ]
+    return render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
 @app.route("/tags")
 def tags():
