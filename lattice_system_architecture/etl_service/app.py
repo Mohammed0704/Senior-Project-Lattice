@@ -1,4 +1,3 @@
-#JUST SOME DEFAULT TESTING THING, CALLED IN etl-flask-dockerfile
 from flask import Flask, render_template, redirect, url_for
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 

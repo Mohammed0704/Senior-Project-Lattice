@@ -27,7 +27,7 @@ h4
     line-height: 2;
 }
 
-body
+.page_content
 {
     margin-top: 3%;
     margin-left: 0px;
@@ -42,7 +42,7 @@ body
 .menu_template
 {
     height:100%;
-    width:80%;
+    width:20%;
     margin-bottom: 8px;
     margin-top: 0px;
     position:absolute;
