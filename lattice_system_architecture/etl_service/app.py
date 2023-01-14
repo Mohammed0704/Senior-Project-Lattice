@@ -12,7 +12,11 @@ def home():
 
 @app.route("/connections")
 def connections():
-    return "connections"
+    connectionsDict = {
+        "testMaria" : ["testType", "www.testURL.com", "dummy name"],
+        "testMongo" : ["testtype2diabetes", "drexel.edu", "moe"]
+    }
+    return render_template("portal_data_source_connections.html", connections=connections)
 
 @app.route("/tags")
 def tags():
