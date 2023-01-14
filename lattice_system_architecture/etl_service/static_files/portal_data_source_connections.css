@@ -38,6 +38,6 @@ tr
     height: 80px;
 }
 
-th {
+th, td {
     border-right: 1px solid black;
 }
