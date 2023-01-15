@@ -15,7 +15,7 @@ def connections():
         ["testMaria", "testType", "www.testURL.com", "dummy name"],
         ["testMongo", "testtype2: diabetes", "drexel.edu", "moe"]
     ]
-    return render_template("portal_data_source_connections.html", connectionsList=connectionsList)
+    return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
 @app.route("/tags")
 def tags():
