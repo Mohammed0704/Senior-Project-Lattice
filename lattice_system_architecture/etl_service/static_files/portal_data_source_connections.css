@@ -40,4 +40,7 @@ tr
 
 th, td {
     border-right: 1px solid black;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    font-size: 18px;
 }

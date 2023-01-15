@@ -13,14 +13,20 @@
               <span class="line line3"></span>
             </div>  
           <div class="logo">
-            <!--<h1>Navbar</h1>-->
           </div>
           <div class="menu-items">
-            <li style="margin-top: 15%;"><a href="#">Home Page</a></li>
-            <li><a href="#">Data Source Connections Portal</a></li>
-            <li><a href="#">Tag Management Portal</a></li>
-            <li><a href="#">Data Object Management Portal</a></li>
-            <li><a href="#">Graph Loader Portal</a></li>
+            <b><div style="font-size: 30px; margin-top: 2.2%; margin-bottom: 12%;">Navigation</div></b>
+            <center><hr size="3" width="57%" color="black"></center>
+            <li><a href="{{ url_for('home') }}">Home Page</a></li>
+            <center><hr size="3" width="57%" color="black"></center>
+            <li><a href="{{ url_for('connections') }}">Data Source Connections Portal</a></li>
+            <center><hr size="3" width="57%" color="black"></center>
+            <li><a href="{{ url_for('tags') }}">Tag Management Portal</a></li>
+            <center><hr size="3" width="57%" color="black"></center>
+            <li><a href="{{ url_for('metadata') }}">Data Object Management Portal</a></li>
+            <center><hr size="3" width="57%" color="black"></center>
+            <li><a href="{{ url_for('loader') }}">Graph Loader Portal</a></li>
+            <center><hr size="3" width="57%" color="black"></center>
           </div>
         </div>
       </div>
