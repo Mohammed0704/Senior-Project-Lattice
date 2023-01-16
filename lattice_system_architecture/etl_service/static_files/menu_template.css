@@ -95,7 +95,7 @@
   transform: translate(-150%);
   display: flex;
   flex-direction: column;
-  margin-left: -40px;
+  margin-left: -50px;
   padding-left: 50px;
   transition: transform 0.5s ease-in-out;
   text-align: center;
