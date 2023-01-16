@@ -6,7 +6,7 @@ docker ps -a
 ---See all images
 docker images
 
----Restar a container
+---Restart a container
 docker restart [container_name]
 
 ---Stop a container
