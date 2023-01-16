@@ -22,7 +22,7 @@ def connections():
 
 @app.route("/tags")
 def tags():
-    tagList = ["Studuent", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study", "Campus Location", "Course", "Class"]
+    tagList = ["Student", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
     return render_template("menu_template.html") + render_template("portal_tag_management.html", tagList=tagList)
 
 
