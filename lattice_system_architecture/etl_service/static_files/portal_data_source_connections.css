@@ -1,10 +1,10 @@
 #outer-content-box
 {
     display: flex;
-    height: 500px;
     background-color: lightgray;
     font-size: 30px;
     width: 90%;
+    height: 62.4%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -13,15 +13,16 @@
 #inner-content-box
 {
     background-color: darkgray;
-    height: 85%;
+    height: 82.3%;
     width: 95%;
     overflow: auto;
 }
 
 #metadata_title
 {
-    margin-top: 0;
-    margin-bottom: 1%;
+    margin-top: 0.0%;
+    margin-bottom: 4%;
+    font-size: 32px;
 }
 
 table
@@ -40,7 +41,7 @@ tr
 
 th, td {
     border-right: 1px solid black;
-    padding-left: 0.5%;
-    padding-right: 0.5%;
+    padding-left: 1%;
+    padding-right: 1%;
     font-size: 18px;
 }

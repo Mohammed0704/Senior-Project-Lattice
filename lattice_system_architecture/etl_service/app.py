@@ -12,8 +12,11 @@ def home():
 @app.route("/connections")
 def connections():
     connectionsList = [
-        ["testMaria", "testType", "www.testURL.com", "dummy name"],
-        ["testMongo", "testtype2: diabetes", "drexel.edu", "moe"]
+        ["testMaria", "MariaDB", "mariaurl:5555", "user"],
+        ["testMongo", "MongoDB", "mongourl:1234", "test"],
+        ["testes", "Elasticsearch", "esurl:9200", "us"],
+        ["testpost", "Postgres", "post:5432", "admin"],
+        ["testcass", "Cassandra", "cassurl:9402", "user"]
     ]
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
