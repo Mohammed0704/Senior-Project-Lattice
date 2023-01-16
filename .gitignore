@@ -1,2 +1,3 @@
 # Selenium Firefox creates a log for the webdriver to be ignored.  Data Generation of: Program tables
 geckodriver.log
+__pycache__
