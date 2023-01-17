@@ -26,9 +26,21 @@ def tags():
     return render_template("menu_template.html") + render_template("portal_tag_management.html", tagList=tagList)
 
 
+@app.route("/objects")
+def objects():
+    return render_template("menu_template.html") + render_template("portal_data_obj_management.html")
+
 @app.route("/metadata")
 def metadata():
-    return "metadata"
+    # Mock data
+    connectionMetadata = [{
+        "mariadb": {
+            "drexel_people": {
+                "student_info": ["drexel_id", "last_name", "first_name"]
+            }
+        }
+    }]
+    return render_template("menu_template.html") + render_template("data_obj_management_metadata.html", connectionMetadata=connectionMetadata)
 
 @app.route("/loader")
 def loader():
