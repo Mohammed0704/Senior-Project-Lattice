@@ -2,6 +2,7 @@ import os
 from Serialization import Serialize
 from Serialization import Deserialize 
 
+# Append full dict to cache file. Create empty cache file if it doesn't already exist
 def AppendToCache(filepath, dict):
     if not os.path.exists(filepath):
         open(filepath, "x")
@@ -9,16 +10,19 @@ def AppendToCache(filepath, dict):
     cacheData.append(dict)
     Serialize(cacheData, filepath)
 
-def DeleteFromCache(filepath, dict):
+# Used to remove dict value from cache file based on itemValue of keyName
+def DeleteFromCache(filepath, keyName, itemValue):
     if not os.path.exists(filepath):
         print("Cache file {} does not exist.".format(filepath))
         return
     try:
         cacheData = Deserialize(filepath)
-        cacheData.remove(dict)
+        for dict in cacheData:
+            if dict[keyName] == itemValue:
+                cacheData.remove(dict)
         Serialize(cacheData, filepath)
     except:
-        print("Value could not be found in {}.".format(filepath))
+        print("Key name could not be found in {}.".format(filepath))
 
 
 if __name__ == "__main__":
@@ -41,6 +45,6 @@ if __name__ == "__main__":
     Serialize(connectionTestDict, "./ConnectionsTest.txt")
     
     AppendToCache("./ConnectionsTest.txt", {"connection_name": "Post", "connection_type": "Postgres", "connection_URL": "196.22.77.108:5432", "connection_username": "user", "connection_password": ""})
-    DeleteFromCache("./ConnectionsTest.txt", {"connection_name": "Post", "connection_type": "Postgres", "connection_URL": "196.22.77.108:5432", "connection_username": "user", "connection_password": ""})
+    DeleteFromCache("./ConnectionsTest.txt", "connection_name", "Post")
 
     print(Deserialize("./ConnectionsTest.txt"))
