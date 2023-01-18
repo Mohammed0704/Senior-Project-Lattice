@@ -32,7 +32,7 @@ def metadata():
 
 @app.route("/loader")
 def loader():
-    return "loader"
+        return render_template("menu_template.html") + render_template("portal_graph_loader.html")
 
 @app.route("/index")
 def index():
