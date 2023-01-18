@@ -28,9 +28,10 @@ def tags():
 
 @app.route("/objects")
 def objects():
-    return render_template("menu_template.html") + render_template("portal_data_obj_management.html")
+    connectionList = ["MDB - MariaDB", "MonDB - MongoDB", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch"]
+    return render_template("menu_template.html") + render_template("portal_data_obj_management.html", connectionList=connectionList)
 
-@app.route("/metadata")
+@app.route("/metadata") #temporary
 def metadata():
     # Mock data
     connectionMetadata = [{

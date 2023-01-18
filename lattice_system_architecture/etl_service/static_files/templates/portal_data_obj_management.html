@@ -15,13 +15,15 @@
   
   <body>
     <div id="outer-content-box">
-      <p id="metadata_title">Connections</p>
+      <p id="title">Connections</p>
       <div id="inner-content-box">
-        <div class="grid">
-          <h4><a href="{{ url_for('metadata') }}?connection=mdb">MDB - MariaDB</a></h4>
-          <h4><a href="{{ url_for('metadata') }}">MonDB - MongoDB</a></h4>
-          <h4><a href="{{ url_for('metadata') }}">ES - Elasticsearch</a></h4>
-        </div>
+        <table id="connections-table">
+          {% for values in connectionList %}
+          <tr> <!-- temporary url -->
+            <td><a href="{{ url_for('metadata') }}"> {{ values }} </a></td>
+          </tr>
+          {% endfor %}
+        </table>
       </div>
     </div>
   </body>
