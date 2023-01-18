@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<link rel='stylesheet' href='/static_files/main.css' />
+<!-- <link rel='stylesheet' href='/static_files/portal_data_source_connections.css' /> -->
+<link rel='stylesheet' href='/static_files/portal_data_obj_management.css' />
+ 
+
+<center>
+  <head>
+      <title>Data Object Management Portal</title>
+      <b>
+          <h1 style="margin-bottom: 1.5%;">Data Object Management Portal</h1>
+      </b>
+  </head>
+  <!-- 
+    
+    THIS IS A PLACE HOLDER PAGE FOR NOW 
+
+    -->
+  <body>
+    <div id="outer-content-box">
+      <p id="metadata_title">Connection Metadata</p>
+      <div id="inner-content-box">
+        {% for connections in connectionMetadata %}
+          {% for connection, schemas in connections.items() %}
+            <p id="connection">Connection: {{ connection }}</p>
+            <div id="schemas">Schema:
+              {% for schema, tables in schemas.items() %}
+                <div id="schemaName">{{ schema }}
+                  <div id="tables">Tables:
+                    {% for table, colList in tables.items() %}
+                      <div id="table">{{ table }}
+                        <div id="columns">
+                          {% for col in colList %}
+                            - {{ col }}<br>
+                          {% endfor %}
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endfor %}      
+        {% endfor %}      
+      </div>
+    </div>
+  </body>
+</center>
+
+</html>

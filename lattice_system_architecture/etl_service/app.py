@@ -22,13 +22,26 @@ def connections():
 
 @app.route("/tags")
 def tags():
-    tagList = ["Studuent", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study", "Campus Location", "Course", "Class"]
+    tagList = ["Student", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
     return render_template("menu_template.html") + render_template("portal_tag_management.html", tagList=tagList)
 
 
-@app.route("/metadata")
+@app.route("/objects")
+def objects():
+    connectionList = ["MDB - MariaDB", "MonDB - MongoDB", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch"]
+    return render_template("menu_template.html") + render_template("portal_data_obj_management.html", connectionList=connectionList)
+
+@app.route("/metadata") #temporary
 def metadata():
-    return "metadata"
+    # Mock data
+    connectionMetadata = [{
+        "mariadb": {
+            "drexel_people": {
+                "student_info": ["drexel_id", "last_name", "first_name"]
+            }
+        }
+    }]
+    return render_template("menu_template.html") + render_template("data_obj_management_metadata.html", connectionMetadata=connectionMetadata)
 
 @app.route("/loader")
 def loader():

@@ -33,6 +33,13 @@ h4
 {
     font-size: 30px;
     line-height: 2;
+    text-decoration: none;
+    color: #0e2431;
+}
+
+h4 a:hover
+{
+    font-weight: bolder;
 }
 
 .page_content
