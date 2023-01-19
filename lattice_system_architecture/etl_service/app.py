@@ -28,20 +28,23 @@ def tags():
 
 @app.route("/objects")
 def objects():
-    connectionList = ["MDB - MariaDB", "MonDB - MongoDB", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch"]
-    return render_template("menu_template.html") + render_template("portal_data_obj_management.html", connectionList=connectionList)
+    connectionList = ["MDB - MariaDB", "MonDB - MongoDB", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "testing"]
+    return render_template("menu_template.html") + render_template("data_object_pages/portal_data_object_management.html", connectionList=connectionList)
 
-@app.route("/metadata") #temporary
-def metadata():
-    # Mock data
-    connectionMetadata = [{
-        "mariadb": {
-            "drexel_people": {
-                "student_info": ["drexel_id", "last_name", "first_name"]
-            }
-        }
-    }]
-    return render_template("menu_template.html") + render_template("data_obj_management_metadata.html", connectionMetadata=connectionMetadata)
+@app.route("/objects/<connectionName>")
+def schemas(connectionName):
+    schemaList = ["schema1", "schema2", "schema3"]
+    return render_template("menu_template.html") + render_template("data_object_pages/data_object_schemas_page.html", schemaList=schemaList, connectionName=connectionName)
+
+@app.route("/objects/<connectionName>/<schemaName>")
+def tables(connectionName, schemaName):
+    tableList = ["table1", "table2", "table3"]
+    return render_template("menu_template.html") + render_template("data_object_pages/data_object_tables_page.html", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
+
+@app.route("/objects/<connectionName>/<schemaName>/<tableName>")
+def columns(connectionName, schemaName, tableName):
+    columnList = ["column1", "column3", "column3", "column4", "column5", "column6", "column7", "column8", "column9"]
+    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName)
 
 @app.route("/loader")
 def loader():
