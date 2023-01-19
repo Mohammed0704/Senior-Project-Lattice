@@ -33,7 +33,7 @@ def objects():
 
 @app.route("/objects/<connectionName>")
 def schemas(connectionName):
-    schemaList = ["schema1", "schema1", "schema2"]
+    schemaList = ["schema1", "schema2", "schema3"]
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_schemas_page.html", schemaList=schemaList, connectionName=connectionName)
 
 @app.route("/objects/<connectionName>/<schemaName>")

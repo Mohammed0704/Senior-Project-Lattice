@@ -18,7 +18,7 @@
       <p id="sub-title"><b>Table:</b> {{ tableName }}</p>
       <div id="inner-content-box">
         <table id="inner-table">
-            <tr>
+            <tr style="position: sticky; top: 0; background: darkgray;">
                 <td><p id="title">Columns</p></td>
                 <td><p id="title">Tags</p></td>
             </tr>
@@ -30,9 +30,9 @@
           {% endfor %}
         </table>
       </div>
+      <a href="/objects/{{ connectionName }}/{{ schemaName }}" class="button button1">Back</a> 
     </div>
   </body>
 </center>
-<a href="/objects/{{ connectionName }}/{{ schemaName }}" class="button button1">Back</a>
 
 </html>
