@@ -13,13 +13,14 @@
   
   <body>
     <div id="outer-content-box">
-      <p id="title">Schemas</p>
+      <p id="title">Tables</p>
       <p id="sub-title">Connection: {{ connectionName }}</p>
+      <p id="sub-title">Schema: {{ schemaName }}</p>
       <div id="inner-content-box">
         <table id="connections-table">
-          {% for value in schemaList %}
+          {% for value in tableList %}
           <tr>
-            <td><a href="/objects/{{ connectionName }}/{{ value }}"> {{ value }}</a></td>
+            <td><a href="/objects/{{ connectionName }}/{{ schemaName }}/{{ value }}"> {{ value }}</a></td>
           </tr>
           {% endfor %}
         </table>
@@ -27,6 +28,6 @@
     </div>
   </body>
 </center>
-<a href="/objects" class="button button1">Back</a>
+<a href="/objects/{{ connectionName }}" class="button button1">Back</a>
 
 </html>
