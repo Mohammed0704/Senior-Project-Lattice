@@ -41,6 +41,11 @@ def tables(connectionName, schemaName):
     tableList = ["table1", "table2", "table3"]
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_tables_page.html", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
 
+@app.route("/objects/<connectionName>/<schemaName>/<tableName>")
+def columns(connectionName, schemaName, tableName):
+    columnList = ["column1", "column3", "column3", "column4", "column5", "column6", "column7", "column8", "column9"]
+    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName)
+
 @app.route("/loader")
 def loader():
         return render_template("menu_template.html") + render_template("portal_graph_loader.html")
