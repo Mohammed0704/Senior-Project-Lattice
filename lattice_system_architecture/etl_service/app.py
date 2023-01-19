@@ -28,7 +28,7 @@ def tags():
 
 @app.route("/objects")
 def objects():
-    connectionList = ["MDB - MariaDB", "MonDB - MongoDB", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch"]
+    connectionList = ["MDB - MariaDB", "MonDB - MongoDB", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "testing"]
     return render_template("menu_template.html") + render_template("./data_object_pages/portal_data_object_management.html", connectionList=connectionList)
 
 @app.route("/objects/<connection_name>")
