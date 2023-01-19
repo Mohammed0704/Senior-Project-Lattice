@@ -82,7 +82,10 @@ def Serialize(data, filePath):
 #deserializeTextDictList
 def Deserialize(filePath):
     with open(filePath, 'r') as file:
-        data = json.load(file)
+        try:
+            data = json.load(file)
+        except:
+            data = []
     return data
 
 if __name__=="__main__":
