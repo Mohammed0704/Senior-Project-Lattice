@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
 <link rel='stylesheet' href='/static_files/main.css' />
-<!-- <link rel='stylesheet' href='/static_files/portal_data_source_connections.css' /> -->
 <link rel='stylesheet' href='/static_files/portal_data_obj_management.css' />
  
-
 <center>
   <head>
       <title>Data Object Management Portal</title>
@@ -18,9 +16,9 @@
       <p id="title">Connections</p>
       <div id="inner-content-box">
         <table id="connections-table">
-          {% for values in connectionList %}
-          <tr> <!-- temporary url -->
-            <td><a href="{{ url_for('metadata') }}"> {{ values }} </a></td>
+          {% for value in connectionList %}
+          <tr>
+            <td><a v-bind:href="/objects/{{ value }}"> {{ value }}</a></td>
           </tr>
           {% endfor %}
         </table>

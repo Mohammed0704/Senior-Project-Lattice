@@ -29,19 +29,12 @@ def tags():
 @app.route("/objects")
 def objects():
     connectionList = ["MDB - MariaDB", "MonDB - MongoDB", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch"]
-    return render_template("menu_template.html") + render_template("portal_data_obj_management.html", connectionList=connectionList)
+    return render_template("menu_template.html") + render_template("./data_object_pages/portal_data_object_management.html", connectionList=connectionList)
 
-@app.route("/metadata") #temporary
-def metadata():
-    # Mock data
-    connectionMetadata = [{
-        "mariadb": {
-            "drexel_people": {
-                "student_info": ["drexel_id", "last_name", "first_name"]
-            }
-        }
-    }]
-    return render_template("menu_template.html") + render_template("data_obj_management_metadata.html", connectionMetadata=connectionMetadata)
+@app.route("/objects/<connection_name>")
+def metadata(connection_name):
+    schemasList = ["test", "blah", "blah2", connection_name]
+    return render_template("menu_template.html") + render_template("./data_object_pages/data_object_schemas_page.html", schemasList=schemasList)
 
 @app.route("/loader")
 def loader():

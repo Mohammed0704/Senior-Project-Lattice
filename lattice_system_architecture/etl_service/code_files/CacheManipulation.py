@@ -71,7 +71,7 @@ if __name__ == "__main__":
                         ]
     Serialize(connectionTestDict, "./ConnectionsTest.txt")'''
     
-    AppendToCache("./ConnectionsTest.txt", "connection_name", {"connection_name": "Post", "connection_type": "Postgres", "connection_URL": "196.22.77.108:5432", "connection_username": "user", "connection_password": ""})
+    #AppendToCache("./ConnectionsTest.txt", "connection_name", {"connection_name": "Post", "connection_type": "Postgres", "connection_URL": "196.22.77.108:5432", "connection_username": "user", "connection_password": ""})
     DeleteFromCache("./ConnectionsTest.txt", "connection_name", "Post")
 
     #print(Deserialize("./ConnectionsTest.txt"))
