@@ -19,3 +19,5 @@ services:
     container_name: etl-service
     ports: 
       - '4999:4999'
+    volumes:
+      - ./etl_service/serialized_data_TEST:/serialized_data_TEST 

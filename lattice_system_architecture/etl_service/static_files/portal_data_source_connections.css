@@ -48,3 +48,36 @@ th, td {
     padding-right: 1%;
     font-size: 18px;
 }
+
+.button {
+    border: 1px solid black;
+    font-size: 23px;
+    padding: 12px 28px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    float: right;
+    bottom: 0%;
+    right: -40%;
+    margin-bottom: 0.5%;
+    text-decoration: none;
+}
+
+.button1:hover {
+    background-color: darkgray;
+}
+
+#inner-content-box-create
+{
+    background-color: darkgray;
+    height: 82.5%;
+    width: 95%;
+    overflow: auto;
+    display: flex;
+}

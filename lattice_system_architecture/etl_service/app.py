@@ -1,4 +1,6 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
+#from Serialization import Serialize
+import json #TEMPORARY
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
 @app.route('/')
@@ -19,6 +21,27 @@ def connections():
         ["testcass", "Cassandra", "cassurl:9402", "user"]
     ]
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
+
+@app.route("/connections/create")
+def connections_create():
+    return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html")
+
+@app.route("/connections/create/submit", methods=["POST"])
+def connections_create_submit():
+    data = request.form
+
+    dataJson = {
+        'name': data['name'],
+        'data_source': data['data_source'],
+        'url': data['url'], 
+        'username': data['username'],
+        'password': data['password']
+    }
+
+    with open('serialized_data_TEST/create_conn_TEST.txt', 'w') as f:
+        json.dump(dataJson, f)
+
+    return dataJson
 
 @app.route("/tags")
 def tags():
