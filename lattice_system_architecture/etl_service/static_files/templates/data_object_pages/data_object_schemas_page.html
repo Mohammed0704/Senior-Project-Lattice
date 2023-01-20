@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link rel='stylesheet' href='/static_files/main.css' />
-<link rel='stylesheet' href='/static_files/data_object_columns_page.css' />
+<link rel='stylesheet' href='/static_files/data_object_pages.css' />
  
 <center>
   <head>
@@ -13,10 +13,12 @@
   
   <body>
     <div id="outer-content-box">
-      <p id="title">Schemas</p>
       <p id="sub-title">Connection: {{ connectionName }}</p>
-      <div id="inner-content-box">
+      <div style="height: 75%;" id="inner-content-box">
         <table id="inner-table">
+          <tr id="table-header">
+            <td><p id="title">Schemas</p></td>
+          </tr>
           {% for value in schemaList %}
           <tr>
             <td><a href="/objects/{{ connectionName }}/{{ value }}"> {{ value }}</a></td>

@@ -25,7 +25,6 @@ def tags():
     tagList = ["Student", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
     return render_template("menu_template.html") + render_template("portal_tag_management.html", tagList=tagList)
 
-
 @app.route("/objects")
 def objects():
     connectionList = ["MDB - MariaDB", "MonDB - MongoDB", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "testing"]
@@ -33,7 +32,7 @@ def objects():
 
 @app.route("/objects/<connectionName>")
 def schemas(connectionName):
-    schemaList = ["schema1", "schema2", "schema3"]
+    schemaList = ["schema1", "schema2"]
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_schemas_page.html", schemaList=schemaList, connectionName=connectionName)
 
 @app.route("/objects/<connectionName>/<schemaName>")
@@ -49,20 +48,6 @@ def columns(connectionName, schemaName, tableName):
 @app.route("/loader")
 def loader():
         return render_template("menu_template.html") + render_template("portal_graph_loader.html")
-
-@app.route("/index")
-def index():
-    return "index"
-
-@app.route("/about")
-def about():
-    sites = ['twitter', 'facebook', 'instagram', 'whatsapp']
-    return render_template("about.html", sites=sites)
-
-@app.route("/dropdown")
-def dropdown():
-    colors = ['Red', 'Blue', 'Black', 'Orange']
-    return render_template('dropdown.html', colors=colors)
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", port = 4999)

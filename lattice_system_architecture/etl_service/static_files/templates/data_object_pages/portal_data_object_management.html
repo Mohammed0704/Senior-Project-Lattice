@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link rel='stylesheet' href='/static_files/main.css' />
-<link rel='stylesheet' href='/static_files/portal_data_object_management.css' />
+<link rel='stylesheet' href='/static_files/data_object_pages.css' />
  
 <center>
   <head>
@@ -13,9 +13,11 @@
   
   <body>
     <div id="outer-content-box">
-      <p id="title">Connections</p>
-      <div id="inner-content-box">
+      <div style="height: 90%;" id="inner-content-box">
         <table id="connections-table">
+          <tr id="table-header">
+            <td><p id="title">Connections</p></td>
+          </tr>
           {% for value in connectionList %}
           <tr>
             <td><a href="/objects/{{ value }}"> {{ value }}</a></td>

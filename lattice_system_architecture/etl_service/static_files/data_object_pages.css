@@ -26,7 +26,7 @@
 {
     margin-top: 0%;
     margin-bottom: 0%;
-    font-size: 32px;
+    font-size: 29.5px;
     font-weight: bold;
     position: relative;
     left: 0%;
@@ -47,6 +47,13 @@ table
     place-content: center;
     border:1px solid black;
     border-collapse: collapse;
+}
+
+#table-header
+{
+    position: sticky; 
+    top: 0; 
+    background: darkgray;
 }
 
 tr
