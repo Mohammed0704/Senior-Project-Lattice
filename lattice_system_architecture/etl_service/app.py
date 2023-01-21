@@ -18,7 +18,10 @@ def connections():
         ["testMongo", "MongoDB", "mongourl:1234", "test"],
         ["testes", "Elasticsearch", "esurl:9200", "us"],
         ["testpost", "Postgres", "post:5432", "admin"],
-        ["testcass", "Cassandra", "cassurl:9402", "user"]
+        ["testcass", "Cassandra", "cassurl:9402", "user"],
+        ["testcass2", "Cassandra", "cassurl:9402", "user"],
+        ["testcass3", "Cassandra", "cassurl:9402", "user"],
+        ["testcass4", "Cassandra", "cassurl:9402", "user"]
     ]
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
