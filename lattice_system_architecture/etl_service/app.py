@@ -36,6 +36,28 @@ def connectionsRemove(connectionToDelete):
     Serialize(connectionsList, "/serialized_data/SerializedConnections.txt")
     return "Connection " + connectionToDelete + " removed!"
 
+@app.route("/connections/create") # create-new-page
+def connections_create():
+    return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html")
+
+@app.route("/connections/create/submit", methods=["POST"]) # create-new-page
+def connections_create_submit():
+    data = request.form
+
+    dataJson = {
+        'name': data['name'],
+        'data_source': data['data_source'],
+        'address': data['address'], 
+        'port': data['port'],
+        'username': data['username'],
+        'password': data['password']
+    }
+
+    with open('serialized_data_TEST/create_conn_TEST.txt', 'w') as f:
+        json.dump(dataJson, f)
+
+    return dataJson
+
 @app.route("/tags")
 def tags():
     tagDict = Deserialize('serialized_data/SerializedTags.txt')
