@@ -47,13 +47,14 @@
 </center>
 
 <script>
-  document.querySelectorAll(".delete-form").forEach((e) => {
-    e.addEventListener("submit", () => {
-      connectionName = e.querySelector("#connection-name").getAttribute("value");
+  document.querySelectorAll(".delete-form").forEach((deleteForm) => {
+    deleteForm.addEventListener("submit", (event) => {
+      connectionName = deleteForm.querySelector("#connection-name").getAttribute("value");
       console.log("Deleting " + connectionName + "...");
-      document.getElementById(connectionName + "-row").remove();
+      //document.getElementById(connectionName + "-row").remove();
+      deleteForm.submit();
       event.preventDefault();    //prevent page from refreshing/navigating to another page
+    });
   });
-});
 </script>
 </html>

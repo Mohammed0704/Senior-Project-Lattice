@@ -28,7 +28,9 @@ def connections():
 @app.route("/connections/remove", methods=["POST"])
 def connectionsRemove():
     data = request.form
-
+    print("IN")
+    with open('serialized_data_TEST/this_is_a_test.txt', 'w') as f:
+        json.dump("Last connection deleted: " + data["connection_name"], f)
     return data["connection_name"]
 
 @app.route("/tags")
