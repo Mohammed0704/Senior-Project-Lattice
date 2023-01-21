@@ -22,26 +22,11 @@ def connections():
     ]
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
-@app.route("/connections/create")
-def connections_create():
-    return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html")
-
-@app.route("/connections/create/submit", methods=["POST"])
-def connections_create_submit():
+@app.route("/connections/remove", methods=["POST"])
+def connectionsRemove():
     data = request.form
 
-    dataJson = {
-        'name': data['name'],
-        'data_source': data['data_source'],
-        'url': data['url'], 
-        'username': data['username'],
-        'password': data['password']
-    }
-
-    with open('serialized_data_TEST/create_conn_TEST.txt', 'w') as f:
-        json.dump(dataJson, f)
-
-    return dataJson
+    return data["connection_name"]
 
 @app.route("/tags")
 def tags():

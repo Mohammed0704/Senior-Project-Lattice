@@ -20,14 +20,21 @@
           <tr>
             <th style="width:20%; font-size: 22px;">Name</th>
             <th style="width:20%; font-size: 22px;">Type</th>
-            <th style="width:40%; font-size: 22px;">URL</th>
+            <th style="width:30%; font-size: 22px;">URL</th>
             <th style="width:20%; font-size: 22px;">Username</th>
+            <th style="width:10%; font-size: 22px;">Delete</th>
           </tr>
           {% for values in connectionsList %}
-          <tr>
+          <tr id="{{ values[0] }}-row">
             {% for value in values %}
             <td> {{ value }}</td>
             {% endfor %}
+            <td>
+              <form class="delete-form" action="{{ url_for('connectionsRemove') }}" method="post">
+                <input hidden type="text" id="connection-name" name="connection_name" value="{{ values[0] }}">
+                <input class="delete-button" type="submit" value="">
+              </form>
+            </td>
           </tr>
           {% endfor %}
         </table>
@@ -37,4 +44,14 @@
   </body>
 </center>
 
+<script>
+  document.querySelectorAll(".delete-form").forEach((e) => {
+    e.addEventListener("submit", () => {
+      connectionName = e.querySelector("#connection-name").getAttribute("value");
+      console.log("Deleting " + connectionName + "...");
+      document.getElementById(connectionName + "-row").remove();
+      event.preventDefault();    //prevent page from refreshing/navigating to another page
+  });
+});
+</script>
 </html>
