@@ -1,4 +1,6 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
+#from Serialization import Serialize
+import json #TEMPORARY
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
 @app.route('/')
@@ -16,9 +18,19 @@ def connections():
         ["testMongo", "MongoDB", "mongourl:1234", "test"],
         ["testes", "Elasticsearch", "esurl:9200", "us"],
         ["testpost", "Postgres", "post:5432", "admin"],
-        ["testcass", "Cassandra", "cassurl:9402", "user"]
+        ["testcass", "Cassandra", "cassurl:9402", "user"],
+        ["testcass2", "Cassandra", "cassurl:9402", "user"],
+        ["testcass3", "Cassandra", "cassurl:9402", "user"],
+        ["testcass4", "Cassandra", "cassurl:9402", "user"]
     ]
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
+
+@app.route("/connections/remove")
+def connectionsRemove():
+    data = request.args.get("jsdata")
+    with open('serialized_data/this_is_a_test.txt', 'w') as f:
+        json.dump("Last connection deleted: " + data, f)
+    return "Connection " + data + " removed!"
 
 @app.route("/tags")
 def tags():
