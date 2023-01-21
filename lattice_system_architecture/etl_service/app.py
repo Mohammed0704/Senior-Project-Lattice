@@ -28,7 +28,7 @@ def connections():
 @app.route("/connections/remove")
 def connectionsRemove():
     data = request.args.get("jsdata")
-    with open('serialized_data_TEST/this_is_a_test.txt', 'w') as f:
+    with open('serialized_data/this_is_a_test.txt', 'w') as f:
         json.dump("Last connection deleted: " + data, f)
     return "Connection " + data + " removed!"
 
