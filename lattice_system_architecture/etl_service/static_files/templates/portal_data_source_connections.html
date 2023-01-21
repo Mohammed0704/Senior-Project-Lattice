@@ -31,10 +31,7 @@
             {% endfor %}
             <td>
               <center>
-              <form style="margin-bottom: 0%;" class="delete-form" action="{{ url_for('connectionsRemove') }}" method="post">
-                <input hidden type="text" id="connection-name" name="connection_name" value="{{ values[0] }}">
-                <input class="delete-button delete-button1" type="submit" value="Delete">
-              </form>
+                <button class="delete-button delete-button1" id="delete-button" name="{{ values[0] }}">Delete</button>
               </center>
             </td>
           </tr>
@@ -46,15 +43,20 @@
   </body>
 </center>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
 <script>
-  document.querySelectorAll(".delete-form").forEach((deleteForm) => {
-    deleteForm.addEventListener("submit", (event) => {
-      connectionName = deleteForm.querySelector("#connection-name").getAttribute("value");
-      console.log("Deleting " + connectionName + "...");
-      //document.getElementById(connectionName + "-row").remove();
-      deleteForm.submit();
-      event.preventDefault();    //prevent page from refreshing/navigating to another page
-    });
+$("#delete-button").click(function(event)
+{
+  elementToDeleteName = $(this).attr("name")
+  console.log("Deleting " + elementToDeleteName + "...");
+
+  $.ajax({
+    url: "/connections/remove",
+    type: "get",
+    data: {jsdata: elementToDeleteName}
   });
+});
+
 </script>
 </html>
