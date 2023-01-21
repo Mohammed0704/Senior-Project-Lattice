@@ -31,7 +31,7 @@
             {% endfor %}
             <td>
               <center>
-                <button class="delete-button delete-button1" id="delete-button" name="{{ values[0] }}">Delete</button>
+                <button class="delete-button delete-button1" name="{{ values[0] }}">Delete</button>
               </center>
             </td>
           </tr>
@@ -43,13 +43,14 @@
   </body>
 </center>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="/static_files/jquery-3.1.1.js"></script>
 
 <script>
-$("#delete-button").click(function(event)
+$(".delete-button").click(function(event)
 {
   elementToDeleteName = $(this).attr("name")
   console.log("Deleting " + elementToDeleteName + "...");
+  $("#" + elementToDeleteName + "-row").remove()
 
   $.ajax({
     url: "/connections/remove",
