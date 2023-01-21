@@ -67,3 +67,22 @@ a:hover
     top:0;
     left:0;
 }
+
+.delete-button {
+    border: 1px solid black;
+    font-size: 18px;
+    padding: 8%;
+    margin: 0%;
+    cursor: pointer;
+}
+
+.delete-button1 {
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.delete-button1:hover {
+    background-color: darkgray;
+}
