@@ -26,8 +26,10 @@
           </tr>
           {% for values in connectionsList %}
           <tr id="{{ values[0] }}-row">
-            {% for value in values %}
-            <td> {{ value }}</td>
+            {% for key, value in values.items() %}
+              {% if key != "connection_password" %}
+                <td> {{ value }}</td>
+              {% endif %}
             {% endfor %}
             <td>
               <center>
