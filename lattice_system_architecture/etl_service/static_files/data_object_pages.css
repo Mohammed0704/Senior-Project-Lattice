@@ -49,13 +49,6 @@ table
     border-collapse: collapse;
 }
 
-#table-header
-{
-    position: sticky; 
-    top: 0; 
-    background: darkgray;
-}
-
 tr
 {
     border: 1px solid black;

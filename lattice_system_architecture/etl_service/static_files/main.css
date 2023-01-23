@@ -87,3 +87,10 @@ a:hover
 .delete-button1:hover {
     background-color: darkgray;
 }
+
+#table-header
+{
+    position: sticky; 
+    top: 0; 
+    background: darkgray;
+}
