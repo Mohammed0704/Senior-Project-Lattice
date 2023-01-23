@@ -1,10 +1,10 @@
 from flask import Flask, render_template, redirect, url_for
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
-''' If we want to put the code files back in their own directory
 import os
+''' If we want to put the code files back in their own directory
 import sys
-sys.path.append(f"{os.getcwd()}{os.sep}serialized_data")
+sys.path.append(f"{os.getcwd()}{os.sep}code_files")
 '''
 from Serialization import Serialize, Deserialize
 
