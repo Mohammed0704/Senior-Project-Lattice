@@ -37,6 +37,10 @@ def tags():
     tagList = ["Student", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
     return render_template("menu_template.html") + render_template("portal_tag_management.html", tagList=tagList)
 
+@app.route("/tags/create")
+def tags_create():
+    return render_template("menu_template.html") + render_template("portal_create_new_tag.html")
+
 @app.route("/objects")
 def objects():
     connectionList = ["MDB - MariaDB", "MonDB - MongoDB", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "ES - Elasticsearch", "testing"]

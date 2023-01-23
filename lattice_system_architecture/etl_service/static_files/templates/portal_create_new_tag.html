@@ -13,19 +13,14 @@
   
   <body>
     <div id="outer-content-box">
-      <p id="title">Current Tags</p>
+      <p id="title">Create New Tag</p>
       <div id="inner-content-box">
-        <table id="connections-table">
-          {% for values in tagList %}
-          <tr>
-            <td> {{ values }}</td>
-          </tr>
-          {% endfor %}
-        </table>
+        <form>
+            <label for="Tag" id="label_text">Tag</label>
+            <input type="text" id="Tag" name="Tag" value="">
+        </form>
       </div>
-      <a href="/tags/create">
-        <button class="button button1">Create New</button>
-      </a>
+      <button class="button button1">Create</button>
     </div>
 </body>
 </center>
