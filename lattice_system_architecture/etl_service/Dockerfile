@@ -5,11 +5,10 @@ FROM python:3.8
 #RUN apt-get install flask
 
 ADD app.py /
-ADD Serialization.py /
 ADD requirements.txt /
 #ADD /templates/ /templates/
+ADD /code_files /code_files/
 ADD /static_files /static_files/
-ADD /serialized_data /serialized_data/
 
 RUN pip3 install -r requirements.txt
 

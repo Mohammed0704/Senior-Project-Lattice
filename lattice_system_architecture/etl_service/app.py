@@ -4,6 +4,8 @@ app = Flask(__name__, static_folder="static_files", template_folder="static_file
 import os # Temp
 import sys # Temp
 
+sys.path.insert(0, "/code_files")
+
 from Serialization import Serialize, Deserialize
 
 @app.route('/')
@@ -16,19 +18,19 @@ def home():
 
 @app.route("/connections")
 def connections():
-    connectionsList = Deserialize("serialized_data/SerializedConnections.txt")
+    connectionsList = Deserialize("/serialized_data/SerializedConnections.txt")
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
 @app.route("/connections/remove/<connectionToDelete>", methods=['DELETE'])
 def connectionsRemove(connectionToDelete):
     #data = request.args.get("jsdata")
-    connectionsList = Deserialize("serialized_data/SerializedConnections.txt")
+    connectionsList = Deserialize("/serialized_data/SerializedConnections.txt")
     for i in range(len(connectionsList)):
         connection = connectionsList[i]
         if connection["connection_name"] == connectionToDelete:
             connectionsList.pop(i)
             break
-    Serialize(connectionsList, "serialized_data/SerializedConnections.txt")
+    Serialize(connectionsList, "/serialized_data/SerializedConnections.txt")
     return "Connection " + connectionToDelete + " removed!"
 
 @app.route("/tags")
