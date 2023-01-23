@@ -25,12 +25,12 @@ def connections():
     ]
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
-@app.route("/connections/remove")
-def connectionsRemove():
-    data = request.args.get("jsdata")
+@app.route("/connections/remove/<connectionToDelete>", methods=['DELETE'])
+def connectionsRemove(connectionToDelete):
+    #data = request.args.get("jsdata")
     with open('serialized_data/this_is_a_test.txt', 'w') as f:
-        json.dump("Last connection deleted: " + data, f)
-    return "Connection " + data + " removed!"
+        json.dump("Last connection deleted: " + connectionToDelete, f)
+    return "Connection " + connectionToDelete + " removed!"
 
 @app.route("/tags")
 def tags():

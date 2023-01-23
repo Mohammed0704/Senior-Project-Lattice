@@ -52,9 +52,8 @@ $(".delete-button").click(function(event)
   $("#" + elementToDeleteName + "-row").remove()
 
   $.ajax({
-    url: "/connections/remove",
-    type: "get",
-    data: {jsdata: elementToDeleteName}
+    url: "/connections/remove/" + elementToDeleteName,
+    type: "delete"
   });
 });
 
