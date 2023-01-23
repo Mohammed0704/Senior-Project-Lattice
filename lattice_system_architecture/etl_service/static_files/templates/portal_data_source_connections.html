@@ -17,7 +17,7 @@
       <p id="title">Connection Metadata</p>
       <div id="inner-content-box">
         <table id="connections-table">
-          <tr>
+          <tr id="table-header">
             <th style="width:20%; font-size: 22px;">Name</th>
             <th style="width:20%; font-size: 22px;">Type</th>
             <th style="width:30%; font-size: 22px;">URL</th>
@@ -54,9 +54,8 @@ $(".delete-button").click(function(event)
   $("#" + elementToDeleteName + "-row").remove()
 
   $.ajax({
-    url: "/connections/remove",
-    type: "get",
-    data: {jsdata: elementToDeleteName}
+    url: "/connections/remove/" + elementToDeleteName,
+    type: "delete"
   });
 });
 

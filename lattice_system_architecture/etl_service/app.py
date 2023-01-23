@@ -23,6 +23,13 @@ def connections():
     connectionsList = Deserialize(f"{dir_path}{os.sep}serialized_data{os.sep}SerializedConnections.txt")
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
+@app.route("/connections/remove/<connectionToDelete>", methods=['DELETE'])
+def connectionsRemove(connectionToDelete):
+    #data = request.args.get("jsdata")
+    with open('serialized_data/this_is_a_test.txt', 'w') as f:
+        json.dump("Last connection deleted: " + connectionToDelete, f)
+    return "Connection " + connectionToDelete + " removed!"
+
 @app.route("/tags")
 def tags():
     tagList = ["Student", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
