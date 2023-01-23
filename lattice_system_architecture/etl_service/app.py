@@ -1,7 +1,12 @@
-from flask import Flask, render_template, redirect, url_for, request
-#from Serialization import Serialize
-import json #TEMPORARY
+from flask import Flask, render_template, redirect, url_for
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
+
+import os # Temp
+import sys # Temp
+
+sys.path.insert(0, "/code_files")
+
+from Serialization import Serialize, Deserialize
 
 @app.route('/')
 def base():
@@ -13,23 +18,19 @@ def home():
 
 @app.route("/connections")
 def connections():
-    connectionsList = [
-        ["testMaria", "MariaDB", "mariaurl:5555", "user"],
-        ["testMongo", "MongoDB", "mongourl:1234", "test"],
-        ["testes", "Elasticsearch", "esurl:9200", "us"],
-        ["testpost", "Postgres", "post:5432", "admin"],
-        ["testcass", "Cassandra", "cassurl:9402", "user"],
-        ["testcass2", "Cassandra", "cassurl:9402", "user"],
-        ["testcass3", "Cassandra", "cassurl:9402", "user"],
-        ["testcass4", "Cassandra", "cassurl:9402", "user"]
-    ]
+    connectionsList = Deserialize("/serialized_data/SerializedConnections.txt")
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
 @app.route("/connections/remove/<connectionToDelete>", methods=['DELETE'])
 def connectionsRemove(connectionToDelete):
     #data = request.args.get("jsdata")
-    with open('serialized_data/this_is_a_test.txt', 'w') as f:
-        json.dump("Last connection deleted: " + connectionToDelete, f)
+    connectionsList = Deserialize("/serialized_data/SerializedConnections.txt")
+    for i in range(len(connectionsList)):
+        connection = connectionsList[i]
+        if connection["connection_name"] == connectionToDelete:
+            connectionsList.pop(i)
+            break
+    Serialize(connectionsList, "/serialized_data/SerializedConnections.txt")
     return "Connection " + connectionToDelete + " removed!"
 
 @app.route("/tags")

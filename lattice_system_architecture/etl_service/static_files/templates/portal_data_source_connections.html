@@ -25,13 +25,15 @@
             <th style="width:10%; font-size: 22px;"></th>
           </tr>
           {% for values in connectionsList %}
-          <tr id="{{ values[0] }}-row">
-            {% for value in values %}
-            <td> {{ value }}</td>
+          <tr id="{{ values['connection_name'] }}-row">
+            {% for key, value in values.items() %}
+              {% if key != "connection_password" %}
+                <td> {{ value }}</td>
+              {% endif %}
             {% endfor %}
             <td>
               <center>
-                <button class="delete-button delete-button1" name="{{ values[0] }}">Delete</button>
+                <button class="delete-button delete-button1" name="{{ values['connection_name'] }}">Delete</button>
               </center>
             </td>
           </tr>
