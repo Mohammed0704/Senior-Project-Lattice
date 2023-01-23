@@ -8,6 +8,8 @@ sys.path.append(f"{os.getcwd()}{os.sep}code_files")
 '''
 from Serialization import Serialize, Deserialize
 
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
 @app.route('/')
 def base():
     return redirect(url_for("home"))
@@ -18,7 +20,7 @@ def home():
 
 @app.route("/connections")
 def connections():
-    connectionsList = Deserialize(f"{os.getcwd()}{os.sep}serialized_data{os.sep}SerializedConnections.txt")
+    connectionsList = Deserialize(f"{dir_path}{os.sep}serialized_data{os.sep}SerializedConnections.txt")
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
 @app.route("/tags")
