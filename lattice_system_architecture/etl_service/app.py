@@ -2,13 +2,12 @@ from flask import Flask, render_template, redirect, url_for
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
 import os
-''' If we want to put the code files back in their own directory
 import sys
-sys.path.append(f"{os.getcwd()}{os.sep}code_files")
-'''
-from Serialization import Serialize, Deserialize
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
+sys.path.append(dir_path)
+
+from Serialization import Serialize, Deserialize
 
 @app.route('/')
 def base():
