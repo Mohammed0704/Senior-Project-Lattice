@@ -7,6 +7,7 @@ import sys # Temp
 sys.path.insert(0, "/code_files")
 
 from Serialization import Serialize, Deserialize
+from TrinoQuery import *
 
 @app.route('/')
 def base():
@@ -23,7 +24,6 @@ def connections():
 
 @app.route("/connections/remove/<connectionToDelete>", methods=['DELETE'])
 def connectionsRemove(connectionToDelete):
-    #data = request.args.get("jsdata")
     connectionsList = Deserialize("/serialized_data/SerializedConnections.txt")
     for i in range(len(connectionsList)):
         connection = connectionsList[i]
@@ -45,17 +45,20 @@ def objects():
 
 @app.route("/objects/<connectionName>")
 def schemas(connectionName):
-    schemaList = ["schema1", "schema2"]
+    trinoQueryObject = TrinoQuery(QueryTrinoForSchemas)
+    schemaList = trinoQueryObject.executeTrinoQuery()
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_schemas_page.html", schemaList=schemaList, connectionName=connectionName)
 
 @app.route("/objects/<connectionName>/<schemaName>")
 def tables(connectionName, schemaName):
-    tableList = ["table1", "table2", "table3"]
+    trinoQueryObject = TrinoQuery(QueryTrinoForTables)
+    tableList = trinoQueryObject.executeTrinoQuery()
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_tables_page.html", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>")
 def columns(connectionName, schemaName, tableName):
-    columnList = ["column1", "column3", "column3", "column4", "column5", "column6", "column7", "column8", "column9"]
+    trinoQueryObject = TrinoQuery(QueryTrinoForColumns)
+    columnList = trinoQueryObject.executeTrinoQuery()
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName)
 
 @app.route("/loader")
