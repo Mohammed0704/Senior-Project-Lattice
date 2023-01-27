@@ -46,19 +46,19 @@ def objects():
 @app.route("/objects/<connectionName>")
 def schemas(connectionName):
     trinoQueryObject = TrinoQuery(QueryTrinoForSchemas)
-    schemaList = trinoQueryObject.executeTrinoQuery()
+    schemaList = trinoQueryObject.executeTrinoQuery(connectionName)
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_schemas_page.html", schemaList=schemaList, connectionName=connectionName)
 
 @app.route("/objects/<connectionName>/<schemaName>")
 def tables(connectionName, schemaName):
     trinoQueryObject = TrinoQuery(QueryTrinoForTables)
-    tableList = trinoQueryObject.executeTrinoQuery()
+    tableList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName)
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_tables_page.html", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>")
 def columns(connectionName, schemaName, tableName):
     trinoQueryObject = TrinoQuery(QueryTrinoForColumns)
-    columnList = trinoQueryObject.executeTrinoQuery()
+    columnList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName + "." + tableName)
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName)
 
 @app.route("/loader")
