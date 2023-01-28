@@ -7,6 +7,7 @@ class QueryTrinoStrategy(ABC):
     def query(self, queryTarget, trinoCursor) -> None:
         pass
 
+#These are mostly the same functionality right now and could probably be abstracted or not within a strategy pattern at all, but this is fine for now in case functionality alters or more variations are added
 #Concrete strategies
 class QueryTrinoForSchemas(QueryTrinoStrategy):
     def query(self, queryTarget, trinoCursor) -> list:
@@ -20,11 +21,23 @@ class QueryTrinoForSchemas(QueryTrinoStrategy):
 
 class QueryTrinoForTables(QueryTrinoStrategy):
     def query(self, queryTarget, trinoCursor) -> list:
-        return ["table1", "table2"]
+        trinoCursor.execute("SHOW TABLES FROM " + queryTarget)
+        rows = trinoCursor.fetchall()
+
+        tableList = []
+        for table in rows:
+            tableList.append(table[0])
+        return tableList
 
 class QueryTrinoForColumns(QueryTrinoStrategy):
     def query(self, queryTarget, trinoCursor) -> list:
-        return ["column1", "column3", "column3", "column4", "column5", "column6", "column7", "column8", "column9"]
+        trinoCursor.execute("SHOW COLUMNS FROM " + queryTarget)
+        rows = trinoCursor.fetchall()
+
+        columnList = []
+        for column in rows:
+            columnList.append(column[0])
+        return columnList
 
 #Context class
 class TrinoQuery:
