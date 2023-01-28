@@ -1,13 +1,15 @@
 from flask import Flask, render_template, redirect, url_for
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
-import os # Temp
 import sys # Temp
 
 sys.path.insert(0, "/code_files")
 
-from Serialization import Serialize, Deserialize
+from Serialization import *
+from EstablishTrinoConnection import *
 from TrinoQuery import *
+
+trinoCursor = None
 
 @app.route('/')
 def base():
@@ -46,19 +48,19 @@ def objects():
 @app.route("/objects/<connectionName>")
 def schemas(connectionName):
     trinoQueryObject = TrinoQuery(QueryTrinoForSchemas)
-    schemaList = trinoQueryObject.executeTrinoQuery(connectionName)
+    schemaList = trinoQueryObject.executeTrinoQuery(connectionName, EstablishTrinoConnection.getActiveTrinoCursor())
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_schemas_page.html", schemaList=schemaList, connectionName=connectionName)
 
 @app.route("/objects/<connectionName>/<schemaName>")
 def tables(connectionName, schemaName):
     trinoQueryObject = TrinoQuery(QueryTrinoForTables)
-    tableList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName)
+    tableList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName, EstablishTrinoConnection.getActiveTrinoCursor())
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_tables_page.html", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>")
 def columns(connectionName, schemaName, tableName):
     trinoQueryObject = TrinoQuery(QueryTrinoForColumns)
-    columnList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName + "." + tableName)
+    columnList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName + "." + tableName, EstablishTrinoConnection.getActiveTrinoCursor())
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName)
 
 @app.route("/loader")
