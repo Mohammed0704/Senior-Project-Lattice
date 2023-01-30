@@ -45,12 +45,11 @@ def connections_create_submit():
     data = request.form
 
     dataJson = {
-        'name': data['name'],
-        'data_source': data['data_source'],
-        'address': data['address'], 
-        'port': data['port'],
-        'username': data['username'],
-        'password': data['password']
+        'connection_name': data['name'],
+        'connection_type': data['data_source'],
+        'connection_URL': data['address'] + ':' + data['port'],
+        'connection_username': data['username'],
+        'connection_password': data['password']
     }
 
     with open('serialized_data_TEST/create_conn_TEST.txt', 'w') as f:
