@@ -94,7 +94,7 @@ a:hover
     background-color: darkgray;
 }
 
-.remove-add-button 
+.remove-button 
 {
     border: 1px solid black;
     font-size: 16px;
@@ -103,7 +103,7 @@ a:hover
     cursor: pointer;
 }
 
-.remove-add-button1 
+.remove-button1 
 {
     background-color: lightgray;
     color: black;
@@ -111,7 +111,29 @@ a:hover
     text-decoration: none;
 }
 
-.remove-add-button1:hover 
+.remove-button1:hover 
+{
+    background-color: lightcoral;
+}
+
+.add-button 
+{
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 5px;
+    margin: 0%;
+    cursor: pointer;
+}
+
+.add-button1 
+{
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.add-button1:hover 
 {
     background-color: darkgray;
 }
