@@ -4,7 +4,7 @@ app = Flask(__name__, static_folder="static_files", template_folder="static_file
 import os # Temp
 import sys # Temp
 
-sys.path.insert(0, "/code_files")
+sys.path.insert(0, f"{os.getcwd()}{os.sep}code_files")
 
 from Serialization import Serialize, Deserialize
 
