@@ -1,7 +1,7 @@
 import trino
 
 #abstracted into its own class so app.py remains clean but still has a single active trino connection
-class EstablishTrinoConnection:
+class TrinoConnection:
     trinoCursor = None
     
     @staticmethod
@@ -12,10 +12,10 @@ class EstablishTrinoConnection:
                 user="trino",
         )
         print("cursor created")
-        EstablishTrinoConnection.trinoCursor = trinoConnection.cursor() #what is being used to send queries to Trino
+        TrinoConnection.trinoCursor = trinoConnection.cursor() #what is being used to send queries to Trino
 
     @staticmethod
     def getActiveTrinoCursor():
-        if EstablishTrinoConnection.trinoCursor is None:
-            EstablishTrinoConnection.establishTrinoConnection()
-        return EstablishTrinoConnection.trinoCursor
+        if TrinoConnection.trinoCursor is None:
+            TrinoConnection.establishTrinoConnection()
+        return TrinoConnection.trinoCursor

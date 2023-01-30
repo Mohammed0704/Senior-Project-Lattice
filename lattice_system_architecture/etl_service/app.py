@@ -6,7 +6,7 @@ import sys # Temp
 sys.path.insert(0, "/code_files")
 
 from Serialization import *
-from EstablishTrinoConnection import *
+from TrinoConnection import *
 from TrinoQuery import *
 
 trinoCursor = None
@@ -48,19 +48,19 @@ def objects():
 @app.route("/objects/<connectionName>")
 def schemas(connectionName):
     trinoQueryObject = TrinoQuery(QueryTrinoForSchemas)
-    schemaList = trinoQueryObject.executeTrinoQuery(connectionName, EstablishTrinoConnection.getActiveTrinoCursor())
+    schemaList = trinoQueryObject.executeTrinoQuery(connectionName, TrinoConnection.getActiveTrinoCursor())
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_schemas_page.html", schemaList=schemaList, connectionName=connectionName)
 
 @app.route("/objects/<connectionName>/<schemaName>")
 def tables(connectionName, schemaName):
     trinoQueryObject = TrinoQuery(QueryTrinoForTables)
-    tableList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName, EstablishTrinoConnection.getActiveTrinoCursor())
+    tableList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName, TrinoConnection.getActiveTrinoCursor())
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_tables_page.html", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>")
 def columns(connectionName, schemaName, tableName):
     trinoQueryObject = TrinoQuery(QueryTrinoForColumns)
-    columnList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName + "." + tableName, EstablishTrinoConnection.getActiveTrinoCursor())
+    columnList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName + "." + tableName, TrinoConnection.getActiveTrinoCursor())
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName)
 
 @app.route("/loader")

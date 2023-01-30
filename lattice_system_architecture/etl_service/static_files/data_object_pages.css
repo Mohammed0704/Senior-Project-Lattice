@@ -76,7 +76,8 @@ a:hover
     cursor: pointer;
 }
 
-.button1 {
+.button1 
+{
     background-color: lightgray;
     color: black;
     font-weight: bold;
@@ -88,6 +89,50 @@ a:hover
     text-decoration: none;
 }
 
-.button1:hover {
+.button1:hover 
+{
     background-color: darkgray;
+}
+
+.remove-button 
+{
+    border: 1px solid black;
+    font-size: 16px;
+    padding: 5px;
+    margin: 0%;
+    cursor: pointer;
+}
+
+.remove-button1 
+{
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: darkgray;
+}
+
+.tag-cell
+{
+    max-width: 100%;
+}
+
+.tag-cell-tag
+{
+    display:inline-block; 
+    padding-right: 11px; 
+    padding-left: 11px;
+    margin-bottom: 4px;
+}
+
+.tag-cell-tag-value
+{
+    margin-bottom: 9px;
+    margin-top: 0%;
+}
+
+.tag-cell-tag-value
+{
+    margin-right: 6px;
+    margin-left: 6px;
 }
