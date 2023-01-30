@@ -27,11 +27,22 @@
             <td><p class="column-value"> {{ value }} </p></td>
             <td class="tag-cell">
               <center>
-              <div class="tag-cell-tag"><p class="tag-cell-tag-value">Person</p><button class="remove-button remove-button1" name="test1">Remove</button></div>
-              <div class="tag-cell-tag"><p class="tag-cell-tag-value">Organization.join</p><button class="remove-button remove-button1" name="test2">Remove</button></div>
-              <div class="tag-cell-tag"><p class="tag-cell-tag-value">Organization</p><button class="remove-button remove-button1" name="test3">Remove</button></div>
-              <div class="tag-cell-tag"><p class="tag-cell-tag-value">Another.tag.thing.here</p><button class="remove-button remove-button1" name="test4">Remove</button></div>
-              <div class="tag-cell-tag"><p class="tag-cell-tag-value">Another</p><button class="remove-button remove-button1" name="test5">Remove</button></div>
+              <div class="tag-cell-tag"><p class="tag-cell-tag-value">Person</p><button class="remove-add-button remove-add-button1" name="test1">Remove</button></div>
+              <div class="tag-cell-tag"><p class="tag-cell-tag-value">Organization.join</p><button class="remove-add-button remove-add-button1" name="test2">Remove</button></div>
+              <div class="tag-cell-tag"><p class="tag-cell-tag-value">Organization</p><button class="remove-add-button remove-add-button1" name="test3">Remove</button></div>
+              <div class="tag-cell-tag"><p class="tag-cell-tag-value">Another.tag.thing.here</p><button class="remove-add-button remove-add-button1" name="test4">Remove</button></div>
+              <div class="tag-cell-tag"><p class="tag-cell-tag-value">Another</p><button class="remove-add-button remove-add-button1" name="test5">Remove</button></div>
+              </center>
+            </td>
+            <td class="add-cell">
+              <center>
+              <select style="font-size: 16px;" name=tags method="GET" action="/">
+                <option id="default-tag-option" selected value> -- Select a tag -- </option>
+                {% for tag in tagList %}
+                <option value= "{{ tag }}">{{ tag }}</option>
+                {% endfor %}
+              </select>
+              <button class="remove-add-button remove-add-button1" name="test6" value="">Add</button>
               </center>
             </td>
           </tr>

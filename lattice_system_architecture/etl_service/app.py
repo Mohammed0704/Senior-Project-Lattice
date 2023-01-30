@@ -37,7 +37,7 @@ def connectionsRemove(connectionToDelete):
 
 @app.route("/tags")
 def tags():
-    tagList = ["Student", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
+    tagList = ["Student", "Student.join", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
     return render_template("menu_template.html") + render_template("portal_tag_management.html", tagList=tagList)
 
 @app.route("/objects")
@@ -59,9 +59,10 @@ def tables(connectionName, schemaName):
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>")
 def columns(connectionName, schemaName, tableName):
+    tagList = ["Student", "Student.join", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
     trinoQueryObject = TrinoQuery(QueryTrinoForColumns)
     columnList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName + "." + tableName, TrinoConnection.getActiveTrinoCursor())
-    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName)
+    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, tagList=tagList)
 
 @app.route("/loader")
 def loader():

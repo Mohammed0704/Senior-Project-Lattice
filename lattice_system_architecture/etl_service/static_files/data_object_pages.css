@@ -94,7 +94,7 @@ a:hover
     background-color: darkgray;
 }
 
-.remove-button 
+.remove-add-button 
 {
     border: 1px solid black;
     font-size: 16px;
@@ -103,18 +103,22 @@ a:hover
     cursor: pointer;
 }
 
-.remove-button1 
+.remove-add-button1 
 {
     background-color: lightgray;
     color: black;
     font-weight: bold;
     text-decoration: none;
+}
+
+.remove-add-button1:hover 
+{
     background-color: darkgray;
 }
 
 .tag-cell
 {
-    max-width: 100%;
+    max-width: 680px;
 }
 
 .tag-cell-tag
@@ -135,4 +139,16 @@ a:hover
 {
     margin-right: 6px;
     margin-left: 6px;
+}
+
+.column-value
+{
+    word-wrap: break-word;
+}
+
+.add-cell
+{
+    min-width: 150px; 
+    display: inline;
+    border: 0px;
 }
