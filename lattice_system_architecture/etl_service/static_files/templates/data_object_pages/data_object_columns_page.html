@@ -13,7 +13,7 @@
   
   <body>
     <div id="outer-content-box">
-      <div id="connectionSchemaTableURL" name="{{ connectionName }}/{{ schemaName }}/{{ tableName }}"></div>
+      <div id="connection-schema-table-URL-storage" name="{{ connectionName }}/{{ schemaName }}/{{ tableName }}"></div>
       <p id="sub-title"><b>Connection:</b> {{ connectionName }}</p>
       <p id="sub-title"><b>Schema:</b> {{ schemaName }}</p>
       <p id="sub-title"><b>Table:</b> {{ tableName }}</p>
@@ -26,7 +26,7 @@
             </tr>
           {% for column in columnList %}
           <tr>
-            <td><p class="column-value"> {{ column }} </p></td>
+            <td><p class="column-value">{{ column }}</p></td>
             <td class="tag-cell">
               <center>
               {% if columnTagDict|length > 0 %}
@@ -42,13 +42,15 @@
             </td>
             <td class="add-cell">
               <center>
-              <select style="font-size: 16px; height: 28px;" name=tags method="GET" action="/">
-                <option id="default-tag-option" selected value> -- Select a tag -- </option>
-                {% for tag in tagList %}
-                <option value= "{{ tag }}">{{ tag }}</option>
-                {% endfor %}
-              </select>
-              <button class="add-button add-button1" name="test6" value="">Add</button>
+              <div class="add-tag-container">
+                <select class="tag-select" style="font-size: 16px; height: 28px;" name="{{ column }}" method="GET" action="/">
+                  <option id="default-tag-option" selected value> -- Select a tag -- </option>
+                  {% for tag in tagList %}
+                  <option value= "{{ tag }}">{{ tag }}</option>
+                  {% endfor %}
+                </select>
+                <button class="add-button add-button1" name="test6" value="">Add</button>
+              </div>
               </center>
             </td>
           </tr>
@@ -67,14 +69,33 @@ $(".remove-button").click(function(event)
 {
   tagToDeleteName = $(this).attr("name")
   console.log("Removing " + tagToDeleteName + " tag...");
+  connectionSchemaTableURL = $("#" + "connection-schema-table-URL-storage").attr("name")
   columnContainingTag = $(this).closest(".tag-cell-tag").attr("name")
   $(this).closest(".tag-cell-tag").remove()
-  connectionSchemaTableURL = $("#" + "connectionSchemaTableURL").attr("name")
 
   $.ajax({
     url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/remove/" + tagToDeleteName,
     type: "delete"
   });
+
+});
+
+$(".add-button").click(function(event)
+{
+  tagToAddName = $(this).closest('div').find(".tag-select option:selected").text()
+  defaultTagValue = $(this).closest('div').find("#default-tag-option").text()
+  connectionSchemaTableURL = $("#" + "connection-schema-table-URL-storage").attr("name")
+  columnContainingTag = $(this).closest('div').find(".tag-select").attr("name")
+  console.log("default: " + defaultTagValue)
+  console.log(columnContainingTag)
+  if (tagToAddName != defaultTagValue)
+  {
+    console.log("Adding " + tagToAddName + " tag...");
+    $.ajax({
+      url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/add/" + tagToAddName,
+      type: "post"
+    });
+  }
 
 });
 

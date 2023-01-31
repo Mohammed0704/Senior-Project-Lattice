@@ -121,7 +121,8 @@ a:hover
     border: 1px solid black;
     font-size: 16px;
     padding: 5px;
-    margin: 0%;
+    margin-top: 3px;
+    margin-bottom: 3px;
     cursor: pointer;
 }
 

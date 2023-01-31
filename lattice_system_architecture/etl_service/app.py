@@ -60,6 +60,7 @@ def tables(connectionName, schemaName):
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>")
 def columns(connectionName, schemaName, tableName):
     tablePath = connectionName + "." + schemaName + "." + tableName
+    #Maybe make a list of all available tags (ones not on already) on a column
     tagList = ["Student", "Student.join", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
     columnTagDict = []
     try:
@@ -70,9 +71,27 @@ def columns(connectionName, schemaName, tableName):
     columnList = trinoQueryObject.executeTrinoQuery(tablePath, TrinoConnection.getActiveTrinoCursor())
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagList=tagList)
 
+@app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/add/<tagToAdd>", methods=['POST'])
+def addTagToColumn(connectionName, schemaName, tableName, columnName, tagToAdd):
+    tablePath = connectionName + "." + schemaName + "." + tableName
+    columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")
+    
+    if tablePath in columnTagDict.keys():
+        tableDict = columnTagDict[tablePath]
+        if columnName in tableDict.keys():
+            columnTagList = tableDict[columnName]
+            columnTagList.append(tagToAdd)
+            tableDict[columnName] = columnTagList
+        else:
+            tableDict[columnName] = [tagToAdd]
+        columnTagDict[tablePath] = tableDict
+    else:
+        columnTagDict[tablePath] = {columnName: [tagToAdd]}
+    Serialize(columnTagDict, "/serialized_data/SerializedTaggedColumns.txt")
+    return "Tag " + tagToAdd + " added!"
+
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/remove/<tagToRemove>", methods=['DELETE'])
 def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagToRemove):
-    #connectionsList = Deserialize("/serialized_data/SerializedConnections.txt")
     tablePath = connectionName + "." + schemaName + "." + tableName
     columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")
     columnTagList = columnTagDict[tablePath][columnName]
