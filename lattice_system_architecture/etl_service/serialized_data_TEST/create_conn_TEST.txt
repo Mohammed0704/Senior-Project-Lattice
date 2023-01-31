@@ -1,1 +1,1 @@
-{"connection_name": "sss", "connection_type": "conn1", "connection_URL": "ddd:qqq", "connection_username": "www", "connection_password": "eee"}
+{"connection_name": "", "connection_type": "conn1", "connection_URL": ":", "connection_username": "", "connection_password": ""}
