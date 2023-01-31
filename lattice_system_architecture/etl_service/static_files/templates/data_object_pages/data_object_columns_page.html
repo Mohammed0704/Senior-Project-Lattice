@@ -21,18 +21,21 @@
             <tr id="table-header">
                 <td><p id="title">Columns</p></td>
                 <td><p id="title">Tags</p></td>
+                <td><p id="title"></p></td>
             </tr>
-          {% for value in columnList %}
+          {% for column in columnList %}
           <tr>
-            <td><p class="column-value"> {{ value }} </p></td>
+            <td><p class="column-value"> {{ column }} </p></td>
             <td class="tag-cell">
               <center>
-              <div class="tag-cell-tag"><button class="remove-button remove-button1" name="test1">Person &times</button></div>
-              <div class="tag-cell-tag"><button class="remove-button remove-button1" name="test2">Organization.join &times</button></div>
-              <div class="tag-cell-tag"><button class="remove-button remove-button1" name="test3">Organization &times</button></div>
-              <div class="tag-cell-tag"><button class="remove-button remove-button1" name="test4">Another.tag.thing.here &times</button></div>
-              <div class="tag-cell-tag"><button class="remove-button remove-button1" name="test5">Another &times</button></div>
-              </center>
+              {% for columnKey, tagList in columnTagDict.items() %}
+                    {% if columnKey == column %}
+                      {% for tag in tagList %}
+                          <div class="tag-cell-tag"><button class="remove-button remove-button1" name="{{ column }}-{{ tag }}-tag">{{ tag }} &times</button></div>
+                      {% endfor %}
+                    {% endif %}
+                  {% endfor %}
+                </center>
             </td>
             <td class="add-cell">
               <center>

@@ -1,0 +1,11 @@
+{
+    "mariadb.drexel_people.basic_employee_info": 
+    {
+        "drexel_id": ["Person", "Person.join", "Housing", "System"],
+        "last_name": ["Person"],
+        "first_name": ["Person"],
+        "middle_name": ["Housing"],
+        "date_of_birth": ["Housing", "Person", "Departments", "System", "Employee"],
+        "email": ["Person", "Housing"]
+    }
+}

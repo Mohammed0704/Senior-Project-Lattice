@@ -59,10 +59,16 @@ def tables(connectionName, schemaName):
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>")
 def columns(connectionName, schemaName, tableName):
+    tablePath = connectionName + "." + schemaName + "." + tableName
     tagList = ["Student", "Student.join", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
+    columnTagDict = []
+    try:
+        columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")[tablePath]
+    except:
+        pass
     trinoQueryObject = TrinoQuery(QueryTrinoForColumns)
-    columnList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName + "." + tableName, TrinoConnection.getActiveTrinoCursor())
-    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, tagList=tagList)
+    columnList = trinoQueryObject.executeTrinoQuery(tablePath, TrinoConnection.getActiveTrinoCursor())
+    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagList=tagList)
 
 @app.route("/loader")
 def loader():
