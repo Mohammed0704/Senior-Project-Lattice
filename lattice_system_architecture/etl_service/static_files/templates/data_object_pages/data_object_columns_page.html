@@ -13,6 +13,7 @@
   
   <body>
     <div id="outer-content-box">
+      <div id="connectionSchemaTableURL" name="{{ connectionName }}/{{ schemaName }}/{{ tableName }}"></div>
       <p id="sub-title"><b>Connection:</b> {{ connectionName }}</p>
       <p id="sub-title"><b>Schema:</b> {{ schemaName }}</p>
       <p id="sub-title"><b>Table:</b> {{ tableName }}</p>
@@ -28,18 +29,20 @@
             <td><p class="column-value"> {{ column }} </p></td>
             <td class="tag-cell">
               <center>
-              {% for columnKey, tagList in columnTagDict.items() %}
-                    {% if columnKey == column %}
-                      {% for tag in tagList %}
-                          <div class="tag-cell-tag"><button class="remove-button remove-button1" name="{{ column }}-{{ tag }}-tag">{{ tag }} &times</button></div>
-                      {% endfor %}
-                    {% endif %}
-                  {% endfor %}
-                </center>
+              {% if columnTagDict|length > 0 %}
+                {% for columnKey, tagList in columnTagDict.items() %}
+                  {% if columnKey == column %}
+                    {% for tag in tagList %}
+                      <div class="tag-cell-tag" name="{{ column }}"><button class="remove-button remove-button1" name="{{ tag }}">{{ tag }} &times</button></div>
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              </center>
             </td>
             <td class="add-cell">
               <center>
-              <select style="font-size: 16px;" name=tags method="GET" action="/">
+              <select style="font-size: 16px; height: 28px;" name=tags method="GET" action="/">
                 <option id="default-tag-option" selected value> -- Select a tag -- </option>
                 {% for tag in tagList %}
                 <option value= "{{ tag }}">{{ tag }}</option>
@@ -56,5 +59,25 @@
     </div>
   </body>
 </center>
+
+<script src="/static_files/jquery-3.1.1.js"></script>
+
+<script>
+$(".remove-button").click(function(event)
+{
+  tagToDeleteName = $(this).attr("name")
+  console.log("Removing " + tagToDeleteName + " tag...");
+  columnContainingTag = $(this).closest(".tag-cell-tag").attr("name")
+  $(this).closest(".tag-cell-tag").remove()
+  connectionSchemaTableURL = $("#" + "connectionSchemaTableURL").attr("name")
+
+  $.ajax({
+    url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/remove/" + tagToDeleteName,
+    type: "delete"
+  });
+
+});
+
+</script>
 
 </html>

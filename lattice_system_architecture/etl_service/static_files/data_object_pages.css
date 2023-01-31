@@ -140,7 +140,7 @@ a:hover
 
 .tag-cell
 {
-    max-width: 680px;
+    width: 60%;
 }
 
 .tag-cell-tag

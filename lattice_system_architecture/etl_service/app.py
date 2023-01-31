@@ -70,6 +70,22 @@ def columns(connectionName, schemaName, tableName):
     columnList = trinoQueryObject.executeTrinoQuery(tablePath, TrinoConnection.getActiveTrinoCursor())
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagList=tagList)
 
+@app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/remove/<tagToRemove>", methods=['DELETE'])
+def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagToRemove):
+    #connectionsList = Deserialize("/serialized_data/SerializedConnections.txt")
+    tablePath = connectionName + "." + schemaName + "." + tableName
+    columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")
+    columnTagList = columnTagDict[tablePath][columnName]
+    if len(columnTagList) == 1: #if there are no tags in the list of the current column and/or column, remove the entries
+        del columnTagDict[tablePath][columnName]
+        if len(columnTagDict[tablePath]) == 0:
+            del columnTagDict[tablePath]
+    else:
+        columnTagList.remove(tagToRemove)
+        columnTagDict[tablePath][columnName] = columnTagList
+    Serialize(columnTagDict, "/serialized_data/SerializedTaggedColumns.txt")
+    return "Tag " + tagToRemove + " removed!"
+
 @app.route("/loader")
 def loader():
         return render_template("menu_template.html") + render_template("portal_graph_loader.html")
