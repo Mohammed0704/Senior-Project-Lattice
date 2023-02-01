@@ -15,17 +15,48 @@
     <div id="outer-content-box">
       <p id="title">Create New Tag</p>
       <div id="inner-content-box">
-        <form>
+        <p id="result"></p>
+        <form id="create-form">
             <label for="Tag" id="label_text">Tag</label>
             <input type="text" id="Tag" name="Tag" value="">
         </form>
       </div>
-      <button class="button button2">Create</button>
+      <button class="button button2" id="create-button">Create</button>
     </div>
     <a href="/tags">
       <button class="button button3">Back</button>
     </a>
 </body>
 </center>
+
+<script>
+  const form = document.querySelector('#create-form');
+  const createButton = document.querySelector('#create-button');
+  const result = document.querySelector('#result');
+ 
+ 
+  createButton.addEventListener('click', function() {
+    const tag = form.elements.Tag.value;
+    const tag_dict = JSON.stringify({'tag_name': tag});
+ 
+ 
+    fetch('/tags/create/create-tag', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: tag_dict
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      if (data.success) {
+        result.innerHTML = `<p id="success-message">Tag "${tag}" was added</p>`;
+      } else {
+        result.innerHTML = `<p id="error-message">Tag "${tag}" already exists</p>`;
+      }
+    });
+  });
+ </script>
 
 </html>

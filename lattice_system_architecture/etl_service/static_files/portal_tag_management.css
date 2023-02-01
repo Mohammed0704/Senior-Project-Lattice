@@ -118,3 +118,14 @@ input {
     background-color: darkgray;
 }
 
+#success-message{
+    color: green;
+}
+
+#error-message{
+    color: red;
+}
+
+p{
+    margin-bottom: 0%;
+}
