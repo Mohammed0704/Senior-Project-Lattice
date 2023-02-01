@@ -13,6 +13,7 @@
   
   <body>
     <div id="outer-content-box">
+      <div id="connection-schema-table-URL-storage" name="{{ connectionName }}/{{ schemaName }}/{{ tableName }}"></div>
       <p id="sub-title"><b>Connection:</b> {{ connectionName }}</p>
       <p id="sub-title"><b>Schema:</b> {{ schemaName }}</p>
       <p id="sub-title"><b>Table:</b> {{ tableName }}</p>
@@ -21,11 +22,37 @@
             <tr id="table-header">
                 <td><p id="title">Columns</p></td>
                 <td><p id="title">Tags</p></td>
+                <td><p id="title"></p></td>
             </tr>
-          {% for value in columnList %}
+          {% for column in columnList %}
           <tr>
-            <td><p> {{ value }} </p></td>
-            <td><p>tag1, tag2, tag3, tag4</p></td>
+            <td><p class="column-value">{{ column }}</p></td>
+            <td class="tag-cell" id="{{ column }}-tag-cell">
+              <center>
+              {% if columnTagDict|length > 0 %}
+                {% for columnKey, tagList in columnTagDict.items() %}
+                  {% if columnKey == column %}
+                    {% for tag in tagList %}
+                      <div class="tag-cell-tag" name="{{ column }}"><button class="remove-button remove-button1" name="{{ tag }}">{{ tag }} &times</button></div>
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              </center>
+            </td>
+            <td class="add-cell">
+              <center>
+              <div class="add-tag-container">
+                <select class="tag-select" style="font-size: 16px; height: 28px;" name="{{ column }}" method="GET" action="/">
+                  <option class="default-tag-option" selected value> -- Select a tag -- </option>
+                  {% for tag in tagList %}
+                  <option value= "{{ tag }}">{{ tag }}</option>
+                  {% endfor %}
+                </select>
+                <button class="add-button add-button1" name="test6" value="">Add</button>
+              </div>
+              </center>
+            </td>
           </tr>
           {% endfor %}
         </table>
@@ -34,5 +61,68 @@
     </div>
   </body>
 </center>
+
+<script src="/static_files/jquery-3.1.1.js"></script>
+
+<script>
+//the function is wrapped to the document so that dynamically generated tag buttons can have the event, too
+$(document).on("click", ".remove-button", function ()
+{
+  tagToDeleteName = $(this).attr("name")
+  console.log("Removing " + tagToDeleteName + " tag...");
+  connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name")
+  columnContainingTag = $(this).closest(".tag-cell-tag").attr("name")
+  $(this).closest(".tag-cell-tag").remove()
+
+  $.ajax({
+    url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/remove/" + tagToDeleteName,
+    type: "delete"
+  });
+});
+
+$(document).on("click", ".add-button", function ()
+{
+  tagToAddName = $(this).closest('div').find(".tag-select option:selected").text()
+  defaultTagValue = $(this).closest('div').find(".default-tag-option").text()
+  connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name")
+  columnContainingTag = $(this).closest('div').find(".tag-select").attr("name")
+
+  if (tagToAddName != defaultTagValue)
+  {
+    console.log("Adding " + tagToAddName + " tag...");
+    $.ajax({
+      url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/add/" + tagToAddName,
+      type: "post"
+    });
+    
+    //constructing a tag button and placing it in the spot where others were generated with the same style //ideally, this should be abstracted in some way
+    const buttonDiv = document.createElement("div");
+    buttonDiv.style.cssText = "display:inline-block; padding-right: 11px; padding-left: 11px; margin-bottom: 4px;";
+    buttonDiv.classList.add("tag-cell-tag");
+    buttonDiv.setAttribute("name", columnContainingTag);
+    const removeButton = document.createElement("button");
+    removeButton.style.cssText = "border: 1px solid black; font-size: 16px; padding: 5px; margin-top: 3px; margin-bottom: 3px; cursor: pointer; background-color: lightgray; color: black; font-weight: bold; text-decoration: none;"
+    removeButton.classList.add("remove-button");
+    removeButton.classList.add("remove-button1");
+    removeButton.setAttribute("name", tagToAddName);
+    removeButton.innerHTML = tagToAddName + " &times";
+    buttonDiv.appendChild(removeButton);
+    document.getElementById(columnContainingTag + "-tag-cell").appendChild(buttonDiv);
+  }
+});
+
+//performed this way so that a dynamically created tag button can have hover coloring
+$(document).on({
+    mouseenter: function () 
+    {
+      $(this).css("background-color", "lightcoral");
+    },
+    mouseleave: function () 
+    {
+      $(this).css("background-color", "lightgray");
+    }
+}, ".remove-button1");
+
+</script>
 
 </html>
