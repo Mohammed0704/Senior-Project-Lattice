@@ -65,6 +65,7 @@
 <script src="/static_files/jquery-3.1.1.js"></script>
 
 <script>
+//the function is wrapped to the document so that dynamically generated tag buttons can have the event, too
 $(document).on("click", ".remove-button", function ()
 {
   tagToDeleteName = $(this).attr("name")
@@ -94,6 +95,7 @@ $(document).on("click", ".add-button", function ()
       type: "post"
     });
     
+    //constructing a tag button and placing it in the spot where others were generated with the same style //ideally, this should be abstracted in some way
     const buttonDiv = document.createElement("div");
     buttonDiv.style.cssText = "display:inline-block; padding-right: 11px; padding-left: 11px; margin-bottom: 4px;";
     buttonDiv.classList.add("tag-cell-tag");
@@ -107,8 +109,19 @@ $(document).on("click", ".add-button", function ()
     buttonDiv.appendChild(removeButton);
     document.getElementById(columnContainingTag + "-tag-cell").appendChild(buttonDiv);
   }
-
 });
+
+//performed this way so that a dynamically created tag button can have hover coloring
+$(document).on({
+    mouseenter: function () 
+    {
+      $(this).css("background-color", "lightcoral");
+    },
+    mouseleave: function () 
+    {
+      $(this).css("background-color", "lightgray");
+    }
+}, ".remove-button1");
 
 </script>
 

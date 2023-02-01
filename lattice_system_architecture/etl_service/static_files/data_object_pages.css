@@ -111,11 +111,6 @@ a:hover
     text-decoration: none;
 }
 
-.remove-button1:hover 
-{
-    background-color: lightcoral;
-}
-
 .add-button 
 {
     border: 1px solid black;
