@@ -27,7 +27,7 @@
           {% for column in columnList %}
           <tr>
             <td><p class="column-value">{{ column }}</p></td>
-            <td class="tag-cell">
+            <td class="tag-cell" id="{{ column }}-tag-cell">
               <center>
               {% if columnTagDict|length > 0 %}
                 {% for columnKey, tagList in columnTagDict.items() %}
@@ -44,7 +44,7 @@
               <center>
               <div class="add-tag-container">
                 <select class="tag-select" style="font-size: 16px; height: 28px;" name="{{ column }}" method="GET" action="/">
-                  <option id="default-tag-option" selected value> -- Select a tag -- </option>
+                  <option class="default-tag-option" selected value> -- Select a tag -- </option>
                   {% for tag in tagList %}
                   <option value= "{{ tag }}">{{ tag }}</option>
                   {% endfor %}
@@ -65,11 +65,11 @@
 <script src="/static_files/jquery-3.1.1.js"></script>
 
 <script>
-$(".remove-button").click(function(event)
+$(document).on("click", ".remove-button", function ()
 {
   tagToDeleteName = $(this).attr("name")
   console.log("Removing " + tagToDeleteName + " tag...");
-  connectionSchemaTableURL = $("#" + "connection-schema-table-URL-storage").attr("name")
+  connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name")
   columnContainingTag = $(this).closest(".tag-cell-tag").attr("name")
   $(this).closest(".tag-cell-tag").remove()
 
@@ -77,17 +77,15 @@ $(".remove-button").click(function(event)
     url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/remove/" + tagToDeleteName,
     type: "delete"
   });
-
 });
 
-$(".add-button").click(function(event)
+$(document).on("click", ".add-button", function ()
 {
   tagToAddName = $(this).closest('div').find(".tag-select option:selected").text()
-  defaultTagValue = $(this).closest('div').find("#default-tag-option").text()
-  connectionSchemaTableURL = $("#" + "connection-schema-table-URL-storage").attr("name")
+  defaultTagValue = $(this).closest('div').find(".default-tag-option").text()
+  connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name")
   columnContainingTag = $(this).closest('div').find(".tag-select").attr("name")
-  console.log("default: " + defaultTagValue)
-  console.log(columnContainingTag)
+
   if (tagToAddName != defaultTagValue)
   {
     console.log("Adding " + tagToAddName + " tag...");
@@ -95,6 +93,19 @@ $(".add-button").click(function(event)
       url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/add/" + tagToAddName,
       type: "post"
     });
+    
+    const buttonDiv = document.createElement("div");
+    buttonDiv.style.cssText = "display:inline-block; padding-right: 11px; padding-left: 11px; margin-bottom: 4px;";
+    buttonDiv.classList.add("tag-cell-tag");
+    buttonDiv.setAttribute("name", columnContainingTag);
+    const removeButton = document.createElement("button");
+    removeButton.style.cssText = "border: 1px solid black; font-size: 16px; padding: 5px; margin-top: 3px; margin-bottom: 3px; cursor: pointer; background-color: lightgray; color: black; font-weight: bold; text-decoration: none;"
+    removeButton.classList.add("remove-button");
+    removeButton.classList.add("remove-button1");
+    removeButton.setAttribute("name", tagToAddName);
+    removeButton.innerHTML = tagToAddName + " &times";
+    buttonDiv.appendChild(removeButton);
+    document.getElementById(columnContainingTag + "-tag-cell").appendChild(buttonDiv);
   }
 
 });

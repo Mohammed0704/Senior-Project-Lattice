@@ -11,7 +11,6 @@ class TrinoConnection:
                 port=8080,
                 user="trino",
         )
-        print("cursor created")
         TrinoConnection.trinoCursor = trinoConnection.cursor() #what is being used to send queries to Trino
 
     @staticmethod

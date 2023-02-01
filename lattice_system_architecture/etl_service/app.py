@@ -76,6 +76,7 @@ def addTagToColumn(connectionName, schemaName, tableName, columnName, tagToAdd):
     tablePath = connectionName + "." + schemaName + "." + tableName
     columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")
     
+    #adds the tag based on whether new dictionary entries need to be made or not
     if tablePath in columnTagDict.keys():
         tableDict = columnTagDict[tablePath]
         if columnName in tableDict.keys():
@@ -95,7 +96,7 @@ def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagTo
     tablePath = connectionName + "." + schemaName + "." + tableName
     columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")
     columnTagList = columnTagDict[tablePath][columnName]
-    if len(columnTagList) == 1: #if there are no tags in the list of the current column and/or column, remove the entries
+    if len(columnTagList) == 1: #if there are no tags in the list of the current column and/or column, removes the entries
         del columnTagDict[tablePath][columnName]
         if len(columnTagDict[tablePath]) == 0:
             del columnTagDict[tablePath]
