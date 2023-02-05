@@ -44,7 +44,7 @@
               <center>
               <div class="add-tag-container">
                 <select class="tag-select" style="font-size: 16px; height: 28px;" name="{{ column }}" method="GET" action="/">
-                  <option class="default-tag-option" selected value> -- Select a tag -- </option>
+                  <option class="default-tag-option" selected disabled hidden value> -- Select a tag -- </option>
                   {% for tag in tagList %}
                   <option value= "{{ tag }}">{{ tag }}</option>
                   {% endfor %}
@@ -86,8 +86,9 @@ $(document).on("click", ".add-button", function ()
   defaultTagValue = $(this).closest('div').find(".default-tag-option").text()
   connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name")
   columnContainingTag = $(this).closest('div').find(".tag-select").attr("name")
+  tagExists = $(this).closest('tr').find("button[name='"+tagToAddName+"']").attr("name")
 
-  if (tagToAddName != defaultTagValue)
+  if (tagToAddName != tagExists && tagToAddName != " -- Select a tag -- ")
   {
     console.log("Adding " + tagToAddName + " tag...");
     $.ajax({
@@ -109,6 +110,7 @@ $(document).on("click", ".add-button", function ()
     buttonDiv.appendChild(removeButton);
     document.getElementById(columnContainingTag + "-tag-cell").appendChild(buttonDiv);
   }
+  $(this).closest('div').find(".tag-select").val("")
 });
 
 //performed this way so that a dynamically created tag button can have hover coloring
