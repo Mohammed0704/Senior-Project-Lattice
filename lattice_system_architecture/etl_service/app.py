@@ -1,4 +1,6 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request, jsonify
+import json #TEMPORARY
+import os
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
 import sys # Temp
@@ -40,6 +42,45 @@ def connectionsRemove(connectionToDelete):
 def tags():
     tagList = ["Student", "Student.join", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
     return render_template("menu_template.html") + render_template("portal_tag_management.html", tagList=tagList)
+
+@app.route("/tags/create")
+def tags_create():
+    return render_template("menu_template.html") + render_template("portal_create_new_tag.html")
+
+@app.route('/tags/create/create-tag', methods=['POST'])
+def create_tag():
+    # Extract JSON payload from request
+    tag_dict = request.get_json()
+    tag_name = tag_dict.get("tag_name")
+    tag_exists = False
+    file_path = './serialized_data/SerializedTags.txt'
+
+    # If file does not exist, create it and add the tag
+    if not os.path.exists(file_path):
+        with open(file_path, 'w') as f:
+            f.write(json.dumps([tag_dict], indent=4))
+        return jsonify({"success": True, "message": "Tag was added"})
+
+    # Load existing tags from file
+    with open(file_path, 'r') as f:
+        serialized_tags = json.loads(f.read())
+
+    # Check if the tag already exists
+    for tag in serialized_tags:
+        if tag.get("tag_name") == tag_name:
+            tag_exists = True
+            break
+
+    # If the tag already exists, return an error message
+    if tag_exists:
+        return jsonify({"success": False, "message": "Tag already exists"})
+
+    # If the tag does not exist, write the new tag to the file
+    with open(file_path, 'w') as f:
+        serialized_tags.append(tag_dict)
+        f.write(json.dumps(serialized_tags, indent=4))
+
+    return jsonify({"success": True, "message": "Tag was added"})
 
 @app.route("/objects")
 def objects():
