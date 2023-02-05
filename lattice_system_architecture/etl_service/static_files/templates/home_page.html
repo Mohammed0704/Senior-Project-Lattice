@@ -10,12 +10,8 @@
         <!--<object class="menu_template" data="/static_files/templates/menu_template.html"></object>-->
         <div class="page_content">
             <b>
-            <h1><img src="{{ url_for('static', filename='title_logo.PNG') }}" alt="Data made simple" /></h1>
-            <p></p>
-            <h2>Home Page</h2>
-            </b>
+            <h1><img id="logo" src="{{ url_for('static', filename='title_logo.png') }}" alt="Data made simple" /></h1>
             <div class="grid">
-                <br></br>
                 <h3>What would you like to do?</h3>
                 <h4><a href="{{ url_for('connections') }}">Data Source Connections Portal</a></h4>
                 <h4><a href="{{ url_for('tags') }}">Tag Management Portal</a></h4>

@@ -136,3 +136,9 @@
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
 }
+
+#logo
+{
+    border-style: solid;
+    border-width: thin;
+}
