@@ -7,7 +7,8 @@
             "System"
         ],
         "middle_name": [
-            "Housing"
+            "Housing",
+            "Student"
         ],
         "date_of_birth": [
             "Housing",
@@ -23,6 +24,11 @@
         "last_name": [
             "Departments",
             "Employees"
+        ],
+        "first_name": [
+            "Housing",
+            "Program",
+            "Student"
         ]
     }
 }
