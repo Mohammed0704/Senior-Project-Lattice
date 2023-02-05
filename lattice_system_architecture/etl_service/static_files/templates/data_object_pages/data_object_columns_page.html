@@ -14,8 +14,8 @@
   <body>
     <div id="outer-content-box">
       <div id="connection-schema-table-URL-storage" name="{{ connectionName }}/{{ schemaName }}/{{ tableName }}"></div>
-      <p id="sub-title"><b>Connection:</b> {{ connectionName }}</p>
-      <p id="sub-title"><b>Schema:</b> {{ schemaName }}</p>
+      <p id="sub-title"><b>Connection:</b> <a href="/objects/{{ connectionName }}">{{ connectionName }}</a></p>
+      <p id="sub-title"><b>Schema:</b> <a href="/objects/{{ connectionName }}/{{ schemaName }}">{{ schemaName }}</a></p>
       <p id="sub-title"><b>Table:</b> {{ tableName }}</p>
       <div id="inner-content-box">
         <table id="inner-table">
