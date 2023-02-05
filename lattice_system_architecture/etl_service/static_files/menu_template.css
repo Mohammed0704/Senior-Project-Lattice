@@ -111,8 +111,8 @@
 .logo {
   display: inline-block;
   position: absolute;
-  top: 5px;
-  right: 15px;
+  top: 15px;
+  right: 80%;
   font-size: 19px;
   color: #0e2431;
 }
