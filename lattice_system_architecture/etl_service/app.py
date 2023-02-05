@@ -3,14 +3,14 @@ import json #TEMPORARY
 import os
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
-import sys # Temp
+#import sys
 import os
 
-sys.path.insert(0, f"{os.getcwd()}{os.sep}code_files")
+#sys.path.insert(0, f"{os.getcwd()}{os.sep}code_files")
 
-from Serialization import *
-from TrinoConnection import *
-from TrinoQuery import *
+from code_files.Serialization import *
+from code_files.TrinoConnection import *
+from code_files.TrinoQuery import *
 
 trinoCursor = None
 
@@ -40,8 +40,8 @@ def connectionsRemove(connectionToDelete):
 
 @app.route("/tags")
 def tags():
-    tagList = ["Student", "Student.join", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
-    return render_template("menu_template.html") + render_template("portal_tag_management.html", tagList=tagList)
+    tagDict = Deserialize('serialized_data/SerializedTags.txt')
+    return render_template("menu_template.html") + render_template("portal_tag_management.html", tagDict=tagDict)
 
 @app.route("/tags/create")
 def tags_create():

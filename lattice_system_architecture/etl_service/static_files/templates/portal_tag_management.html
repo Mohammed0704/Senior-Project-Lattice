@@ -16,9 +16,9 @@
       <p id="title">Current Tags</p>
       <div id="inner-content-box">
         <table id="connections-table">
-          {% for values in tagList %}
+          {% for values in tagDict %}
           <tr>
-            <td> {{ values }}</td>
+            <td> {{ values["tag_name"] }}</td>
           </tr>
           {% endfor %}
         </table>
