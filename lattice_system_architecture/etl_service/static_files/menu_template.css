@@ -109,9 +109,10 @@
 }
 
 .logo {
+  display: inline-block;
   position: absolute;
-  top: 5px;
-  right: 15px;
+  top: 15px;
+  right: 80%;
   font-size: 19px;
   color: #0e2431;
 }
@@ -134,4 +135,10 @@
 
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
+}
+
+#logo
+{
+    border-style: solid;
+    border-width: thin;
 }

@@ -94,3 +94,9 @@ a:hover
     top: 0; 
     background: darkgray;
 }
+
+#logo
+{
+    border-style: solid;
+    border-width: thin;
+}
