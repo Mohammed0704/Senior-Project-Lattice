@@ -1,5 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request, jsonify
-import json #TEMPORARY
+import json
 import os
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
@@ -11,8 +11,6 @@ import os
 from code_files.Serialization import *
 from code_files.TrinoConnection import *
 from code_files.TrinoQuery import *
-
-trinoCursor = None
 
 @app.route('/')
 def base():
