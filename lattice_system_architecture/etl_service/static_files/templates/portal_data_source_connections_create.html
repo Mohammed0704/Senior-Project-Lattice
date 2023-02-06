@@ -24,8 +24,9 @@
           <div class="formSet">
             <label for="data_source" class="formLabel">Data Source Type:</label>
             <select id="data-source" name="data_source" value="" class="formInput">
-              <option value="conn1">conn1</option>
-              <option value="conn2">conn2</option>
+              {% for conn in unusedConns %}
+                <option value="{{ conn }}">{{ conn }}</option>
+              {% endfor %}
             </select>
           </div><br>
           <div class="formSet">
@@ -44,7 +45,7 @@
             <label for="password" class="formLabel">Password:</label>
             <input type="password" id="password" name="password" value="" class="formInput">
           </div><br><br>
-          <input class= "button button1" id="create-submit-button" type="submit" value="Create New">
+          <input class="button button1" id="submit-button" type="submit" value="Create New">
         </form>
       </div>
     </div>
@@ -52,22 +53,5 @@
 </center>
 
 <script src="/static_files/jquery-3.1.1.js"></script>
-<script>
-
-  var currConns = '{{ currConns }}';
-  var form = document.getElementById("form-create-connection");
-
-  form.addEventListener('submit', function(event)
-  {
-    console.log("INVISIBLE");
-    console.log(document.getElementById('name').value);
-    console.log(document.getElementById('data-source').value);
-    console.log(document.getElementById('address').value);
-    console.log(document.getElementById('port').value);
-    console.log(document.getElementById('username').value);
-    console.log(document.getElementById('password').value);
-    console.log(currConns['connection_name']);
-  });
-</script>
 
 </html>

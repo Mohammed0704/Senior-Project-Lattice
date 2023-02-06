@@ -21,3 +21,4 @@ services:
       - '4999:4999'
     volumes:
       - ./etl_service/serialized_data:/serialized_data
+      - ./trino/etc/catalog:/catalog

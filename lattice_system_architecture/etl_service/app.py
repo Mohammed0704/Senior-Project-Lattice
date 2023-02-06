@@ -10,6 +10,7 @@ app = Flask(__name__, static_folder="static_files", template_folder="static_file
 
 from code_files.Serialization import *
 from code_files.TrinoConnection import *
+from code_files.TrinoConnectors import *
 from code_files.TrinoQuery import *
 
 @app.route('/')
@@ -39,36 +40,42 @@ def connectionsRemove(connectionToDelete):
 # create-new-page
 @app.route("/connections/create", methods=["GET", "POST"])
 def connections_create():
-
+    '''
     if (exists('./serialized_data/SerializedConnections.txt')):
         with open('./serialized_data/SerializedConnections.txt', 'r') as listConns:
             currConns = literal_eval(listConns)
     else:
         currConns = []
-    return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html", currConns=currConns)
-
-# create-new-page
-@app.route("/connections/create/submit", methods=["POST"])
-def connections_create_submit():
-    data = request.form
-
-    newConn = {
-        'connection_name': data['name'],
-        'connection_type': data['data_source'],
-        'connection_URL': data['address'] + ':' + data['port'],
-        'connection_username': data['username'],
-        'connection_password': data['password']
-    }
-
-    with open('serialized_data_TEST/create_conn_TEST.json', 'r+') as json_conns:
-        currConns = json.load(json_conns)
-        for conn in currConns:
-            if (conn['connection_name'].lower() == newConn['connection_name'].lower()):
-                return False
-        return True
+    '''
+    # Don't need a route for submitting the form, it automatically sends it back to this route with the post method
     
-
-        json.dump(newData, json_conns)
+    currConns = Deserialize("/serialized_data/SerializedConnections.txt")
+    unusedConns = []
+    if request.method == "POST":
+        data = request.form
+        newConn = {
+            'connection_name': data['name'],
+            'connection_type': data['data_source'],
+            'connection_URL': data['address'] + ':' + data['port'],
+            'connection_username': data['username'],
+            'connection_password': data['password']
+        }
+        currConns.append(newConn)
+        
+        Serialize(currConns, "/serialized_data/SerializedConnections.txt")
+        trinoConnectorCreator = TrinoConnector()
+        trinoConnectorCreator.createConnector(newConn)
+    if request.method == "GET":
+        connections = ["MariaDB", "MongoDB", "Cassandra", "Postgres", "Elasticsearch"]
+        if len(currConns) > 0:
+            for conn in currConns:
+                if conn['connection_type'] in connections:
+                    i = connections.index(conn['connection_type'])
+                    connections.pop(i)
+        unusedConns = connections
+    
+    return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html", unusedConns=unusedConns)   
+    
 
 @app.route("/tags")
 def tags():
