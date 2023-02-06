@@ -13,20 +13,46 @@
   
   <body>
     <div id="outer-content-box">
-      <p id="title">Current Tags</p>
+      <p style="margin-top: 1.6%; margin-bottom: 1.6%;" id="title">Current Tags</p>
       <div id="inner-content-box">
-        <table id="connections-table">
+        <table id="tags-table">
+          <tr id="table-header">
+            <th style="width:88%; font-size: 22px;">Tag Name</th>
+            <th style="width:12%; font-size: 22px;"></th>
+          </tr>
           {% for values in tagDict %}
-          <tr>
+          <tr id="{{ values['tag_name'] }}-row">
             <td> {{ values["tag_name"] }}</td>
+            <td>
+              <center>
+                <button class="delete-button delete-button1" name="{{ values['tag_name'] }}">Delete</button>
+              </center>
+            </td>
           </tr>
           {% endfor %}
         </table>
       </div>
-      <a href="/tags/create">
-        <button class="button button1">Create New</button>
-      </a>
+      <button class="button button1">Create New</button>
     </div>
-</body>
+  </body>
 </center>
+
+<script src="/static_files/jquery-3.1.1.js"></script>
+
+<script>
+  $(".delete-button").click(function(event)
+  {
+    elementToDeleteName = $(this).attr("name")
+    console.log("Deleting " + elementToDeleteName + "...");
+    $("#" + elementToDeleteName + "-row").remove()
+  
+    $.ajax({
+      url: "/tags/remove/" + elementToDeleteName,
+      type: "delete"
+    });
+  });
+  
+</script>
+
+
 </html>

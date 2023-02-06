@@ -9,7 +9,7 @@
     align-items: center;
     flex-direction: column;
     border-style: solid;
-    border-width: thin;
+    border-width: thick;
 }
 
 #inner-content-box

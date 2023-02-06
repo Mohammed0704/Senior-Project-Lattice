@@ -80,6 +80,18 @@ def create_tag():
 
     return jsonify({"success": True, "message": "Tag was added"})
 
+@app.route("/tags/remove/<tagToDelete>", methods=['DELETE'])
+def tagsRemove(tagToDelete):
+    tagsList = Deserialize("serialized_data/SerializedTags.txt")
+    for i in range(len(tagsList)):
+        tag = tagsList[i]
+        if tag["tag_name"] == tagToDelete:
+            tagsList.pop(i)
+            break
+    Serialize(tagsList, "serialized_data/SerializedTags.txt")
+    return "Tag " + tagToDelete + " removed!"
+
+
 @app.route("/objects")
 def objects():
     connectionList = Deserialize("/serialized_data/SerializedConnections.txt")
