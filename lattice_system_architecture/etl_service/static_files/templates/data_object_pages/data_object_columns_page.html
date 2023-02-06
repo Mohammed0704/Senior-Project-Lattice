@@ -45,8 +45,8 @@
               <div class="add-tag-container">
                 <select class="tag-select" style="font-size: 16px; height: 28px;" name="{{ column }}" method="GET" action="/">
                   <option class="default-tag-option" selected disabled hidden value> -- Select a tag -- </option>
-                  {% for tag in tagList %}
-                  <option value= "{{ tag }}">{{ tag }}</option>
+                  {% for tag in tagDict %}
+                  <option value="{{ tag['tag_name'] }}">{{ tag["tag_name"] }}</option>
                   {% endfor %}
                 </select>
                 <button class="add-button add-button1" name="test6" value="">Add</button>

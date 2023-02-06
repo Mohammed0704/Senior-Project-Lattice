@@ -101,7 +101,7 @@ def tables(connectionName, schemaName):
 def columns(connectionName, schemaName, tableName):
     tablePath = connectionName + "." + schemaName + "." + tableName
     #Maybe make a list of all available tags (ones not on already) on a column
-    tagList = ["Student", "Student.join", "Housing", "System", "Departments", "Colleges", "Employees", "Program", "Area of Study"]
+    tagDict = Deserialize('serialized_data/SerializedTags.txt')
     columnTagDict = []
     try:
         columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")[tablePath]
@@ -109,7 +109,7 @@ def columns(connectionName, schemaName, tableName):
         pass
     trinoQueryObject = TrinoQuery(QueryTrinoForColumns)
     columnList = trinoQueryObject.executeTrinoQuery(tablePath, TrinoConnection.getActiveTrinoCursor())
-    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagList=tagList)
+    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagDict=tagDict)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/add/<tagToAdd>", methods=['POST'])
 def addTagToColumn(connectionName, schemaName, tableName, columnName, tagToAdd):
