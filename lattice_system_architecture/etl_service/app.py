@@ -1,10 +1,10 @@
 from flask import Flask, render_template, redirect, url_for, request, jsonify
 import json
 import os
-app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
+from os.path import exists
+from ast import literal_eval
 
-#import sys
-import os
+app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
 #sys.path.insert(0, f"{os.getcwd()}{os.sep}code_files")
 
@@ -35,6 +35,40 @@ def connectionsRemove(connectionToDelete):
             break
     Serialize(connectionsList, "/serialized_data/SerializedConnections.txt")
     return "Connection " + connectionToDelete + " removed!"
+
+# create-new-page
+@app.route("/connections/create", methods=["GET", "POST"])
+def connections_create():
+
+    if (exists('./serialized_data/SerializedConnections.txt')):
+        with open('./serialized_data/SerializedConnections.txt', 'r') as listConns:
+            currConns = literal_eval(listConns)
+    else:
+        currConns = []
+    return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html", currConns=currConns)
+
+# create-new-page
+@app.route("/connections/create/submit", methods=["POST"])
+def connections_create_submit():
+    data = request.form
+
+    newConn = {
+        'connection_name': data['name'],
+        'connection_type': data['data_source'],
+        'connection_URL': data['address'] + ':' + data['port'],
+        'connection_username': data['username'],
+        'connection_password': data['password']
+    }
+
+    with open('serialized_data_TEST/create_conn_TEST.json', 'r+') as json_conns:
+        currConns = json.load(json_conns)
+        for conn in currConns:
+            if (conn['connection_name'].lower() == newConn['connection_name'].lower()):
+                return False
+        return True
+    
+
+        json.dump(newData, json_conns)
 
 @app.route("/tags")
 def tags():

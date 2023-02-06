@@ -13,25 +13,61 @@
   </head>
   
   <body>
-    <div id="outer-content-box">
+    <div id="outer-content-box-create">
       <p id="title">Create New Connection</p>
       <div id="inner-content-box-create">
-        <form action="{{ url_for('connections_create_submit') }}"method="post">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" value=""><br>
-          <label for="data_source">Data Source Type</label>
-          <input type="text" id="data-source" name="data_source" value=""><br>
-          <label for="url">URL:</label>
-          <input type="text" id="url" name="url" value=""><br>
-          <label for="username">Username:</label>
-          <input type="text" id="username" name="username" value=""><br>
-          <label for="password">Password:</label>
-          <input type="password" id="password" name="password" value=""><br><br>
-          <input class= "button button1" type="submit" value="Create New">
+        <form method="post" id="form-create-connection">
+          <div class="formSet">
+            <label for="name" class="formLabel">Name:</label>
+            <input type="text" id="name" name="name" value="" class="formInput">
+          </div><br>
+          <div class="formSet">
+            <label for="data_source" class="formLabel">Data Source Type:</label>
+            <select id="data-source" name="data_source" value="" class="formInput">
+              <option value="conn1">conn1</option>
+              <option value="conn2">conn2</option>
+            </select>
+          </div><br>
+          <div class="formSet">
+            <label for="address" class="formLabel">Address:</label>
+            <input type="text" id="address" name="address" value="" class="formInput">
+          </div><br>
+          <div class="formSet">
+            <label for="port" class="formLabel">Port:</label>
+            <input type="text" id="port" name="port" value="" class="formInput">
+          </div>
+          <div class="formSet">
+            <label for="username" class="formLabel">Username:</label>
+            <input type="text" id="username" name="username" value="" class="formInput">
+          </div><br>
+          <div class="formSet">
+            <label for="password" class="formLabel">Password:</label>
+            <input type="password" id="password" name="password" value="" class="formInput">
+          </div><br><br>
+          <input class= "button button1" id="create-submit-button" type="submit" value="Create New">
         </form>
       </div>
     </div>
   </body>
 </center>
+
+<script src="/static_files/jquery-3.1.1.js"></script>
+<script>
+
+  var currConns = '{{ currConns }}';
+  var form = document.getElementById("form-create-connection");
+
+  form.addEventListener('submit', function(event)
+  {
+    console.log("INVISIBLE");
+    console.log(document.getElementById('name').value);
+    console.log(document.getElementById('data-source').value);
+    console.log(document.getElementById('address').value);
+    console.log(document.getElementById('port').value);
+    console.log(document.getElementById('username').value);
+    console.log(document.getElementById('password').value);
+    console.log(currConns['connection_name']);
+  });
+</script>
 
 </html>
