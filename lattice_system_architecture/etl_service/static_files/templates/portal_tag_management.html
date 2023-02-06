@@ -46,7 +46,7 @@
   {
     elementToDeleteName = $(this).attr("name")
     console.log("Deleting " + elementToDeleteName + "...");
-    $("#" + elementToDeleteName + "-row").remove()
+    $("#" + elementToDeleteName.replace( /(:|\.|\[|\])/g, "\\$1" ) + "-row").remove()
   
     $.ajax({
       url: "/tags/remove/" + elementToDeleteName,
