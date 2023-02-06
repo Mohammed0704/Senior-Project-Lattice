@@ -36,7 +36,8 @@ def connectionsRemove(connectionToDelete):
     Serialize(connectionsList, "/serialized_data/SerializedConnections.txt")
     return "Connection " + connectionToDelete + " removed!"
 
-@app.route("/connections/create", methods=["GET", "POST"]) # create-new-page
+# create-new-page
+@app.route("/connections/create", methods=["GET", "POST"])
 def connections_create():
 
     if (exists('./serialized_data/SerializedConnections.txt')):
@@ -46,7 +47,8 @@ def connections_create():
         currConns = []
     return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html", currConns=currConns)
 
-@app.route("/connections/create/submit", methods=["POST"]) # create-new-page
+# create-new-page
+@app.route("/connections/create/submit", methods=["POST"])
 def connections_create_submit():
     data = request.form
 
