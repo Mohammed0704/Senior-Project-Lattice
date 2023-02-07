@@ -117,14 +117,23 @@ def create_tag():
 @app.route("/tags/remove/<tagToDelete>", methods=['DELETE'])
 def tagsRemove(tagToDelete):
     tagsList = Deserialize("serialized_data/SerializedTags.txt")
+    
     for i in range(len(tagsList)):
         tag = tagsList[i]
         if tag["tag_name"] == tagToDelete:
             tagsList.pop(i)
             break
+    
+    # checks if tagToDelete is also in SerializedTaggedColumns.txt and removes from there as well
+    columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")
+    for tablePath in columnTagDict:
+        for columnName in columnTagDict[tablePath]:
+            if tagToDelete in columnTagDict[tablePath][columnName]:
+                connectionName, schemaName, tableName = tablePath.split(".")
+                removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagToDelete)
+    
     Serialize(tagsList, "serialized_data/SerializedTags.txt")
     return "Tag " + tagToDelete + " removed!"
-
 
 @app.route("/objects")
 def objects():
