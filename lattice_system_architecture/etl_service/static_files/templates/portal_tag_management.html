@@ -18,7 +18,7 @@
         <table id="tags-table">
           <tr id="table-header">
             <th style="width:88%; font-size: 22px;">Tag Name</th>
-            <th style="width:12%; font-size: 22px;"></th>
+            <th style="width:12%; font-size: 22px;">Delete</th>
           </tr>
           {% for values in tagDict %}
           <tr id="{{ values['tag_name'] }}-row">
@@ -45,15 +45,16 @@
   $(".delete-button").click(function(event)
   {
     elementToDeleteName = $(this).attr("name")
-    console.log("Deleting " + elementToDeleteName + "...");
-    $("#" + elementToDeleteName.replace( /(:|\.|\[|\])/g, "\\$1" ) + "-row").remove()
+    if (confirm("Are you sure you want to delete this tag? This tag will also be deleted from the selected tags in the Data Object Management Portal")) {
+      console.log("Deleting " + elementToDeleteName + "...");
+      $("#" + elementToDeleteName.replace( /(:|\.|\[|\])/g, "\\$1" ) + "-row").remove()
   
-    $.ajax({
-      url: "/tags/remove/" + elementToDeleteName,
-      type: "delete"
-    });
+      $.ajax({
+        url: "/tags/remove/" + elementToDeleteName,
+        type: "delete"
+      });
+    }
   });
-  
 </script>
 
 
