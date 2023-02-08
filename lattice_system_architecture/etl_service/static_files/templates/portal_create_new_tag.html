@@ -36,11 +36,13 @@
   const createButton = document.querySelector('#create-button');
   const result = document.querySelector('#result');
  
- 
   createButton.addEventListener('click', function() {
     const tag = form.elements.Tag.value;
+    if (tag.includes(' ') || tag == "") {
+      result.innerHTML = `<p id="error-message">Cannot have spaces in the tag name</p>`;
+      return;
+    }
     const tag_dict = JSON.stringify({'tag_name': tag});
- 
  
     fetch('/tags/create/create-tag', {
       method: 'POST',

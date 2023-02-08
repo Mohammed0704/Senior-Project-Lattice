@@ -87,6 +87,9 @@ def create_tag():
     tag_exists = False
     file_path = './serialized_data/SerializedTags.txt'
 
+    if not tag_name or " " in tag_name:
+        return jsonify({"success": False, "message": "Cannot have spaces in the name"})
+
     # If file does not exist, create it and add the tag
     if not os.path.exists(file_path):
         with open(file_path, 'w') as f:
