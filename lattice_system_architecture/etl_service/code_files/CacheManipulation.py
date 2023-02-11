@@ -1,6 +1,5 @@
 import os
-from Serialization import Serialize
-from Serialization import Deserialize
+from Serialization import *
 
 # Check if the key value exists and if found, return the entire dictionary where the key value is found
 def CheckIfKeyValueAlreadyExists(keyName, keyValue, cacheData):
@@ -13,7 +12,7 @@ def CheckIfKeyValueAlreadyExists(keyName, keyValue, cacheData):
 def AppendToCache(filepath, keyName, dict):
     if not os.path.exists(filepath):
         open(filepath, "x")
-    cacheData = Deserialize(filepath)
+    cacheData = Serialization.Deserialize(filepath)
 
     # if the key name is not expected to be in the current cache structure
     if len(cacheData) > 0: 
@@ -27,7 +26,7 @@ def AppendToCache(filepath, keyName, dict):
     keyValue = dict[keyName]
     if not CheckIfKeyValueAlreadyExists(keyName, keyValue, cacheData):
         cacheData.append(dict)
-        Serialize(cacheData, filepath)
+        Serialization.Serialize(cacheData, filepath)
     else:
         print("Failure to append: The key value \"{}\" is already in use".format(keyValue))
 
@@ -36,7 +35,7 @@ def DeleteFromCache(filepath, keyName, keyValue):
     if not os.path.exists(filepath):
         print("Failure to remove: Cache file \"{}\" does not exist".format(filepath))
         return
-    cacheData = Deserialize(filepath)
+    cacheData = Serialization.Deserialize(filepath)
 
     # if the key name is not in the current cache data
     if len(cacheData) > 0: 
@@ -47,7 +46,7 @@ def DeleteFromCache(filepath, keyName, keyValue):
     dictToRemove = CheckIfKeyValueAlreadyExists(keyName, keyValue, cacheData)
     if dictToRemove:
         cacheData.remove(dictToRemove)
-        Serialize(cacheData, filepath)
+        Serialization.Serialize(cacheData, filepath)
     else:
         print("Failure to remove: The key value \"{}\" does not exist".format(keyValue))
 
@@ -69,9 +68,9 @@ if __name__ == "__main__":
                             "connection_password": "password"
                             }
                         ]
-    Serialize(connectionTestDict, "./ConnectionsTest.txt")'''
+    Serialization.Serialize(connectionTestDict, "./ConnectionsTest.txt")'''
     
     #AppendToCache("./ConnectionsTest.txt", "connection_name", {"connection_name": "Post", "connection_type": "Postgres", "connection_URL": "196.22.77.108:5432", "connection_username": "user", "connection_password": ""})
     DeleteFromCache("./ConnectionsTest.txt", "connection_name", "Post")
 
-    #print(Deserialize("./ConnectionsTest.txt"))
+    #print(Serialization.Deserialize("./ConnectionsTest.txt"))
