@@ -51,8 +51,8 @@ th, td {
 
 .button {
     border: 1px solid black;
-    font-size: 23px;
-    padding: 12px 28px;
+    font-size: 25px;
+    padding: 16px 32px;
     margin: 4px 2px;
     cursor: pointer;
 }
@@ -62,12 +62,9 @@ th, td {
     color: black;
     font-weight: bold;
     position: relative;
-    float: right;
-    bottom: 0%;
-    right: -40%;
-    margin-bottom: 0.5%;
-    text-decoration: none;
+    margin: auto;
 }
+
 
 .button1:hover {
     background-color: darkgray;
