@@ -13,45 +13,61 @@
   </head>
   
   <body>
-    <div id="outer-content-box-create">
+    <div id="outer-content-box">
       <p id="title">Create New Connection</p>
-      <div id="inner-content-box-create">
-        <form method="post" id="form-create-connection">
+      <div id="inner-content-box" style="border:1px solid black;">
+        <p id="result"></p>
+        <form id="form-create-connection" method="post">
           <div class="formSet">
-            <label for="name" class="formLabel">Name:</label>
+            <label for="name" class="formLabel">Name</label>
             <input type="text" id="name" name="name" value="" class="formInput">
-          </div><br>
+          </div>
           <div class="formSet">
-            <label for="data_source" class="formLabel">Data Source Type:</label>
+            <label for="data_source" class="formLabel">Data Source Type</label>
             <select id="data-source" name="data_source" value="" class="formInput">
               {% for conn in unusedConns %}
                 <option value="{{ conn }}">{{ conn }}</option>
               {% endfor %}
             </select>
-          </div><br>
+          </div>
           <div class="formSet">
-            <label for="address" class="formLabel">Address:</label>
+            <label for="address" class="formLabel">Address</label>
             <input type="text" id="address" name="address" value="" class="formInput">
-          </div><br>
+          </div>
           <div class="formSet">
-            <label for="port" class="formLabel">Port:</label>
+            <label for="port" class="formLabel">Port</label>
             <input type="text" id="port" name="port" value="" class="formInput">
           </div>
           <div class="formSet">
-            <label for="username" class="formLabel">Username:</label>
+            <label for="username" class="formLabel">Username</label>
             <input type="text" id="username" name="username" value="" class="formInput">
-          </div><br>
+          </div>
           <div class="formSet">
-            <label for="password" class="formLabel">Password:</label>
+            <label for="password" class="formLabel">Password</label>
             <input type="password" id="password" name="password" value="" class="formInput">
-          </div><br><br>
-          <input class="button button1" id="submit-button" type="submit" value="Create New">
+          </div>
         </form>
+      </div>
+      <div style="display: flex">
+        <a href="/connections">
+          <button class="button button3">Back</button>
+        </a>
+        <input class="button button3" id="create-button" type="submit" value="Create New">
       </div>
     </div>
   </body>
 </center>
 
 <script src="/static_files/jquery-3.1.1.js"></script>
+
+<script>
+  const form = document.querySelector('#form-create-connection');
+  const createButton = document.querySelector('#create-button');
+  const result = document.querySelector('#result');
+ 
+  createButton.addEventListener('click', function() {
+    form.submit()
+  });
+ </script>
 
 </html>

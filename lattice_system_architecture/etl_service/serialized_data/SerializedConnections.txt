@@ -26,12 +26,5 @@
         "connection_URL": "196.22.77.108:9200",
         "connection_username": "admin",
         "connection_password": ""
-    },
-    {
-        "connection_name": "Cass",
-        "connection_type": "Cassandra",
-        "connection_URL": "10102.12.31.2:6969",
-        "connection_username": "username",
-        "connection_password": "password"
     }
 ]
