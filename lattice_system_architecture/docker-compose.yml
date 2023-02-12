@@ -19,6 +19,10 @@ services:
     container_name: etl-service
     ports: 
       - '4999:4999'
+    environment:
+      trino_host: trino
+      trino_port: 8080
+      trino_user: trino
     volumes:
       - ./etl_service/serialized_data:/serialized_data
       - ./trino/etc/catalog:/catalog

@@ -2,7 +2,6 @@ from flask import Flask, render_template, redirect, url_for, request, jsonify
 import json
 import os
 from os.path import exists
-from ast import literal_eval
 
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 

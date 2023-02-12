@@ -1,4 +1,5 @@
 import trino
+import os
 
 #abstracted into its own class so app.py remains clean but still has a single active trino connection
 class TrinoConnection:
@@ -7,9 +8,9 @@ class TrinoConnection:
     @staticmethod
     def establishTrinoConnection():
         trinoConnection = trino.dbapi.connect(
-                host="trino", #docker container name #TODO: Abstract this whole section
-                port=8080,
-                user="trino",
+                host=os.environ["trino_host"],
+                port=os.environ["trino_port"],
+                user=os.environ["trino_user"],
         )
         TrinoConnection.trinoCursor = trinoConnection.cursor() #what is being used to send queries to Trino
 
