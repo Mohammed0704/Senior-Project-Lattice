@@ -49,7 +49,7 @@ def connections_create():
     # Don't need a route for submitting the form, it automatically sends it back to this route with the post method
     
     currConns = Deserialize("/serialized_data/SerializedConnections.txt")
-    unusedConns = []
+    databaseTypes = ["Cassandra", "Elasticsearch", "Postgres", "MariaDB", "MongoDB"]
     if request.method == "POST":
         data = request.form
         newConn = {
@@ -64,16 +64,8 @@ def connections_create():
         Serialize(currConns, "/serialized_data/SerializedConnections.txt")
         trinoConnectorCreator = TrinoConnector()
         trinoConnectorCreator.createConnector(newConn)
-    if request.method == "GET":
-        connections = ["MariaDB", "MongoDB", "Cassandra", "Postgres", "Elasticsearch"]
-        if len(currConns) > 0:
-            for conn in currConns:
-                if conn['connection_type'] in connections:
-                    i = connections.index(conn['connection_type'])
-                    connections.pop(i)
-        unusedConns = connections
     
-    return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html", unusedConns=unusedConns)   
+    return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html", databaseTypes=databaseTypes)   
     
 
 @app.route("/tags")

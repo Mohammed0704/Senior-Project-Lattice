@@ -40,7 +40,7 @@ class TrinoConnector:
         properties.append(f"elasticsearch.auth.password={password}")
         properties.append("elasticsearch.default-schema-name=default")
 
-        self.output(properties, "elasticsearch")
+        self.output(properties, name)
 
     def CreateCassandraConnector(self, name, url, user, password):
         properties = []
@@ -53,7 +53,7 @@ class TrinoConnector:
         properties.append(f"cassandra.password={password}")
         properties.append("cassandra.load-policy.dc-aware.local-dc=datacenter1")
 
-        self.output(properties, "cassandra")
+        self.output(properties, name)
 
     def CreateMariadbConnector(self, name, url, user, password):
         properties = []
@@ -63,7 +63,7 @@ class TrinoConnector:
         properties.append(f"connection-user={user}")
         properties.append(f"connection-password={password}")
 
-        self.output(properties, "mariadb")
+        self.output(properties, name)
 
     def CreateMongoConnector(self, name, url, user=None, password=None):
         properties = []
@@ -85,7 +85,7 @@ class TrinoConnector:
         properties.append(f"connector.name={name}")
         properties.append(f"mongodb.connection-url={concatenatedURL}")
 
-        self.output(properties, "mongo")
+        self.output(properties, name)
 
     def CreatePostgresConnector(self, name, url, user, password):
         properties = []
@@ -95,7 +95,7 @@ class TrinoConnector:
         properties.append(f"connection-user={user}")
         properties.append(f"connection-password={password}")
 
-        self.output(properties, "postgres")
+        self.output(properties, name)
 
 if __name__ == "__main__":
     # Testing

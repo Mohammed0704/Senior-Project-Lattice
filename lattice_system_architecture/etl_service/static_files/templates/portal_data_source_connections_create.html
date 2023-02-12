@@ -25,8 +25,8 @@
           <div class="formSet">
             <label for="data_source" class="formLabel">Data Source Type</label>
             <select id="data-source" name="data_source" value="" class="formInput">
-              {% for conn in unusedConns %}
-                <option value="{{ conn }}">{{ conn }}</option>
+              {% for databaseType in databaseTypes %}
+                <option value="{{ databaseType }}">{{ databaseType }}</option>
               {% endfor %}
             </select>
           </div>
