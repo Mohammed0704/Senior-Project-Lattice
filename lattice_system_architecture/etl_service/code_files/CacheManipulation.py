@@ -1,6 +1,5 @@
 import os
-from Serialization import Serialize
-from Serialization import Deserialize
+from Serialization import *
 
 
 class CacheManipulation():
@@ -74,8 +73,9 @@ if __name__ == "__main__":
     Serialize(connectionTestDict, "./ConnectionsTest.txt")'''
 
     cacheManipulation = CacheManipulation()
+    Serialization.Serialize(connectionTestDict, "./ConnectionsTest.txt")
     
     # cacheManipulation.AppendToCache("./ConnectionsTest.txt", "connection_name", {"connection_name": "Post", "connection_type": "Postgres", "connection_URL": "196.22.77.108:5432", "connection_username": "user", "connection_password": ""})
     cacheManipulation.DeleteFromCache("./ConnectionsTest.txt", "connection_name", "Post")
 
-    #print(Deserialize("./ConnectionsTest.txt"))
+    #print(Serialization.Deserialize("./ConnectionsTest.txt"))

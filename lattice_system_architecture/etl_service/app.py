@@ -22,18 +22,18 @@ def home():
 
 @app.route("/connections")
 def connections():
-    connectionsList = Deserialize("/serialized_data/SerializedConnections.txt")
+    connectionsList = Serialization.Deserialize("/serialized_data/SerializedConnections.txt")
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
 @app.route("/connections/remove/<connectionToDelete>", methods=['DELETE'])
 def connectionsRemove(connectionToDelete):
-    connectionsList = Deserialize("/serialized_data/SerializedConnections.txt")
+    connectionsList = Serialization.Deserialize("/serialized_data/SerializedConnections.txt")
     for i in range(len(connectionsList)):
         connection = connectionsList[i]
         if connection["connection_name"] == connectionToDelete:
             connectionsList.pop(i)
             break
-    Serialize(connectionsList, "/serialized_data/SerializedConnections.txt")
+    Serialization.Serialize(connectionsList, "/serialized_data/SerializedConnections.txt")
     return "Connection " + connectionToDelete + " removed!"
 
 # create-new-page
@@ -72,7 +72,7 @@ def connections_create_submit():
 
 @app.route("/tags")
 def tags():
-    tagDict = Deserialize('serialized_data/SerializedTags.txt')
+    tagDict = Serialization.Deserialize('serialized_data/SerializedTags.txt')
     return render_template("menu_template.html") + render_template("portal_tag_management.html", tagDict=tagDict)
 
 @app.route("/tags/create")
@@ -119,7 +119,7 @@ def create_tag():
 
 @app.route("/tags/remove/<tagToDelete>", methods=['DELETE'])
 def tagsRemove(tagToDelete):
-    tagsList = Deserialize("serialized_data/SerializedTags.txt")
+    tagsList = Serialization.Deserialize("serialized_data/SerializedTags.txt")
     
     for i in range(len(tagsList)):
         tag = tagsList[i]
@@ -128,19 +128,19 @@ def tagsRemove(tagToDelete):
             break
     
     # checks if tagToDelete is also in SerializedTaggedColumns.txt and removes from there as well
-    columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")
+    columnTagDict = Serialization.Deserialize("/serialized_data/SerializedTaggedColumns.txt")
     for tablePath in columnTagDict:
         for columnName in columnTagDict[tablePath]:
             if tagToDelete in columnTagDict[tablePath][columnName]:
                 connectionName, schemaName, tableName = tablePath.split(".")
                 removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagToDelete)
     
-    Serialize(tagsList, "serialized_data/SerializedTags.txt")
+    Serialization.Serialize(tagsList, "serialized_data/SerializedTags.txt")
     return "Tag " + tagToDelete + " removed!"
 
 @app.route("/objects")
 def objects():
-    connectionList = Deserialize("/serialized_data/SerializedConnections.txt")
+    connectionList = Serialization.Deserialize("/serialized_data/SerializedConnections.txt")
     return render_template("menu_template.html") + render_template("data_object_pages/portal_data_object_management.html", connectionList=connectionList)
 
 @app.route("/objects/<connectionName>")
@@ -159,10 +159,10 @@ def tables(connectionName, schemaName):
 def columns(connectionName, schemaName, tableName):
     tablePath = connectionName + "." + schemaName + "." + tableName
     #Maybe make a list of all available tags (ones not on already) on a column
-    tagDict = Deserialize('serialized_data/SerializedTags.txt')
+    tagDict = Serialization.Deserialize('serialized_data/SerializedTags.txt')
     columnTagDict = []
     try:
-        columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")[tablePath]
+        columnTagDict = Serialization.Deserialize("/serialized_data/SerializedTaggedColumns.txt")[tablePath]
     except:
         pass
     trinoQueryObject = TrinoQuery(QueryTrinoForColumns)
@@ -172,7 +172,7 @@ def columns(connectionName, schemaName, tableName):
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/add/<tagToAdd>", methods=['POST'])
 def addTagToColumn(connectionName, schemaName, tableName, columnName, tagToAdd):
     tablePath = connectionName + "." + schemaName + "." + tableName
-    columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")
+    columnTagDict = Serialization.Deserialize("/serialized_data/SerializedTaggedColumns.txt")
     
     #adds the tag based on whether new dictionary entries need to be made or not
     if tablePath in columnTagDict.keys():
@@ -186,13 +186,13 @@ def addTagToColumn(connectionName, schemaName, tableName, columnName, tagToAdd):
         columnTagDict[tablePath] = tableDict
     else:
         columnTagDict[tablePath] = {columnName: [tagToAdd]}
-    Serialize(columnTagDict, "/serialized_data/SerializedTaggedColumns.txt")
+    Serialization.Serialize(columnTagDict, "/serialized_data/SerializedTaggedColumns.txt")
     return "Tag " + tagToAdd + " added!"
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/remove/<tagToRemove>", methods=['DELETE'])
 def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagToRemove):
     tablePath = connectionName + "." + schemaName + "." + tableName
-    columnTagDict = Deserialize("/serialized_data/SerializedTaggedColumns.txt")
+    columnTagDict = Serialization.Deserialize("/serialized_data/SerializedTaggedColumns.txt")
     columnTagList = columnTagDict[tablePath][columnName]
     if len(columnTagList) == 1: #if there are no tags in the list of the current column and/or column, removes the entries
         del columnTagDict[tablePath][columnName]
@@ -201,7 +201,7 @@ def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagTo
     else:
         columnTagList.remove(tagToRemove)
         columnTagDict[tablePath][columnName] = columnTagList
-    Serialize(columnTagDict, "/serialized_data/SerializedTaggedColumns.txt")
+    Serialization.Serialize(columnTagDict, "/serialized_data/SerializedTaggedColumns.txt")
     return "Tag " + tagToRemove + " removed!"
 
 @app.route("/loader")

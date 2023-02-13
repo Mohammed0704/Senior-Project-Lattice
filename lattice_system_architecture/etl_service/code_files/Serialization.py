@@ -2,35 +2,39 @@
 import json
 #import yaml #pip install pyyaml
 
-#def serializeYamlDictList(data, filePath):
-#    with open(filePath, "w+") as yamlFile:
-#        yaml.dump(data, yamlFile, default_flow_style=False)
+class Serialization():
+    #serializeTextDictList
+    @staticmethod
+    def Serialize(data, filePath):
+        with open(filePath, "w+") as file:
+            json.dump(data, file, indent=4)
 
-#serializeTextDictList
-def Serialize(data, filePath):
-    with open(filePath, "w+") as file:
-        json.dump(data, file, indent=4)
+    #deserializeTextDictList
+    @staticmethod
+    def Deserialize(filePath):
+        with open(filePath, 'r') as file:
+            try:
+                data = json.load(file)
+            except:
+                data = []
+        return data
 
-# def serializeCsvDictList(data, filePath):
-#     keys = data[0].keys()
-#     with open(filePath, "w+", newline='') as csvFile:
-#         dict_writer = csv.DictWriter(csvFile, keys)
-#         dict_writer.writeheader()
-#         dict_writer.writerows(data)
+    #def serializeYamlDictList(data, filePath):
+    #    with open(filePath, "w+") as yamlFile:
+    #        yaml.dump(data, yamlFile, default_flow_style=False)
 
-#def deserializeYamlDictList(filePath):
-#    with open(filePath, 'r') as yamlFile:
-#        data = yaml.safe_load(yamlFile)
-#        return data
+    # def serializeCsvDictList(data, filePath):
+    #     keys = data[0].keys()
+    #     with open(filePath, "w+", newline='') as csvFile:
+    #         dict_writer = csv.DictWriter(csvFile, keys)
+    #         dict_writer.writeheader()
+    #         dict_writer.writerows(data)
 
-#deserializeTextDictList
-def Deserialize(filePath):
-    with open(filePath, 'r') as file:
-        try:
-            data = json.load(file)
-        except:
-            data = []
-    return data
+    #def deserializeYamlDictList(filePath):
+    #    with open(filePath, 'r') as yamlFile:
+    #        data = yaml.safe_load(yamlFile)
+    #        return data
+
 
 if __name__=="__main__":
     '''taggedColumnsList = [
@@ -149,6 +153,6 @@ if __name__=="__main__":
     }
     ]
     
-    Serialize(tagsExample, "./SerializedTags.txt")
-    deserializedTestObject = Deserialize("./SerializedTags.txt")
+    Serialization.Serialize(tagsExample, "./SerializedTags.txt")
+    deserializedTestObject = Serialization.Deserialize("./SerializedTags.txt")
     print(deserializedTestObject)
