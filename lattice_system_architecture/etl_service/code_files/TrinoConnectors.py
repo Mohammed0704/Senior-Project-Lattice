@@ -99,8 +99,9 @@ class TrinoConnector:
 
 if __name__ == "__main__":
     # Testing
-    CreateElasticsearchConnector("localhost:9200", "elastic", "lakjsdf982")
-    CreateCassandraConnector("localhost:9142", "user", "asdfasdg3g2344")
-    CreateMariadbConnector("jdbc:mariadb://mariadb:3306", "mariauser", "asdxcvbesxfgh")
-    CreateMongoConnector("mongodb://mongouser:mongopassword@sample.host:27017/")
-    CreatePostgresConnector("jdbc:postgresql://example.net:5432/database", "postgres", "ikjhfsgioeduy")
+    trinoConnectors = TrinoConnectors()
+    trinoConnectors.CreateElasticsearchConnector("localhost:9200", "elastic", "lakjsdf982")
+    trinoConnectors.CreateCassandraConnector("localhost:9142", "user", "asdfasdg3g2344")
+    trinoConnectors.CreateMariadbConnector("jdbc:mariadb://mariadb:3306", "mariauser", "asdxcvbesxfgh")
+    trinoConnectors.CreateMongoConnector("mongodb://mongouser:mongopassword@sample.host:27017/")
+    trinoConnectors.CreatePostgresConnector("jdbc:postgresql://example.net:5432/database", "postgres", "ikjhfsgioeduy")
