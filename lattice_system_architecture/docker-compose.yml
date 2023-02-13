@@ -17,7 +17,7 @@ services:
     #     context: ./etl_service
     #     dockerfile: Dockerfile
     container_name: etl-service
-    ports: 
+    ports:
       - '4999:4999'
     environment:
       trino_host: trino
@@ -35,12 +35,6 @@ services:
       - 7474:7474
       - 7687:7687
     volumes:
-      - ./neo4j/conf:/neo4j/conf
-      - ./neo4j/data:/neo4j/data
-      - ./neo4j/import:/neo4j/import
-      - ./neo4j/plugins:/neo4j/plugins
-    environment: 
-      # Raise memory limits
-      - NEO4J_dbms_memory_pagecache_size=1G
-      - NEO4J_dbms.memory.heap.initial_size=1G
-      - NEO4J_dbms_memory_heap_max__size=1G
+      - ./neo4j/conf:/var/lib/neo4j/conf
+      - ./neo4j/import:/var/lib/neo4j/import
+      - ./neo4j/plugins:/var/lib/neo4j/plugins
