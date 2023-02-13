@@ -48,7 +48,7 @@ def connections_create():
     '''
     # Don't need a route for submitting the form, it automatically sends it back to this route with the post method
     
-    currConns = Deserialize("/serialized_data/SerializedConnections.txt")
+    currConns = Serialization.Deserialize("/serialized_data/SerializedConnections.txt")
     databaseTypes = ["Cassandra", "Elasticsearch", "Postgres", "MariaDB", "MongoDB"]
     if request.method == "POST":
         data = request.form
@@ -61,7 +61,7 @@ def connections_create():
         }
         currConns.append(newConn)
         
-        Serialize(currConns, "/serialized_data/SerializedConnections.txt")
+        Serialization.Serialize(currConns, "/serialized_data/SerializedConnections.txt")
         trinoConnectorCreator = TrinoConnector()
         trinoConnectorCreator.createConnector(newConn)
     
