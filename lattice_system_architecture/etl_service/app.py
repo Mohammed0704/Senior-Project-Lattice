@@ -10,7 +10,6 @@ app = Flask(__name__, static_folder="static_files", template_folder="static_file
 from code_files.Serialization import *
 from code_files.TrinoConnection import *
 from code_files.TrinoConnectors import *
-from code_files.TrinoQuery import *
 
 @app.route('/')
 def base():
@@ -143,14 +142,12 @@ def objects():
 
 @app.route("/objects/<connectionName>")
 def schemas(connectionName):
-    trinoQueryObject = TrinoQuery(QueryTrinoForSchemas)
-    schemaList = trinoQueryObject.executeTrinoQuery(connectionName, TrinoConnection.getActiveTrinoCursor())
+    schemaList = TrinoConnection.query(QueryTrinoForSchemas, connectionName)
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_schemas_page.html", schemaList=schemaList, connectionName=connectionName)
 
 @app.route("/objects/<connectionName>/<schemaName>")
 def tables(connectionName, schemaName):
-    trinoQueryObject = TrinoQuery(QueryTrinoForTables)
-    tableList = trinoQueryObject.executeTrinoQuery(connectionName + "." + schemaName, TrinoConnection.getActiveTrinoCursor())
+    tableList = TrinoConnection.query(QueryTrinoForTables, connectionName + "." + schemaName)
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_tables_page.html", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>")
@@ -163,8 +160,7 @@ def columns(connectionName, schemaName, tableName):
         columnTagDict = Serialization.Deserialize("/serialized_data/SerializedTaggedColumns.txt")[tablePath]
     except:
         pass
-    trinoQueryObject = TrinoQuery(QueryTrinoForColumns)
-    columnList = trinoQueryObject.executeTrinoQuery(tablePath, TrinoConnection.getActiveTrinoCursor())
+    columnList = TrinoConnection.query(QueryTrinoForColumns, connectionName + "." + schemaName + "." + tableName)
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagDict=tagDict)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/add/<tagToAdd>", methods=['POST'])

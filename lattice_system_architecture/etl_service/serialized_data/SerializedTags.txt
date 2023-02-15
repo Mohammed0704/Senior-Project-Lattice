@@ -9,12 +9,6 @@
         "tag_name": "Employee"
     },
     {
-        "tag_name": "Employee.join"
-    },
-    {
-        "tag_name": "Housing"
-    },
-    {
         "tag_name": "System"
     },
     {
@@ -25,5 +19,8 @@
     },
     {
         "tag_name": "Program"
+    },
+    {
+        "tag_name": "Test"
     }
 ]

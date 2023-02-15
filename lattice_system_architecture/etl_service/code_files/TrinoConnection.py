@@ -1,5 +1,6 @@
 import trino
 import os
+from code_files.TrinoQuery import *
 
 #abstracted into its own class so app.py remains clean but still has a single active trino connection
 class TrinoConnection:
@@ -19,3 +20,9 @@ class TrinoConnection:
         if TrinoConnection.trinoCursor is None:
             TrinoConnection.establishTrinoConnection()
         return TrinoConnection.trinoCursor
+    
+    @staticmethod
+    def query(queryTrinoStrategy: QueryTrinoStrategy, queryTarget):
+        trinoCursor = TrinoConnection.getActiveTrinoCursor()
+        return TrinoQuery(queryTrinoStrategy).executeTrinoQuery(queryTarget, trinoCursor)
+        
