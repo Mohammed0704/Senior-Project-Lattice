@@ -10,7 +10,7 @@ ADD requirements.txt /
 ADD /code_files /code_files/
 ADD /static_files /static_files/
 
-RUN pip3 install -r requirements.txt trino
+RUN pip3 install -r requirements.txt trino neo4j
 
 WORKDIR /
 

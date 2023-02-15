@@ -5,14 +5,15 @@ from os.path import exists
 
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
-#sys.path.insert(0, f"{os.getcwd()}{os.sep}code_files")
-
 from code_files.Serialization import *
 from code_files.TrinoConnection import *
 from code_files.TrinoConnectors import *
+from code_files.Neo4jConnection import *
 
 @app.route('/')
 def base():
+    neo4j = Neo4jConnection()
+    neo4j.query()
     return redirect(url_for("home"))
 
 @app.route("/home")
