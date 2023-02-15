@@ -53,13 +53,15 @@
 $(".delete-button").click(function(event)
 {
   elementToDeleteName = $(this).attr("name")
-  console.log("Deleting " + elementToDeleteName + "...");
-  $("#" + elementToDeleteName.replace( /(:|\.|\[|\])/g, "\\$1" ) + "-row").remove()
+  if (confirm("Are you sure you want to delete this connection?")) {
+    console.log("Deleting " + elementToDeleteName + "...");
+    $("#" + elementToDeleteName.replace( /(:|\.|\[|\])/g, "\\$1" ) + "-row").remove()
 
-  $.ajax({
-    url: "/connections/remove/" + elementToDeleteName,
-    type: "delete"
-  });
+    $.ajax({
+      url: "/connections/remove/" + elementToDeleteName,
+      type: "delete"
+    });
+  }
 });
 
 </script>
