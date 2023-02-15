@@ -12,8 +12,6 @@ from code_files.Neo4jConnection import *
 
 @app.route('/')
 def base():
-    neo4j = Neo4jConnection()
-    neo4j.query()
     return redirect(url_for("home"))
 
 @app.route("/home")
