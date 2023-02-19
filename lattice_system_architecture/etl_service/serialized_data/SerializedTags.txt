@@ -1,26 +1,40 @@
-[
-    {
-        "tag_name": "Student"
+{
+    "Student": {
+        "columns_tagged": [
+            "mariadb.drexel_people.basic_employee_info.drexel_id",
+            "mariadb.drexel_people.basic_student_info.drexel_id"
+        ]
     },
-    {
-        "tag_name": "Student.join"
+    "Employee": {
+        "columns_tagged": [
+            "mariadb.drexel_people.basic_employee_info.drexel_id"
+        ]
     },
-    {
-        "tag_name": "Employee"
+    "Housing": {
+        "columns_tagged": [
+            "mariadb.drexel_people.basic_student_info.middle_name"
+        ]
     },
-    {
-        "tag_name": "System"
+    "Course": {
+        "columns_tagged": []
     },
-    {
-        "tag_name": "Departments"
+    "Class": {
+        "columns_tagged": []
     },
-    {
-        "tag_name": "Colleges"
+    "Department": {
+        "columns_tagged": [
+            "mariadb.drexel_people.basic_student_info.middle_name"
+        ]
     },
-    {
-        "tag_name": "Program"
+    "College": {
+        "columns_tagged": []
     },
-    {
-        "tag_name": "Test"
+    "Student.join": {
+        "columns_tagged": [
+            "mariadb.drexel_people.basic_employee_info.drexel_id"
+        ]
+    },
+    "Employee.join": {
+        "columns_tagged": []
     }
-]
+}
