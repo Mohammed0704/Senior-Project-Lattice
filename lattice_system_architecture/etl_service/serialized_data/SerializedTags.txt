@@ -1,26 +1,23 @@
-[
-    {
-        "tag_name": "Student"
+{
+    "Student": {
+        "columns_tagged": []
     },
-    {
-        "tag_name": "Student.join"
+    "Employee": {
+        "columns_tagged": []
     },
-    {
-        "tag_name": "Employee"
+    "Housing": {
+        "columns_tagged": []
     },
-    {
-        "tag_name": "System"
+    "Course": {
+        "columns_tagged": []
     },
-    {
-        "tag_name": "Departments"
+    "Class": {
+        "columns_tagged": []
     },
-    {
-        "tag_name": "Colleges"
+    "Department": {
+        "columns_tagged": []
     },
-    {
-        "tag_name": "Program"
-    },
-    {
-        "tag_name": "Test"
+    "College": {
+        "columns_tagged": []
     }
-]
+}

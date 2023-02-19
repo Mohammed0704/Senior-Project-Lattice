@@ -20,16 +20,18 @@
             <th style="width:88%; font-size: 22px;">Tag Name</th>
             <th style="width:12%; font-size: 22px;">Delete</th>
           </tr>
-          {% for values in tagDict %}
-          <tr id="{{ values['tag_name'] }}-row">
-            <td> {{ values["tag_name"] }}</td>
-            <td>
-              <center>
-                <button class="delete-button delete-button1" name="{{ values['tag_name'] }}">Delete</button>
-              </center>
-            </td>
-          </tr>
-          {% endfor %}
+          {% if tagDict|length > 0 %}
+            {% for tagKey, columnsTaggedList in tagDict.items() %}
+              <tr id="{{ tagKey }}-row">
+                <td> {{ tagKey }}</td>
+                <td>
+                  <center>
+                    <button class="delete-button delete-button1" name="{{ tagKey }}">Delete</button>
+                  </center>
+                </td>
+              </tr>
+            {% endfor %}
+          {% endif %}
         </table>
       </div>
       <a href="/tags/create">

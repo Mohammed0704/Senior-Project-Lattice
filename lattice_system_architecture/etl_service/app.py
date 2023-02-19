@@ -78,50 +78,38 @@ def tags_create():
 @app.route('/tags/create/create-tag', methods=['POST'])
 def create_tag():
     # Extract JSON payload from request
-    tag_dict = request.get_json()
-    tag_name = tag_dict.get("tag_name")
-    tag_exists = False
-    file_path = './serialized_data/SerializedTags.txt'
+    tagDict = request.get_json()
+    tagName = tagDict.get("tag_name")
+    tagExists = False
+    filePath = "serialized_data/SerializedTags.txt"
 
-    if not tag_name or " " in tag_name:
+    if not tagName or " " in tagName:
         return jsonify({"success": False, "message": "Cannot have spaces in the name"})
 
-    # If file does not exist, create it and add the tag
-    if not os.path.exists(file_path):
-        with open(file_path, 'w') as f:
-            f.write(json.dumps([tag_dict], indent=4))
-        return jsonify({"success": True, "message": "Tag was added"})
-
     # Load existing tags from file
-    with open(file_path, 'r') as f:
-        serialized_tags = json.loads(f.read())
+    tagsList = Serialization.Deserialize(filePath)
 
     # Check if the tag already exists
-    for tag in serialized_tags:
-        if tag.get("tag_name") == tag_name:
-            tag_exists = True
-            break
+    if tagName in tagsList.keys():
+        tagExists = True
 
     # If the tag already exists, return an error message
-    if tag_exists:
+    if tagExists:
         return jsonify({"success": False, "message": "Tag already exists"})
 
     # If the tag does not exist, write the new tag to the file
-    with open(file_path, 'w') as f:
-        serialized_tags.append(tag_dict)
-        f.write(json.dumps(serialized_tags, indent=4))
+    with open(filePath, 'w') as f:
+        tagsList[tagName] = {"columns_tagged": []}
+        Serialization.Serialize(tagsList, "serialized_data/SerializedTags.txt")
 
     return jsonify({"success": True, "message": "Tag was added"})
 
 @app.route("/tags/remove/<tagToDelete>", methods=['DELETE'])
 def tagsRemove(tagToDelete):
-    tagsList = Serialization.Deserialize("serialized_data/SerializedTags.txt")
+    filePath = "serialized_data/SerializedTags.txt"
+    tagsList = Serialization.Deserialize(filePath)
     
-    for i in range(len(tagsList)):
-        tag = tagsList[i]
-        if tag["tag_name"] == tagToDelete:
-            tagsList.pop(i)
-            break
+    del tagsList[tagToDelete]
     
     # checks if tagToDelete is also in SerializedTaggedColumns.txt and removes from there as well
     columnTagDict = Serialization.Deserialize("/serialized_data/SerializedTaggedColumns.txt")
@@ -131,7 +119,7 @@ def tagsRemove(tagToDelete):
                 connectionName, schemaName, tableName = tablePath.split(".")
                 removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagToDelete)
     
-    Serialization.Serialize(tagsList, "serialized_data/SerializedTags.txt")
+    Serialization.Serialize(tagsList, filePath)
     return "Tag " + tagToDelete + " removed!"
 
 @app.route("/objects")
