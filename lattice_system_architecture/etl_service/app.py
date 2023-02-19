@@ -100,7 +100,8 @@ def create_tag():
     # If the tag does not exist, write the new tag to the file
     with open(filePath, 'w') as f:
         tagsDict[tagName] = {"columns_tagged": []}
-        Serialization.Serialize(tagsDict, "serialized_data/SerializedTags.txt")
+        sortedTagsDict = {key: val for key, val in sorted(tagsDict.items(), key = lambda ele: ele[0])} #alphabetizes tags
+        Serialization.Serialize(sortedTagsDict, "serialized_data/SerializedTags.txt")
 
     return jsonify({"success": True, "message": "Tag was added"})
 
@@ -120,7 +121,8 @@ def tagsRemove(tagToDelete):
                 connectionName, schemaName, tableName = tablePath.split(".")
                 removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagToDelete)
     
-    Serialization.Serialize(tagsDict, filePath)
+    sortedTagsDict = {key: val for key, val in sorted(tagsDict.items(), key = lambda ele: ele[0])} #alphabetizes tags
+    Serialization.Serialize(sortedTagsDict, filePath)
     return "Tag " + tagToDelete + " removed!"
 
 @app.route("/objects")
