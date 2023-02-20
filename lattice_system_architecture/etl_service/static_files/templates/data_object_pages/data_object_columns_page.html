@@ -67,37 +67,63 @@
 <script src="/static_files/jquery-3.1.1.js"></script>
 
 <script>
-//the function is wrapped to the document so that dynamically generated tag buttons can have the event, too
-$(document).on("click", ".remove-button", function ()
-{
-  tagToDeleteName = $(this).attr("name")
-  console.log("Removing " + tagToDeleteName + " tag...");
-  connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name")
-  columnContainingTag = $(this).closest(".tag-cell-tag").attr("name")
-  $(this).closest(".tag-cell-tag").remove()
-
-  $.ajax({
-    url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/remove/" + tagToDeleteName,
-    type: "delete"
+// Populate the dropdown with available tags and remove any selected tags
+$(document).ready(function() {
+  $(".tag-select").each(function() {
+    const selectedTag = $(this).closest(".tag-cell-tag").find(".remove-button").attr("name");
+    const connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name");
+    const columnContainingTag = $(this).attr("name");
+    $.ajax({
+      url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/get",
+      type: "get",
+      success: function(data) {
+        const tagSelect = $(this);
+        $.each(data, function(index, tag) {
+          const tagOption = $("<option>", { value: tag, text: tag });
+          tagSelect.append(tagOption);
+        });
+        tagSelect.find(`option[value="${selectedTag}"]`).remove();
+      }.bind(this)
+    });
   });
 });
 
-$(document).on("click", ".add-button", function ()
-{
-  tagToAddName = $(this).closest('div').find(".tag-select option:selected").text()
-  defaultTagValue = $(this).closest('div').find(".default-tag-option").text()
-  connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name")
-  columnContainingTag = $(this).closest('div').find(".tag-select").attr("name")
-  tagExists = $(this).closest('tr').find("button[name='"+tagToAddName+"']").attr("name")
+//the function is wrapped to the document so that dynamically generated tag buttons can have the event, too
+$(document).on("click", ".remove-button", function () {
+  const tagToDeleteName = $(this).attr("name");
+  console.log("Removing " + tagToDeleteName + " tag...");
+  const connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name");
+  const columnContainingTag = $(this).closest(".tag-cell-tag").attr("name");
+  $(this).closest(".tag-cell-tag").remove();
 
-  if (tagToAddName != tagExists && tagToAddName != " -- Select a tag -- ")
-  {
+  $.ajax({
+    url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/remove/" + tagToDeleteName,
+    type: "delete",
+    success: function() {
+      // Add the removed tag option back to the dropdown
+      const tagOption = $("<option>", { value: tagToDeleteName, text: tagToDeleteName });
+      $(`.tag-select[name="${columnContainingTag}"]`).append(tagOption);
+    }
+  });
+});
+
+$(document).on("change", ".tag-select", function () {
+  const tagToAddName = $(this).find(":selected").text();
+  const defaultTagValue = $(this).find(".default-tag-option").text();
+  const connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name");
+  const columnContainingTag = $(this).attr("name");
+  const tagExists = $(this).closest("tr").find(`button[name="${tagToAddName}"]`).attr("name");
+
+  if (tagToAddName != tagExists && tagToAddName != " -- Select a tag -- ") {
     console.log("Adding " + tagToAddName + " tag...");
     $.ajax({
-      url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/add/" + tagToAddName,
-      type: "post"
+      url: `/objects/${connectionSchemaTableURL}/${columnContainingTag}/add/${tagToAddName}`,
+      type: "post",
     });
-    
+
+    // Remove selected option from dropdown
+    $(this).find(`option[value="${tagToAddName}"]`).remove();
+
     //constructing a tag button and placing it in the spot where others were generated with the same style //ideally, this should be abstracted in some way
     const buttonDiv = document.createElement("div");
     buttonDiv.style.cssText = "display:inline-block; padding-right: 11px; padding-left: 11px; margin-bottom: 4px;";
@@ -113,6 +139,8 @@ $(document).on("click", ".add-button", function ()
     document.getElementById(columnContainingTag + "-tag-cell").appendChild(buttonDiv);
   }
   $(this).closest('div').find(".tag-select").val("")
+  // Remove the added tag option from the dropdown
+  $(this).find(`option[value="${tagToAddName}"]`).remove();
 });
 
 //performed this way so that a dynamically created tag button can have hover coloring
