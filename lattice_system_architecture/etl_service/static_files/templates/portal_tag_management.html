@@ -72,7 +72,7 @@
                 {% if tagDict|length > 0 %}
                   {% for tagKey, columnsTaggedList in tagDict.items() %}
                     {% for tag in columnsTaggedList["columns_tagged"] %}
-                      <tr id="{{ tagKey }}-row" style="display: none">
+                      <tr id="{{ tagKey }}-row">
                         <td>{{ tag }}</td>
                       </tr>
                     {% endfor %}
@@ -101,6 +101,15 @@
         type: "delete"
       });
     }
+  });
+
+  $(".usage-button").click(function(event)
+  {
+    elementToDisplayName = $(this).attr("name")
+
+    $("#usage-table").find("tr").css("display", "none");
+    $("#usage-table").find("tr[id='table-header']").css("display", "table-row");
+    $("#usage-table").find("tr[id='"+elementToDisplayName+"-row']").css("display", "table-row");
   });
 
   const form = document.querySelector('#create-form');

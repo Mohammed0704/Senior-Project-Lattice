@@ -75,6 +75,14 @@
     width: 95%;
 }
 
+#usage-table tr {
+    display: none;
+}
+
+#usage-table #table-header {
+    display: table-row;
+}
+
 table
 {
     width: 100%;
