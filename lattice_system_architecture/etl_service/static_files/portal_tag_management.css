@@ -5,7 +5,7 @@
     font-size: 30px;
     width: 90%;
     height: 72%;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     border-style: solid;
@@ -15,9 +15,40 @@
 #inner-content-box
 {
     background-color: darkgray;
-    height: 71.4%;
     width: 95%;
     overflow: auto;
+}
+
+#content {
+    display: flex;
+    width: 90%;
+    height: 90%;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#content .left {
+    width: 60%;
+}
+
+#content .right {
+    width: 40%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#right-div {
+    width: 90%;
+}
+
+#button-div {
+    justify-content: center;
 }
 
 #title
@@ -51,7 +82,6 @@ th, td {
 }
 
 .button {
-    border: 1px solid black;
     font-size: 25px;
     padding: 16px 32px;
     margin: 4px 2px;
@@ -76,7 +106,6 @@ th, td {
 {
     font-size: 30px;
     font-weight: bold;
-    line-height: 400px;
 }
 
 input {
@@ -111,7 +140,7 @@ input {
     float: left;
     margin-bottom: 2px;
     margin-top: 2px;
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 .button3:hover {
@@ -136,6 +165,8 @@ input {
 }
 
 #create-form {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 2px;
     margin-top: 0px;
 }
