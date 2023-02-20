@@ -41,9 +41,23 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
-#right-div {
+.right .right-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 50%;
+}
+
+.right .right-bottom {
+    height: 50%;
+}
+
+.right-div {
     width: 90%;
 }
 
