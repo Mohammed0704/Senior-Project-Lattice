@@ -55,7 +55,25 @@
             </div>
           </div>
           <div id="inner-content-box" class="right-bottom" style="border:1px solid black;">
-            content
+            <div id="label_text">
+              Tag Usages
+            </div>
+            <div>
+              <table id="usage-table">
+                <tr id="table-header">
+                  <th style="width:88%; font-size: 20px;">Database.Schema.Table.ColumnName</th>
+                </tr>
+                {% if tagDict|length > 0 %}
+                  {% for tagKey, columnsTaggedList in tagDict.items() %}
+                    {% for tag in columnsTaggedList["columns_tagged"] %}
+                      <tr id="{{ tagKey }}-row" style="display: none">
+                        <td>{{ tag }}</td>
+                      </tr>
+                    {% endfor %}
+                  {% endfor %}
+                {% endif %}
+              </table>
+            </div>
           </div>
       </div>
     </div>
