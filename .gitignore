@@ -2,5 +2,5 @@
 geckodriver.log
 __pycache__
 
-#conf files are made dynamically by docker-compose file
-neo4j.conf
+#neo4j is made dynamically by docker-compose file
+*/neo4j.conf
