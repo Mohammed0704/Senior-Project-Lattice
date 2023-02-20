@@ -1,3 +1,6 @@
 # Selenium Firefox creates a log for the webdriver to be ignored.  Data Generation of: Program tables
 geckodriver.log
 __pycache__
+
+#conf files are made dynamically by docker-compose file
+lattice_system_architecture\neo4j\conf\neo4j.conf
