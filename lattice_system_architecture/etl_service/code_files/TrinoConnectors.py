@@ -23,7 +23,7 @@ class TrinoConnector:
             self.CreatePostgresConnector(name, url, user, password)
 
     def output(self, properties, connectorName):
-        fileName = "/catalog/" + connectorName + ".properties"
+        fileName = "../trino/etc/catalog/" + connectorName + ".properties"
         with open(fileName, "w") as f:
             for line in properties:
                 f.write(line+"\n")
