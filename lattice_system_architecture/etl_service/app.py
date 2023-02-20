@@ -107,14 +107,14 @@ def create_tag():
 
 @app.route("/tags/remove/<tagToDelete>", methods=['DELETE'])
 def tagsRemove(tagToDelete):
-    filePath = "./serialized_data/SerializedTags.txt"
+    filePath = "/serialized_data/SerializedTags.txt"
     tagsDict = Serialization.Deserialize(filePath)
     
     # removes the tag from the list of created tags
     del tagsDict[tagToDelete]
     
     # checks if tagToDelete is also in SerializedTaggedColumns.txt and removes from there as well
-    columnTagDict = Serialization.Deserialize("./serialized_data/SerializedTaggedColumns.txt")
+    columnTagDict = Serialization.Deserialize("/serialized_data/SerializedTaggedColumns.txt")
     for tablePath in columnTagDict:
         for columnName in columnTagDict[tablePath]:
             if tagToDelete in columnTagDict[tablePath][columnName]:
