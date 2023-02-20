@@ -80,7 +80,6 @@ def create_tag():
     # Extract JSON payload from request
     tagDict = request.get_json()
     tagName = tagDict.get("tag_name")
-    tagExists = False
     filePath = "serialized_data/SerializedTags.txt"
 
     if not tagName or " " in tagName:
@@ -89,12 +88,8 @@ def create_tag():
     # Load existing tags from file
     tagsDict = Serialization.Deserialize(filePath)
 
-    # Check if the tag already exists
-    if tagName in tagsDict.keys():
-        tagExists = True
-
     # If the tag already exists, return an error message
-    if tagExists:
+    if tagName in tagsDict.keys():
         return jsonify({"success": False, "message": "Tag already exists"})
 
     # If the tag does not exist, write the new tag to the file
@@ -207,7 +202,8 @@ def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagTo
 
 @app.route("/loader")
 def loader():
-        return render_template("menu_template.html") + render_template("portal_graph_loader.html")
+        
+    return render_template("menu_template.html") + render_template("portal_graph_loader.html")
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", port = 4999)

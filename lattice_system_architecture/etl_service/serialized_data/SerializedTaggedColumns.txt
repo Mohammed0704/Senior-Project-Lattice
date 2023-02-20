@@ -14,5 +14,14 @@
             "Housing",
             "Department"
         ]
+    },
+    "elasticsearch.additional_info.hagerty_library_log": {
+        "drexelid": [
+            "Student.join",
+            "Student"
+        ],
+        "location": [
+            "Student"
+        ]
     }
 }

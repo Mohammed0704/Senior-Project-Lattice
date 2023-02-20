@@ -1,6 +1,10 @@
 import trino
 import os
-from code_files.TrinoQuery import *
+
+try:
+    from code_files.TrinoQuery import *
+except:
+    from TrinoQuery import *
 
 #abstracted into its own class so app.py remains clean but still has a single active trino connection
 class TrinoConnection:

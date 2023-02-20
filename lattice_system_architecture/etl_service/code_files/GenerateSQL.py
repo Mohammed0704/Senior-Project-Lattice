@@ -1,5 +1,7 @@
 import trino
 import pandas as pd
+from Serialization import *
+from TrinoConnection import *
 
 class GenerateSQL:
     trinoCursor = None
@@ -8,9 +10,8 @@ class GenerateSQL:
     trinoUser = "user"
 
     #example of tagged columns after being deserialized and parsed
-    taggedColumnsList = [
-                            {
-                            "tag_name": "Housing",
+    exampleColumnsDict = {
+                            "Housing": {
                             "all_columns": 
                             [
                                 "cassandra.finances.housing_costs.residence_name", 
@@ -60,11 +61,44 @@ class GenerateSQL:
                                 "cassandra.finances.housing_costs",
                                 "postgres.campus_life.housing_options"
                             ]
-                            }
-                        ]
+                        }
+                    }
     
     def __init__(self):
         pass
+
+    def FormatDictionary(self, entireDict, tagToFormat):
+        formattedTagDict = entireDict[tagToFormat]
+
+        #set up "all_columns"
+        formattedTagDict["all_columns"] = formattedTagDict["columns_tagged"]
+        del formattedTagDict["columns_tagged"]
+
+        #set up "all_concat_columns"
+        #TODO: Set this part up
+        formattedTagDict["all_concat_columns"] = []
+
+        #set up "join_columns"
+        if tagToFormat + ".join" in entireDict: #if a join tag exists for the current tag
+            if len(entireDict[tagToFormat + ".join"]["columns_tagged"]) > 0: #if the join tag has been applied to columns
+                formattedTagDict["join_columns"] = entireDict[tagToFormat + ".join"]["columns_tagged"]
+            else:
+                formattedTagDict["join_columns"] = []
+        else:
+            formattedTagDict["join_columns"] = []
+
+        #set up "all_tables"
+        formattedTagDict["all_tables"] = []
+        taggedTables = []
+        for column in formattedTagDict["all_columns"]:
+            table = column[:-(column[::-1].index(".")+1)]
+            if not table in taggedTables: #each table added should be unique
+                allTables = formattedTagDict["all_tables"]
+                allTables.append(table)
+                formattedTagDict["all_tables"] = allTables
+                taggedTables.append(table)
+
+        return(formattedTagDict)
 
     def ConnectToTrino(self):
         trinoConnection = trino.dbapi.connect(
@@ -83,27 +117,19 @@ class GenerateSQL:
         print(queryResult) #results are currently printed but will be written to CSVs later
 
     #the different portions of a SQL query are configured and added together as a string
-    def ConvertColumnsToSQL(self, tag):
-        taggedColumnsDict = {}
-        
+    def ConvertColumnsToSQL(self, tagDict):        
         generatedSQLStatement = ""
         sqlColumns = "SELECT "
         sqlFrom = ""
         sqlInnerJoin = ""
 
-        #specified tag is found in the dictionary
-        for taggedColumnsListElement in self.taggedColumnsList:
-            if taggedColumnsListElement["tag_name"] == tag:
-                taggedColumnsDict = taggedColumnsListElement
-                break
-
         #columns to SELECT are constructed
-        for column in taggedColumnsDict["all_columns"]:
+        for column in tagDict["all_columns"]:
             sqlColumns = sqlColumns + column + ", "
 
         #add concatenated columns to the SELECT if requested
-        if len(taggedColumnsDict["all_concat_columns"]) > 0:
-            for allConcatColumns in taggedColumnsDict["all_concat_columns"]:
+        if len(tagDict["all_concat_columns"]) > 0:
+            for allConcatColumns in tagDict["all_concat_columns"]:
                 sqlColumns = sqlColumns + "concat("
                 for concatColumns in allConcatColumns["concat_columns"]:
                     sqlColumns = sqlColumns + concatColumns["concat_column"] + ", \' \', "
@@ -112,25 +138,23 @@ class GenerateSQL:
 
         sqlColumns = sqlColumns[:-2] #removes remaining comma
 
-
-        
         #FROM text is configured
-        sqlFrom = sqlFrom + "\nFROM " + taggedColumnsDict["all_tables"][0]
+        sqlFrom = sqlFrom + "\nFROM " + tagDict["all_tables"][0]
 
         isFirstIteration = True #utilized to skip the first iteration
-        if len(taggedColumnsDict["all_tables"]) > 1:
-            taggedColumnsTables = taggedColumnsDict["all_tables"]
+        if len(tagDict["all_tables"]) > 1:
+            taggedColumnsTables = tagDict["all_tables"]
             for table in taggedColumnsTables:
                 if isFirstIteration:
                     isFirstIteration = False
                     continue
                 sqlInnerJoin = sqlInnerJoin + "\nINNER JOIN " #inner joins are constructed for as many joins are set to take place
                 sqlOn = "ON "
-                for joinColumn in taggedColumnsDict["join_columns"]:
+                for joinColumn in tagDict["join_columns"]:
                     if joinColumn[:-(joinColumn[::-1].index(".")+1)] == table:
                         sqlOn = sqlOn + joinColumn + " = "
                         break
-                for joinColumn in taggedColumnsDict["join_columns"]:
+                for joinColumn in tagDict["join_columns"]:
                     if joinColumn[:-(joinColumn[::-1].index(".")+1)] == taggedColumnsTables[0]: #retrives the FROM table's join column
                         sqlOn = sqlOn + joinColumn
                         break
@@ -145,7 +169,13 @@ class GenerateSQL:
         
     def Main(self):
         self.ConnectToTrino()
-        self.ExecuteTrinoQuery(self.ConvertColumnsToSQL("Housing"))
+
+        tagsDict = Serialization.Deserialize("etl_service/serialized_data/SerializedTags.txt") #TODO: Change off temp dir
+        for tag in tagsDict:
+            if (len(tagsDict[tag]["columns_tagged"]) > 0) and (not ".join" in tag) and (not ".concat" in tag):
+                formattedTagDict = self.FormatDictionary(tagsDict, tag)
+                print(self.ConvertColumnsToSQL(formattedTagDict))
+        #self.ExecuteTrinoQuery(self.ConvertColumnsToSQL("Housing"))
 
 if __name__=="__main__":
     generateSQL = GenerateSQL()
