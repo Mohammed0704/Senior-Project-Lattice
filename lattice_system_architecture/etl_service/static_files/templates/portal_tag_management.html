@@ -17,13 +17,19 @@
         <div id="inner-content-box" class="left">
           <table id="tags-table">
             <tr id="table-header">
-              <th style="width:88%; font-size: 22px;">Current Tag Names</th>
+              <th style="width:76%; font-size: 22px;">Current Tag Names</th>
+              <th style="width:12%; font-size: 22px;">Usages</th>
               <th style="width:12%; font-size: 22px;">Delete</th>
             </tr>
             {% if tagDict|length > 0 %}
               {% for tagKey, columnsTaggedList in tagDict.items() %}
                 <tr id="{{ tagKey }}-row">
                   <td> {{ tagKey }}</td>
+                  <td>
+                    <center>
+                      <button class="usage-button delete-button1" name="{{ tagKey }}">Usages</button>
+                    </center>
+                  </td>
                   <td>
                     <center>
                       <button class="delete-button delete-button1" name="{{ tagKey }}">Delete</button>

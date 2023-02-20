@@ -133,6 +133,15 @@ input {
     font-size: 20px;
 }
 
+.usage-button {
+    border: 1px solid black;
+    font-size: 18px;
+    padding: 5px;
+    margin: 0%;
+    cursor: pointer;
+    display: flex;
+}
+
 .button2 {
     background-color: lightgray;
     color: black;
