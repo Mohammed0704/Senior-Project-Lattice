@@ -82,6 +82,11 @@ class GenerateSQL:
         if tagToFormat + ".join" in entireDict: #if a join tag exists for the current tag
             if len(entireDict[tagToFormat + ".join"]["columns_tagged"]) > 0: #if the join tag has been applied to columns
                 formattedTagDict["join_columns"] = entireDict[tagToFormat + ".join"]["columns_tagged"]
+                for joinColumn in formattedTagDict["join_columns"]: #make sure that a join column is in the "all_columns" list
+                    if not joinColumn in formattedTagDict["all_columns"]:
+                        allColumns = formattedTagDict["all_columns"]
+                        allColumns.append(joinColumn)
+                        formattedTagDict["all_columns"] = allColumns
             else:
                 formattedTagDict["join_columns"] = []
         else:
@@ -174,7 +179,9 @@ class GenerateSQL:
         for tag in tagsDict:
             if (len(tagsDict[tag]["columns_tagged"]) > 0) and (not ".join" in tag) and (not ".concat" in tag):
                 formattedTagDict = self.FormatDictionary(tagsDict, tag)
-                print(self.ConvertColumnsToSQL(formattedTagDict))
+                self.ExecuteTrinoQuery(self.ConvertColumnsToSQL(formattedTagDict))
+                #TODO: Consider error handling for if tags aren't applied properly (such as .joins missing) (Maybe just ignore a table if it doesn't have a .join when there are at least 2 tables)
+                #TODO: Write to CSV
         #self.ExecuteTrinoQuery(self.ConvertColumnsToSQL("Housing"))
 
 if __name__=="__main__":
