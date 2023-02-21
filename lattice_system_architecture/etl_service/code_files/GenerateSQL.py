@@ -1,15 +1,11 @@
-import trino
-import pandas as pd
-from Serialization import *
-from TrinoConnection import *
+from code_files.Serialization import *
 
 class GenerateSQL:
-    trinoCursor = None
     
     def __init__(self):
         pass
 
-    def FormatDictionary(self, entireDict, tagToFormat):
+    def formatDictionary(self, entireDict, tagToFormat):
         formattedTagDict = entireDict[tagToFormat]
 
         #set up "all_columns"
@@ -47,16 +43,8 @@ class GenerateSQL:
 
         return(formattedTagDict)
 
-    #Trino has a query sent to it and the results are stored in a Pandas dataframe
-    def ExecuteTrinoQuery(self, query):
-        self.trinoCursor.execute(query)
-        rows = self.trinoCursor.fetchall()
-        columns = [column[0] for column in self.trinoCursor.description]
-        queryResult = pd.DataFrame(rows, columns=columns)
-        print(queryResult) #results are currently printed but will be written to CSVs later
-
     #the different portions of a SQL query are configured and added together as a string
-    def ConvertColumnsToSQL(self, tagDict):        
+    def convertColumnsToSQL(self, tagDict):        
         generatedSQLStatement = ""
         sqlColumns = "SELECT "
         sqlFrom = ""
@@ -105,17 +93,10 @@ class GenerateSQL:
 
         return generatedSQLStatement
         
-    def Main(self):
-        self.trinoCursor = TrinoConnection.getActiveTrinoCursor()
-
-        tagsDict = Serialization.Deserialize("../serialized_data/SerializedTags.txt") #TODO: Change off temp dir
-        for tag in tagsDict:
-            if (len(tagsDict[tag]["columns_tagged"]) > 0) and (not ".join" in tag) and (not ".concat" in tag):
-                formattedTagDict = self.FormatDictionary(tagsDict, tag)
-                self.ExecuteTrinoQuery(self.ConvertColumnsToSQL(formattedTagDict))
-                #TODO: Consider error handling for if tags aren't applied properly (such as .joins missing) (Maybe just ignore a table if it doesn't have a .join when there are at least 2 tables)
-                #TODO: Write to CSV
-
-if __name__ == "__main__":
-    generateSQL = GenerateSQL()
-    generateSQL.Main()
+    def generateQuery(self, tag, tagsDict):
+        if (len(tagsDict[tag]["columns_tagged"]) > 0) and (not ".join" in tag) and (not ".concat" in tag):
+            formattedTagDict = self.formatDictionary(tagsDict, tag)
+            return self.convertColumnsToSQL(formattedTagDict)
+            #TODO: Consider error handling for if tags aren't applied properly (such as .joins missing) (Maybe just ignore a table if it doesn't have a .join when there are at least 2 tables)
+        else:
+            return None

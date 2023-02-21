@@ -1,7 +1,4 @@
 from flask import Flask, render_template, redirect, url_for, request, jsonify
-import json
-import os
-from os.path import exists
 
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
@@ -9,6 +6,8 @@ from code_files.Serialization import *
 from code_files.TrinoConnection import *
 from code_files.TrinoConnectors import *
 from code_files.Neo4jConnection import *
+from code_files.GenerateSQL import *
+from code_files.QueryToCSV import *
 
 @app.route('/')
 def base():
@@ -202,6 +201,16 @@ def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagTo
 
 @app.route("/loader")
 def loader():
+    generateSQL = GenerateSQL()
+    queryToCSV = QueryToCSV()
+    tagsDict = Serialization.Deserialize("/serialized_data/SerializedTags.txt")
+
+    time = None #time is currently not utilized in the final name of the resulting CSVs
+    for tag in tagsDict:
+        taggedColumnsAsSQL = generateSQL.generateQuery(tag, tagsDict)
+        if taggedColumnsAsSQL is not None:
+            queryResultDataframe = TrinoConnection.query(QueryTrinoWithSelect, taggedColumnsAsSQL)
+            time = queryToCSV.writeQueryToCSV(tag, queryResultDataframe, time)
         
     return render_template("menu_template.html") + render_template("portal_graph_loader.html")
 

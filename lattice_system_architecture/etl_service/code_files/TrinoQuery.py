@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-#import pandas as pd
+import pandas as pd
 
 #Strategy interface 
 class QueryTrinoStrategy(ABC):
@@ -7,7 +7,6 @@ class QueryTrinoStrategy(ABC):
     def query(self, queryTarget, trinoCursor) -> None:
         pass
 
-#These are mostly the same functionality right now and could probably be abstracted or not within a strategy pattern at all, but this is fine for now in case functionality alters or more variations are added
 #Concrete strategies
 class QueryTrinoForSchemas(QueryTrinoStrategy):
     def query(self, queryTarget, trinoCursor) -> list:
@@ -38,6 +37,14 @@ class QueryTrinoForColumns(QueryTrinoStrategy):
         for column in rows:
             columnList.append(column[0])
         return columnList
+    
+class QueryTrinoWithSelect(QueryTrinoStrategy):    
+    def query(self, queryTarget, trinoCursor):
+        trinoCursor.execute(queryTarget)
+        rows = trinoCursor.fetchall()
+        columns = [column[0] for column in trinoCursor.description]
+        queryResult = pd.DataFrame(rows, columns=columns)
+        return queryResult
 
 #Context class
 class TrinoQuery:
@@ -46,5 +53,5 @@ class TrinoQuery:
     def __init__(self, queryTrinoStrategy: QueryTrinoStrategy = None) -> None:
         self.queryTrinoStrategy = queryTrinoStrategy
 
-    def executeTrinoQuery(self, queryTarget, trinoCursor) -> list:
+    def executeTrinoQuery(self, queryTarget, trinoCursor):
         return self.queryTrinoStrategy.query(self, queryTarget, trinoCursor)
