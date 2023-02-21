@@ -5,64 +5,6 @@ from TrinoConnection import *
 
 class GenerateSQL:
     trinoCursor = None
-    trinoHost = "localhost"
-    trinoPort = 8080
-    trinoUser = "user"
-
-    #example of tagged columns after being deserialized and parsed
-    exampleColumnsDict = {
-                            "Housing": {
-                            "all_columns": 
-                            [
-                                "cassandra.finances.housing_costs.residence_name", 
-                                "cassandra.finances.housing_costs.room_style", 
-                                "cassandra.finances.housing_costs.maximum_monthly_cost", 
-                                "cassandra.finances.housing_costs.minimum_monthly_cost",
-                                "postgres.campus_life.housing_options.residence_name",
-                                "postgres.campus_life.housing_options.address",
-                                "postgres.campus_life.housing_options.is_affiliated_housing"
-                            ],
-                            "all_concat_columns":
-                            [
-                                {
-                                    "concat_name": "test", "concat_columns": 
-                                [
-                                    {
-                                        "concat_column": "cassandra.finances.housing_costs.room_style",
-                                        "concat_column_order": 1
-                                    },
-                                    {
-                                        "concat_column": "cassandra.finances.housing_costs.maximum_monthly_cost",
-                                        "concat_column_order": 2
-                                    }
-                                ]
-                                },
-                                {
-                                    "concat_name": "another_test", "concat_columns": 
-                                [
-                                    {
-                                        "concat_column": "postgres.campus_life.housing_options.address",
-                                        "concat_column_order": 1
-                                    },
-                                    {
-                                        "concat_column": "postgres.campus_life.housing_options.residence_name",
-                                        "concat_column_order": 2
-                                    }
-                                ]
-                                }
-                            ],
-                            "join_columns":
-                            [
-                                "cassandra.finances.housing_costs.residence_name",
-                                "postgres.campus_life.housing_options.residence_name"
-                            ],
-                            "all_tables":
-                            [
-                                "cassandra.finances.housing_costs",
-                                "postgres.campus_life.housing_options"
-                            ]
-                        }
-                    }
     
     def __init__(self):
         pass
@@ -104,14 +46,6 @@ class GenerateSQL:
                 taggedTables.append(table)
 
         return(formattedTagDict)
-
-    def ConnectToTrino(self):
-        trinoConnection = trino.dbapi.connect(
-            host=self.trinoHost,
-            port=self.trinoPort,
-            user=self.trinoUser
-        )
-        self.trinoCursor = trinoConnection.cursor() #what is being used to send queries to Trino
 
     #Trino has a query sent to it and the results are stored in a Pandas dataframe
     def ExecuteTrinoQuery(self, query):
@@ -169,22 +103,19 @@ class GenerateSQL:
         else:
             generatedSQLStatement = generatedSQLStatement + sqlColumns + sqlFrom #the final SQL statement is constructed
 
-        print("\nGenerated SQL Statement:\n" + generatedSQLStatement + "\n")
         return generatedSQLStatement
         
     def Main(self):
-        self.ConnectToTrino()
+        self.trinoCursor = TrinoConnection.getActiveTrinoCursor()
 
-        tagsDict = Serialization.Deserialize("etl_service/serialized_data/SerializedTags.txt") #TODO: Change off temp dir
+        tagsDict = Serialization.Deserialize("../serialized_data/SerializedTags.txt") #TODO: Change off temp dir
         for tag in tagsDict:
             if (len(tagsDict[tag]["columns_tagged"]) > 0) and (not ".join" in tag) and (not ".concat" in tag):
                 formattedTagDict = self.FormatDictionary(tagsDict, tag)
                 self.ExecuteTrinoQuery(self.ConvertColumnsToSQL(formattedTagDict))
                 #TODO: Consider error handling for if tags aren't applied properly (such as .joins missing) (Maybe just ignore a table if it doesn't have a .join when there are at least 2 tables)
                 #TODO: Write to CSV
-        #self.ExecuteTrinoQuery(self.ConvertColumnsToSQL("Housing"))
 
-if __name__=="__main__":
+if __name__ == "__main__":
     generateSQL = GenerateSQL()
-
     generateSQL.Main()

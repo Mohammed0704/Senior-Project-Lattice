@@ -4,6 +4,12 @@
             "Employee",
             "Student.join",
             "Employee.join"
+        ],
+        "last_name": [
+            "Employee"
+        ],
+        "first_name": [
+            "Employee"
         ]
     },
     "mariadb.drexel_people.basic_student_info": {
