@@ -36,7 +36,7 @@
           </div>
           <div class="formSet">
             <label for="port" class="formLabel">Port</label>
-            <input type="text" id="port" name="port" value="" class="formInput">
+            <input type="number" id="port" name="port" value="" class="formInput" min="0" max="65535">
           </div>
           <div class="formSet">
             <label for="username" class="formLabel">Username</label>
@@ -64,9 +64,17 @@
   const form = document.querySelector('#form-create-connection');
   const createButton = document.querySelector('#create-button');
   const result = document.querySelector('#result');
+  
  
-  createButton.addEventListener('click', function() {
-    form.submit()
+  createButton.addEventListener('click', function(event) {
+    const portInput = document.querySelector('#port');
+    if (portInput.value < 0 || portInput.value > 65535) {
+      event.preventDefault();
+      result.innerText = 'Please enter a valid port number between 0 and 65535.';
+      result.style.color = 'red';
+    } else {
+      form.submit();
+    }
   });
  </script>
 
