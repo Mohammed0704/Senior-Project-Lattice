@@ -93,11 +93,9 @@
       body: connection_dict
     })
     .then(response => response.json())
-    .then(repos => {
-      console.log("test")
-      console.log(repos)
-      console.log("test2")
-      if (repos.success) {
+    .then(data => {
+      console.log(data)
+      if (data.success) {
         result.innerHTML = `<p id="success-message">Connection "${name}" was added</p>`;
       } else {
         result.innerHTML = `<p id="error-message">Connection "${name}" already exists</p>`;
