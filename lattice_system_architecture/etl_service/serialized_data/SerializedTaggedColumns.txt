@@ -10,6 +10,9 @@
         ],
         "first_name": [
             "Employee"
+        ],
+        "primary_department": [
+            "Employee"
         ]
     },
     "mariadb.drexel_people.basic_student_info": {
@@ -41,6 +44,28 @@
         ],
         "prerequisites": [
             "Course"
+        ]
+    },
+    "mongo.classes.classes_info": {
+        "crn": [
+            "Class.join"
+        ],
+        "description": [
+            "Class"
+        ],
+        "instructor": [
+            "Class"
+        ],
+        "associated_course_code": [
+            "Class"
+        ]
+    },
+    "mongo.classes.classes_instruction_info": {
+        "crn": [
+            "Class.join"
+        ],
+        "professor": [
+            "Class"
         ]
     }
 }

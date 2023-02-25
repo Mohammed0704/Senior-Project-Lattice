@@ -1,12 +1,14 @@
-//Both of these Creates ran beforehand
-CREATE(:TestNode {name: 'Test1'})
-CREATE(:TestNode {name: 'Test2'})
-
-MATCH
-  (a:TestNode),
-  (b:TestNode)
-WHERE a.name = 'Test1' AND b.name = 'Test2'
-CREATE (a)-[r:RELTYPE]->(b)
-RETURN type(r)
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Class),
+		(b:Course)
+	WHERE a.associated_course_code = b.`course code`
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'Is Instance Of', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
 //:
 
