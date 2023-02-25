@@ -23,5 +23,24 @@
         "first_name": [
             "Student"
         ]
+    },
+    "mongo.courses.courses_info": {
+        "course code": [
+            "Course.join"
+        ],
+        "course title": [
+            "Course"
+        ],
+        "college": [
+            "Course"
+        ]
+    },
+    "mongo.courses.courses_requirements": {
+        "course code": [
+            "Course.join"
+        ],
+        "prerequisites": [
+            "Course"
+        ]
     }
 }

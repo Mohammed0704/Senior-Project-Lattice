@@ -19,7 +19,11 @@ class Neo4jConnection:
 
     @staticmethod
     def query(query):
-        Neo4jConnection.getActiveNeo4jSession().run(query)
+        try: #attempt the query; if it fails, close the connection so it isn't left open
+            Neo4jConnection.getActiveNeo4jSession().run(query)
+        except Exception as e:
+            Neo4jConnection.closeConnection()
+            print(e)
         
         # Ingesting test data
         #self.session.run("CREATE (:Person {name: 'Test'})-[:KNOWS]->(:Person {name: 'Test2'})")

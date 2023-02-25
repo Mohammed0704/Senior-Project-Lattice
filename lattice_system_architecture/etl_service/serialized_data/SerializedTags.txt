@@ -6,7 +6,17 @@
         "columns_tagged": []
     },
     "Course": {
-        "columns_tagged": []
+        "columns_tagged": [
+            "mongo.courses.courses_info.course title",
+            "mongo.courses.courses_info.college",
+            "mongo.courses.courses_requirements.prerequisites"
+        ]
+    },
+    "Course.join": {
+        "columns_tagged": [
+            "mongo.courses.courses_info.course code",
+            "mongo.courses.courses_requirements.course code"
+        ]
     },
     "Department": {
         "columns_tagged": [

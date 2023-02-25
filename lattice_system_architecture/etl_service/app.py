@@ -32,6 +32,7 @@ def connectionsRemove(connectionToDelete):
             connectionsList.pop(i)
             break
     Serialization.Serialize(connectionsList, "/serialized_data/SerializedConnections.txt")
+    print("\nConnection " + connectionToDelete + " removed!")
     return "Connection " + connectionToDelete + " removed!"
 
 # create-new-page
@@ -118,6 +119,7 @@ def tagsRemove(tagToDelete):
     
     sortedTagsDict = {key: val for key, val in sorted(tagsDict.items(), key = lambda ele: ele[0])} #alphabetizes tags
     Serialization.Serialize(sortedTagsDict, filePath)
+    print("\nTag " + tagToDelete + " removed!")
     return "Tag " + tagToDelete + " removed!"
 
 @app.route("/objects")
@@ -174,6 +176,7 @@ def addTagToColumn(connectionName, schemaName, tableName, columnName, tagToAdd):
 
     Serialization.Serialize(columnTagDict, "/serialized_data/SerializedTaggedColumns.txt")
     Serialization.Serialize(tagsDict, "serialized_data/SerializedTags.txt")
+    print("\nTag " + tagToAdd + " added!")
     return "Tag " + tagToAdd + " added!"
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/remove/<tagToRemove>", methods=['DELETE'])
@@ -198,6 +201,7 @@ def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagTo
 
     Serialization.Serialize(columnTagDict, "/serialized_data/SerializedTaggedColumns.txt")
     Serialization.Serialize(tagsDict, "serialized_data/SerializedTags.txt")
+    print("\nTag " + tagToRemove + " removed!")
     return "Tag " + tagToRemove + " removed!"
 
 @app.route("/loader")
@@ -223,6 +227,7 @@ def loadDataObjects(): #TODO: Update client side progress of the process even if
         cypherCreateQuery = cypherGeneration.generateCypherCreate(dataObjectFileName)
         Neo4jConnection.query(cypherCreateQuery)
     Neo4jConnection.closeConnection()
+    print("\nData Objects loaded!")
     return "\nData Objects loaded!"
 
 if __name__ == "__main__":
