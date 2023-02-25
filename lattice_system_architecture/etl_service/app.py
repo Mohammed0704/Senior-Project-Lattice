@@ -1,7 +1,4 @@
 from flask import Flask, render_template, redirect, url_for, request, jsonify
-import json
-import os
-from os.path import exists
 
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
 
@@ -9,6 +6,9 @@ from code_files.Serialization import *
 from code_files.TrinoConnection import *
 from code_files.TrinoConnectors import *
 from code_files.Neo4jConnection import *
+from code_files.CypherGeneration import *
+from code_files.SQLGeneration import *
+from code_files.QueryToCSV import *
 
 @app.route('/')
 def base():
@@ -80,7 +80,6 @@ def create_tag():
     # Extract JSON payload from request
     tagDict = request.get_json()
     tagName = tagDict.get("tag_name")
-    tagExists = False
     filePath = "serialized_data/SerializedTags.txt"
 
     if not tagName or " " in tagName:
@@ -89,12 +88,8 @@ def create_tag():
     # Load existing tags from file
     tagsDict = Serialization.Deserialize(filePath)
 
-    # Check if the tag already exists
-    if tagName in tagsDict.keys():
-        tagExists = True
-
     # If the tag already exists, return an error message
-    if tagExists:
+    if tagName in tagsDict.keys():
         return jsonify({"success": False, "message": "Tag already exists"})
 
     # If the tag does not exist, write the new tag to the file
@@ -132,12 +127,12 @@ def objects():
 
 @app.route("/objects/<connectionName>")
 def schemas(connectionName):
-    schemaList = TrinoConnection.query(QueryTrinoForSchemas, connectionName)
+    schemaList = TrinoConnection.query(TrinoSchemasQuery, connectionName)
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_schemas_page.html", schemaList=schemaList, connectionName=connectionName)
 
 @app.route("/objects/<connectionName>/<schemaName>")
 def tables(connectionName, schemaName):
-    tableList = TrinoConnection.query(QueryTrinoForTables, connectionName + "." + schemaName)
+    tableList = TrinoConnection.query(TrinoTablesQuery, connectionName + "." + schemaName)
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_tables_page.html", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>")
@@ -150,7 +145,7 @@ def columns(connectionName, schemaName, tableName):
         columnTagDict = Serialization.Deserialize("/serialized_data/SerializedTaggedColumns.txt")[tablePath]
     except:
         pass
-    columnList = TrinoConnection.query(QueryTrinoForColumns, connectionName + "." + schemaName + "." + tableName)
+    columnList = TrinoConnection.query(TrinoColumnsQuery, connectionName + "." + schemaName + "." + tableName)
     return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagDict=tagDict)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/add/<tagToAdd>", methods=['POST'])
@@ -206,8 +201,29 @@ def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagTo
     return "Tag " + tagToRemove + " removed!"
 
 @app.route("/loader")
-def loader():
-        return render_template("menu_template.html") + render_template("portal_graph_loader.html")
+def loader():        
+    return render_template("menu_template.html") + render_template("portal_graph_loader.html")
+
+@app.route("/loader/load", methods=['GET'])
+def loadDataObjects(): #TODO: Update client side progress of the process even if just a "loading" before and "done" after sort of thing #TODO: Make sure to disable button during load process until done
+    sqlGeneration = SQLGeneration()
+    cypherGeneration = CypherGeneration()
+    queryToCSV = QueryToCSV()
+    tagsDict = Serialization.Deserialize("/serialized_data/SerializedTags.txt")
+
+    time = None #time is currently not utilized in the final name of the resulting CSVs TODO: Update this comment when this changes
+    for tag in tagsDict:
+        taggedColumnsAsSQL = sqlGeneration.generateQuery(tag, tagsDict)
+        if taggedColumnsAsSQL is not None: #if there are columns with the current tag applied and isn't a non-base (.join, .concat, etc...) tag
+            queryResultDataframe = TrinoConnection.query(TrinoSelectQuery, taggedColumnsAsSQL)
+            time = queryToCSV.writeQueryToCSV(tag, queryResultDataframe, time) #update time
+
+    for dataObjectFile in os.listdir("data_object_import_data/"): #TODO: Abstract this directory path
+        dataObjectFileName = os.fsdecode(dataObjectFile)
+        cypherCreateQuery = cypherGeneration.generateCypherCreate(dataObjectFileName)
+        Neo4jConnection.query(cypherCreateQuery)
+    Neo4jConnection.closeConnection()
+    return "\nData Objects loaded!"
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", port = 4999)
