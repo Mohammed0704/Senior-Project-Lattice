@@ -2,13 +2,13 @@ from abc import ABC, abstractmethod
 import pandas as pd
 
 #Strategy interface 
-class QueryTrinoStrategy(ABC):
+class TrinoQueryStrategy(ABC):
     @abstractmethod
     def query(self, queryTarget, trinoCursor) -> None:
         pass
 
 #Concrete strategies
-class QueryTrinoForSchemas(QueryTrinoStrategy):
+class TrinoSchemasQuery(TrinoQueryStrategy):
     def query(self, queryTarget, trinoCursor) -> list:
         trinoCursor.execute("SHOW SCHEMAS FROM " + queryTarget)
         rows = trinoCursor.fetchall()
@@ -18,7 +18,7 @@ class QueryTrinoForSchemas(QueryTrinoStrategy):
             schemaList.append(schema[0])
         return schemaList
 
-class QueryTrinoForTables(QueryTrinoStrategy):
+class TrinoTablesQuery(TrinoQueryStrategy):
     def query(self, queryTarget, trinoCursor) -> list:
         trinoCursor.execute("SHOW TABLES FROM " + queryTarget)
         rows = trinoCursor.fetchall()
@@ -28,7 +28,7 @@ class QueryTrinoForTables(QueryTrinoStrategy):
             tableList.append(table[0])
         return tableList
 
-class QueryTrinoForColumns(QueryTrinoStrategy):
+class TrinoColumnsQuery(TrinoQueryStrategy):
     def query(self, queryTarget, trinoCursor) -> list:
         trinoCursor.execute("SHOW COLUMNS FROM " + queryTarget)
         rows = trinoCursor.fetchall()
@@ -38,7 +38,7 @@ class QueryTrinoForColumns(QueryTrinoStrategy):
             columnList.append(column[0])
         return columnList
     
-class QueryTrinoWithSelect(QueryTrinoStrategy):    
+class TrinoSelectQuery(TrinoQueryStrategy):    
     def query(self, queryTarget, trinoCursor):
         trinoCursor.execute(queryTarget)
         rows = trinoCursor.fetchall()
@@ -48,10 +48,10 @@ class QueryTrinoWithSelect(QueryTrinoStrategy):
 
 #Context class
 class TrinoQuery:
-    queryTrinoStrategy: QueryTrinoStrategy
+    trinoQueryStrategy: TrinoQueryStrategy
 
-    def __init__(self, queryTrinoStrategy: QueryTrinoStrategy = None) -> None:
-        self.queryTrinoStrategy = queryTrinoStrategy
+    def __init__(self, trinoQueryStrategy: TrinoQueryStrategy = None) -> None:
+        self.trinoQueryStrategy = trinoQueryStrategy
 
     def executeTrinoQuery(self, queryTarget, trinoCursor):
-        return self.queryTrinoStrategy.query(self, queryTarget, trinoCursor)
+        return self.trinoQueryStrategy.query(self, queryTarget, trinoCursor)

@@ -26,7 +26,7 @@ class TrinoConnection:
         return TrinoConnection.trinoCursor
     
     @staticmethod
-    def query(queryTrinoStrategy: QueryTrinoStrategy, queryTarget):
+    def query(trinoQueryStrategy: TrinoQueryStrategy, queryTarget):
         trinoCursor = TrinoConnection.getActiveTrinoCursor()
-        return TrinoQuery(queryTrinoStrategy).executeTrinoQuery(queryTarget, trinoCursor)
+        return TrinoQuery(trinoQueryStrategy).executeTrinoQuery(queryTarget, trinoCursor)
         

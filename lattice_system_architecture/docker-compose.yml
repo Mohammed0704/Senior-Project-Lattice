@@ -26,11 +26,11 @@ services:
     volumes:
       - ./etl_service/serialized_data:/serialized_data
       - ./trino/etc/catalog:/catalog
-      - ./etl_service/data_object_data:/data_object_data
+      - ./neo4j/import:/data_object_import_data #generated CSV data in the etl-service container is handed off to Neo4j's import directory
 
   neo4j:
     container_name: neo4j
-    image: neo4j:5.4
+    image: neo4j:5.1
     restart: unless-stopped
     ports:
       - 7474:7474
