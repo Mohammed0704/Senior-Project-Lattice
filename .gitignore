@@ -3,4 +3,7 @@ geckodriver.log
 __pycache__
 
 #confs for neo4j are made dynamically by docker-compose file
-lattice_system_architecture/neo4j/conf/*.conf
+lattice_system_architecture/neo4j/conf/neo4j.conf
+
+#ignoring csvs that get generated on local instances
+lattice_system_architecture/neo4j/import/*.csv

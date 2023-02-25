@@ -42,6 +42,14 @@ class SQLGeneration:
                 taggedTables.append(table)
 
         return(formattedTagDict)
+    
+    def formatColumn(self, fullColumn):
+        table = fullColumn[:-(fullColumn[::-1].index(".")+1)]
+        column = fullColumn[fullColumn.rfind(".") + 1 : len(fullColumn)]
+        if " " in column: #if there is a space in the column name
+            return table + ".\"" + column + "\""
+        else:
+            return fullColumn
 
     #the different portions of a SQL query are configured and added together as a string
     def convertColumnsToSQL(self, tagDict):        
@@ -52,16 +60,16 @@ class SQLGeneration:
 
         #columns to SELECT are constructed
         for column in tagDict["all_columns"]:
-            sqlColumns = sqlColumns + column + ", "
+            sqlColumns = sqlColumns + self.formatColumn(column) + ", "
 
         #add concatenated columns to the SELECT if requested
         if len(tagDict["all_concat_columns"]) > 0:
             for allConcatColumns in tagDict["all_concat_columns"]:
                 sqlColumns = sqlColumns + "concat("
                 for concatColumns in allConcatColumns["concat_columns"]:
-                    sqlColumns = sqlColumns + concatColumns["concat_column"] + ", \' \', "
+                    sqlColumns = sqlColumns + self.formatColumn(concatColumns["concat_column"]) + ", \' \', "
                 sqlColumns = sqlColumns[:-7] #removes remaining space and commas
-                sqlColumns = sqlColumns + ") AS " + allConcatColumns["concat_name"] + ", "
+                sqlColumns = sqlColumns + ") AS " + self.formatColumn(allConcatColumns["concat_name"]) + ", "
 
         sqlColumns = sqlColumns[:-2] #removes remaining comma
 
@@ -79,11 +87,11 @@ class SQLGeneration:
                 sqlOn = "ON "
                 for joinColumn in tagDict["join_columns"]:
                     if joinColumn[:-(joinColumn[::-1].index(".")+1)] == table:
-                        sqlOn = sqlOn + joinColumn + " = "
+                        sqlOn = sqlOn + self.formatColumn(joinColumn) + " = "
                         break
                 for joinColumn in tagDict["join_columns"]:
                     if joinColumn[:-(joinColumn[::-1].index(".")+1)] == taggedColumnsTables[0]: #retrives the FROM table's join column
-                        sqlOn = sqlOn + joinColumn
+                        sqlOn = sqlOn + self.formatColumn(joinColumn)
                         break
                 sqlInnerJoin = sqlInnerJoin + table + " " + sqlOn
 
