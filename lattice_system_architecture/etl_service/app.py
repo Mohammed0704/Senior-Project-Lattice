@@ -103,7 +103,7 @@ def create_tag():
 
 @app.route("/tags/remove/<tagToDelete>", methods=['DELETE'])
 def tagsRemove(tagToDelete):
-    filePath = "serialized_data/SerializedTags.txt"
+    filePath = "/serialized_data/SerializedTags.txt"
     tagsDict = Serialization.Deserialize(filePath)
     
     # removes the tag from the list of created tags

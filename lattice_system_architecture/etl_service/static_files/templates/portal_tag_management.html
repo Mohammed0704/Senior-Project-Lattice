@@ -9,34 +9,79 @@
       <b>
           <h1 style="margin-bottom: 1.5%;">Tag Management Portal</h1>
       </b>
-  </head>
-  
-  <body>
+    </head>
+    
+    <body>
     <div id="outer-content-box">
-      <p style="margin-top: 1.6%; margin-bottom: 1.6%;" id="title">Current Tags</p>
-      <div id="inner-content-box">
-        <table id="tags-table">
-          <tr id="table-header">
-            <th style="width:88%; font-size: 22px;">Tag Name</th>
-            <th style="width:12%; font-size: 22px;">Delete</th>
-          </tr>
-          {% if tagDict|length > 0 %}
-            {% for tagKey, columnsTaggedList in tagDict.items() %}
-              <tr id="{{ tagKey }}-row">
-                <td> {{ tagKey }}</td>
-                <td>
-                  <center>
-                    <button class="delete-button delete-button1" name="{{ tagKey }}">Delete</button>
-                  </center>
-                </td>
-              </tr>
-            {% endfor %}
-          {% endif %}
-        </table>
+      <div id="content">
+        <div id="inner-content-box" class="left">
+          <table id="tags-table">
+            <tr id="table-header">
+              <th style="width:76%; font-size: 22px;">Current Tag Names</th>
+              <th style="width:12%; font-size: 22px;">Usages</th>
+              <th style="width:12%; font-size: 22px;">Delete</th>
+            </tr>
+            {% if tagDict|length > 0 %}
+              {% for tagKey, columnsTaggedList in tagDict.items() %}
+                <tr id="{{ tagKey }}-row">
+                  <td> {{ tagKey }}</td>
+                  <td>
+                    <center>
+                      <button class="usage-button delete-button1" name="{{ tagKey }}">Usages</button>
+                    </center>
+                  </td>
+                  <td>
+                    <center>
+                      <button class="delete-button delete-button1" name="{{ tagKey }}">Delete</button>
+                    </center>
+                  </td>
+                </tr>
+              {% endfor %}
+            {% endif %}
+          </table>
+        </div>
+        <div class="right">
+          <div id="inner-content-box" class="right-top" style="border:1px solid black;">
+            <div class="right-div">
+              <div>
+                <p id="result"></p>
+              </div>
+              <div id="create-div">
+                <form id="create-form">
+                  <label for="Tag" id="label_text">New Tag Input</label>
+                  <input type="text" id="Tag" name="Tag" value="">
+                </form>
+              </div>
+              <div id="button-div" style="display: flex">
+                <a href="/tags">
+                  <button class="button button3">Update</button>
+                </a>
+                <button class="button button2" id="create-button">Create</button>
+              </div>
+            </div>
+          </div>
+          <div id="inner-content-box" class="right-bottom" style="border:1px solid black;">
+            <div id="label_text">
+              Tag Usages
+            </div>
+            <div>
+              <table id="usage-table">
+                <tr id="table-header">
+                  <th style="width:88%; font-size: 20px;">Database.Schema.Table.ColumnName</th>
+                </tr>
+                {% if tagDict|length > 0 %}
+                  {% for tagKey, columnsTaggedList in tagDict.items() %}
+                    {% for tag in columnsTaggedList["columns_tagged"] %}
+                      <tr id="{{ tagKey }}-row">
+                        <td>{{ tag }}</td>
+                      </tr>
+                    {% endfor %}
+                  {% endfor %}
+                {% endif %}
+              </table>
+            </div>
+          </div>
       </div>
-      <a href="/tags/create">
-        <button class="button button1">Create New</button>
-      </a>
     </div>
   </body>
 </center>
@@ -56,6 +101,46 @@
         type: "delete"
       });
     }
+  });
+
+  $(".usage-button").click(function(event)
+  {
+    elementToDisplayName = $(this).attr("name")
+
+    $("#usage-table").find("tr").css("display", "none");
+    $("#usage-table").find("tr[id='table-header']").css("display", "table-row");
+    $("#usage-table").find("tr[id='"+elementToDisplayName+"-row']").css("display", "table-row");
+  });
+
+  const form = document.querySelector('#create-form');
+  const createButton = document.querySelector('#create-button');
+  const result = document.querySelector('#result');
+ 
+  createButton.addEventListener('click', function() {
+    const tag = form.elements.Tag.value;
+    if (tag.includes(' ') || tag == "") {
+      result.innerHTML = `<p id="error-message">Cannot have spaces in the tag name</p>`;
+      return;
+    }
+    const tag_dict = JSON.stringify({'tag_name': tag});
+ 
+    fetch('/tags/create/create-tag', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: tag_dict
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      if (data.success) {
+        result.innerHTML = `<p id="success-message">Tag "${tag}" was added</p>`;
+        form.elements.Tag.value = "";
+      } else {
+        result.innerHTML = `<p id="error-message">Tag "${tag}" already exists</p>`;
+      }
+    });
   });
 </script>
 
