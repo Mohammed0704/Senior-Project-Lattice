@@ -1,0 +1,14 @@
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Class),
+		(b:Course)
+	WHERE a.associated_course_code = b.`course code`
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'Is Instance Of', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+

@@ -1,6 +1,17 @@
 {
     "Class": {
-        "columns_tagged": []
+        "columns_tagged": [
+            "mongo.classes.classes_info.description",
+            "mongo.classes.classes_info.instructor",
+            "mongo.classes.classes_instruction_info.professor",
+            "mongo.classes.classes_info.associated_course_code"
+        ]
+    },
+    "Class.join": {
+        "columns_tagged": [
+            "mongo.classes.classes_info.crn",
+            "mongo.classes.classes_instruction_info.crn"
+        ]
     },
     "College": {
         "columns_tagged": []
@@ -27,7 +38,8 @@
         "columns_tagged": [
             "mariadb.drexel_people.basic_employee_info.drexel_id",
             "mariadb.drexel_people.basic_employee_info.last_name",
-            "mariadb.drexel_people.basic_employee_info.first_name"
+            "mariadb.drexel_people.basic_employee_info.first_name",
+            "mariadb.drexel_people.basic_employee_info.primary_department"
         ]
     },
     "Employee.join": {

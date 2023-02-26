@@ -7,7 +7,7 @@ class Neo4jConnection:
     @staticmethod
     def establishNeo4jConnection():
         # Establishing a connection to Neo4j
-        uri = "neo4j://neo4j:7687" #set to the container name
+        uri = "neo4j://localhost:7687" #set to the container name
         Neo4jConnection.neo4jDriver = GraphDatabase.driver(uri, auth=("neo4j", "password"))
         Neo4jConnection.neo4jSession = Neo4jConnection.neo4jDriver.session()
 
