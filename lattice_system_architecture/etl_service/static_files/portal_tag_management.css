@@ -21,18 +21,18 @@
 
 #content {
     display: flex;
-    width: 90%;
-    height: 90%;
+    width: 97%;
+    height: 94%;
     justify-content: space-between;
     flex-direction: row;
 }
 
 #content .left {
-    width: 60%;
+    width: 55%;
 }
 
 #content .right {
-    width: 40%;
+    width: 45%;
 }
 
 .right {
@@ -53,6 +53,10 @@
 
 .right .right-bottom {
     height: 50%;
+}
+
+.right .right-full {
+    height: 100%;
 }
 
 .right-div {

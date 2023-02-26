@@ -17,9 +17,9 @@
         <div id="inner-content-box" class="left">
           <table id="tags-table">
             <tr id="table-header">
-              <th style="width:76%; font-size: 22px;">Current Tag Names</th>
-              <th style="width:12%; font-size: 22px;">Usages</th>
-              <th style="width:12%; font-size: 22px;">Delete</th>
+              <th style="width:70%; font-size: 22px;">Current Tags</th>
+              <th style="width:15%; font-size: 22px;">Usages</th>
+              <th style="width:15%; font-size: 22px;">Delete</th>
             </tr>
             {% if tagDict|length > 0 %}
               {% for tagKey, columnsTaggedList in tagDict.items() %}
@@ -41,26 +41,7 @@
           </table>
         </div>
         <div class="right">
-          <div id="inner-content-box" class="right-top" style="border:1px solid black;">
-            <div class="right-div">
-              <div>
-                <p id="result"></p>
-              </div>
-              <div id="create-div">
-                <form id="create-form">
-                  <label for="Tag" id="label_text">New Tag Input</label>
-                  <input type="text" id="Tag" name="Tag" value="">
-                </form>
-              </div>
-              <div id="button-div" style="display: flex">
-                <a href="/tags">
-                  <button class="button button3">Update</button>
-                </a>
-                <button class="button button2" id="create-button">Create</button>
-              </div>
-            </div>
-          </div>
-          <div id="inner-content-box" class="right-bottom" style="border:1px solid black;">
+          <div id="inner-content-box" class="right-full" style="border:1px solid black;">
             <div id="label_text">
               Tag Usages
             </div>
