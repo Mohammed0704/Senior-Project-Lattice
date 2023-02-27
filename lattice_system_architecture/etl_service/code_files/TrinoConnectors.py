@@ -49,8 +49,9 @@ class TrinoConnector:
         properties.append(f"connector.name=cassandra")
         properties.append(f"cassandra.contact-points={splitURL[0]}")
         properties.append(f"cassandra.native-protocol-port={splitURL[1]}")
-        properties.append(f"cassandra.username={user}")
-        properties.append(f"cassandra.password={password}")
+        if len(user) > 0:
+            properties.append(f"cassandra.username={user}")
+            properties.append(f"cassandra.password={password}")
         properties.append("cassandra.load-policy.dc-aware.local-dc=datacenter1")
 
         self.output(properties, name)

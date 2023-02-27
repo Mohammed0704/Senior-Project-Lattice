@@ -59,7 +59,6 @@
     },
     "Student.join": {
         "columns_tagged": [
-            "mariadb.drexel_people.basic_employee_info.drexel_id",
             "mariadb.drexel_people.basic_student_info.drexel_id"
         ]
     }
