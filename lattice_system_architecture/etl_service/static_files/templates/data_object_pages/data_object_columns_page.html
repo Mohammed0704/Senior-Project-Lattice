@@ -66,43 +66,18 @@
 <script src="/static_files/jquery-3.1.1.js"></script>
 
 <script>
-// Populate the dropdown with available tags and remove any selected tags
-$(document).ready(function() {
-  $(".tag-select").each(function() {
-    const selectedTag = $(this).closest(".tag-cell-tag").find(".remove-button").attr("name");
-    const connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name");
-    const columnContainingTag = $(this).attr("name");
-    $.ajax({
-      url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/get",
-      type: "get",
-      success: function(data) {
-        const tagSelect = $(this);
-        $.each(data, function(index, tag) {
-          const tagOption = $("<option>", { value: tag, text: tag });
-          tagSelect.append(tagOption);
-        });
-        tagSelect.find(`option[value="${selectedTag}"]`).remove();
-      }.bind(this)
-    });
-  });
-});
-
 //the function is wrapped to the document so that dynamically generated tag buttons can have the event, too
-$(document).on("click", ".remove-button", function () {
-  const tagToDeleteName = $(this).attr("name");
+$(document).on("click", ".remove-button", function ()
+{
+  tagToDeleteName = $(this).attr("name")
   console.log("Removing " + tagToDeleteName + " tag...");
-  const connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name");
-  const columnContainingTag = $(this).closest(".tag-cell-tag").attr("name");
-  $(this).closest(".tag-cell-tag").remove();
+  connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name")
+  columnContainingTag = $(this).closest(".tag-cell-tag").attr("name")
+  $(this).closest(".tag-cell-tag").remove()
 
   $.ajax({
     url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/remove/" + tagToDeleteName,
-    type: "delete",
-    success: function() {
-      // Add the removed tag option back to the dropdown
-      const tagOption = $("<option>", { value: tagToDeleteName, text: tagToDeleteName });
-      $(`.tag-select[name="${columnContainingTag}"]`).append(tagOption);
-    }
+    type: "delete"
   });
 });
 
@@ -120,11 +95,8 @@ $(document).on("change", ".tag-select", function () {
       type: "post",
     });
 
-    // Remove selected option from dropdown
-    $(this).find(`option[value="${tagToAddName}"]`).remove();
-
-    //constructing a tag button and placing it in the spot where others were generated with the same style //ideally, this should be abstracted in some way
-    const buttonDiv = document.createElement("div");
+ //constructing a tag button and placing it in the spot where others were generated with the same style //ideally, this should be abstracted in some way
+ const buttonDiv = document.createElement("div");
     buttonDiv.style.cssText = "display:inline-block; padding-right: 11px; padding-left: 11px; margin-bottom: 4px;";
     buttonDiv.classList.add("tag-cell-tag");
     buttonDiv.setAttribute("name", columnContainingTag);
@@ -138,8 +110,6 @@ $(document).on("change", ".tag-select", function () {
     document.getElementById(columnContainingTag + "-tag-cell").appendChild(buttonDiv);
   }
   $(this).closest('div').find(".tag-select").val("")
-  // Remove the added tag option from the dropdown
-  $(this).find(`option[value="${tagToAddName}"]`).remove();
 });
 
 //performed this way so that a dynamically created tag button can have hover coloring
