@@ -17,7 +17,7 @@
         <div id="inner-content-box" class="left">
           <table id="tags-table">
             <tr id="table-header">
-              <th style="width:76%; font-size: 22px;">Current Tag Names</th>
+              <th style="width:76%; font-size: 22px;">Current Tags</th>
               <th style="width:12%; font-size: 22px;">Usages</th>
               <th style="width:12%; font-size: 22px;">Delete</th>
             </tr>
@@ -38,6 +38,28 @@
                 </tr>
               {% endfor %}
             {% endif %}
+            <tr id="table-footer">
+              <td style="width:76%; font-size: 22px;">              
+                <div id="create-div">
+                  <form id="create-form">
+                    <label for="Tag" id="label_text">New Tag Input</label>
+                    <input type="text" id="Tag" name="Tag" value="">
+                  </form>
+                </div>
+              </td>
+              <td>
+                <center>
+                  <button class="usage-button delete-button1" id="create-button">Create</button>
+                </center>
+              </td>
+              <td>
+                <center>
+                  <a href="/tags">
+                    <button class="usage-button delete-button1">Update</button>
+                  </a>
+                </center>
+              </td>
+            </tr>
           </table>
         </div>
         <div class="right">

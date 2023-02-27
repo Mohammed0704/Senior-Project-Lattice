@@ -17,6 +17,7 @@
     background-color: darkgray;
     width: 95%;
     overflow: auto;
+    border:1px solid black;
 }
 
 #content {
@@ -73,6 +74,8 @@
 
 #usage-table {
     width: 95%;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
 }
 
 #usage-table tr {
@@ -83,24 +86,42 @@
     display: table-row;
 }
 
+#table-footer {
+    position: sticky;
+    bottom: 0;
+    background: darkgrey;
+    border: 1px solid black;
+}
+
 table
 {
     width: 100%;
     place-content: center;
-    border-collapse: collapse;
-    border:1px solid black;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+table th {
+    /* Apply both top and bottom borders to the <th> */
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+table #table-footer td {
+    /* Apply both top and bottom borders to the <th> */
+    border-right: 1px solid black;
+    border-top: 1px solid black;
 }
 
 tr
 {
     border: 1px solid black;
-    height: 80px;
+    height: 60px;
 }
 
-th, td {
+td {
     border-right: 1px solid black;
-    padding-left: 1%;
-    padding-right: 1%;
+    border-bottom: 1px solid black;
     font-size: 18px;
     text-align: center;
 }
@@ -128,7 +149,7 @@ th, td {
 /* Style for Create New Tag Page */
 #label_text
 {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
 }
 
