@@ -146,6 +146,9 @@ input {
     font-size: 20px;
 }
 
+.tag-input {
+}
+
 .usage-button {
     border: 1px solid black;
     font-size: 18px;
@@ -188,16 +191,16 @@ input {
 #success-message{
     color: green;
     margin-bottom: 0px;
-    margin-top: 10px;
 }
 
 #error-message{
     color: red;
     margin-bottom: 0px;
-    margin-top: 10px;
+    height: 10px;
 }
 
 #result{
+    height: 20px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
