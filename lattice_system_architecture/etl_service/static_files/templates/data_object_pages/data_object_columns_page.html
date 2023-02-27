@@ -51,7 +51,6 @@
                     {% endfor %}
                   {% endif %}
                 </select>
-                <button class="add-button add-button1" name="test6" value="">Add</button>
               </div>
               </center>
             </td>
@@ -82,24 +81,22 @@ $(document).on("click", ".remove-button", function ()
   });
 });
 
-$(document).on("click", ".add-button", function ()
-{
-  tagToAddName = $(this).closest('div').find(".tag-select option:selected").text()
-  defaultTagValue = $(this).closest('div').find(".default-tag-option").text()
-  connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name")
-  columnContainingTag = $(this).closest('div').find(".tag-select").attr("name")
-  tagExists = $(this).closest('tr').find("button[name='"+tagToAddName+"']").attr("name")
+$(document).on("change", ".tag-select", function () {
+  const tagToAddName = $(this).find(":selected").text();
+  const defaultTagValue = $(this).find(".default-tag-option").text();
+  const connectionSchemaTableURL = $("#connection-schema-table-URL-storage").attr("name");
+  const columnContainingTag = $(this).attr("name");
+  const tagExists = $(this).closest("tr").find(`button[name="${tagToAddName}"]`).attr("name");
 
-  if (tagToAddName != tagExists && tagToAddName != " -- Select a tag -- ")
-  {
+  if (tagToAddName != tagExists && tagToAddName != " -- Select a tag -- ") {
     console.log("Adding " + tagToAddName + " tag...");
     $.ajax({
-      url: "/objects/" + connectionSchemaTableURL + "/" + columnContainingTag + "/add/" + tagToAddName,
-      type: "post"
+      url: `/objects/${connectionSchemaTableURL}/${columnContainingTag}/add/${tagToAddName}`,
+      type: "post",
     });
-    
-    //constructing a tag button and placing it in the spot where others were generated with the same style //ideally, this should be abstracted in some way
-    const buttonDiv = document.createElement("div");
+
+ //constructing a tag button and placing it in the spot where others were generated with the same style //ideally, this should be abstracted in some way
+ const buttonDiv = document.createElement("div");
     buttonDiv.style.cssText = "display:inline-block; padding-right: 11px; padding-left: 11px; margin-bottom: 4px;";
     buttonDiv.classList.add("tag-cell-tag");
     buttonDiv.setAttribute("name", columnContainingTag);
