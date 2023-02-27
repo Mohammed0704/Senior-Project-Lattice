@@ -47,17 +47,31 @@
   $(".delete-button").click(function(event)
   {
     elementToDeleteName = $(this).attr("name")
-    if (confirm("Are you sure you want to delete this tag? This tag will also be deleted from the selected tags in the Data Object Management Portal")) {
-      console.log("Deleting " + elementToDeleteName + "...");
-      $("#" + elementToDeleteName.replace( /(:|\.|\[|\])/g, "\\$1" ) + "-row").remove()
+
+    // Check if tag name is in SerializedTaggedColumns.txt
+    $.get("/tags/check/" + elementToDeleteName, function(data) {
+      if (data == "True") {
+        if (confirm("Are you sure you want to delete this tag? This tag will also be deleted from the selected tags in the Data Object Management Portal")) {
+          console.log("Deleting " + elementToDeleteName + "...");
+          $("#" + elementToDeleteName.replace( /(:|\.|\[|\])/g, "\\$1" ) + "-row").remove()
   
-      $.ajax({
-        url: "/tags/remove/" + elementToDeleteName,
-        type: "delete"
-      });
-    }
+          $.ajax({
+            url: "/tags/remove/" + elementToDeleteName,
+            type: "delete"
+          });
+        }
+      }
+      else {
+        console.log("Deleting " + elementToDeleteName + "...");
+        $("#" + elementToDeleteName.replace( /(:|\.|\[|\])/g, "\\$1" ) + "-row").remove()
+  
+        $.ajax({
+          url: "/tags/remove/" + elementToDeleteName,
+          type: "delete"
+        });
+      }
+    });
   });
 </script>
-
 
 </html>

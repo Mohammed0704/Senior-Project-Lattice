@@ -125,6 +125,18 @@ def tagsRemove(tagToDelete):
     Serialization.Serialize(sortedTagsDict, filePath)
     return "Tag " + tagToDelete + " removed!"
 
+@app.route("/tags/check/<tagToDelete>")
+def tagsCheck(tagToDelete):
+    filePath = "serialized_data/SerializedTaggedColumns.txt"
+    columnTagDict = Serialization.Deserialize(filePath)
+
+    for tablePath in columnTagDict:
+        for columnName in columnTagDict[tablePath]:
+            if tagToDelete in columnTagDict[tablePath][columnName]:
+                return "True"
+
+    return "False"
+
 @app.route("/objects")
 def objects():
     connectionList = Serialization.Deserialize("/serialized_data/SerializedConnections.txt")
