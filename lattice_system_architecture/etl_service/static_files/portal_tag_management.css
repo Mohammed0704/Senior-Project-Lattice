@@ -22,10 +22,11 @@
 
 #content {
     display: flex;
-    width: 90%;
+    width: 95%;
     height: 90%;
     justify-content: space-between;
     flex-direction: row;
+    gap: 10px;
 }
 
 #content .left {
@@ -39,25 +40,8 @@
 .right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-}
-
-.right .right-top {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-}
-
-.right .right-bottom {
-    height: 50%;
-}
-
-.right-div {
-    width: 90%;
+    width: 100%;
 }
 
 #button-div {

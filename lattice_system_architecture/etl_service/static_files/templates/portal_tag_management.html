@@ -39,7 +39,10 @@
               {% endfor %}
             {% endif %}
             <tr id="table-footer">
-              <td style="width:76%; font-size: 22px;">              
+              <td style="width:76%; font-size: 22px;">
+                <div>
+                  <p id="result"></p>
+                </div>              
                 <div id="create-div">
                   <form id="create-form">
                     <label for="Tag" id="label_text">New Tag Input</label>
@@ -62,47 +65,26 @@
             </tr>
           </table>
         </div>
-        <div class="right">
-          <div id="inner-content-box" class="right-top" style="border:1px solid black;">
-            <div class="right-div">
-              <div>
-                <p id="result"></p>
-              </div>
-              <div id="create-div">
-                <form id="create-form">
-                  <label for="Tag" id="label_text">New Tag Input</label>
-                  <input type="text" id="Tag" name="Tag" value="">
-                </form>
-              </div>
-              <div id="button-div" style="display: flex">
-                <a href="/tags">
-                  <button class="button button3">Update</button>
-                </a>
-                <button class="button button2" id="create-button">Create</button>
-              </div>
-            </div>
-          </div>
-          <div id="inner-content-box" class="right-bottom" style="border:1px solid black;">
-            <div id="label_text">
-              Tag Usages
-            </div>
-            <div>
-              <table id="usage-table">
-                <tr id="table-header">
-                  <th style="width:88%; font-size: 20px;">Database.Schema.Table.ColumnName</th>
-                </tr>
-                {% if tagDict|length > 0 %}
-                  {% for tagKey, columnsTaggedList in tagDict.items() %}
-                    {% for tag in columnsTaggedList["columns_tagged"] %}
-                      <tr id="{{ tagKey }}-row">
-                        <td>{{ tag }}</td>
-                      </tr>
-                    {% endfor %}
-                  {% endfor %}
-                {% endif %}
-              </table>
-            </div>
-          </div>
+      <div id="inner-content-box" class="right" style="border:1px solid black;">
+        <div id="label_text">
+          Tag Usages
+        </div>
+        <div>
+          <table id="usage-table">
+            <tr id="table-header">
+              <th style="width:88%; font-size: 20px;">Database.Schema.Table.ColumnName</th>
+            </tr>
+            {% if tagDict|length > 0 %}
+              {% for tagKey, columnsTaggedList in tagDict.items() %}
+                {% for tag in columnsTaggedList["columns_tagged"] %}
+                  <tr id="{{ tagKey }}-row">
+                    <td>{{ tag }}</td>
+                  </tr>
+                {% endfor %}
+              {% endfor %}
+            {% endif %}
+          </table>
+        </div>
       </div>
     </div>
   </body>
