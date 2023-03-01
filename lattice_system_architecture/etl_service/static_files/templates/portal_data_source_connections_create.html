@@ -73,8 +73,42 @@
       result.innerText = 'Please enter a valid port number between 0 and 65535.';
       result.style.color = 'red';
     } else {
-      form.submit();
-    }
+      const name = form.elements.name.value;
+      const data_source = form.elements.data_source.value;
+      const address = form.elements.address.value;
+      const port = form.elements.port.value;
+      const username = form.elements.username.value;
+      const password = form.elements.password.value;
+      if (name.includes(' ') || name == "") {
+        result.innerHTML = `<p id="error-message">Cannot have spaces in the connection name</p>`;
+        return;
+      }
+      const connection_dict = JSON.stringify({
+        'name': name,
+        'data_source': data_source,
+        'address': address,
+        'port': port,
+        'username': username,
+        'password': password
+      });
+  
+      fetch('/connections/create', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: connection_dict
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        if (data.success) {
+          result.innerHTML = `<p id="success-message">Connection "${name}" was added</p>`;
+        } else {
+          result.innerHTML = `<p id="error-message">Connection "${name}" already exists</p>`;
+        }
+      });
+    } 
   });
  </script>
 

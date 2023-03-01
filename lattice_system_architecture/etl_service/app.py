@@ -10,6 +10,8 @@ from code_files.CypherGeneration import *
 from code_files.SQLGeneration import *
 from code_files.QueryToCSV import *
 
+import re;
+
 @app.route('/')
 def base():
     return redirect(url_for("home"))
@@ -20,12 +22,12 @@ def home():
 
 @app.route("/connections")
 def connections():
-    connectionsList = Serialization.Deserialize("/serialized_data/SerializedConnections.txt")
+    connectionsList = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
     return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
 
 @app.route("/connections/remove/<connectionToDelete>", methods=['DELETE'])
 def connectionsRemove(connectionToDelete):
-    connectionsList = Serialization.Deserialize("/serialized_data/SerializedConnections.txt")
+    connectionsList = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
     for i in range(len(connectionsList)):
         connection = connectionsList[i]
         if connection["connection_name"] == connectionToDelete:
@@ -46,11 +48,18 @@ def connections_create():
         currConns = []
     '''
     # Don't need a route for submitting the form, it automatically sends it back to this route with the post method
-    
-    currConns = Serialization.Deserialize("/serialized_data/SerializedConnections.txt")
+    currConns = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
+    connNames = [conn.get('connection_name') for conn in currConns]
+
     databaseTypes = ["Cassandra", "Elasticsearch", "Postgres", "MariaDB", "MongoDB"]
     if request.method == "POST":
-        data = request.form
+        data = request.get_json()
+        if not data['name']:
+            return jsonify({"success": False, "message": "Connection name was not provided"})
+        if data['name'] in connNames:
+            return jsonify({"success": False, "message": "Connection name already exists"})
+        if not data['name'] or data['name'] in connNames or re.search(r"\s", data['name']):
+            return jsonify({"success": False, "message": "Cannot have spaces in the name"})
         newConn = {
             'connection_name': data['name'],
             'connection_type': data['data_source'],
@@ -60,9 +69,10 @@ def connections_create():
         }
         currConns.append(newConn)
         
-        Serialization.Serialize(currConns, "/serialized_data/SerializedConnections.txt")
+        Serialization.Serialize(currConns, "./serialized_data/SerializedConnections.txt")
         trinoConnectorCreator = TrinoConnector()
         trinoConnectorCreator.createConnector(newConn)
+        return jsonify({"success": True, "message": "Connection has been created"})
     
     return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html", databaseTypes=databaseTypes)   
     
@@ -110,7 +120,7 @@ def tagsRemove(tagToDelete):
     del tagsDict[tagToDelete]
     
     # checks if tagToDelete is also in SerializedTaggedColumns.txt and removes from there as well
-    columnTagDict = Serialization.Deserialize("/serialized_data/SerializedTaggedColumns.txt")
+    columnTagDict = Serialization.Deserialize("./serialized_data/SerializedTaggedColumns.txt")
     for tablePath in columnTagDict:
         for columnName in columnTagDict[tablePath]:
             if tagToDelete in columnTagDict[tablePath][columnName]:
@@ -136,7 +146,7 @@ def tagsCheck(tagToDelete):
 
 @app.route("/objects")
 def objects():
-    connectionList = Serialization.Deserialize("/serialized_data/SerializedConnections.txt")
+    connectionList = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
     return render_template("menu_template.html") + render_template("data_object_pages/portal_data_object_management.html", connectionList=connectionList)
 
 @app.route("/objects/<connectionName>")
@@ -156,7 +166,7 @@ def columns(connectionName, schemaName, tableName):
     tagDict = Serialization.Deserialize('serialized_data/SerializedTags.txt')
     columnTagDict = []
     try:
-        columnTagDict = Serialization.Deserialize("/serialized_data/SerializedTaggedColumns.txt")[tablePath]
+        columnTagDict = Serialization.Deserialize("./serialized_data/SerializedTaggedColumns.txt")[tablePath]
     except:
         pass
     columnList = TrinoConnection.query(TrinoColumnsQuery, connectionName + "." + schemaName + "." + tableName)
@@ -194,7 +204,7 @@ def addTagToColumn(connectionName, schemaName, tableName, columnName, tagToAdd):
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/remove/<tagToRemove>", methods=['DELETE'])
 def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagToRemove):
     tablePath = connectionName + "." + schemaName + "." + tableName
-    columnTagDict = Serialization.Deserialize("/serialized_data/SerializedTaggedColumns.txt")
+    columnTagDict = Serialization.Deserialize("./serialized_data/SerializedTaggedColumns.txt")
     columnTagList = columnTagDict[tablePath][columnName]
     tagsDict = Serialization.Deserialize("serialized_data/SerializedTags.txt")
 
