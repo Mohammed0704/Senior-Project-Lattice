@@ -227,6 +227,11 @@ def loadDataObjects(): #TODO: Update client side progress of the process even if
     queryToCSV = QueryToCSV()
     tagsDict = Serialization.Deserialize("/serialized_data/SerializedTags.txt")
 
+    #removes old data object CSVs
+    for oldDataObjectFile in os.listdir("data_object_import_data/"): #TODO: abstract this directory
+        os.remove("data_object_import_data/" + oldDataObjectFile)
+
+    #generates a data object CSV for each utilized tag
     time = None #time is currently not utilized in the final name of the resulting CSVs TODO: Update this comment when this changes
     for tag in tagsDict:
         taggedColumnsAsSQL = sqlGeneration.generateQuery(tag, tagsDict)
@@ -234,6 +239,7 @@ def loadDataObjects(): #TODO: Update client side progress of the process even if
             queryResultDataframe = TrinoConnection.query(TrinoSelectQuery, taggedColumnsAsSQL)
             time = queryToCSV.writeQueryToCSV(tag, queryResultDataframe, time) #update time
 
+    #generate and send query to Neo4j for each data object CSV
     for dataObjectFile in os.listdir("data_object_import_data/"): #TODO: Abstract this directory path
         dataObjectFileName = os.fsdecode(dataObjectFile)
         cypherCreateQuery = cypherGeneration.generateCypherCreate(dataObjectFileName)
