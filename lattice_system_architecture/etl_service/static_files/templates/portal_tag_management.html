@@ -53,8 +53,12 @@
                 {% if tagDict|length > 0 %}
                   {% for tagKey, columnsTaggedList in tagDict.items() %}
                     {% for tag in columnsTaggedList["columns_tagged"] %}
+                      {% set tag_parts = tag.split('.') %}
+                      {% set connectionName = tag_parts[0] %}
+                      {% set schemaName = tag_parts[1] %}
+                      {% set tableName = tag_parts[2] %}
                       <tr id="{{ tagKey }}-row">
-                        <td>{{ tag }}</td>
+                        <td><a href="/objects/{{ connectionName }}/{{ schemaName }}/{{ tableName }}">{{ tag }}</a></td>
                       </tr>
                     {% endfor %}
                   {% endfor %}
