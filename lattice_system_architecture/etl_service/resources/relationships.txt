@@ -12,3 +12,5 @@ CALL apoc.periodic.iterate(
 {batchSize:1000})
 //:
 
+your query here
+//:

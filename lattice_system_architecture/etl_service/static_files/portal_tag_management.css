@@ -22,7 +22,7 @@
 #content {
     display: flex;
     width: 97%;
-    height: 94%;
+    height: 95%;
     justify-content: space-between;
     flex-direction: row;
 }
@@ -114,6 +114,10 @@ th, td {
     padding: 16px 32px;
     margin: 4px 2px;
     cursor: pointer;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
 }
 
 .button1 {

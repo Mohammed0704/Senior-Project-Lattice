@@ -30,36 +30,41 @@
         ]
     },
     "Department": {
-        "columns_tagged": [
-            "mariadb.drexel_people.basic_student_info.middle_name"
-        ]
+        "columns_tagged": []
     },
     "Employee": {
         "columns_tagged": [
-            "mariadb.drexel_people.basic_employee_info.drexel_id",
-            "mariadb.drexel_people.basic_employee_info.last_name",
-            "mariadb.drexel_people.basic_employee_info.first_name",
-            "mariadb.drexel_people.basic_employee_info.primary_department"
+            "cassandra.finances.employee_salaries.annual_salary"
+        ]
+    },
+    "Employee.concat.full_name.1": {
+        "columns_tagged": [
+            "mariadb.drexel_people.basic_employee_info.first_name"
+        ]
+    },
+    "Employee.concat.full_name.2": {
+        "columns_tagged": [
+            "mariadb.drexel_people.basic_employee_info.last_name"
         ]
     },
     "Employee.join": {
         "columns_tagged": [
+            "cassandra.finances.employee_salaries.drexel_id",
             "mariadb.drexel_people.basic_employee_info.drexel_id"
         ]
     },
     "Housing": {
-        "columns_tagged": [
-            "mariadb.drexel_people.basic_student_info.middle_name"
-        ]
+        "columns_tagged": []
     },
     "Student": {
         "columns_tagged": [
-            "mariadb.drexel_people.basic_student_info.first_name"
+            "mariadb.drexel_people.basic_student_info.date_of_birth"
         ]
     },
     "Student.join": {
-        "columns_tagged": [
-            "mariadb.drexel_people.basic_student_info.drexel_id"
-        ]
+        "columns_tagged": []
+    },
+    "test": {
+        "columns_tagged": []
     }
 }

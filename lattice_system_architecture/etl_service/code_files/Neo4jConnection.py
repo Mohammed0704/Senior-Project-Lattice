@@ -34,7 +34,8 @@ class Neo4jConnection:
     @staticmethod
     def closeConnection():
         # Closing the session and driver
-        Neo4jConnection.neo4jSession.close()
-        Neo4jConnection.neo4jDriver.close()
-        Neo4jConnection.neo4jSession = None
-        Neo4jConnection.neo4jDriver = None
+        if Neo4jConnection.neo4jSession is not None and Neo4jConnection.neo4jDriver is not None:
+            Neo4jConnection.neo4jSession.close()
+            Neo4jConnection.neo4jDriver.close()
+            Neo4jConnection.neo4jSession = None
+            Neo4jConnection.neo4jDriver = None
