@@ -39,3 +39,11 @@ class Neo4jConnection:
             Neo4jConnection.neo4jDriver.close()
             Neo4jConnection.neo4jSession = None
             Neo4jConnection.neo4jDriver = None
+
+    def clearAllData(self):
+        # Matches to all nodes and relations
+        self.neo4jSession.run("MATCH (n)-[r]-()")
+        # Deletes all data
+        self.neo4jSession.run("CALL { WITH r DELETE r} IN TRANSACTIONS OF 10000 ROWS")
+        self.neo4jSession.run("WITH distinct n")
+        self.neo4jSession.run("CALL { WITH n DELETE n} IN TRANSACTIONS OF 10000 ROWS;")
