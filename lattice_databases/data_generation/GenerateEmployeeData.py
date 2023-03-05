@@ -29,7 +29,7 @@ departmentOptions = ["Biodiversity, Earth & Environmental Science","Biology","Ch
 
 #we can add more as we go
 HighestLevelRoleOptions = ["Program Director", "Deputy Director", "Executive Director", "Research Director"]
-HighLevelRoleOptions = ["Dean", "Senior Advisor", "Research Manager", "Professor", "Clinician", "Program Coordinator", "Payroll Administrator", 
+HighLevelRoleOptions = ["Senior Advisor", "Research Manager", "Professor", "Clinician", "Program Coordinator", "Payroll Administrator", 
                         "Research Professor", "Adjunct Instructor", "Finance Coordinator"]
 MediumLevelRoleOptions = ["Administrative Coordinator", "Academic Advisor", "Financial Aid Officer", "Research Coordinator", "Accountant", "Software Engineer",
                             "Systems Analyst", "Human Resources", "Talent Acquistion Consultant", "Psychologist", "Designer", "Assistant Professor", "Drexel Central Coordinator"]
@@ -48,7 +48,7 @@ turboTaxOptOutOptions = ["Included", "Opt Out"]
 employeeSalariesRows = [] 
 
 currentEmployeeIDs = []
-#Manually Appending Employees to Employee Data Object
+#Manually Appending Department Heads to Employee Data Object
 #David Velinsky
 basicEmployeeInfoRows.append(["djv23", "Velinsky", "David", "", "1/24/1973", "David", "He/Him/His", "djv23@drexel.edu", "Biodiversity, Earth & Environmental Science", 
 "M", "Single", "Non Hispanic", "White", "123 Main St", "123 Main St", "215-571-4651", "Department Head"])
@@ -128,6 +128,95 @@ basicEmployeeInfoRows.append(["jes53", "Spanier", "Jonathan", "E.", "8/29/1975",
 employeeSalariesRows.append(["jes53", 104876, "8/29/1975", "Jonathan E. Spanier", "Department Head", 1998, employer, "semi-monthly",
 "FALSE", "TRUE", "Opt Out"])
 currentEmployeeIDs.append("jes53")
+
+#Manually Appending Deans to Employee Data Object
+#David S. Brown
+basicEmployeeInfoRows.append(["dsb93", "Brown", "David", "S.", "6/15/1951", "David", "He/Him/His", "dsb93@drexel.edu", "Not Applicable", 
+"M", "Married", "Non Hispanic", "White", "367 Trace Street", "367 Trace Street", "215-895-1891", "Dean"])
+
+employeeSalariesRows.append(["dsb93", 130600, "6/15/1951", "David S. Brown", "Dean", 2022, employer, "semi-monthly",
+"FALSE", "TRUE", "Opt Out"])
+currentEmployeeIDs.append("dsb93")
+
+#Yi Deng
+basicEmployeeInfoRows.append(["yd362", "Deng", "Yi", "", "2/20/1950", "Yi", "He/Him/His", "yd362@drexel.edu", "Not Applicable", 
+"M", "Married", "Non Hispanic", "Asian", "4560 Pratt Street", "4560 Pratt Street", "215-895-2474", "Dean"])
+
+employeeSalariesRows.append(["yd362", 150800, "2/20/1950", "Yi Deng", "Dean", 2016, employer, "semi-monthly",
+"TRUE", "TRUE", "Opt Out"])
+currentEmployeeIDs.append("yd362")
+
+#Laura N. Gitlin
+basicEmployeeInfoRows.append(["lng45", "Gitlin", "Laura", "N.", "5/25/1952", "Laura", "She/Her/Hers", "lng45@drexel.edu", "Not Applicable", 
+"F", "Married", "Non Hispanic", "White", "235 Wyoming Avenue", "235 Wyoming Avenue", "215-895-3654", "Dean"])
+
+employeeSalariesRows.append(["yd362", 141000, "2/20/1950", "Laura N. Gitlin", "Dean", 2018, employer, "semi-monthly",
+"TRUE", "FALSE", "Included"])
+currentEmployeeIDs.append("lng45")
+
+#Sharon Walker
+basicEmployeeInfoRows.append(["slw384", "Walker", "Sharon", "L.", "4/21/1960", "Sharon", "She/Her/Hers", "slw384@drexel.edu", "Not Applicable", 
+"F", "Single", "Non Hispanic", "White", "4013 Castor Avenue", "230 Blane Street", "215-895-2210", "Dean"])
+
+employeeSalariesRows.append(["slw384", 139560, "4/21/1960", "Sharon L. Walker", "Dean", 2014, employer, "semi-monthly",
+"FALSE", "FALSE", "Included"])
+currentEmployeeIDs.append("slw384")
+
+#Vibhas Madan
+basicEmployeeInfoRows.append(["vm238", "Madan", "Vibhas", "", "12/4/1954", "Vibhas", "He/Him/His", "vm238@drexel.edu", "Not Applicable", 
+"M", "Single", "Non Hispanic", "Other", "512 Racket Street", "512  Racket Street", "215-895-2124", "Dean"])
+
+employeeSalariesRows.append(["vm238", 145790, "12/4/1954", "Vibhas Madan", "Dean", 2013, employer, "semi-monthly",
+"TRUE", "TRUE", "Opt Out"])
+currentEmployeeIDs.append("vm238")
+
+#Charles B. Cairns
+basicEmployeeInfoRows.append(["cbc39", "Cairns", "Charles", "B.", "10/18/1972", "Charles", "He/Him/His", "cbc39@drexel.edu", "Not Applicable", 
+"M", "Divorced", "Non Hispanic", "White", "680 Pine Street", "680 Pine Street", "215-762-3500", "Dean"])
+
+employeeSalariesRows.append(["cbc39", 138460, "10/18/1972", "Charles B. Cairns", "Dean", 2019, employer, "semi-monthly",
+"FALSE", "TRUE", "Included"])
+currentEmployeeIDs.append("cbc39")
+
+#Jason Schupbach
+basicEmployeeInfoRows.append(["jss422", "Schupbach", "Jason ", "", "6/24/1978", "Charles", "He/Him/His", "jss422@drexel.edu", "Not Applicable", 
+"M", "Single", "Non Hispanic", "White", "882 Fletcher Road", "882 Fletcher Road", "215-762-3500", "Dean"])
+
+employeeSalariesRows.append(["jss422", 129220, "6/24/1978", "Jason Schupbach", "Dean", 2020, employer, "semi-monthly",
+"FALSE", "FALSE", "Included"])
+currentEmployeeIDs.append("jss422")
+
+#Paula Marantz Cohen
+basicEmployeeInfoRows.append(["pmc49", "Cohen", "Paula", "Marantz", "7/30/1953", "Paula", "She/Her/Hers", "pmc49@drexel.edu", "Not Applicable", 
+"F", "Married", "Non Hispanic", "White", "211 Trat Street", "5016 MacAlister Hall", "215-895-1266", "Dean"])
+
+employeeSalariesRows.append(["pmc49", 145000, "7/30/1953", "Paula Marantz Cohen", "Dean", 2012, employer, "semi-monthly",
+"TRUE", "FALSE", "Opt Out"])
+currentEmployeeIDs.append("pmc49")
+
+#Donna Marie De Carolis
+basicEmployeeInfoRows.append(["dmd33", "de Carolis", "Donna", "", "8/29/1955", "Donna", "She/Her/Hers", "dmd33@drexel.edu", "Not Applicable", 
+"F", "Married", "Non Hispanic", "White", "2018 Capper Avenue", "2018 Capper Avenue", "215-895-1795", "Dean"])
+
+employeeSalariesRows.append(["dmd33", 155000, "8/29/1955", "Donna de Carolis", "Dean", 2015, employer, "semi-monthly",
+"TRUE", "FALSE", "Opt Out"])
+currentEmployeeIDs.append("dmd33")
+
+#Ana V. Diez Roux
+basicEmployeeInfoRows.append(["avd37", "Diez Roux", "Ana", "V.", "6/1/1964", "Ana", "She/Her/Hers", "avd37@drexel.edu", "Not Applicable", 
+"F", "Single", "Non Hispanic", "White", "540 Frank Street", "4017 Ontario Avenue", "267-359-6070", "Dean"])
+
+employeeSalariesRows.append(["avd37", 145000, "6/1/1964", "Ana V. Diez Roux", "Dean", 2009, employer, "semi-monthly",
+"TRUE", "FALSE", "Opt Out"])
+currentEmployeeIDs.append("avd37")
+
+#Daniel M. Filler
+basicEmployeeInfoRows.append(["dmf24", "Filler", "Daniel", "M.", "5/10/1958", "Daniel", "He/Him/His", "dmf24@drexel.edu", "Not Applicable", 
+"M", "Married", "Non Hispanic", "White", "410 Stoke Street", "410 Stoke Street", "215-571-4705", "Dean"])
+
+employeeSalariesRows.append(["dmf24", 133290, "5/10/1958", "Daniel M. Filler", "Dean", 2017, employer, "semi-monthly",
+"TRUE", "TRUE", "Included"])
+currentEmployeeIDs.append("dmf24")
 
 #Janitor not assigned to department head
 #Dean to only be picked to one department
