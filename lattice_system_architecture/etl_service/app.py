@@ -171,7 +171,30 @@ def columns(connectionName, schemaName, tableName):
     except:
         pass
     columnList = TrinoConnection.query(TrinoColumnsQuery, connectionName + "." + schemaName + "." + tableName)
-    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagDict=tagDict)
+
+    #Queries Trino for an example value of data for each column in a row
+    #TODO: Move this functionality into a separate script
+    columnsAsString = ""
+    casesAsString = "("
+    for column in columnList:
+        columnsAsString = columnsAsString + "\"" + column + "\"" + ", "
+        casesAsString = casesAsString + "CASE WHEN CAST(" + "\"" + column + "\" AS VARCHAR) != \'\' THEN 1 ELSE 0 END + "
+    casesAsString = casesAsString[:-2] + ") AS this_is_a_non_null_count_that_is_long"
+
+    exampleRow = TrinoConnection.query(TrinoSelectQuery, "SELECT " + columnsAsString[:-2] + " FROM (SELECT * FROM (SELECT " + columnsAsString + casesAsString + " FROM " + tablePath + ") ORDER BY this_is_a_non_null_count_that_is_long desc FETCH FIRST 1 ROWS ONLY)")
+    
+    exampleColumnDataDict = {}
+    for column in columnList:
+        exampleColumnData = str(exampleRow[column].iloc[0]).replace("\"", "")
+        try:
+            if len(exampleColumnData) >= 21:
+                exampleColumnData = exampleColumnData[0:20]
+                exampleColumnData = exampleColumnData + "..."
+        except:
+            pass
+        exampleColumnDataDict[column] = exampleColumnData
+
+    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagDict=tagDict, exampleColumnDataDict=exampleColumnDataDict)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/add/<tagToAdd>", methods=['POST'])
 def addTagToColumn(connectionName, schemaName, tableName, columnName, tagToAdd):
