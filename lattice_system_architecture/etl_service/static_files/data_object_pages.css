@@ -15,7 +15,7 @@
 #inner-content-box
 {
     background-color: darkgray;
-    height: 67.5%;
+    height: 78.1%;
     width: 95%;
     overflow: auto;
     display: grid;
@@ -32,13 +32,28 @@
     left: 0%;
 }
 
-#sub-title
+.sub-title
 {
     margin-top: 0%;
     margin-bottom: 0%;
     font-size: 27px;
     position: relative;
     left: 0%;
+    display: inline-block;
+}
+
+.sub-title-container
+{
+    display: inline-block; 
+    justify-content: space-evenly;
+    width: 95%;
+}
+
+.vertical-line
+{
+    border-left: 3px solid black;
+    height: 20px;
+    display: inline-block;
 }
 
 table
