@@ -17,9 +17,11 @@
         <div id="inner-content-box" class="left">
           <table id="tags-table">
             <tr id="table-header">
-              <th style="width:70%; font-size: 22px;">Current Tags</th>
-              <th style="width:15%; font-size: 22px;">Usages</th>
-              <th style="width:15%; font-size: 22px;">Delete</th>
+              <th style="width:60%; font-size: 22px;">Current Tags</th>
+              <div style="width:40%; justify-content: space-evenly;">
+                <th style="font-size: 22px;">Usages</th>
+                <th style="font-size: 22px;">Delete</th>
+              </div>
             </tr>
             {% if tagDict|length > 0 %}
               {% for tagKey, columnsTaggedList in tagDict.items() %}
@@ -38,37 +40,44 @@
                 </tr>
               {% endfor %}
             {% endif %}
+            <tr id="table-footer">
+              <td class="tag-input" style="width:76%; font-size: 20px;">
+                <p id="result">
+                </p>              
+                <div id="create-div">
+                  <form id="create-form">
+                    <input type="text" id="Tag" name="Tag" value="" placeholder="Enter new tag name...">
+                  </form>
+                </div>
+              </td>
+              <td>
+                <center>
+                  <button class="create-button create-button1" id="create-button">Create</button>
+                </center>
+              </td>
+              <td id="end-cell">
+              </td>
+            </tr>
           </table>
         </div>
-        <div class="right">
-          <div id="inner-content-box" class="right-full" style="border:1px solid black;">
-            <div id="label_text">
-              Tag Usages
-            </div>
-            <div>
-              <table id="usage-table">
-                <tr id="table-header">
-                  <th style="width:88%; font-size: 20px;">Database.Schema.Table.ColumnName</th>
+      <div id="inner-content-box" class="right" style="border:1px solid black;">
+        <div id="label_text">
+          Tag Usages
+        </div>
+        <table id="usage-table">
+          <tr id="table-header">
+            <th style="width:88%; font-size: 20px;">Database.Schema.Table.ColumnName</th>
+          </tr>
+          {% if tagDict|length > 0 %}
+            {% for tagKey, columnsTaggedList in tagDict.items() %}
+              {% for tag in columnsTaggedList["columns_tagged"] %}
+                <tr id="{{ tagKey }}-row">
+                  <td><a href="/objects/{{ connectionName }}/{{ schemaName }}/{{ tableName }}">{{ tag }}</a></td>
                 </tr>
-                {% if tagDict|length > 0 %}
-                  {% for tagKey, columnsTaggedList in tagDict.items() %}
-                    {% for tag in columnsTaggedList["columns_tagged"] %}
-                      {% set tag_parts = tag.split('.') %}
-                      {% set connectionName = tag_parts[0] %}
-                      {% set schemaName = tag_parts[1] %}
-                      {% set tableName = tag_parts[2] %}
-                      <tr id="{{ tagKey }}-row">
-                        <td><a href="/objects/{{ connectionName }}/{{ schemaName }}/{{ tableName }}">{{ tag }}</a></td>
-                      </tr>
-                    {% endfor %}
-                  {% endfor %}
-                {% endif %}
-              </table>
-            </div>      
-          </div>
-          <a href="/tags/create">
-            <button class="button button1">Create New Tag</button>
-          </a>
+              {% endfor %}
+            {% endfor %}
+          {% endif %}
+        </table>
       </div>
     </div>
   </body>

@@ -3,8 +3,8 @@
     display: flex;
     background-color: lightgray;
     font-size: 30px;
-    width: 90%;
-    height: 72%;
+    width: 97%;
+    height: 75%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -17,6 +17,7 @@
     background-color: darkgray;
     width: 95%;
     overflow: auto;
+    border:1px solid black;
 }
 
 #content {
@@ -25,6 +26,7 @@
     height: 95%;
     justify-content: space-between;
     flex-direction: row;
+    gap: 10px;
 }
 
 #content .left {
@@ -38,29 +40,8 @@
 .right {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-}
-
-.right .right-top {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-}
-
-.right .right-bottom {
-    height: 50%;
-}
-
-.right .right-full {
-    height: 100%;
-}
-
-.right-div {
-    width: 90%;
+    width: 100%;
 }
 
 #button-div {
@@ -77,6 +58,8 @@
 
 #usage-table {
     width: 95%;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
 }
 
 #usage-table tr {
@@ -87,24 +70,42 @@
     display: table-row;
 }
 
+#table-footer {
+    position: sticky;
+    bottom: 0;
+    background: darkgrey;
+    border: 1px solid black;
+}
+
 table
 {
     width: 100%;
     place-content: center;
-    border-collapse: collapse;
-    border:1px solid black;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+table th {
+    /* Apply both top and bottom borders to the <th> */
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+table #table-footer td {
+    /* Apply both top and bottom borders to the <th> */
+    border-right: 0px solid black;
+    border-top: 1px solid black;
 }
 
 tr
 {
     border: 1px solid black;
-    height: 80px;
+    height: 60px;
 }
 
-th, td {
+td {
     border-right: 1px solid black;
-    padding-left: 1%;
-    padding-right: 1%;
+    border-bottom: 1px solid black;
     font-size: 18px;
     text-align: center;
 }
@@ -136,8 +137,10 @@ th, td {
 /* Style for Create New Tag Page */
 #label_text
 {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 input {
@@ -191,16 +194,16 @@ input {
 #success-message{
     color: green;
     margin-bottom: 0px;
-    margin-top: 10px;
 }
 
 #error-message{
     color: red;
     margin-bottom: 0px;
-    margin-top: 10px;
+    height: 10px;
 }
 
 #result{
+    height: 20px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
@@ -210,4 +213,26 @@ input {
     flex-direction: column;
     margin-bottom: 2px;
     margin-top: 0px;
+}
+
+.create-button {
+    border: 1px solid black;
+    font-size: 18px;
+    padding: 5px;
+    margin: 0%;
+    margin-top: 15px;
+    cursor: pointer;
+    display: flex;
+}
+
+.create-button1 {
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    margin: auto;
+}
+
+.create-button1:hover {
+    background-color: darkgray;
 }

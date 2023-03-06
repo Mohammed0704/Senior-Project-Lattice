@@ -1,6 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, request, jsonify
 
 app = Flask(__name__, static_folder="static_files", template_folder="static_files/templates")
+app.url_map.strict_slashes = False
 
 from code_files.Serialization import *
 from code_files.TrinoConnection import *
