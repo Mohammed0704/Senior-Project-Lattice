@@ -171,7 +171,20 @@ def columns(connectionName, schemaName, tableName):
     except:
         pass
     columnList = TrinoConnection.query(TrinoColumnsQuery, connectionName + "." + schemaName + "." + tableName)
-    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagDict=tagDict)
+
+    #Queries Trino for an example value of data for each column in a row
+    exampleRow = TrinoConnection.query(TrinoSelectQuery, "SELECT * FROM " + tablePath + " LIMIT 1")
+    exampleColumnDataDict = {}
+    for column in columnList:
+        exampleColumnDataRow = exampleRow[column].iloc[0]
+        try:
+            if len(exampleColumnDataRow) >= 21:
+                exampleColumnDataRow = exampleColumnDataRow[0:20]
+        except:
+            pass
+        exampleColumnDataDict[column] = exampleColumnDataRow
+
+    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagDict=tagDict, exampleColumnDataDict=exampleColumnDataDict)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/add/<tagToAdd>", methods=['POST'])
 def addTagToColumn(connectionName, schemaName, tableName, columnName, tagToAdd):

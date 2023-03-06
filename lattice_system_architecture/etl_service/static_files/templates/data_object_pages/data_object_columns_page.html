@@ -24,13 +24,15 @@
       <div id="inner-content-box">
         <table id="inner-table">
             <tr id="table-header">
-                <td><p id="title">Columns</p></td>
+                <td style="width: 22%;"><p id="title">Column</p></td>
+                <td style="width: 20%;"><p id="title">Example</p></td>
                 <td><p id="title">Tags</p></td>
                 <td><p id="title">Select</p></td>
             </tr>
           {% for column in columnList %}
           <tr>
             <td><p class="column-value">{{ column }}</p></td>
+            <td class="example-cell"><p>{{ exampleColumnDataDict[column] }}</p></td>
             <td class="tag-cell" id="{{ column }}-tag-cell">
               <center>
               {% if columnTagDict|length > 0 %}
@@ -47,7 +49,7 @@
             <td class="add-cell">
               <center>
               <div class="add-tag-container">
-                <select class="tag-select" style="font-size: 16px; height: 28px;" name="{{ column }}" method="GET" action="/">
+                <select class="tag-select" name="{{ column }}" method="GET" action="/">
                   <option class="default-tag-option" selected disabled hidden value> -- Select a tag -- </option>
                   {% if tagDict|length > 0 %}
                     {% for tagKey, columnsTaggedList in tagDict.items() %}
