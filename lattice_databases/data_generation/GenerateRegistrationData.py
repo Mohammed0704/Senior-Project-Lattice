@@ -46,7 +46,7 @@ with open(filePathClass, 'r') as jsonClass:
         
   dataTerms = [dataFall22, dataWinter22, dataSpring22, dataSummer22, dataFall21] #not adding Winter21 b/c of problem, idk 
 
-dataHeaderRegistration = ["crn, student_id"]
+dataHeaderRegistration = ["reg_code, crn, student_id"]
 dataRowsRegistration = []
 
 with open(filePathCourse, 'r') as jsonCourse:
@@ -64,6 +64,8 @@ with open(filePathStudent, 'r') as csvStudent:
   
   reader = csv.reader(csvStudent)
   next(reader) #skip header row
+
+  generatedRowIndex = 1
   for student in reader: #each row corresponds to a student
     for term in dataTerms:
       termCredits = 0 #reset num of credits student is taking
@@ -140,7 +142,8 @@ with open(filePathStudent, 'r') as csvStudent:
 
         termRegistration.append([newClass["crn"], student[0]]) #crn and the student id
       for registration in termRegistration:
-        dataRowsRegistration.append([registration[0], registration[1]])
+        dataRowsRegistration.append([generatedRowIndex, registration[0], registration[1]])
+        generatedRowIndex += 1
 
 with open(filePathOutput, 'w', newline='') as csvOutput:
   writer = csv.writer(csvOutput)
