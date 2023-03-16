@@ -98,6 +98,21 @@ if [ -d "$windowsDir" ]; then #checks if the machine is Windows and provides alt
     winpty docker exec -it cassandra cqlsh -e "COPY finances.tuition (drexel_id, year, tuition_and_fees, annual_financial_aid_award, subsidized_loan_offered, unsubsidized_loan_offered, accepted_subsidized, accepted_unsubsidized, outstanding_balances) 
                     FROM '/data_files/Cassandra-tuition.csv' 
                     WITH HEADER = TRUE;"
+
+    #creating registration schema
+    winpty docker exec -it cassandra cqlsh -e "DROP KEYSPACE IF EXISTS registration;"
+    winpty docker exec -it cassandra cqlsh -e "CREATE KEYSPACE registration WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };"
+
+    #class_registration
+    winpty docker exec -it cassandra cqlsh -e "CREATE TABLE registration.class_registration(
+                                        reg_code VARINT PRIMARY KEY, 
+                                        drexel_id text,
+                                        annual_salary float
+                                        );"
+
+    winpty docker exec -it cassandra cqlsh -e "COPY registration.class_registration (reg_code, drexel_id, annual_salary) 
+                    FROM '/data_files/Cassandra-registration.csv' 
+                    WITH HEADER = TRUE;"
 else
     #copy cassandra data into the cassandra container
     docker cp ./cassandra/data_files cassandra:/
@@ -194,21 +209,19 @@ else
     docker exec -it cassandra cqlsh -e "COPY finances.tuition (drexel_id, year, tuition_and_fees, annual_financial_aid_award, subsidized_loan_offered, unsubsidized_loan_offered, accepted_subsidized, accepted_unsubsidized, outstanding_balances) 
                     FROM '/data_files/Cassandra-tuition.csv' 
                     WITH HEADER = TRUE;"
-
-
     
     #creating registration schema
-    winpty docker exec -it cassandra cqlsh -e "DROP KEYSPACE IF EXISTS registration;"
-    winpty docker exec -it cassandra cqlsh -e "CREATE KEYSPACE registration WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };"
+    docker exec -it cassandra cqlsh -e "DROP KEYSPACE IF EXISTS registration;"
+    docker exec -it cassandra cqlsh -e "CREATE KEYSPACE registration WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };"
 
     #class_registration
-    winpty docker exec -it cassandra cqlsh -e "CREATE TABLE registration.class_registration(
+    docker exec -it cassandra cqlsh -e "CREATE TABLE registration.class_registration(
                                         reg_code VARINT PRIMARY KEY, 
                                         drexel_id text,
                                         annual_salary float
                                         );"
 
-    winpty docker exec -it cassandra cqlsh -e "COPY registration.class_registration (reg_code, drexel_id, annual_salary) 
+    docker exec -it cassandra cqlsh -e "COPY registration.class_registration (reg_code, drexel_id, annual_salary) 
                     FROM '/data_files/Cassandra-registration.csv' 
                     WITH HEADER = TRUE;"
 fi
