@@ -25,6 +25,7 @@ services:
       trino_user: trino
     volumes:
       - ./etl_service/serialized_data:/serialized_data
+      - ./etl_service/resources:/resources
       - ./trino/etc/catalog:/catalog
       - ./neo4j/import:/data_object_import_data #generated CSV data in the etl-service container is handed off to Neo4j's import directory
 

@@ -7,4 +7,9 @@ class CypherGeneration():
         "\nCREATE (n:" + tag + ") SET n = row"
         "\n\', {batchSize:1000, iterateList:true, parallel:true})")
 
+        if ("Neo.ClientError.Procedure.ProcedureCallFailed" not in createQuery):
+            print("\nCypher query created for " + tag + "!")
+        else:
+            print("\nCypher query ERROR for " + tag + "!\nERROR: " + createQuery)
+
         return createQuery

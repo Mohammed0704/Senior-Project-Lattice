@@ -54,7 +54,6 @@ class SQLGeneration:
                         concatTagDict[concatName] = tempConcatTagList
                     
                     concatTable = columnTagged[:-(columnTagged[::-1].index(".")+1)]
-                    print(concatTable)
                     if concatTable not in formattedTagDict["all_tables"]: #if the concat column's table is not in all_tables, add it
                         allTables = formattedTagDict["all_tables"]
                         allTables.append(concatTable)
@@ -62,7 +61,6 @@ class SQLGeneration:
         concatTagDict = {key: val for key, val in sorted(concatTagDict.items(), key = lambda ele: ele[0])} #sorts tag dictionary
         formattedTagDict["all_concat_columns"] = concatTagDict
 
-        print(formattedTagDict)
         return(formattedTagDict)
     
     def formatColumn(self, fullColumn):
@@ -126,7 +124,6 @@ class SQLGeneration:
         else:
             generatedSQLStatement = generatedSQLStatement + sqlColumns + sqlFrom #the final SQL statement is constructed
 
-        print("\n" + generatedSQLStatement)
         return generatedSQLStatement
         
     def generateQuery(self, tag, tagsDict):

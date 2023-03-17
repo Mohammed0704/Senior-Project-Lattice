@@ -1,9 +1,8 @@
-from neo4j import GraphDatabase
-from Neo4jConnection import *
+from code_files.Neo4jConnection import *
 
 class Neo4jSetRelationships:
   session = Neo4jConnection.getActiveNeo4jSession()
-  relationsPath = "../resources/relationships.txt"
+  relationsPath = "/resources/relationships.txt"
 
   def setRelationships(self):
     commands = self.parseFile()
@@ -21,6 +20,3 @@ class Neo4jSetRelationships:
           cmds.append(s)
           s = ""
     return cmds
-    
-if __name__=="__main__": #for testing
-  Neo4jSetRelationships().setRelationships()

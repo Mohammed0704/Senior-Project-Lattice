@@ -5,12 +5,82 @@ CALL apoc.periodic.iterate(
 	WHERE a.associated_course_code = b.`course code`
 	RETURN a, b
 ",
-"CALL apoc.create.relationship(a, 'Is Instance Of', {}, b)
+"CALL apoc.create.relationship(a, 'is Instance Of', {}, b)
 	YIELD rel
 	RETURN rel
 ",
 {batchSize:1000})
 //:
 
-your query here
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Employee),
+		(b:Department)
+	WHERE a.primary_department = b.department_name
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'belongs To', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Department),
+		(b:College)
+	WHERE a.college_name = b.name
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'is In', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Student),
+		(b:Housing)
+	//WHERE a.living_address = b.address //using CONTAINS until the quotes are removed from a.living_address
+	WHERE b.address CONTAINS SUBSTRING(a.living_address,1) //TEMPORARY
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'lives at', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:AreaOfStudy),
+		(b:Department)
+	WHERE a.department CONTAINS b.department_name
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'is part of', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
+//:
+
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:Program),
+		(b:AreaOfStudy)
+	WHERE a.area_of_study = b.name
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'is in', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
 //:

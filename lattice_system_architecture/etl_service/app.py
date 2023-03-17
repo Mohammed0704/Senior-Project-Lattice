@@ -7,6 +7,7 @@ from code_files.Serialization import *
 from code_files.TrinoConnection import *
 from code_files.TrinoConnectors import *
 from code_files.Neo4jConnection import *
+from code_files.Neo4jSetRelationships import *
 from code_files.CypherGeneration import *
 from code_files.SQLGeneration import *
 from code_files.QueryToCSV import *
@@ -273,14 +274,23 @@ def loadDataObjects(): #TODO: Update client side progress of the process even if
             queryResultDataframe = TrinoConnection.query(TrinoSelectQuery, taggedColumnsAsSQL)
             time = queryToCSV.writeQueryToCSV(tag, queryResultDataframe, time) #update time
 
+    #clear data out of Neo4j before putting in more
+    Neo4jConnection.query("match (n) detach delete n")
+    print("\nPrevious Neo4j data cleared!")
+
     #generate and send query to Neo4j for each data object CSV
     for dataObjectFile in os.listdir("data_object_import_data/"): #TODO: Abstract this directory path
         dataObjectFileName = os.fsdecode(dataObjectFile)
         cypherCreateQuery = cypherGeneration.generateCypherCreate(dataObjectFileName)
         Neo4jConnection.query(cypherCreateQuery)
+
+    #create relationships based on text file
+    Neo4jSetRelationships().setRelationships()
+    print("\nRelationships created!")
+
     Neo4jConnection.closeConnection()
-    print("\nData Objects loaded!")
-    return "\nData Objects loaded!"
+    print("\nData Objects loading finished!")
+    return "\nData Objects loading finished!"
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", port = 4999)

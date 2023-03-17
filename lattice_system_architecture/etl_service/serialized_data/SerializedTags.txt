@@ -1,4 +1,18 @@
 {
+    "AreaOfStudy": {
+        "columns_tagged": [
+            "postgres.education.areas_of_study.department",
+            "elasticsearch.additional_info.area_of_study.has minor",
+            "elasticsearch.additional_info.area_of_study.has major",
+            "elasticsearch.additional_info.area_of_study.has certificate"
+        ]
+    },
+    "AreaOfStudy.join": {
+        "columns_tagged": [
+            "postgres.education.areas_of_study.name",
+            "elasticsearch.additional_info.area_of_study.name"
+        ]
+    },
     "Class": {
         "columns_tagged": [
             "mongo.classes.classes_info.description",
@@ -14,13 +28,19 @@
         ]
     },
     "College": {
-        "columns_tagged": []
+        "columns_tagged": [
+            "postgres.education.colleges.name",
+            "postgres.education.colleges.address",
+            "postgres.education.colleges.campus",
+            "postgres.education.colleges.contact_email"
+        ]
     },
     "Course": {
         "columns_tagged": [
             "mongo.courses.courses_info.course title",
             "mongo.courses.courses_info.college",
-            "mongo.courses.courses_requirements.prerequisites"
+            "mongo.courses.courses_requirements.prerequisites",
+            "mongo.courses.courses_requirements.corequisites"
         ]
     },
     "Course.join": {
@@ -30,11 +50,23 @@
         ]
     },
     "Department": {
-        "columns_tagged": []
+        "columns_tagged": [
+            "postgres.education.departments.college_name",
+            "postgres.education.departments.url",
+            "postgres.education.departments.main_office_location"
+        ]
+    },
+    "Department.join": {
+        "columns_tagged": [
+            "postgres.education.departments.department_name"
+        ]
     },
     "Employee": {
         "columns_tagged": [
-            "cassandra.finances.employee_salaries.annual_salary"
+            "mariadb.drexel_people.basic_employee_info.date_of_birth",
+            "mariadb.drexel_people.basic_employee_info.primary_department",
+            "cassandra.finances.employee_salaries.annual_salary",
+            "cassandra.finances.employee_salaries.job_title"
         ]
     },
     "Employee.concat.full_name.1": {
@@ -54,17 +86,47 @@
         ]
     },
     "Housing": {
-        "columns_tagged": []
+        "columns_tagged": [
+            "postgres.campus_life.housing_options.address",
+            "postgres.campus_life.housing_options.url",
+            "postgres.campus_life.housing_options.is_affiliated_housing"
+        ]
+    },
+    "Program": {
+        "columns_tagged": [
+            "postgres.education.programs.program_name",
+            "postgres.education.programs.area_of_study",
+            "postgres.education.programs.is_stem",
+            "postgres.education.programs.is_graduate_program",
+            "postgres.education.programs.description"
+        ]
     },
     "Student": {
         "columns_tagged": [
-            "mariadb.drexel_people.basic_student_info.date_of_birth"
+            "mariadb.drexel_people.basic_student_info.date_of_birth",
+            "mariadb.locations.student_locations.living_address",
+            "mariadb.locations.student_locations.is_communter"
+        ]
+    },
+    "Student.concat.full_name.1": {
+        "columns_tagged": [
+            "mariadb.drexel_people.basic_student_info.first_name"
+        ]
+    },
+    "Student.concat.full_name.2": {
+        "columns_tagged": [
+            "mariadb.drexel_people.basic_student_info.middle_name"
+        ]
+    },
+    "Student.concat.full_name.3": {
+        "columns_tagged": [
+            "mariadb.drexel_people.basic_student_info.last_name"
         ]
     },
     "Student.join": {
-        "columns_tagged": []
-    },
-    "test": {
-        "columns_tagged": []
+        "columns_tagged": [
+            "mariadb.drexel_people.basic_student_info.drexel_id",
+            "mariadb.locations.student_locations.drexel_id"
+        ]
     }
 }
