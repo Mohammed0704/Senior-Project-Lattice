@@ -1,13 +1,13 @@
 from code_files.Neo4jConnection import *
 
 class Neo4jSetRelationships:
-  session = Neo4jConnection.getActiveNeo4jSession()
   relationsPath = "/resources/relationships.txt"
 
   def setRelationships(self):
     commands = self.parseFile()
     for cmd in commands:
-      self.session.run(cmd)
+      Neo4jConnection.query(cmd)
+    print("\nRelationships created!")
 
   def parseFile(self):
     s = ""

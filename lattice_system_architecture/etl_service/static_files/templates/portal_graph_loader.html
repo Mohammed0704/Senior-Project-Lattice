@@ -16,6 +16,7 @@
     <div id="outer-content-box">
       <p id="title"><strong>Note: </strong>Once 'Load Data' is clicked, all previous data will be cleared</p>
       <button id="load-button" class="button button1">Load Data</button>
+      <p id="execution-container-text" style="font-size: 24px;"></p>
     </div>
 </body>
 </center>
@@ -23,12 +24,49 @@
 <script src="/static_files/jquery-3.1.1.js"></script>
 
 <script>
-$("#load-button").click(function(event)
+function execute(executionIndex)
 {
-  $.ajax({
-      url: "/loader/load",
-      type: "get"
-    });
+  const executionContainerText = document.querySelector('#execution-container-text');
+
+  console.log("fetching!");
+  fetch('/loader/load', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: executionIndex
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    if (data.returnMessage == "END_OF_EXECUTION") {
+      console.log("end of execution");
+      const loadButton = document.getElementById("load-button");
+      loadButton.disabled = false;
+      loadButton.removeAttribute("disabled");
+    } else {
+      console.log("next execution");
+
+      executionContainerText.innerHTML = executionContainerText.innerHTML + "<br></br>" + data.returnMessage
+
+      tempExecutionIndex = executionIndex + 1;
+      execute(tempExecutionIndex); //recursive call
+    }
+  });
+}
+
+$("#load-button").click(function(event)
+{  
+  const loadButton = document.getElementById("load-button");
+  const executionContainerText = document.getElementById("execution-container-text");
+
+  loadButton.disabled = true;
+  loadButton.setAttribute("disabled", true);
+
+  executionContainerText.innerHTML = "";
+
+  var executionIndex = 0;
+  execute(executionIndex);
 });
 
 </script>

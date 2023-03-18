@@ -10,6 +10,11 @@
     flex-direction: column;
     border-style: solid;
     border-width: thick;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
 }
 
 #title
@@ -28,6 +33,8 @@
     padding: 16px 32px;
     margin: 4px 2px;
     cursor: pointer;
+    position: relative;
+    z-index: 1000;
 }
 
 .button1 {
@@ -38,8 +45,20 @@
     float: right;
     margin: 0 auto;
     bottom: 230px;
+    z-index: 1000;
 }
 
 .button1:hover {
     background-color: darkgray;
+}
+
+#execution-container-text
+{
+    font-size: 24px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 230px;
 }

@@ -40,10 +40,7 @@ class Neo4jConnection:
             Neo4jConnection.neo4jSession = None
             Neo4jConnection.neo4jDriver = None
 
-    def clearAllData(self):
-        # Matches to all nodes and relations
-        self.neo4jSession.run("MATCH (n)-[r]-()")
-        # Deletes all data
-        self.neo4jSession.run("CALL { WITH r DELETE r} IN TRANSACTIONS OF 10000 ROWS")
-        self.neo4jSession.run("WITH distinct n")
-        self.neo4jSession.run("CALL { WITH n DELETE n} IN TRANSACTIONS OF 10000 ROWS;")
+    @staticmethod
+    def clearAllData():
+        Neo4jConnection.query("MATCH (n) CALL { WITH n DETACH DELETE n } IN TRANSACTIONS OF 10000 ROWS")
+        print("\nPrevious Neo4j data cleared!")

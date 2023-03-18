@@ -11,8 +11,10 @@ from code_files.Neo4jSetRelationships import *
 from code_files.CypherGeneration import *
 from code_files.SQLGeneration import *
 from code_files.QueryToCSV import *
+from code_files.GraphLoaderExecution import *
 
 import re;
+import typing;
 
 @app.route('/')
 def base():
@@ -255,42 +257,12 @@ def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagTo
 def loader():        
     return render_template("menu_template.html") + render_template("portal_graph_loader.html")
 
-@app.route("/loader/load", methods=['GET'])
-def loadDataObjects(): #TODO: Update client side progress of the process even if just a "loading" before and "done" after sort of thing #TODO: Make sure to disable button during load process until done
-    sqlGeneration = SQLGeneration()
-    cypherGeneration = CypherGeneration()
-    queryToCSV = QueryToCSV()
-    tagsDict = Serialization.Deserialize("/serialized_data/SerializedTags.txt")
-
-    #removes old data object CSVs
-    for oldDataObjectFile in os.listdir("data_object_import_data/"): #TODO: abstract this directory
-        os.remove("data_object_import_data/" + oldDataObjectFile)
-
-    #generates a data object CSV for each utilized tag
-    time = None #time is currently not utilized in the final name of the resulting CSVs TODO: Update this comment when this changes
-    for tag in tagsDict:
-        taggedColumnsAsSQL = sqlGeneration.generateQuery(tag, tagsDict)
-        if taggedColumnsAsSQL is not None: #if there are columns with the current tag applied and isn't a non-base (.join, .concat, etc...) tag
-            queryResultDataframe = TrinoConnection.query(TrinoSelectQuery, taggedColumnsAsSQL)
-            time = queryToCSV.writeQueryToCSV(tag, queryResultDataframe, time) #update time
-
-    #clear data out of Neo4j before putting in more
-    Neo4jConnection.query("match (n) detach delete n")
-    print("\nPrevious Neo4j data cleared!")
-
-    #generate and send query to Neo4j for each data object CSV
-    for dataObjectFile in os.listdir("data_object_import_data/"): #TODO: Abstract this directory path
-        dataObjectFileName = os.fsdecode(dataObjectFile)
-        cypherCreateQuery = cypherGeneration.generateCypherCreate(dataObjectFileName)
-        Neo4jConnection.query(cypherCreateQuery)
-
-    #create relationships based on text file
-    Neo4jSetRelationships().setRelationships()
-    print("\nRelationships created!")
-
-    Neo4jConnection.closeConnection()
-    print("\nData Objects loading finished!")
-    return "\nData Objects loading finished!"
+@app.route("/loader/load", methods=['GET', 'POST'])
+def loadDataObjects(): #TODO: Make sure to disable button during load process until done
+    executionObjects : typing.Dict[int, GraphLoaderExecutionStrategy] = {0: CSVExecution(), 1: ClearExecution(), 
+                                                                         2: NodeCreationExecution(), 3: RelationshipCreationExecution(), 
+                                                                         4: Neo4jLinkExecution(), 5: Neo4jCloseExecution()}
+    return jsonify({"returnMessage": executionObjects[request.get_json()].execute()})
 
 if __name__ == "__main__":
     app.run(host = "0.0.0.0", port = 4999)

@@ -23,6 +23,7 @@ services:
       trino_host: trino
       trino_port: 8080
       trino_user: trino
+      import_directory: data_object_import_data/
     volumes:
       - ./etl_service/serialized_data:/serialized_data
       - ./etl_service/resources:/resources
