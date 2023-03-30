@@ -75,6 +75,7 @@ a:hover
     margin: 0%;
     cursor: pointer;
     display: flex;
+    border-radius: 7px;
 }
 
 .delete-button1 {

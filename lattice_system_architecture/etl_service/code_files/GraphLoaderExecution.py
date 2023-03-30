@@ -73,7 +73,6 @@ class RelationshipCreationExecution(GraphLoaderExecutionStrategy):
     
 class Neo4jLinkExecution(GraphLoaderExecutionStrategy):
     def execute(self) -> str:
-        #return "Completed! Access Neo4j at <a id=\"neo4j-link\" href=\"http://localhost:7474/browser\">http://localhost:7474/browser</a>"
         return "Completed! Access Neo4j at <a id=\"neo4j-link\" href=\"#\" onClick=\"window.open('http://localhost:7474/browser', '_blank')\">http://localhost:7474/browser</a>" #href link should be abstracted and not hardcoded in javascript
     
 class Neo4jCloseExecution(GraphLoaderExecutionStrategy):
@@ -82,7 +81,7 @@ class Neo4jCloseExecution(GraphLoaderExecutionStrategy):
         return "END_OF_EXECUTION"
 
 #Context class
-class TrinoQuery:
+class GraphLoaderExecution:
     graphLoaderExecutionStrategy: GraphLoaderExecutionStrategy
 
     def __init__(self, graphLoaderExecutionStrategy: GraphLoaderExecutionStrategy = None) -> None:

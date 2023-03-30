@@ -10,6 +10,7 @@
     flex-direction: column;
     border-style: solid;
     border-width: thick;
+    border-radius: 10px;
 }
 
 #inner-content-box
@@ -107,6 +108,7 @@ a:hover
     padding: 12px 28px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 7px;
 }
 
 .button1 
@@ -118,6 +120,7 @@ a:hover
     float: left;
     margin-bottom: 0.5%;
     text-decoration: none;
+    border-radius: 7px;
 }
 
 .button1:hover 
@@ -132,6 +135,7 @@ a:hover
     padding: 5px;
     margin: 0%;
     cursor: pointer;
+    border-radius: 7px;
 }
 
 .remove-button1 
@@ -140,6 +144,7 @@ a:hover
     color: black;
     font-weight: bold;
     text-decoration: none;
+    border-radius: 7px;
 }
 
 .add-button 
@@ -150,6 +155,7 @@ a:hover
     margin-top: 3px;
     margin-bottom: 3px;
     cursor: pointer;
+    border-radius: 7px;
 }
 
 .add-button1 
@@ -158,6 +164,7 @@ a:hover
     color: black;
     font-weight: bold;
     text-decoration: none;
+    border-radius: 7px;
 }
 
 .add-button1:hover 
@@ -176,18 +183,15 @@ a:hover
     padding-right: 11px; 
     padding-left: 11px;
     margin-bottom: 4px;
-}
-
-.tag-cell-tag-value
-{
-    margin-bottom: 9px;
-    margin-top: 0%;
+    border-radius: 7px;
 }
 
 .tag-cell-tag-value
 {
     margin-right: 6px;
     margin-left: 6px;
+    margin-bottom: 9px;
+    margin-top: 0%;
 }
 
 .column-value

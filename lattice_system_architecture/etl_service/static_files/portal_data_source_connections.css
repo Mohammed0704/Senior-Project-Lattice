@@ -10,6 +10,7 @@
     flex-direction: column;
     border-style: solid;
     border-width: thick;
+    border-radius: 10px;
 }
 
 #inner-content-box
@@ -35,6 +36,7 @@ table
     place-content: center;
     border-collapse: collapse;
     border:1px solid black;
+    border-radius: 4px;
 }
 
 tr
@@ -56,6 +58,7 @@ th, td {
     padding: 16px 32px;
     margin: 4px 2px;
     cursor: pointer;
+    border-radius: 7px;
 }
 
 .button1 {
@@ -64,6 +67,7 @@ th, td {
     font-weight: bold;
     position: relative;
     margin: auto;
+    border-radius: 7px;
 }
 
 
@@ -80,6 +84,7 @@ th, td {
     margin-bottom: 2px;
     margin-top: 2px;
     margin-left: 5%;
+    border-radius: 7px;
 }
 
 .button2:hover {
@@ -95,6 +100,7 @@ th, td {
     margin-bottom: 2px;
     margin-top: 2px;
     margin-left: 5%;
+    border-radius: 7px;
 }
 
 .button3:hover {
