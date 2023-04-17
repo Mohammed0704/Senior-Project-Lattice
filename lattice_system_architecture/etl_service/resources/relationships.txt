@@ -5,7 +5,7 @@ CALL apoc.periodic.iterate(
 	WHERE a.associated_course_code = b.`course code`
 	RETURN a, b
 ",
-"CALL apoc.create.relationship(a, 'is Instance Of', {}, b)
+"CALL apoc.create.relationship(a, 'is instance of', {}, b)
 	YIELD rel
 	RETURN rel
 ",
@@ -33,7 +33,7 @@ CALL apoc.periodic.iterate(
 	WHERE a.college_name = b.name
 	RETURN a, b
 ",
-"CALL apoc.create.relationship(a, 'is In', {}, b)
+"CALL apoc.create.relationship(a, 'is in', {}, b)
 	YIELD rel
 	RETURN rel
 ",
@@ -108,6 +108,36 @@ CALL apoc.periodic.iterate(
 	RETURN a, b
 	",
 	"CALL apoc.create.relationship(a, 'is head of', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
+//:
+
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:Registration),
+		(b:Class)
+	WHERE a.crm = b.crn
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'is a', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
+//:
+
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:Student),
+		(b:Registration)
+	WHERE a.drexel_id = b.drexel_id
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'is registered for', {}, b)
 		YIELD rel
 		RETURN rel
 	",
