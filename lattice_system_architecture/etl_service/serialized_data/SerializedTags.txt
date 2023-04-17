@@ -53,7 +53,8 @@
         "columns_tagged": [
             "postgres.education.departments.college_name",
             "postgres.education.departments.url",
-            "postgres.education.departments.main_office_location"
+            "postgres.education.departments.main_office_location",
+            "postgres.education.departments.department_head"
         ]
     },
     "Department.join": {

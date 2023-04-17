@@ -86,6 +86,9 @@
         ],
         "department_name": [
             "Department.join"
+        ],
+        "department_head": [
+            "Department"
         ]
     },
     "mariadb.locations.student_locations": {
