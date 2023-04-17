@@ -84,3 +84,31 @@ CALL apoc.periodic.iterate(
 	{batchSize:1000}
 )
 //:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Employee),
+		(b:Class)
+	WHERE apoc.text.join([a.first_name, a.last_name], ' ') = b.instructor
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'Teaches', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Employee),
+		(b:Department)
+	WHERE apoc.text.join([a.first_name, a.last_name], ' ') = b.current_head
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'Is head of', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
