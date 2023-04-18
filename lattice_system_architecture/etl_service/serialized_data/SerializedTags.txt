@@ -13,6 +13,16 @@
             "elasticsearch.additional_info.area_of_study.name"
         ]
     },
+    "CampusLocation": {
+        "columns_tagged": [
+            "postgres.campus_life.locations.building_name",
+            "postgres.campus_life.locations.description",
+            "postgres.campus_life.locations.address",
+            "postgres.campus_life.locations.phone",
+            "postgres.campus_life.locations.email",
+            "postgres.campus_life.locations.website"
+        ]
+    },
     "Class": {
         "columns_tagged": [
             "mongo.classes.classes_info.description",

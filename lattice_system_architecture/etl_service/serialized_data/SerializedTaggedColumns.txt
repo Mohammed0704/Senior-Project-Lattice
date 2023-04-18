@@ -202,5 +202,25 @@
         "drexel_id": [
             "Registration"
         ]
+    },
+    "postgres.campus_life.locations": {
+        "building_name": [
+            "CampusLocation"
+        ],
+        "description": [
+            "CampusLocation"
+        ],
+        "address": [
+            "CampusLocation"
+        ],
+        "phone": [
+            "CampusLocation"
+        ],
+        "email": [
+            "CampusLocation"
+        ],
+        "website": [
+            "CampusLocation"
+        ]
     }
 }
