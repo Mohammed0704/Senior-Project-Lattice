@@ -116,7 +116,7 @@ CALL apoc.periodic.iterate(
 //:
 
 CALL apoc.periodic.iterate('
-CALL apoc.load.csv("import/LibraryLogs.csv") yield map as row return row
+CALL apoc.load.csv("import/logs/LibraryLogs.csv") yield map as row return row
 ','
 MATCH (s:Student {drexel_id:row.drexelID}), (cl:CampusLocation {building_name:row.location})
 CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, cl)
@@ -126,10 +126,20 @@ RETURN rel;
 //:
 
 CALL apoc.periodic.iterate('
-CALL apoc.load.csv("import/RecreationCenterLogs.csv") yield map as row return row
+CALL apoc.load.csv("import/logs/RecreationCenterLogs.csv") yield map as row return row
 ','
 MATCH (s:Student {drexel_id:row.drexelID}), (cl:CampusLocation {building_name:row.location})
 CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, cl)
+YIELD rel
+RETURN rel;
+', {batchSize:1000, iterateList:true, parallel:true});
+//:
+
+CALL apoc.periodic.iterate('
+CALL apoc.load.csv("import/logs/SystemsLogs.csv") yield map as row return row
+','
+MATCH (s:Student {drexel_id:row.drexelID}), (sys:System {name:row.system})
+CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, sys)
 YIELD rel
 RETURN rel;
 ', {batchSize:1000, iterateList:true, parallel:true});

@@ -221,6 +221,38 @@
         ],
         "website": [
             "CampusLocation"
+        ],
+        "sign_in_required": [
+            "CampusLocation"
+        ]
+    },
+    "cassandra.finances.software_costs": {
+        "software": [
+            "System.join"
+        ],
+        "drexel_annual_license_cost": [
+            "System"
+        ]
+    },
+    "mongo.classes.software": {
+        "name": [
+            "System.join",
+            "System"
+        ],
+        "description": [
+            "System"
+        ],
+        "link": [
+            "System"
+        ],
+        "student_cost_per_term": [
+            "System"
+        ],
+        "software_type": [
+            "System"
+        ],
+        "is_downloadable": [
+            "System"
         ]
     }
 }

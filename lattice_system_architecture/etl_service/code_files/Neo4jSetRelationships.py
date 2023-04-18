@@ -5,8 +5,7 @@ except:
 import pandas as pd
 from pandas import json_normalize
 from ast import literal_eval
-import csv
-import json
+import os
 
 class Neo4jSetRelationships:
   relationsPath = "/resources/relationships.txt"
@@ -31,8 +30,13 @@ class Neo4jSetRelationships:
   
   #copies CSVs of logs into import directory in docker (volume, AKA neo4j/import/)
   def importLogFilesAsCSV(self):
+
+    #need to run from code_files folder
     logsPath = '../../../lattice_databases/elasticsearch/data_files/logs/'
-    targetPath = '../../neo4j/import/' #path to volume to put the new csvs into
+    targetPath = '../../neo4j/import/logs/' #path to volume to put the new csvs into
+
+    if not os.path.exists(targetPath):
+      os.mkdir(targetPath)
 
     logFiles = ['LibraryLogs.json', 'RecreationCenterLogs.json', 'SystemsLogs.json']
     targetFiles = ['LibraryLogs.csv', 'RecreationCenterLogs.csv', 'SystemsLogs.csv']

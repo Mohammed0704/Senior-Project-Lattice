@@ -34,8 +34,9 @@ class CSVExecution(GraphLoaderExecutionStrategy):
         queryToCSV = QueryToCSV()
 
         #removes old data object CSVs
-        for oldDataObjectFile in os.listdir(os.environ["import_directory"]):
-            os.remove(os.environ["import_directory"] + oldDataObjectFile)
+        for filename in os.listdir(os.environ["import_directory"]):
+            if not os.path.isdir(os.path.join(os.environ["import_directory"], filename)):
+                os.remove(os.environ["import_directory"] + filename)
 
         #generates a data object CSV for each utilized tag
         time = None #time is currently not utilized in the final name of the resulting CSVs TODO: Update this comment when this changes
@@ -67,8 +68,16 @@ class NodeCreationExecution(GraphLoaderExecutionStrategy):
     
 class RelationshipCreationExecution(GraphLoaderExecutionStrategy):
     def execute(self) -> str:
+
+        setRelObs = Neo4jSetRelationships()
+
+        #import logs jsons as csvs to that relationships can reference them
+        #TODO: COMPLETELY BUSTED, Jsons are local but need to put them into volume but volume is always cleared
+        #TODO: maybe making sure they don't get deleted on new load is the solution, then i don't need this? -Matt
+        #setRelObs.importLogFilesAsCSV()
+
         #create relationships based on text file
-        Neo4jSetRelationships().setRelationships()
+        setRelObs.setRelationships()
         return "Neo4j relationships created!"
     
 class Neo4jLinkExecution(GraphLoaderExecutionStrategy):
