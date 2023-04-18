@@ -102,11 +102,22 @@
             "postgres.education.programs.description"
         ]
     },
+    "Registration": {
+        "columns_tagged": [
+            "cassandra.registration.class_registration.reg_code",
+            "cassandra.registration.class_registration.crm",
+            "cassandra.registration.class_registration.drexel_id"
+        ]
+    },
     "Student": {
         "columns_tagged": [
             "mariadb.drexel_people.basic_student_info.date_of_birth",
             "mariadb.locations.student_locations.living_address",
-            "mariadb.locations.student_locations.is_communter"
+            "mariadb.locations.student_locations.is_communter",
+            "mariadb.drexel_people.basic_student_info.email",
+            "mariadb.drexel_people.basic_student_info.student_program_type",
+            "mariadb.drexel_people.basic_student_info.phone",
+            "mariadb.drexel_people.basic_student_info.home_address"
         ]
     },
     "Student.concat.full_name.1": {
