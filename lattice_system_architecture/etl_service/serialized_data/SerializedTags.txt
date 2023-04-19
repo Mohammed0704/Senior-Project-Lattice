@@ -13,6 +13,17 @@
             "elasticsearch.additional_info.area_of_study.name"
         ]
     },
+    "CampusLocation": {
+        "columns_tagged": [
+            "postgres.campus_life.locations.building_name",
+            "postgres.campus_life.locations.description",
+            "postgres.campus_life.locations.address",
+            "postgres.campus_life.locations.phone",
+            "postgres.campus_life.locations.email",
+            "postgres.campus_life.locations.website",
+            "postgres.campus_life.locations.sign_in_required"
+        ]
+    },
     "Class": {
         "columns_tagged": [
             "mongo.classes.classes_info.description",
@@ -139,6 +150,23 @@
         "columns_tagged": [
             "mariadb.drexel_people.basic_student_info.drexel_id",
             "mariadb.locations.student_locations.drexel_id"
+        ]
+    },
+    "System": {
+        "columns_tagged": [
+            "cassandra.finances.software_costs.drexel_annual_license_cost",
+            "mongo.classes.software.name",
+            "mongo.classes.software.description",
+            "mongo.classes.software.link",
+            "mongo.classes.software.student_cost_per_term",
+            "mongo.classes.software.software_type",
+            "mongo.classes.software.is_downloadable"
+        ]
+    },
+    "System.join": {
+        "columns_tagged": [
+            "cassandra.finances.software_costs.software",
+            "mongo.classes.software.name"
         ]
     }
 }

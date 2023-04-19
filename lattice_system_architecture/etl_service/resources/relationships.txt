@@ -5,7 +5,7 @@ CALL apoc.periodic.iterate(
 	WHERE a.associated_course_code = b.`course code`
 	RETURN a, b
 ",
-"CALL apoc.create.relationship(a, 'is instance of', {}, b)
+"CALL apoc.create.relationship(a, 'is Instance Of', {}, b)
 	YIELD rel
 	RETURN rel
 ",
@@ -33,7 +33,7 @@ CALL apoc.periodic.iterate(
 	WHERE a.college_name = b.name
 	RETURN a, b
 ",
-"CALL apoc.create.relationship(a, 'is in', {}, b)
+"CALL apoc.create.relationship(a, 'is In', {}, b)
 	YIELD rel
 	RETURN rel
 ",
@@ -115,32 +115,32 @@ CALL apoc.periodic.iterate(
 )
 //:
 
-CALL apoc.periodic.iterate(
-	"MATCH
-		(a:Registration),
-		(b:Class)
-	WHERE a.crm = b.crn
-	RETURN a, b
-	",
-	"CALL apoc.create.relationship(a, 'is a', {}, b)
-		YIELD rel
-		RETURN rel
-	",
-	{batchSize:1000}
-)
+CALL apoc.periodic.iterate('
+CALL apoc.load.csv("import/logs/LibraryLogs.csv") yield map as row return row
+','
+MATCH (s:Student {drexel_id:row.drexelID}), (cl:CampusLocation {building_name:row.location})
+CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, cl)
+YIELD rel
+RETURN rel;
+', {batchSize:1000, iterateList:true, parallel:true});
 //:
 
-CALL apoc.periodic.iterate(
-	"MATCH
-		(a:Student),
-		(b:Registration)
-	WHERE a.drexel_id = b.drexel_id
-	RETURN a, b
-	",
-	"CALL apoc.create.relationship(a, 'is registered for', {}, b)
-		YIELD rel
-		RETURN rel
-	",
-	{batchSize:1000}
-)
+CALL apoc.periodic.iterate('
+CALL apoc.load.csv("import/logs/RecreationCenterLogs.csv") yield map as row return row
+','
+MATCH (s:Student {drexel_id:row.drexelID}), (cl:CampusLocation {building_name:row.location})
+CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, cl)
+YIELD rel
+RETURN rel;
+', {batchSize:1000, iterateList:true, parallel:true});
+//:
+
+CALL apoc.periodic.iterate('
+CALL apoc.load.csv("import/logs/SystemsLogs.csv") yield map as row return row
+','
+MATCH (s:Student {drexel_id:row.drexelID}), (sys:System {name:row.system})
+CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, sys)
+YIELD rel
+RETURN rel;
+', {batchSize:1000, iterateList:true, parallel:true});
 //:
