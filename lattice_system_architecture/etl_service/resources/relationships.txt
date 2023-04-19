@@ -115,6 +115,36 @@ CALL apoc.periodic.iterate(
 )
 //:
 
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:Registration),
+		(b:Class)
+	WHERE a.crm = b.crn
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'is a', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
+//:
+
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:Student),
+		(b:Registration)
+	WHERE a.drexel_id = b.drexel_id
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'is registered for', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
+//:
+
 CALL apoc.periodic.iterate('
 CALL apoc.load.csv("import/logs/LibraryLogs.csv") yield map as row return row
 ','
