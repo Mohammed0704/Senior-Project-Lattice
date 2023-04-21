@@ -9,6 +9,7 @@ services:
     restart: always
     ports:
       - 3306:3306
+    command: --max_allowed_packet=67108864
     environment:
       MYSQL_ROOT_PASSWORD: user
       MYSQL_DATABASE: mariadb
