@@ -65,3 +65,19 @@
     right: 0;
     top: 230px;
 }
+
+  #load-button.spinner::after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: .2em solid currentColor;
+    border-right-color: transparent;
+    animation: spinner .6s linear infinite;
+  }
+  
+  @keyframes spinner {
+    to {transform: rotate(360deg);}
+  }

@@ -21,12 +21,13 @@
 </body>
 </center>
 
+
 <script src="/static_files/jquery-3.1.1.js"></script>
 
 <script>
-function execute(executionIndex)
-{
+function execute(executionIndex) {
   const executionContainerText = document.querySelector('#execution-container-text');
+  const loadButton = document.getElementById("load-button");
 
   console.log("fetching!");
   fetch('/loader/load', {
@@ -41,27 +42,25 @@ function execute(executionIndex)
     console.log(data);
     if (data.returnMessage == "END_OF_EXECUTION") {
       console.log("end of execution");
-      const loadButton = document.getElementById("load-button");
       loadButton.disabled = false;
-      loadButton.removeAttribute("disabled");
+      loadButton.classList.remove("spinner"); // remove "spinner" class from button
+      loadButton.innerHTML = "Load Data"; // restore button text
     } else {
       console.log("next execution");
-
       executionContainerText.innerHTML = executionContainerText.innerHTML + "<br></br>" + data.returnMessage
-
       tempExecutionIndex = executionIndex + 1;
       execute(tempExecutionIndex); //recursive call
     }
   });
 }
 
-$("#load-button").click(function(event)
-{  
+$("#load-button").click(function(event) {
   const loadButton = document.getElementById("load-button");
   const executionContainerText = document.getElementById("execution-container-text");
 
   loadButton.disabled = true;
-  loadButton.setAttribute("disabled", true);
+  loadButton.innerHTML = "Loading...";
+  loadButton.classList.add("spinner"); // add "spinner" class to button
 
   executionContainerText.innerHTML = "";
 
