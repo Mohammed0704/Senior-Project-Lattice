@@ -4,7 +4,7 @@ version: "3.1"
 
 services:
   trino:
-    image: 'trinodb/trino:latest'
+    image: 'trinodb/trino:411'
     container_name: trino
     ports:
       - '8080:8080'
@@ -17,5 +17,44 @@ services:
     #     context: ./etl_service
     #     dockerfile: Dockerfile
     container_name: etl-service
-    ports: 
+    ports:
       - '4999:4999'
+    environment:
+      trino_host: trino
+      trino_port: 8080
+      trino_user: trino
+      import_directory: data_object_import_data/
+    volumes:
+      - ./etl_service/serialized_data:/serialized_data
+      - ./etl_service/resources:/resources
+      - ./trino/etc/catalog:/catalog
+      - ./neo4j/import:/data_object_import_data #generated CSV data in the etl-service container is handed off to Neo4j's import directory
+
+  neo4j:
+    container_name: neo4j
+    image: neo4j:5.1
+    restart: unless-stopped
+    ports:
+      - 7474:7474
+      - 7687:7687
+    environment:
+      NEO4J_AUTH: neo4j/password
+      NEO4j_dbms_security_procedures_allowlist: apoc.*
+      NEO4J_server_memory_pagecache_size: 1G
+      NEO4J_server_memory_heap_max__size: 1G
+      NEO4J_server_directories_plugins: /var/lib/neo4j/plugins
+      NEO4J_server_default__listen__address: 0.0.0.0
+      NEO4J_dbms_security_procedures_unrestricted: apoc.*
+      NEO4J_dbms_security_auth__enabled: "false"
+      NEO4J_dbms_security_allow__csv__import__from__file__urls: "true"
+      NEO4J_server_config_strict__validation_enabled: "false"
+      NEO4J_db_tx__log_rotation_retention__policy: 100M size
+      NEO4J_server_directories_logs: /logs
+      NEO4J_apoc_export_file_enabled: "true"
+      NEO4J_apoc_import_file_enabled: "true"
+
+
+    volumes:
+      - ./neo4j/conf:/var/lib/neo4j/conf
+      - ./neo4j/import:/var/lib/neo4j/import
+      - ./neo4j/plugins:/var/lib/neo4j/plugins

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<link rel='stylesheet' href='/static_files/main.css' />
+<link rel='stylesheet' href='/static_files/portal_tag_management.css' />
+ 
+<center>
+  <head>
+      <title>Tag Management Portal</title>
+      <b>
+          <h1 style="margin-bottom: 1.5%;">Tag Management Portal</h1>
+      </b>
+  </head>
+  
+  <body>
+    <div id="outer-content-box">
+      <p id="title">Create New Tag</p>
+      <div id="inner-content-box" style="border:1px solid black;">
+        <p id="result"></p>
+        <form id="create-form">
+          <label for="Tag" id="label_text">Tag</label>
+          <input type="text" id="Tag" name="Tag" value="">
+        </form>
+      </div>
+      <div style="display: flex">
+        <a href="/tags">
+          <button class="button button3">Back</button>
+        </a>
+        <button class="button button2" id="create-button">Create</button>
+      </div>
+    </div>
+</body>
+</center>
+
+<script>
+  const form = document.querySelector('#create-form');
+  const createButton = document.querySelector('#create-button');
+  const result = document.querySelector('#result');
+ 
+  createButton.addEventListener('click', function() {
+    const tag = form.elements.Tag.value;
+    if (tag.includes(' ') || tag == "") {
+      result.innerHTML = `<p id="error-message">Cannot have spaces in the tag name</p>`;
+      return;
+    }
+    const tag_dict = JSON.stringify({'tag_name': tag});
+ 
+    fetch('/tags/create/create-tag', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: tag_dict
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data);
+      if (data.success) {
+        result.innerHTML = `<p id="success-message">Tag "${tag}" was added</p>`;
+        form.elements.Tag.value = "";
+      } else {
+        result.innerHTML = `<p id="error-message">Tag "${tag}" already exists</p>`;
+      }
+    });
+  });
+ </script>
+
+</html>

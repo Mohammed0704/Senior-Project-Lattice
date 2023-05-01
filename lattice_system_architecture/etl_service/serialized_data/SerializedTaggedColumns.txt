@@ -1,0 +1,258 @@
+{
+    "mariadb.drexel_people.basic_student_info": {
+        "date_of_birth": [
+            "Student"
+        ],
+        "drexel_id": [
+            "Student.join"
+        ],
+        "first_name": [
+            "Student.concat.full_name.1"
+        ],
+        "middle_name": [
+            "Student.concat.full_name.2"
+        ],
+        "last_name": [
+            "Student.concat.full_name.3"
+        ],
+        "email": [
+            "Student"
+        ],
+        "student_program_type": [
+            "Student"
+        ],
+        "phone": [
+            "Student"
+        ],
+        "home_address": [
+            "Student"
+        ]
+    },
+    "mongo.courses.courses_info": {
+        "course code": [
+            "Course.join"
+        ],
+        "course title": [
+            "Course"
+        ],
+        "college": [
+            "Course"
+        ]
+    },
+    "mongo.courses.courses_requirements": {
+        "course code": [
+            "Course.join"
+        ],
+        "prerequisites": [
+            "Course"
+        ],
+        "corequisites": [
+            "Course"
+        ]
+    },
+    "mongo.classes.classes_info": {
+        "crn": [
+            "Class.join"
+        ],
+        "description": [
+            "Class"
+        ],
+        "instructor": [
+            "Class"
+        ],
+        "associated_course_code": [
+            "Class"
+        ]
+    },
+    "mongo.classes.classes_instruction_info": {
+        "crn": [
+            "Class.join"
+        ],
+        "professor": [
+            "Class"
+        ]
+    },
+    "postgres.education.colleges": {
+        "name": [
+            "College"
+        ],
+        "address": [
+            "College"
+        ],
+        "campus": [
+            "College"
+        ],
+        "contact_email": [
+            "College"
+        ]
+    },
+    "postgres.education.departments": {
+        "college_name": [
+            "Department"
+        ],
+        "url": [
+            "Department"
+        ],
+        "main_office_location": [
+            "Department"
+        ],
+        "department_name": [
+            "Department.join"
+        ],
+        "department_head": [
+            "Department"
+        ]
+    },
+    "mariadb.locations.student_locations": {
+        "drexel_id": [
+            "Student.join"
+        ],
+        "living_address": [
+            "Student"
+        ],
+        "is_communter": [
+            "Student"
+        ]
+    },
+    "postgres.education.areas_of_study": {
+        "department": [
+            "AreaOfStudy"
+        ],
+        "name": [
+            "AreaOfStudy.join"
+        ]
+    },
+    "elasticsearch.additional_info.area_of_study": {
+        "name": [
+            "AreaOfStudy.join"
+        ],
+        "has minor": [
+            "AreaOfStudy"
+        ],
+        "has major": [
+            "AreaOfStudy"
+        ],
+        "has certificate": [
+            "AreaOfStudy"
+        ]
+    },
+    "postgres.education.programs": {
+        "program_name": [
+            "Program"
+        ],
+        "area_of_study": [
+            "Program"
+        ],
+        "is_stem": [
+            "Program"
+        ],
+        "is_graduate_program": [
+            "Program"
+        ],
+        "description": [
+            "Program"
+        ]
+    },
+    "postgres.campus_life.housing_options": {
+        "address": [
+            "Housing"
+        ],
+        "url": [
+            "Housing"
+        ],
+        "is_affiliated_housing": [
+            "Housing"
+        ]
+    },
+    "mariadb.drexel_people.basic_employee_info": {
+        "date_of_birth": [
+            "Employee"
+        ],
+        "first_name": [
+            "Employee.concat.full_name.1"
+        ],
+        "last_name": [
+            "Employee.concat.full_name.2"
+        ],
+        "primary_department": [
+            "Employee"
+        ],
+        "drexel_id": [
+            "Employee.join"
+        ]
+    },
+    "cassandra.finances.employee_salaries": {
+        "drexel_id": [
+            "Employee.join"
+        ],
+        "annual_salary": [
+            "Employee"
+        ],
+        "job_title": [
+            "Employee"
+        ]
+    },
+    "cassandra.registration.class_registration": {
+        "reg_code": [
+            "Registration"
+        ],
+        "crm": [
+            "Registration"
+        ],
+        "drexel_id": [
+            "Registration"
+        ]
+    },
+    "postgres.campus_life.locations": {
+        "building_name": [
+            "CampusLocation"
+        ],
+        "description": [
+            "CampusLocation"
+        ],
+        "address": [
+            "CampusLocation"
+        ],
+        "phone": [
+            "CampusLocation"
+        ],
+        "email": [
+            "CampusLocation"
+        ],
+        "website": [
+            "CampusLocation"
+        ],
+        "sign_in_required": [
+            "CampusLocation"
+        ]
+    },
+    "cassandra.finances.software_costs": {
+        "software": [
+            "System.join"
+        ],
+        "drexel_annual_license_cost": [
+            "System"
+        ]
+    },
+    "mongo.classes.software": {
+        "name": [
+            "System.join",
+            "System"
+        ],
+        "description": [
+            "System"
+        ],
+        "link": [
+            "System"
+        ],
+        "student_cost_per_term": [
+            "System"
+        ],
+        "software_type": [
+            "System"
+        ],
+        "is_downloadable": [
+            "System"
+        ]
+    }
+}

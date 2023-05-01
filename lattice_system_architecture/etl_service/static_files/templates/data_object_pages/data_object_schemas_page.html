@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<link rel='stylesheet' href='/static_files/main.css' />
+<link rel='stylesheet' href='/static_files/data_object_pages.css' />
+ 
+<center>
+  <head>
+      <title>Data Object Management Portal</title>
+      <b>
+          <h1 style="margin-bottom: 1.5%;">Data Object Management Portal</h1>
+      </b>
+  </head>
+  
+  <body>
+    <div id="outer-content-box">
+      <div class="sub-title-container">
+        <div class="sub-title"><b>Connection:</b> {{ connectionName }}</div>
+      </div>
+      <div style="height: 75%;" id="inner-content-box">
+        <table id="inner-table">
+          <tr id="table-header">
+            <th><p class="table-title">Schemas</p></th>
+          </tr>
+          {% for value in schemaList %}
+          <tr>
+            <td><a href="/objects/{{ connectionName }}/{{ value }}"> {{ value }}</a></td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <a href="/objects" class="button button1">Back</a>
+    </div>
+  </body>
+</center>
+
+</html>

@@ -3,21 +3,50 @@
     display: flex;
     background-color: lightgray;
     font-size: 30px;
-    width: 90%;
-    height: 72%;
-    justify-content: space-evenly;
+    width: 97%;
+    height: 75%;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     border-style: solid;
-    border-width: thin;
+    border-width: thick;
+    border-radius: 10px;
 }
 
 #inner-content-box
 {
     background-color: darkgray;
-    height: 71.4%;
     width: 95%;
     overflow: auto;
+    border:1px solid black;
+}
+
+#content {
+    display: flex;
+    width: 97%;
+    height: 95%;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#content .left {
+    width: 55%;
+}
+
+#content .right {
+    width: 45%;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#button-div {
+    justify-content: center;
 }
 
 #title
@@ -28,34 +57,70 @@
     font-weight: bold;
 }
 
+#usage-table {
+    width: 95%;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}
+
+#usage-table tr {
+    display: none;
+}
+
+#usage-table #table-header {
+    display: table-row;
+}
+
+#table-footer {
+    position: sticky;
+    bottom: 0;
+    background: darkgrey;
+    border: 1px solid black;
+}
+
 table
 {
     width: 100%;
     place-content: center;
-    border:1px solid black;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+table th {
+    /* Apply both top and bottom borders to the <th> */
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+table #table-footer td {
+    /* Apply both top and bottom borders to the <th> */
+    border-right: 0px solid black;
+    border-top: 1px solid black;
 }
 
 tr
 {
     border: 1px solid black;
-    height: 80px;
+    height: 60px;
 }
 
-th, td {
+td {
     border-right: 1px solid black;
-    padding-left: 1%;
-    padding-right: 1%;
+    border-bottom: 1px solid black;
     font-size: 18px;
     text-align: center;
 }
 
 .button {
-    border: 1px solid black;
     font-size: 25px;
     padding: 16px 32px;
     margin: 4px 2px;
     cursor: pointer;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-bottom-width: 1px;
+    border-radius: 7px;
 }
 
 .button1 {
@@ -63,15 +128,119 @@ th, td {
     color: black;
     font-weight: bold;
     position: relative;
-    float: right;
-    bottom: 0%;
-    right: -39.7%;
-    margin-bottom: 0%;
-    margin-top: 0%;
+    margin: auto;
+    border-radius: 7px;
 }
+
 
 .button1:hover {
     background-color: darkgray;
 }
 
+/* Style for Create New Tag Page */
+#label_text
+{
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
+input {
+    padding: 8px 20px;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-color: lightgray;
+    font-size: 20px;
+}
+
+.usage-button {
+    border: 1px solid black;
+    font-size: 18px;
+    padding: 5px;
+    margin: 0%;
+    cursor: pointer;
+    display: flex;
+    border-radius: 7px;
+}
+
+.button2 {
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    float: right;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    margin-left: 5%;
+    border-radius: 7px;
+}
+
+.button2:hover {
+    background-color: darkgray;
+}
+
+.button3 {
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    float: left;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    margin-left: 3%;
+    border-radius: 7px;
+}
+
+.button3:hover {
+    background-color: darkgray;
+}
+
+#success-message{
+    color: green;
+    margin-bottom: 0px;
+}
+
+#error-message{
+    color: red;
+    margin-bottom: 0px;
+    height: 10px;
+}
+
+#result{
+    height: 20px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#create-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2px;
+    margin-top: 0px;
+}
+
+.create-button {
+    border: 1px solid black;
+    font-size: 18px;
+    padding: 5px;
+    margin: 0%;
+    margin-top: 15px;
+    cursor: pointer;
+    display: flex;
+    border-radius: 7px;
+}
+
+.create-button1 {
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    margin: auto;
+    border-radius: 7px;
+}
+
+.create-button1:hover {
+    background-color: darkgray;
+}
