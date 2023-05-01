@@ -136,6 +136,13 @@
   const createButton = document.querySelector('#create-button');
   const result = document.querySelector('#result');
  
+  $(document).on("keypress", "#Tag", function (event) {
+  if (event.which === 13) {
+    event.preventDefault();
+    $("#create-button").click();
+  }
+});
+
   createButton.addEventListener('click', function() {
     const tag = form.elements.Tag.value;
     if (tag.includes(' ') || tag == "") {
