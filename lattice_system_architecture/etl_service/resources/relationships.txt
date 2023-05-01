@@ -145,6 +145,48 @@ CALL apoc.periodic.iterate(
 )
 //:
 
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Course),
+		(b:Course)
+	WHERE a.prerequisites contains b.`course code`
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'Requires', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Course),
+		(b:College)
+	WHERE a.college = b.name
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'Is In', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Student),
+		(b:AreaOfStudy)
+	WHERE a.majors contains b.name OR a.minors contains b.name
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'studies in', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
 CALL apoc.periodic.iterate('
 CALL apoc.load.csv("import/logs/LibraryLogs.csv") yield map as row return row
 ','

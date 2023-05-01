@@ -37,6 +37,9 @@
         ],
         "college": [
             "Course"
+        ],
+        "credits": [
+            "Course"
         ]
     },
     "mongo.courses.courses_requirements": {
@@ -83,6 +86,15 @@
             "College"
         ],
         "contact_email": [
+            "College"
+        ],
+        "description": [
+            "College"
+        ],
+        "url": [
+            "College"
+        ],
+        "year_founded": [
             "College"
         ]
     },
@@ -253,6 +265,28 @@
         ],
         "is_downloadable": [
             "System"
+        ]
+    },
+    "postgres.education.student_education_choices": {
+        "drexel_id": [
+            "Student.join"
+        ],
+        "majors": [
+            "Student"
+        ],
+        "minors": [
+            "Student"
+        ]
+    },
+    "cassandra.finances.tuition": {
+        "drexel_id": [
+            "Student.join"
+        ],
+        "annual_financial_aid_award": [
+            "Student"
+        ],
+        "outstanding_balances": [
+            "Student"
         ]
     }
 }

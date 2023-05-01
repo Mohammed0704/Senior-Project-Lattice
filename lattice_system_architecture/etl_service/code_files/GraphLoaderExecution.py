@@ -60,9 +60,10 @@ class NodeCreationExecution(GraphLoaderExecutionStrategy):
 
         #generate and send query to Neo4j for each data object CSV
         for dataObjectFile in os.listdir(os.environ["import_directory"]):
-            dataObjectFileName = os.fsdecode(dataObjectFile)
-            cypherCreateQuery = cypherGeneration.generateCypherCreate(dataObjectFileName)
-            Neo4jConnection.query(cypherCreateQuery)
+            if ".csv" in dataObjectFile:
+                dataObjectFileName = os.fsdecode(dataObjectFile)
+                cypherCreateQuery = cypherGeneration.generateCypherCreate(dataObjectFileName)
+                Neo4jConnection.query(cypherCreateQuery)
         
         return "Neo4j nodes created!"
     
