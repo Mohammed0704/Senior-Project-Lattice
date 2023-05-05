@@ -180,7 +180,7 @@ CALL apoc.periodic.iterate(
 	WHERE a.majors contains b.program_name OR a.minors contains b.program_name
 	RETURN a, b
 ",
-"CALL apoc.create.relationship(a, 'studies in', {}, b)
+"CALL apoc.create.relationship(a, 'enrolled in', {}, b)
 	YIELD rel
 	RETURN rel
 ",
