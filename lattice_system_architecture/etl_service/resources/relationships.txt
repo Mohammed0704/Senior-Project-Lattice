@@ -176,8 +176,8 @@ CALL apoc.periodic.iterate(
 CALL apoc.periodic.iterate(
 "MATCH 
 		(a:Student),
-		(b:AreaOfStudy)
-	WHERE a.majors contains b.name OR a.minors contains b.name
+		(b:Program)
+	WHERE a.majors contains b.program_name OR a.minors contains b.program_name
 	RETURN a, b
 ",
 "CALL apoc.create.relationship(a, 'studies in', {}, b)
