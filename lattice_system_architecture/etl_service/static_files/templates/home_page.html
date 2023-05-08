@@ -23,38 +23,116 @@
         padding-bottom: 0px;
     }
 
-</style>
+    .link-object:hover {
+        opacity: 0.75;
+    }
 
-<center>
+    #header-text {
+        font-size: 20px;
+    }
+
+    #myheader {
+      background-color: #4779C5;
+      color: #ffffff;
+      padding: 0;
+      margin: 0;
+      height: 12vh;
+      width: 100%;
+    }
+
+    #myfooter {
+      background-color: #4779C5;
+      color: #ffffff;
+      padding: 0;
+      height: 8vh;
+      width: 100%;
+    }
+    
+    #logo {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 10vh;
+      object-fit: contain;
+      box-shadow: 2px 2px 3px 0px rgba(0,0,0);
+    }
+
+    .logo:hover {
+        opacity: 0.80;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+ 
+    #wrapper {
+      flex: 1;
+    }
+
+    .column {
+      object-fit: contain;
+    }
+
+    .is-clickable {
+      cursor: pointer !important;
+    }
+
+</style>
     <body>
-        <header id="myheader" class="header">this is a header</header>
+        <header id="myheader" class="navbar columns is-mobile is-centered is-vcentered">
+            <div class="column has-text-centered">
+                <a href="{{ url_for('home') }}">
+                    <img id="logo" src="{{ url_for('static', filename='new_logo_1.png') }}" alt="Data made simple">
+                </a>
+            </div>
+            <div class="column has-text-centered">
+                <b><p id="header-text">{{ headerText }}</p></b>
+            </div>
+        </header>
         <div id="wrapper">
             <section class="section">
                 <div class="container">
-                    <!--<object class="menu_template" data="/static_files/templates/menu_template.html"></object>-->
-                    <!--<h1><img id="logo" src="{{ url_for('static', filename='new_logo_1.png') }}" alt="Data made simple" /></h1>-->
                     <div class="link-objects">
-                        <div class="columns is-centered is-vcentered is-multiline">
-                            <div class="column">
-                                <img class="link-object" src="{{ url_for('static', filename='DataSourceConnections.png') }}" alt="Data made simple">
+                        <div style="margin-top: 2%;" class="columns is-centered is-multiline">
+                            <div style="margin-left: 5%;" class="column"> <!-- NOTE: Messes up the formatting on window shrink but makes the columns even-->
+                                <a href="{{ url_for('connections') }}">
+                                    <img class="link-object" src="{{ url_for('static', filename='DataSourceConnections_2.png') }}" alt="Data made simple">
+                                </a>
                             </div>
                             <div class="column">
-                                <img class="link-object" src="{{ url_for('static', filename='DataSourceConnections.png') }}" alt="Data made simple">
+                                <a href="{{ url_for('tags') }}">
+                                    <img class="link-object" src="{{ url_for('static', filename='TagManagement.png') }}" alt="Data made simple">
+                                </a>
                             </div>
                         </div>
-                        <div class="columns is-centered is-vcentered">
-                            <div class="column">
-                                <img class="link-object" src="{{ url_for('static', filename='DataSourceConnections.png') }}" alt="Data made simple">
+                        <div class="columns is-centered">
+                            <div style="margin-left: 5%;" class="column"> <!-- NOTE: Messes up the formatting on window shrink but makes the columns even-->
+                                <a href="{{ url_for('objects') }}">
+                                    <img class="link-object" src="{{ url_for('static', filename='DataObjectManagement.png') }}" alt="Data made simple">
+                                </a>
                             </div>
                             <div class="column">
-                                <img class="link-object" src="{{ url_for('static', filename='DataSourceConnections.png') }}" alt="Data made simple">
+                                <a href="{{ url_for('loader') }}">
+                                <img class="link-object" src="{{ url_for('static', filename='GraphLoader.png') }}" alt="Data made simple">
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
-        <footer id="myfooter" class="footer hero is-fixed-bottom">This is a footer</footer>
+        <footer style="justify-content: space-evenly;" id="myfooter" class="footer hero is-fixed-bottom">
+            <div class="columns is-centered is-vcentered">
+                <div class="column has-text-centered">
+                    <p></p>
+                </div>
+                <div class="column has-text-centered">
+                    <p>Version 0.1</p>
+                    <p>2023</p>
+                </div>
+            </div>
+        </footer>
     </body>
-</center>
 </html>

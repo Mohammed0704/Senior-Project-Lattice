@@ -27,7 +27,7 @@ def test_connections():
 
 @app.route("/home")
 def home():
-    return render_template("home_page.html", headerText="This is a variable test")
+    return render_template("home_page.html", headerText="\"Bringing data together to answer complex questions\"")
 
 @app.route("/connections")
 def connections():
