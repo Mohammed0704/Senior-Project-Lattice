@@ -22,7 +22,7 @@ def base():
 
 @app.route("/home")
 def home():
-    return render_template("home_page.html")
+    return render_template("home_page.html", headerText="This is a variable test")
 
 @app.route("/connections")
 def connections():
@@ -147,6 +147,10 @@ def tagsCheck(tagToDelete):
                 return "True"
 
     return "False"
+
+@app.route("/test")
+def test():
+    return render_template("header.html", headerText="This is a variable test")
 
 @app.route("/objects")
 def objects():

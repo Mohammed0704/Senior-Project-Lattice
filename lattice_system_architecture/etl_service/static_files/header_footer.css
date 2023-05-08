@@ -1,0 +1,38 @@
+#myheader {
+    background-color: #4779C5;
+    color: #ffffff;
+    padding: 0;
+    height: 6vw;
+  }
+
+.header-content {
+    justify-content: space-evenly;
+}
+
+#myfooter {
+background-color: #4779C5;
+color: #ffffff;
+padding: 0;
+height: 6vw;
+}
+
+body {
+display: flex;
+min-height: 100vh;
+flex-direction: column;
+}
+
+#wrapper {
+flex: 1;
+}
+
+br {
+    display: block;
+    margin: 10px 0;
+ }
+
+#logo {
+    object-fit: contain;
+    max-width:100%;
+    max-height:100%;
+}
