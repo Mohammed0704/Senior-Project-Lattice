@@ -27,12 +27,12 @@ def test_connections():
 
 @app.route("/home")
 def home():
-    return render_template("home_page.html", headerText="\"Bringing data together to answer complex questions\"")
+    return render_template("home_page.html", headerText="Home")
 
 @app.route("/connections")
 def connections():
     connectionsList = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
-    return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
+    return render_template("data_source_connections.html", headerText="Data Source Connections", connectionsList=connectionsList)
 
 @app.route("/connections/remove/<connectionToDelete>", methods=['DELETE'])
 def connectionsRemove(connectionToDelete):
@@ -152,10 +152,6 @@ def tagsCheck(tagToDelete):
                 return "True"
 
     return "False"
-
-@app.route("/test")
-def test():
-    return render_template("header.html", headerText="This is a variable test")
 
 @app.route("/objects")
 def objects():

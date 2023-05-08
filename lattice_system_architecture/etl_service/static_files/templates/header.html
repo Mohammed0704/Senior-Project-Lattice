@@ -4,11 +4,11 @@
 
 <header id="myheader" class="navbar columns is-mobile is-centered is-vcentered">
     <div class="column has-text-centered">
+        <b><p id="header-text">{{ headerText }}</p></b>
+    </div>
+    <div class="column has-text-centered">
         <a href="{{ url_for('home') }}">
             <img id="logo" src="{{ url_for('static', filename='new_logo_1.png') }}" alt="Data made simple">
         </a>
-    </div>
-    <div class="column has-text-centered">
-        <b><p id="header-text">{{ headerText }}</p></b>
     </div>
 </header>

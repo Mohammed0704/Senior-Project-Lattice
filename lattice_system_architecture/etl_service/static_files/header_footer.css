@@ -1,5 +1,5 @@
 #header-text {
-    font-size: 20px;
+    font-size: 35px;
 }
 
 #myheader {
@@ -9,6 +9,7 @@
   margin: 0;
   height: 12vh;
   width: 100%;
+  border-bottom: 1.5px solid #000000;
 }
 
 #myfooter {
@@ -17,6 +18,11 @@
   padding: 0;
   height: 8vh;
   width: 100%;
+  border-top: 1.5px solid #000000;
+}
+
+#footer-text-1 {
+    font-size: 20px;
 }
 
 #logo {

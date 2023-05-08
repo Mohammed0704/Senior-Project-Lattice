@@ -148,3 +148,11 @@ th, td {
     margin-bottom: 18px;
     margin-top: 15px;
 }
+
+.is-clickable {
+    cursor: pointer !important;
+}
+
+.icon :hover{
+    color:red !important;
+}
