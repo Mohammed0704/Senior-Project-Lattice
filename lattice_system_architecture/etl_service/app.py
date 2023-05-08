@@ -20,6 +20,11 @@ import typing;
 def base():
     return redirect(url_for("home"))
 
+@app.route('/test/connections')
+def test_connections():
+    connectionsList = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
+    return render_template("test-connections.html", connectionsList=connectionsList)
+
 @app.route("/home")
 def home():
     return render_template("home_page.html", headerText="This is a variable test")
