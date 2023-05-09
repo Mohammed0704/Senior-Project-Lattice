@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/static_files/bulma/css/bulma.min.css"/>
   <link rel='stylesheet' href='/static_files/data_source_connections.css'/>
+  <link rel="stylesheet" href="/static_files/main.css"/>
 
   <head>
+    <title>Lattice - Data Source Connections</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  
   <body>
     {% include "header.html" %}
+    {% include "temp_menu_template.html" %}
     <div id="wrapper">
       <section class="section">
         <div class="container">
@@ -40,7 +42,7 @@
             </tbody>
           </table>
           <a href="/connections/create">
-            <button class="button button1">Create New Connection</button>
+            <button style="font-size: 19px;" class="button button1">Create New Connection</button>
           </a>
         </div>
       </section>
