@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+  <link rel="stylesheet" href="/static_files/bulma/css/bulma.min.css"/>
+  <link rel='stylesheet' href='/static_files/data_source_connections.css'/>
+  <link rel="stylesheet" href="/static_files/main.css"/>
+
+  <head>
+    <title>Lattice - Data Source Connections</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    {% include "header.html" %}
+    {% include "temp_menu_template.html" %}
+    <div id="wrapper">
+      <section class="section">
+        <div class="container">
+            <p id="result"></p>
+            <form id="form-create-connection" method="post">
+                <div class="field">
+                    <label for="name" class="label">Name</label>
+                    <div class="control">
+                        <input id="name" name="name" class="input" type="text" placeholder="cassandra-data">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="data_source" class="label">Data Source Type</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="data-source" name="data_source" value="">
+                                {% for databaseType in databaseTypes %}
+                                <option value="{{ databaseType }}">{{ databaseType }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="address" class="label">Address</label>
+                    <div class="control">
+                        <input id="address" name="address" class="input" type="text" placeholder="191.16.221.23">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="port" class="label">Port</label>
+                    <div class="control">
+                        <input type="number" id="port" name="port" value="" class="formInput" min="0" max="65535" placeholder="5432">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="username" class="label">Username</label>
+                    <div class="control">
+                        <input id="username" name="username" class="input" type="text" placeholder="admin">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="password" class="label">Password</label>
+                    <div class="control">
+                        <input id="password" name="password" class="input" type="password">
+                    </div>
+                </div>
+            </form>
+
+                <!--
+                <div class="field">
+                <label class="label">Data Source Type</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                    <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                    </span>
+                </div>
+                <p class="help is-success">This username is available</p>
+                </div>
+                
+                <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                    <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                    <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                </div>
+                <p class="help is-danger">This email is invalid</p>
+                </div>
+                -->
+                <div style="margin-top: 12px;" class="field is-grouped">
+                    <div class="control">
+                        <a href="/connections">
+                            <button style="font-size: 19px;" class="button button1">Back</button>
+                        </a>
+                    </div>
+                    <div class="control">
+                        <input style="font-size: 19px;" class="button button1" id="create-button" type="submit" value="Create New">
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+    </div>
+    {% include "footer.html" %}
+  </body>
+
+  <script src="/static_files/jquery-3.1.1.js"></script>
+
+  <script>
+    const form = document.querySelector('#form-create-connection');
+    const createButton = document.querySelector('#create-button');
+    const result = document.querySelector('#result');
+    
+    createButton.addEventListener('click', function(event) {
+      const portInput = document.querySelector('#port');
+      if (portInput.value < 0 || portInput.value > 65535) {
+        event.preventDefault();
+        result.innerText = 'Please enter a valid port number between 0 and 65535.';
+        result.style.color = 'red';
+      } else {
+        const name = form.elements.name.value;
+        const data_source = form.elements.data_source.value;
+        const address = form.elements.address.value;
+        const port = form.elements.port.value;
+        const username = form.elements.username.value;
+        const password = form.elements.password.value;
+
+        if (address.includes(' ') || address == "") {
+            event.preventDefault();
+            result.innerText = 'Please enter a valid address.';
+            result.style.color = 'red';
+            return;
+        }
+
+        if (name.includes(' ') || name == "") {
+            result.style.color = 'red';
+            result.innerHTML = `<p id="error-message">Cannot have spaces in the connection name</p>`;
+            return;
+        }
+        const connection_dict = JSON.stringify({
+          'name': name,
+          'data_source': data_source,
+          'address': address,
+          'port': port,
+          'username': username,
+          'password': password
+        });
+    
+        fetch('/connections/create', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: connection_dict
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log(data)
+          if (data.success) {
+            result.innerHTML = `<p id="success-message">Connection "${name}" was added</p>`;
+          } else {
+            result.innerHTML = `<p id="error-message">Connection "${name}" already exists</p>`;
+          }
+        });
+      } 
+    });
+   </script>
+</html>

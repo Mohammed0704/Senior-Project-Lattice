@@ -20,11 +20,6 @@ import typing;
 def base():
     return redirect(url_for("home"))
 
-@app.route('/test/connections')
-def test_connections():
-    connectionsList = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
-    return render_template("test-connections.html", connectionsList=connectionsList)
-
 @app.route("/home")
 def home():
     return render_template("home_page.html", headerText="Home")
@@ -83,7 +78,7 @@ def connections_create():
         trinoConnectorCreator.createConnector(newConn)
         return jsonify({"success": True, "message": "Connection has been created"})
     
-    return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html", databaseTypes=databaseTypes)   
+    return render_template("temp_data_source_connections_create.html", headerText="Data Source Connections", databaseTypes=databaseTypes)
     
 
 @app.route("/tags")
