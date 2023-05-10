@@ -2,7 +2,6 @@
 <html>
   <link rel='stylesheet' href='/static_files/portal_graph_loader.css' />
   <link rel="stylesheet" href="/static_files/bulma/css/bulma.min.css"/>
-  <link rel='stylesheet' href='/static_files/main.css' />
   
   <head>
     <title>Graph Loader Portal</title>
@@ -12,6 +11,7 @@
   
   <body>
     {% include "header.html" %}
+    {% include "temp_menu_template.html" %}
     <div id="wrapper">
       <section class="section">
         <div id="outer-content-box">
@@ -26,13 +26,14 @@
     </div>
     {% include "footer.html" %}
   </body>
-
+  <link rel='stylesheet' href='/static_files/main.css' />
+  
   <script src="/static_files/jquery-3.1.1.js"></script>
   <script>
     function execute(executionIndex) {
       const executionContainerText = document.querySelector('#execution-container-text');
       const loadButton = document.getElementById("load-button");
-
+      
       console.log("fetching!");
       fetch('/loader/load', {
         method: 'POST',
@@ -57,7 +58,7 @@
         }
       });
     }
-
+    
     $("#load-button").click(function(event) {
       const loadButton = document.getElementById("load-button");
       const executionContainerText = document.getElementById("execution-container-text");

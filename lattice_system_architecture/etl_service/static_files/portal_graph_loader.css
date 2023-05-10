@@ -1,7 +1,7 @@
 #outer-content-box
 {
     display: flex;
-    background-color: white;
+    background-color: #EEEEEE;
     font-size: 30px;
     width: 70%;
     height: 72%;
@@ -13,11 +13,6 @@
     margin-right: auto;
     left: 0;
     right: 0;
-    /*
-    border-style: solid;
-    border-width: thick;
-    border-color: #dee2e6;
-    */
     border-radius: 10px;
     box-shadow: 2px 2px 8px 0px rgba(0,0,0);
 }
