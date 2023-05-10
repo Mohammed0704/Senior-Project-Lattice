@@ -78,13 +78,13 @@ def connections_create():
         trinoConnectorCreator.createConnector(newConn)
         return jsonify({"success": True, "message": "Connection has been created"})
     
-    return render_template("temp_data_source_connections_create.html", headerText="Data Source Connections", databaseTypes=databaseTypes)
+    return render_template("data_source_connections_create.html", headerText="Data Source Connections", databaseTypes=databaseTypes)
     
 
 @app.route("/tags")
 def tags():
     tagDict = Serialization.Deserialize('serialized_data/SerializedTags.txt')
-    return render_template("menu_template.html") + render_template("portal_tag_management.html", tagDict=tagDict)
+    return render_template("tag_management.html", headerText="Tag Management", tagDict=tagDict)
 
 @app.route("/tags/create")
 def tags_create():

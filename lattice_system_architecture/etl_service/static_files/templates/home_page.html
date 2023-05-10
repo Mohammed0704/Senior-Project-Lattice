@@ -3,7 +3,6 @@
 
 <link rel="stylesheet" href="/static_files/home_page.css"/>
 <link rel="stylesheet" href="/static_files/bulma/css/bulma.min.css"/>
-<link rel="stylesheet" href="/static_files/main.css"/>
  
 </head>
 <head>
@@ -20,24 +19,24 @@
                         <div style="margin-top: 2%;" class="columns is-centered is-multiline">
                             <div style="margin-left: 5%;" class="column"> <!-- NOTE: Messes up the formatting on window shrink but makes the columns even-->
                                 <a href="{{ url_for('connections') }}">
-                                    <img class="link-object" src="{{ url_for('static', filename='DataSourceConnections_2.png') }}" alt="Data made simple">
+                                    <img class="link-object" src="{{ url_for('static', filename='DataSourceConnections_3.png') }}" alt="Data made simple">
                                 </a>
                             </div>
                             <div class="column">
                                 <a href="{{ url_for('tags') }}">
-                                    <img class="link-object" src="{{ url_for('static', filename='TagManagement.png') }}" alt="Data made simple">
+                                    <img class="link-object" src="{{ url_for('static', filename='TagManagement_2.png') }}" alt="Data made simple">
                                 </a>
                             </div>
                         </div>
                         <div class="columns is-centered">
                             <div style="margin-left: 5%;" class="column"> <!-- NOTE: Messes up the formatting on window shrink but makes the columns even-->
                                 <a href="{{ url_for('objects') }}">
-                                    <img class="link-object" src="{{ url_for('static', filename='DataObjectManagement.png') }}" alt="Data made simple">
+                                    <img class="link-object" src="{{ url_for('static', filename='DataObjectManagement_2.png') }}" alt="Data made simple">
                                 </a>
                             </div>
                             <div class="column">
                                 <a href="{{ url_for('loader') }}">
-                                <img class="link-object" src="{{ url_for('static', filename='GraphLoader.png') }}" alt="Data made simple">
+                                <img class="link-object" src="{{ url_for('static', filename='GraphLoader_2.png') }}" alt="Data made simple">
                                 </a>
                             </div>
                         </div>
@@ -47,4 +46,5 @@
         </div>
         {% include "footer.html" %}
     </body>
+    <link rel="stylesheet" href="/static_files/main.css"/>
 </html>

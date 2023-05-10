@@ -3,7 +3,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
   <link rel="stylesheet" href="/static_files/bulma/css/bulma.min.css"/>
   <link rel='stylesheet' href='/static_files/data_source_connections.css'/>
-  <link rel="stylesheet" href="/static_files/main.css"/>
 
   <head>
     <title>Lattice - Data Source Connections</title>
@@ -19,10 +18,10 @@
           <table id="connections-table" class="table is-striped is-hoverable is-fullwidth is-size-4">
             <thead>
               <tr id="table-header">
-                <th>Name</th>
-                <th>Type</th>
-                <th>URL</th>
-                <th>Username</th>
+                <th class="is-vcentered">Name</th>
+                <th class="is-vcentered">Type</th>
+                <th class="is-vcentered">URL</th>
+                <th class="is-vcentered">Username</th>
                 <th></th>
               </tr>
             </thead>
@@ -31,10 +30,10 @@
               <tr id="{{ values['connection_name'] }}-row">
                 {% for key, value in values.items() %}
                   {% if key != "connection_password" %}
-                    <td> {{ value }}</td>
+                    <td class="is-vcentered"> {{ value }}</td>
                   {% endif %}
                 {% endfor %}
-                <td>
+                <td class="is-vcentered">
                   <span class="icon delete-button delete-button1" name="{{ values['connection_name'] }}"><i class="fas fa-trash-alt is-clickable"></i></span>
                 </td>
               </tr>
@@ -42,13 +41,14 @@
             </tbody>
           </table>
           <a href="/connections/create">
-            <button style="font-size: 19px;" class="button button1">Create New Connection</button>
+            <button class="button button1">Create New Connection</button>
           </a>
         </div>
       </section>
     </div>
     {% include "footer.html" %}
   </body>
+  <link rel="stylesheet" href="/static_files/main.css"/>
 
   <script src="/static_files/jquery-3.1.1.js"></script>
 
