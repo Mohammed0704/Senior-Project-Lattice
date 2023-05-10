@@ -22,3 +22,11 @@
 .button1:hover {
     opacity: 0.83;
 }
+
+.table-header {
+    font-size: 22px;
+}
+
+.table-element {
+    font-size: 19px;
+}

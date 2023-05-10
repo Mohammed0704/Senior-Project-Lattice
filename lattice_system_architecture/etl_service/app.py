@@ -86,15 +86,12 @@ def tags():
     tagDict = Serialization.Deserialize('serialized_data/SerializedTags.txt')
     return render_template("tag_management.html", headerText="Tag Management", tagDict=tagDict)
 
-@app.route("/tags/create")
-def tags_create():
-    return render_template("menu_template.html") + render_template("portal_create_new_tag.html")
-
 @app.route('/tags/create/create-tag', methods=['POST'])
 def create_tag():
     # Extract JSON payload from request
     tagDict = request.get_json()
     tagName = tagDict.get("tag_name")
+    tagDescription = tagDict.get("tag_description")
     filePath = "serialized_data/SerializedTags.txt"
 
     if not tagName or " " in tagName:
@@ -109,7 +106,7 @@ def create_tag():
 
     # If the tag does not exist, write the new tag to the file
     with open(filePath, 'w') as f:
-        tagsDict[tagName] = {"columns_tagged": []}
+        tagsDict[tagName] = {"columns_tagged": [], "description": tagDescription}
         sortedTagsDict = {key: val for key, val in sorted(tagsDict.items(), key = lambda ele: ele[0])} #alphabetizes tags
         Serialization.Serialize(sortedTagsDict, "serialized_data/SerializedTags.txt")
 

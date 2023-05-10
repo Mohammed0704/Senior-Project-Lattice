@@ -1,170 +1,3 @@
-#content {
-    display: flex;
-    width: 97%;
-    height: 95%;
-    justify-content: space-between;
-    flex-direction: row;
-    gap: 10px;
-}
-
-#content .left {
-    width: 55%;
-}
-
-#content .right {
-    width: 45%;
-}
-
-.right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-#button-div {
-    justify-content: center;
-}
-
-#title
-{
-    margin-top: 0%;
-    margin-bottom: 0%;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-#usage-table {
-    width: 95%;
-    border-left: 1px solid black;
-    border-top: 1px solid black;
-}
-
-#usage-table tr {
-    display: none;
-}
-
-#usage-table #table-header {
-    display: table-row;
-}
-
-#table-footer {
-    position: sticky;
-    bottom: 0;
-    background: darkgrey;
-    border: 1px solid black;
-}
-
-table
-{
-    width: 100%;
-    place-content: center;
-    border-collapse: separate;
-    border-spacing: 0px;
-}
-
-table th {
-    /* Apply both top and bottom borders to the <th> */
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-}
-
-table #table-footer td {
-    /* Apply both top and bottom borders to the <th> */
-    border-right: 0px solid black;
-    border-top: 1px solid black;
-}
-
-tr
-{
-    border: 1px solid black;
-    height: 60px;
-}
-
-td {
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    font-size: 18px;
-    text-align: center;
-}
-
-/* Style for Create New Tag Page */
-#label_text
-{
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-input {
-    padding: 8px 20px;
-    margin: 8px;
-    box-sizing: border-box;
-    border: 2px solid black;
-    background-color: lightgray;
-    font-size: 20px;
-}
-
-.usage-button {
-    border: 1px solid black;
-    font-size: 18px;
-    padding: 5px;
-    margin: 0%;
-    cursor: pointer;
-    display: flex;
-    border-radius: 7px;
-}
-
-.button2 {
-    background-color: lightgray;
-    color: black;
-    font-weight: bold;
-    position: relative;
-    float: right;
-    margin-bottom: 2px;
-    margin-top: 2px;
-    margin-left: 5%;
-    border-radius: 7px;
-}
-
-.button2:hover {
-    background-color: darkgray;
-}
-
-.button3 {
-    background-color: lightgray;
-    color: black;
-    font-weight: bold;
-    position: relative;
-    float: left;
-    margin-bottom: 2px;
-    margin-top: 2px;
-    margin-left: 3%;
-    border-radius: 7px;
-}
-
-.button3:hover {
-    background-color: darkgray;
-}
-
-#success-message{
-    color: green;
-    margin-bottom: 0px;
-}
-
-#error-message{
-    color: red;
-    margin-bottom: 0px;
-    height: 10px;
-}
-
-#result{
-    height: 20px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-
 #create-form {
     display: flex;
     flex-direction: column;
@@ -192,6 +25,14 @@ input {
     cursor: pointer !important;
 }
 
-.icon :hover{
+.delete-icon :hover{
     color:red !important;
+}
+
+.usages-icon :hover{
+    color:grey !important;
+}
+
+.description-input {
+    width: 100%;
 }
