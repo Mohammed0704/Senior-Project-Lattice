@@ -5,13 +5,15 @@
             "elasticsearch.additional_info.area_of_study.has minor",
             "elasticsearch.additional_info.area_of_study.has major",
             "elasticsearch.additional_info.area_of_study.has certificate"
-        ]
+        ],
+        "description": "The overall study topic a student is studying in within a program"
     },
     "AreaOfStudy.join": {
         "columns_tagged": [
             "postgres.education.areas_of_study.name",
             "elasticsearch.additional_info.area_of_study.name"
-        ]
+        ],
+        "description": "The tag used to join Area of Study tables together"
     },
     "CampusLocation": {
         "columns_tagged": [
@@ -22,7 +24,8 @@
             "postgres.campus_life.locations.email",
             "postgres.campus_life.locations.website",
             "postgres.campus_life.locations.sign_in_required"
-        ]
+        ],
+        "description": "A location on the university campus that students can utilize"
     },
     "Class": {
         "columns_tagged": [
@@ -30,13 +33,15 @@
             "mongo.classes.classes_info.instructor",
             "mongo.classes.classes_instruction_info.professor",
             "mongo.classes.classes_info.associated_course_code"
-        ]
+        ],
+        "description": "A term instance of a Course"
     },
     "Class.join": {
         "columns_tagged": [
             "mongo.classes.classes_info.crn",
             "mongo.classes.classes_instruction_info.crn"
-        ]
+        ],
+        "description": "The tag used to join Class tables together"
     },
     "College": {
         "columns_tagged": [
@@ -47,7 +52,8 @@
             "postgres.education.colleges.description",
             "postgres.education.colleges.url",
             "postgres.education.colleges.year_founded"
-        ]
+        ],
+        "description": "A college within the university"
     },
     "Course": {
         "columns_tagged": [
@@ -56,13 +62,15 @@
             "mongo.courses.courses_requirements.prerequisites",
             "mongo.courses.courses_requirements.corequisites",
             "mongo.courses.courses_info.credits"
-        ]
+        ],
+        "description": "A course within the university that is required for graduation"
     },
     "Course.join": {
         "columns_tagged": [
             "mongo.courses.courses_info.course code",
             "mongo.courses.courses_requirements.course code"
-        ]
+        ],
+        "description": "The tag used to join Course tables together"
     },
     "Department": {
         "columns_tagged": [
@@ -70,12 +78,14 @@
             "postgres.education.departments.url",
             "postgres.education.departments.main_office_location",
             "postgres.education.departments.department_head"
-        ]
+        ],
+        "description": "A department within a College"
     },
     "Department.join": {
         "columns_tagged": [
             "postgres.education.departments.department_name"
-        ]
+        ],
+        "description": "The tag used to join Department tables together"
     },
     "Employee": {
         "columns_tagged": [
@@ -83,30 +93,35 @@
             "mariadb.drexel_people.basic_employee_info.primary_department",
             "cassandra.finances.employee_salaries.annual_salary",
             "cassandra.finances.employee_salaries.job_title"
-        ]
+        ],
+        "description": "A person who is employed at the university"
     },
     "Employee.concat.full_name.1": {
         "columns_tagged": [
             "mariadb.drexel_people.basic_employee_info.first_name"
-        ]
+        ],
+        "description": "The first tag used to concatenate an Employee column together"
     },
     "Employee.concat.full_name.2": {
         "columns_tagged": [
             "mariadb.drexel_people.basic_employee_info.last_name"
-        ]
+        ],
+        "description": "The second tag used to concatenate an Employee column together"
     },
     "Employee.join": {
         "columns_tagged": [
             "cassandra.finances.employee_salaries.drexel_id",
             "mariadb.drexel_people.basic_employee_info.drexel_id"
-        ]
+        ],
+        "description": "The tag used to join Employee tables together"
     },
     "Housing": {
         "columns_tagged": [
             "postgres.campus_life.housing_options.address",
             "postgres.campus_life.housing_options.url",
             "postgres.campus_life.housing_options.is_affiliated_housing"
-        ]
+        ],
+        "description": "University housing locations that students may live at"
     },
     "Program": {
         "columns_tagged": [
@@ -115,14 +130,16 @@
             "postgres.education.programs.is_stem",
             "postgres.education.programs.is_graduate_program",
             "postgres.education.programs.description"
-        ]
+        ],
+        "description": "The degree that a student is pursuing"
     },
     "Registration": {
         "columns_tagged": [
             "cassandra.registration.class_registration.reg_code",
             "cassandra.registration.class_registration.crm",
             "cassandra.registration.class_registration.drexel_id"
-        ]
+        ],
+        "description": "An instance of a Class that a student registered for"
     },
     "Student": {
         "columns_tagged": [
@@ -137,22 +154,26 @@
             "postgres.education.student_education_choices.minors",
             "cassandra.finances.tuition.annual_financial_aid_award",
             "cassandra.finances.tuition.outstanding_balances"
-        ]
+        ],
+        "description": "A student that attends the university"
     },
     "Student.concat.full_name.1": {
         "columns_tagged": [
             "mariadb.drexel_people.basic_student_info.first_name"
-        ]
+        ],
+        "description": "The first tag used to concatenate a Student column together"
     },
     "Student.concat.full_name.2": {
         "columns_tagged": [
             "mariadb.drexel_people.basic_student_info.middle_name"
-        ]
+        ],
+        "description": "The second tag used to concatenate a Student column together"
     },
     "Student.concat.full_name.3": {
         "columns_tagged": [
             "mariadb.drexel_people.basic_student_info.last_name"
-        ]
+        ],
+        "description": "The third tag used to concatenate a Student column together"
     },
     "Student.join": {
         "columns_tagged": [
@@ -160,7 +181,8 @@
             "mariadb.locations.student_locations.drexel_id",
             "postgres.education.student_education_choices.drexel_id",
             "cassandra.finances.tuition.drexel_id"
-        ]
+        ],
+        "description": "The tag used to join Student tables together"
     },
     "System": {
         "columns_tagged": [
@@ -171,12 +193,14 @@
             "mongo.classes.software.student_cost_per_term",
             "mongo.classes.software.software_type",
             "mongo.classes.software.is_downloadable"
-        ]
+        ],
+        "description": "Software that students utilize at the university"
     },
     "System.join": {
         "columns_tagged": [
             "cassandra.finances.software_costs.software",
             "mongo.classes.software.name"
-        ]
+        ],
+        "description": "The tag used to join System tables together"
     }
 }

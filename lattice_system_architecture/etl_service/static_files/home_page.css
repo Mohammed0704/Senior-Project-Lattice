@@ -1,0 +1,14 @@
+.link-objects {
+    justify-content: space-evenly;
+}
+
+.link-object {
+    box-shadow: 2px 2px 8px 0px rgba(0,0,0);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 8px;
+}
+
+.link-object:hover {
+    opacity: 0.75;
+}

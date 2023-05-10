@@ -22,12 +22,12 @@ def base():
 
 @app.route("/home")
 def home():
-    return render_template("home_page.html")
+    return render_template("home_page.html", headerText="Home")
 
 @app.route("/connections")
 def connections():
     connectionsList = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
-    return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
+    return render_template("data_source_connections.html", headerText="Data Source Connections", connectionsList=connectionsList)
 
 @app.route("/connections/remove/<connectionToDelete>", methods=['DELETE'])
 def connectionsRemove(connectionToDelete):
@@ -78,23 +78,20 @@ def connections_create():
         trinoConnectorCreator.createConnector(newConn)
         return jsonify({"success": True, "message": "Connection has been created"})
     
-    return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html", databaseTypes=databaseTypes)   
+    return render_template("data_source_connections_create.html", headerText="Data Source Connections", databaseTypes=databaseTypes)
     
 
 @app.route("/tags")
 def tags():
     tagDict = Serialization.Deserialize('serialized_data/SerializedTags.txt')
-    return render_template("menu_template.html") + render_template("portal_tag_management.html", tagDict=tagDict)
-
-@app.route("/tags/create")
-def tags_create():
-    return render_template("menu_template.html") + render_template("portal_create_new_tag.html")
+    return render_template("tag_management.html", headerText="Tag Management", tagDict=tagDict)
 
 @app.route('/tags/create/create-tag', methods=['POST'])
 def create_tag():
     # Extract JSON payload from request
     tagDict = request.get_json()
     tagName = tagDict.get("tag_name")
+    tagDescription = tagDict.get("tag_description")
     filePath = "serialized_data/SerializedTags.txt"
 
     if not tagName or " " in tagName:
@@ -109,7 +106,7 @@ def create_tag():
 
     # If the tag does not exist, write the new tag to the file
     with open(filePath, 'w') as f:
-        tagsDict[tagName] = {"columns_tagged": []}
+        tagsDict[tagName] = {"columns_tagged": [], "description": tagDescription}
         sortedTagsDict = {key: val for key, val in sorted(tagsDict.items(), key = lambda ele: ele[0])} #alphabetizes tags
         Serialization.Serialize(sortedTagsDict, "serialized_data/SerializedTags.txt")
 

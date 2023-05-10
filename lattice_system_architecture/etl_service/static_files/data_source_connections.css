@@ -1,0 +1,53 @@
+#title
+{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+table
+{
+    width: 100%;
+    place-content: center;
+    border-collapse: collapse;
+    border:1px solid black;
+    border-radius: 4px;
+}
+
+tr
+{
+    border: 1px solid black;
+    height: 80px;
+}
+
+th, td {
+    border-right: 1px solid black;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-size: 18px;
+}
+
+#success-message{
+    color: green;
+    margin-top: 5px;
+}
+
+#error-message{
+    color: red;
+    margin-top: 5px;
+}
+
+#result {
+    margin-bottom: 18px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.is-clickable {
+    cursor: pointer !important;
+}
+
+.icon :hover{
+    color:red !important;
+}

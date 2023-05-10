@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+  <link rel="stylesheet" href="/static_files/bulma/css/bulma.min.css"/>
+  <link rel='stylesheet' href='/static_files/data_source_connections.css'/>
+
+  <head>
+    <title>Lattice - Data Source Connections</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    {% include "header.html" %}
+    {% include "temp_menu_template.html" %}
+    <div id="wrapper">
+      <section class="section">
+        <div class="container">
+          <table id="connections-table" class="table is-striped is-hoverable is-fullwidth is-size-4">
+            <thead>
+              <tr id="table-header">
+                <th class="is-vcentered">Name</th>
+                <th class="is-vcentered">Type</th>
+                <th class="is-vcentered">URL</th>
+                <th class="is-vcentered">Username</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for values in connectionsList %}
+              <tr id="{{ values['connection_name'] }}-row">
+                {% for key, value in values.items() %}
+                  {% if key != "connection_password" %}
+                    <td class="is-vcentered"> {{ value }}</td>
+                  {% endif %}
+                {% endfor %}
+                <td class="is-vcentered">
+                  <span class="icon delete-button delete-button1" name="{{ values['connection_name'] }}"><i class="fas fa-trash-alt is-clickable"></i></span>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+          <a href="/connections/create">
+            <button class="button button1">Create New Connection</button>
+          </a>
+        </div>
+      </section>
+    </div>
+    {% include "footer.html" %}
+  </body>
+  <link rel="stylesheet" href="/static_files/main.css"/>
+
+  <script src="/static_files/jquery-3.1.1.js"></script>
+
+<script>
+$(".delete-button").click(function(event)
+{
+  elementToDeleteName = $(this).attr("name")
+  if (confirm("Are you sure you want to delete this connection?")) {
+    console.log("Deleting " + elementToDeleteName + "...");
+    $("#" + elementToDeleteName.replace( /(:|\.|\[|\])/g, "\\$1" ) + "-row").remove()
+
+    $.ajax({
+      url: "/connections/remove/" + elementToDeleteName,
+      type: "delete"
+    });
+  }
+});
+</script>
+</html>
