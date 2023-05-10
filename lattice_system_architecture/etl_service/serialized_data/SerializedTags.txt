@@ -202,9 +202,5 @@
             "mongo.classes.software.name"
         ],
         "description": "The tag used to join System tables together"
-    },
-    "asdasdfasf": {
-        "columns_tagged": [],
-        "description": "sdf"
     }
 }
