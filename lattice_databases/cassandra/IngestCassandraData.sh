@@ -107,10 +107,11 @@ if [ -d "$windowsDir" ]; then #checks if the machine is Windows and provides alt
     winpty docker exec -it cassandra cqlsh -e "CREATE TABLE registration.class_registration(
                                         reg_code VARINT PRIMARY KEY, 
                                         crn text,
-                                        drexel_id text
+                                        student_id text,
+										grade text
                                         );"
 
-    winpty docker exec -it cassandra cqlsh -e "COPY registration.class_registration (reg_code, crn, drexel_id) 
+    winpty docker exec -it cassandra cqlsh -e "COPY registration.class_registration (reg_code, crn, student_id, grade) 
                     FROM '/data_files/Cassandra-registration.csv' 
                     WITH HEADER = TRUE;"
 else
@@ -217,11 +218,12 @@ else
     #class_registration
     docker exec -it cassandra cqlsh -e "CREATE TABLE registration.class_registration(
                                         reg_code VARINT PRIMARY KEY, 
-                                        crm text,
-                                        drexel_id text
+                                        crn text,
+                                        student_id text,
+										grade text
                                         );"
 
-    docker exec -it cassandra cqlsh -e "COPY registration.class_registration (reg_code, crm, drexel_id) 
+    docker exec -it cassandra cqlsh -e "COPY registration.class_registration (reg_code, crn, student_id, grade) 
                     FROM '/data_files/Cassandra-registration.csv' 
                     WITH HEADER = TRUE;"
 fi

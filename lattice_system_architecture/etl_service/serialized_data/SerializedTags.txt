@@ -136,8 +136,9 @@
     "Registration": {
         "columns_tagged": [
             "cassandra.registration.class_registration.reg_code",
-            "cassandra.registration.class_registration.crm",
-            "cassandra.registration.class_registration.drexel_id"
+            "cassandra.registration.class_registration.crn",
+            "cassandra.registration.class_registration.grade",
+            "cassandra.registration.class_registration.student_id"
         ],
         "description": "An instance of a Class that a student registered for"
     },

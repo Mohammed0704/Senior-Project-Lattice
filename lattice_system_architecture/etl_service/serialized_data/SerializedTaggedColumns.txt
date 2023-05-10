@@ -207,11 +207,14 @@
     "cassandra.registration.class_registration": {
         "reg_code": [
             "Registration"
-        ],
-        "crm": [
+        ]
+        "crn": [
             "Registration"
         ],
-        "drexel_id": [
+        "grade": [
+            "Registration"
+        ],
+        "student_id": [
             "Registration"
         ]
     },
