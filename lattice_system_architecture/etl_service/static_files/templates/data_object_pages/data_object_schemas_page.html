@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+<link rel="stylesheet" href="/static_files/bulma/css/bulma.min.css"/>
 <link rel='stylesheet' href='/static_files/main.css' />
 <link rel='stylesheet' href='/static_files/data_object_pages.css' />
  
 <center>
   <head>
       <title>Data Object Management Portal</title>
-      <b>
-          <h1 style="margin-bottom: 1.5%;">Data Object Management Portal</h1>
-      </b>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
-  
   <body>
+    {% include "header.html" %}
+    {% include "temp_menu_template.html" %}
     <div id="outer-content-box">
       <div class="sub-title-container">
         <div class="sub-title"><b>Connection:</b> {{ connectionName }}</div>
@@ -30,6 +32,7 @@
       </div>
       <a href="/objects" class="button button1">Back</a>
     </div>
+    {% include "footer.html" %}  
   </body>
 </center>
 
