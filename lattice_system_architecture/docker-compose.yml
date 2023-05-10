@@ -4,7 +4,7 @@ version: "3.1"
 
 services:
   trino:
-    image: 'trinodb/trino:411'
+    image: 'trinodb/trino:416'
     container_name: trino
     ports:
       - '8080:8080'
@@ -32,7 +32,7 @@ services:
 
   neo4j:
     container_name: neo4j
-    image: neo4j:5.1
+    image: neo4j:5.7 #latest version for Neo4j Database – Neo4j 5 Enterprise Edition
     ports:
       - 7474:7474
       - 7687:7687

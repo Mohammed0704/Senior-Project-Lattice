@@ -4,7 +4,7 @@ version: "3.1"
 
 services:
   mariadb:
-    image: mariadb:latest
+    image: mariadb:10.11.2
     container_name: mariadb
     restart: always
     ports:
@@ -17,7 +17,7 @@ services:
       MYSQL_PASSWORD: user
 
   mongo:
-    image: mongo:latest
+    image: mongo:6.0
     container_name: mongo
     ports:
       - 27017:27017
@@ -26,13 +26,13 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: root
 
   cassandra:
-    image: cassandra:latest
+    image: cassandra:4.1
     container_name: cassandra
     ports:
       - 9042:9042
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.4.3
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.7.1
     container_name: elasticsearch
     ports:
       - 9200:9200
@@ -48,7 +48,7 @@ services:
         hard: -1
 
   postgres:
-    image: postgres:latest
+    image: postgres:15.2 #github docker library only shows latest as 15
     container_name: postgres
     ports:
       - 5432:5432
