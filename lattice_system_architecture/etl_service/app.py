@@ -148,7 +148,7 @@ def tagsCheck(tagToDelete):
 @app.route("/objects")
 def objects():
     connectionList = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
-    return render_template("data_object_pages/portal_data_object_management.html", headerText="Data Object Management", connectionList=connectionList)
+    return render_template("data_object_pages/data_object_management.html", headerText="Data Object Management", connectionList=connectionList)
 
 @app.route("/objects/<connectionName>")
 def schemas(connectionName):

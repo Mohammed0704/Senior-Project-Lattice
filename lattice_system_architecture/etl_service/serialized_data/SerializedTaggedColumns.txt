@@ -207,7 +207,7 @@
     "cassandra.registration.class_registration": {
         "reg_code": [
             "Registration"
-        ]
+        ],
         "crn": [
             "Registration"
         ],
