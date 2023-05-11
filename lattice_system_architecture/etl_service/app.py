@@ -148,17 +148,17 @@ def tagsCheck(tagToDelete):
 @app.route("/objects")
 def objects():
     connectionList = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
-    return render_template("data_object_pages/portal_data_object_management.html", headerText="Data Source Connections", connectionList=connectionList)
+    return render_template("data_object_pages/portal_data_object_management.html", headerText="Data Object Management", connectionList=connectionList)
 
 @app.route("/objects/<connectionName>")
 def schemas(connectionName):
     schemaList = TrinoConnection.query(TrinoSchemasQuery, connectionName)
-    return render_template("data_object_pages/data_object_schemas_page.html", headerText="Data Source Connections", schemaList=schemaList, connectionName=connectionName)
+    return render_template("data_object_pages/data_object_schemas_page.html", headerText="Data Object Management", schemaList=schemaList, connectionName=connectionName)
 
 @app.route("/objects/<connectionName>/<schemaName>")
 def tables(connectionName, schemaName):
     tableList = TrinoConnection.query(TrinoTablesQuery, connectionName + "." + schemaName)
-    return render_template("data_object_pages/data_object_tables_page.html", headerText="Data Source Connections", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
+    return render_template("data_object_pages/data_object_tables_page.html", headerText="Data Object Management", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>")
 def columns(connectionName, schemaName, tableName):
@@ -194,7 +194,7 @@ def columns(connectionName, schemaName, tableName):
             pass
         exampleColumnDataDict[column] = exampleColumnData
 
-    return render_template("data_object_pages/data_object_columns_page.html", headerText="Data Source Connections", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagDict=tagDict, exampleColumnDataDict=exampleColumnDataDict)
+    return render_template("data_object_pages/data_object_columns_page.html", headerText="Data Object Management", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagDict=tagDict, exampleColumnDataDict=exampleColumnDataDict)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/add/<tagToAdd>", methods=['POST'])
 def addTagToColumn(connectionName, schemaName, tableName, columnName, tagToAdd):
