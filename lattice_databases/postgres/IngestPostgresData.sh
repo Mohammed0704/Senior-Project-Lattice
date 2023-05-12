@@ -121,6 +121,14 @@ if [ -d "$windowsDir" ]; then #checks if the machine is Windows and provides alt
                                                 );"
 
     winpty docker exec -it postgres psql -U postgres -c "\copy campus_life.locations from '/data_files/Postgres-locations.csv' DELIMITER ',' CSV HEADER encoding 'windows-1251';"
+	
+	winpty docker exec -it postgres psql -U postgres -c "CREATE TABLE education.program_requirements (
+                                                    program_name text,
+                                                    course_code text,
+                                                    requirement_category text
+                                                );"
+
+    winpty docker exec -it postgres psql -U postgres -c "\copy education.program_requirements from '/data_files/Postgres-program_requirements.csv' DELIMITER ',' CSV HEADER encoding 'windows-1251';"
 else
     #copy postgres data into the postgres container
     docker cp ./postgres/data_files postgres:/
@@ -240,4 +248,12 @@ else
                                                 );"
 
     docker exec -it postgres psql -U postgres -c "\copy campus_life.locations from '/data_files/Postgres-locations.csv' DELIMITER ',' CSV HEADER encoding 'windows-1251';"
+	
+	docker exec -it postgres psql -U postgres -c "CREATE TABLE education.program_requirements (
+                                                    program_name text,
+                                                    course_code text,
+                                                    requirement_category text
+                                                );"
+
+    docker exec -it postgres psql -U postgres -c "\copy education.program_requirements from '/data_files/Postgres-program_requirements.csv' DELIMITER ',' CSV HEADER encoding 'windows-1251';"
 fi

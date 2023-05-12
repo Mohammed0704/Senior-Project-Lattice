@@ -163,6 +163,9 @@
         ],
         "description": [
             "Program"
+        ],
+        "url": [
+            "Program"
         ]
     },
     "postgres.campus_life.housing_options": {
@@ -290,6 +293,17 @@
         ],
         "outstanding_balances": [
             "Student"
+        ]
+    },
+    "postgres.education.program_requirements": {
+        "program_name": [
+            "ProgramRequirements"
+        ],
+        "course_code": [
+            "ProgramRequirements"
+        ],
+        "requirement_category": [
+            "ProgramRequirements"
         ]
     }
 }

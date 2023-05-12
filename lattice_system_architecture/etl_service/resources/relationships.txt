@@ -187,6 +187,20 @@ CALL apoc.periodic.iterate(
 {batchSize:1000})
 //:
 
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Program),
+		(b:ProgramRequirements)
+	WHERE a.program_name = b.program_name
+	RETURN a, b
+",
+"CALL apoc.create.relationship(b, 'is a', {}, a)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
 CALL apoc.periodic.iterate('
 CALL apoc.load.csv("import/logs/LibraryLogs.csv") yield map as row return row
 ','

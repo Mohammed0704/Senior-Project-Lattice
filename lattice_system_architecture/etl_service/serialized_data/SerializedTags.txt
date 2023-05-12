@@ -129,9 +129,18 @@
             "postgres.education.programs.area_of_study",
             "postgres.education.programs.is_stem",
             "postgres.education.programs.is_graduate_program",
-            "postgres.education.programs.description"
+            "postgres.education.programs.description",
+            "postgres.education.programs.url"
         ],
         "description": "The degree that a student is pursuing"
+    },
+    "ProgramRequirements": {
+        "columns_tagged": [
+            "postgres.education.program_requirements.program_name",
+            "postgres.education.program_requirements.course_code",
+            "postgres.education.program_requirements.requirement_category"
+        ],
+        "description": "An instance of a Program that contains all the required Courses to complete the program"
     },
     "Registration": {
         "columns_tagged": [
