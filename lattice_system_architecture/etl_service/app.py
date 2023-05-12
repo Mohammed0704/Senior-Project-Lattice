@@ -252,7 +252,7 @@ def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagTo
 
 @app.route("/loader")
 def loader():        
-    return render_template("portal_graph_loader.html", headerText="Graph Loader Portal")
+    return render_template("graph_loader.html", headerText="Graph Loader Portal")
 
 @app.route("/loader/load", methods=['GET', 'POST'])
 def loadDataObjects(): #TODO: Make sure to disable button during load process until done

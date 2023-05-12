@@ -64,7 +64,11 @@
     top: 170px;
 }
 
-  #load-button.spinner::after {
+#load-button {
+    margin-bottom: 8px;
+}
+
+#load-button.spinner::after {
     content: "";
     display: inline-block;
     vertical-align: middle;
@@ -74,8 +78,8 @@
     border: .2em solid currentColor;
     border-right-color: transparent;
     animation: spinner .6s linear infinite;
-  }
-  
-  @keyframes spinner {
+}
+
+@keyframes spinner {
     to {transform: rotate(360deg);}
-  }
+}

@@ -5,7 +5,7 @@ CALL apoc.periodic.iterate(
 	WHERE a.associated_course_code = b.`course code`
 	RETURN a, b
 ",
-"CALL apoc.create.relationship(a, 'is Instance Of', {}, b)
+"CALL apoc.create.relationship(a, 'is instance if', {}, b)
 	YIELD rel
 	RETURN rel
 ",
@@ -33,7 +33,7 @@ CALL apoc.periodic.iterate(
 	WHERE a.college_name = b.name
 	RETURN a, b
 ",
-"CALL apoc.create.relationship(a, 'is In', {}, b)
+"CALL apoc.create.relationship(a, 'is in', {}, b)
 	YIELD rel
 	RETURN rel
 ",
@@ -119,7 +119,7 @@ CALL apoc.periodic.iterate(
 	"MATCH
 		(a:Registration),
 		(b:Class)
-	WHERE a.crm = b.crn
+	WHERE a.crn = b.crn
 	RETURN a, b
 	",
 	"CALL apoc.create.relationship(a, 'is a', {}, b)
@@ -134,7 +134,7 @@ CALL apoc.periodic.iterate(
 	"MATCH
 		(a:Student),
 		(b:Registration)
-	WHERE a.drexel_id = b.drexel_id
+	WHERE a.drexel_id = b.student_id
 	RETURN a, b
 	",
 	"CALL apoc.create.relationship(a, 'is registered for', {}, b)
@@ -152,7 +152,7 @@ CALL apoc.periodic.iterate(
 	WHERE a.prerequisites contains b.`course code`
 	RETURN a, b
 ",
-"CALL apoc.create.relationship(a, 'Requires', {}, b)
+"CALL apoc.create.relationship(a, 'requires', {}, b)
 	YIELD rel
 	RETURN rel
 ",
@@ -166,7 +166,7 @@ CALL apoc.periodic.iterate(
 	WHERE a.college = b.name
 	RETURN a, b
 ",
-"CALL apoc.create.relationship(a, 'Is In', {}, b)
+"CALL apoc.create.relationship(a, 'is in', {}, b)
 	YIELD rel
 	RETURN rel
 ",
