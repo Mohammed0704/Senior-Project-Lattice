@@ -1,0 +1,126 @@
+program_name,course_code,requirement_category
+Bachelor of Science in Computer Science,CS 164,Computer Science Requirements
+Bachelor of Science in Computer Science,"CS 171, CS 175",Computer Science Requirements
+Bachelor of Science in Computer Science,"CS 172, CS 176",Computer Science Requirements
+Bachelor of Science in Computer Science,CS 260,Computer Science Requirements
+Bachelor of Science in Computer Science,CS 265,Computer Science Requirements
+Bachelor of Science in Computer Science,CS 270,Computer Science Requirements
+Bachelor of Science in Computer Science,CS 277,Computer Science Requirements
+Bachelor of Science in Computer Science,CS 281,Computer Science Requirements
+Bachelor of Science in Computer Science,CS 283,Computer Science Requirements
+Bachelor of Science in Computer Science,CS 360,Computer Science Requirements
+Bachelor of Science in Computer Science,SE 181,Computer Science Requirements
+Bachelor of Science in Computer Science,SE 310,Computer Science Requirements
+Bachelor of Science in Computer Science,CI 101,Computing & Informatics Requirements
+Bachelor of Science in Computer Science,CI 102,Computing & Informatics Requirements
+Bachelor of Science in Computer Science,CI 103,Computing & Informatics Requirements
+Bachelor of Science in Computer Science,CI 491,Computing & Informatics Requirements
+Bachelor of Science in Computer Science,CI 492,Computing & Informatics Requirements
+Bachelor of Science in Computer Science,CI 493,Computing & Informatics Requirements
+Bachelor of Science in Computer Science,MATH 121,Mathematics Requirements
+Bachelor of Science in Computer Science,MATH 122,Mathematics Requirements
+Bachelor of Science in Computer Science,MATH 123,Mathematics Requirements
+Bachelor of Science in Computer Science,MATH 200,Mathematics Requirements
+Bachelor of Science in Computer Science,MATH 201,Mathematics Requirements
+Bachelor of Science in Computer Science,MATH 221,Mathematics Requirements
+Bachelor of Science in Computer Science,MATH 311,Mathematics Requirements
+Bachelor of Science in Computer Science,"BIO 131, BIO 134, BIO 132, BIO 135, BIO 133, BIO 136",Science Requirements
+Bachelor of Science in Computer Science,"CHEM 101, CHEM 102, CHEM 103",Science Requirements
+Bachelor of Science in Computer Science,"PHYS 101, PHYS 102, PHYS 201",Science Requirements
+Bachelor of Science in Computer Science,COM 230,Arts & Humanities Requirements
+Bachelor of Science in Computer Science,"ENGL 101, ENGL 111",Arts & Humanities Requirements
+Bachelor of Science in Computer Science,"ENGL 102, ENGL 112",Arts & Humanities Requirements
+Bachelor of Science in Computer Science,"ENGL 103, ENGL 113",Arts & Humanities Requirements
+Bachelor of Science in Computer Science,PHIL 311,Arts & Humanities Requirements
+Bachelor of Science in Computer Science,"UNIV CI101, CI 120",University Requirements
+Bachelor of Science in Computer Science,CIVC 101,University Requirements
+Bachelor of Science in Computer Science,COOP 101,University Requirements
+Bachelor of Science in Software Engineering,CS 164,Software Engineering Requirements
+Bachelor of Science in Software Engineering,"CS 171, CS 175",Software Engineering Requirements
+Bachelor of Science in Software Engineering,"CS 172, CS 176",Software Engineering Requirements
+Bachelor of Science in Software Engineering,SE 181,Software Engineering Requirements
+Bachelor of Science in Software Engineering,SE 210,Software Engineering Requirements
+Bachelor of Science in Software Engineering,SE 211,Software Engineering Requirements
+Bachelor of Science in Software Engineering,SE 310,Software Engineering Requirements
+Bachelor of Science in Software Engineering,SE 311,Software Engineering Requirements
+Bachelor of Science in Software Engineering,SE 320,Software Engineering Requirements
+Bachelor of Science in Software Engineering,SE 410,Software Engineering Requirements
+Bachelor of Science in Software Engineering,CS 260,Computer Science Requirements
+Bachelor of Science in Software Engineering,CS 265,Computer Science Requirements
+Bachelor of Science in Software Engineering,CS 281,Computer Science Requirements
+Bachelor of Science in Software Engineering,CS 283,Computer Science Requirements
+Bachelor of Science in Software Engineering,CS 472,Computer Science Requirements
+Bachelor of Science in Software Engineering,INFO 210,Information Systems Requirements
+Bachelor of Science in Software Engineering,INFO 310,Information Systems Requirements
+Bachelor of Science in Software Engineering,INFO 420,Information Systems Requirements
+Bachelor of Science in Software Engineering,CI 101,Computing & Informatics Requirements
+Bachelor of Science in Software Engineering,CI 102,Computing & Informatics Requirements
+Bachelor of Science in Software Engineering,CI 103,Computing & Informatics Requirements
+Bachelor of Science in Software Engineering,CI 491,Computing & Informatics Requirements
+Bachelor of Science in Software Engineering,CI 492,Computing & Informatics Requirements
+Bachelor of Science in Software Engineering,CI 493,Computing & Informatics Requirements
+Bachelor of Science in Software Engineering,CS 270,Mathematics Requirements
+Bachelor of Science in Software Engineering,MATH 121,Mathematics Requirements
+Bachelor of Science in Software Engineering,MATH 122,Mathematics Requirements
+Bachelor of Science in Software Engineering,MATH 123,Mathematics Requirements
+Bachelor of Science in Software Engineering,MATH 221,Mathematics Requirements
+Bachelor of Science in Software Engineering,STAT 201,Mathematics Requirements
+Bachelor of Science in Software Engineering,STAT 202,Mathematics Requirements
+Bachelor of Science in Software Engineering,"BIO 131, BIO 134, BIO 132, BIO 135, BIO 133, BIO 136",Science Requirements
+Bachelor of Science in Software Engineering,"CHEM 101, CHEM 102, CHEM 103",Science Requirements
+Bachelor of Science in Software Engineering,"PHYS 101, PHYS 102, PHYS 201",Science Requirements
+Bachelor of Science in Software Engineering,COM 230,Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,COM 310,Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,"ENGL 101, ENGL 111",Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,"ENGL 102, ENGL 112",Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,"ENGL 103, ENGL 113",Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,PHIL 105,Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,PHIL 311,Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,PSY 101,Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,PSY 330,Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,ACCT 110,Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,ECON 201,Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,ECON 202,Arts & Humanities Requirements
+Bachelor of Science in Software Engineering,CIVC 101,University Requirements
+Bachelor of Science in Software Engineering,COOP 101,University Requirements
+Bachelor of Science in Software Engineering,"UNIV CI101, CI 120",University Requirements
+Bachelor of Science in Biological Sciences,CIVC 101,Humanities and Social Sciences
+Bachelor of Science in Biological Sciences,COM 230,Humanities and Social Sciences
+Bachelor of Science in Biological Sciences,"COM 310, COM 320",Humanities and Social Sciences
+Bachelor of Science in Biological Sciences,COOP 101,Humanities and Social Sciences
+Bachelor of Science in Biological Sciences,"ENGL 101, ENGL 111",Humanities and Social Sciences
+Bachelor of Science in Biological Sciences,"ENGL 102, ENGL 112",Humanities and Social Sciences
+Bachelor of Science in Biological Sciences,"ENGL 103, ENGL 113",Humanities and Social Sciences
+Bachelor of Science in Biological Sciences,"PHIL 251, PHIL 321",Humanities and Social Sciences
+Bachelor of Science in Biological Sciences,UNIV S101,Humanities and Social Sciences
+Bachelor of Science in Biological Sciences,UNIV S201,Humanities and Social Sciences
+Bachelor of Science in Biological Sciences,"MATH 101, MATH 102, MATH 239",Mathematics and Statistics
+Bachelor of Science in Biological Sciences,"MATH 121, MATH 122, MATH 123",Mathematics and Statistics
+Bachelor of Science in Biological Sciences,MATH 410,Mathematics and Statistics
+Bachelor of Science in Biological Sciences,MATH 411,Mathematics and Statistics
+Bachelor of Science in Biological Sciences,"BIO 311, CHEM 243",Physical Sciences
+Bachelor of Science in Biological Sciences,CHEM 101,Physical Sciences
+Bachelor of Science in Biological Sciences,CHEM 102,Physical Sciences
+Bachelor of Science in Biological Sciences,CHEM 103,Physical Sciences
+Bachelor of Science in Biological Sciences,CHEM 241,Physical Sciences
+Bachelor of Science in Biological Sciences,CHEM 242,Physical Sciences
+Bachelor of Science in Biological Sciences,PHYS 152,Physical Sciences
+Bachelor of Science in Biological Sciences,PHYS 153,Physical Sciences
+Bachelor of Science in Biological Sciences,PHYS 154,Physical Sciences
+Bachelor of Science in Biological Sciences,BIO 131,Core Biology Courses
+Bachelor of Science in Biological Sciences,"BIO 134, BIO 142",Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 132,Core Biology Courses
+Bachelor of Science in Biological Sciences,"BIO 135, BIO 143",Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 133,Core Biology Courses
+Bachelor of Science in Biological Sciences,"BIO 136, BIO 144",Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 207,Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 208,Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 209,Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 211,Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 219,Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 224,Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 225,Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 471,Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 472,Core Biology Courses
+Bachelor of Science in Biological Sciences,BIO 473,Core Biology Courses
+Bachelor of Science in Biological Sciences,ENVS 212,Core Biology Courses
