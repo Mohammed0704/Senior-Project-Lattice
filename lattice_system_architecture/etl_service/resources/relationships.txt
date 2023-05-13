@@ -1,15 +1,7 @@
-CALL apoc.periodic.iterate(
-"MATCH 
-		(a:Class),
-		(b:Course)
-	WHERE a.associated_course_code = b.`course code`
-	RETURN a, b
-",
-"CALL apoc.create.relationship(a, 'is instance if', {}, b)
-	YIELD rel
-	RETURN rel
-",
-{batchSize:1000})
+MATCH (a:Class), (b:Course)
+WHERE a.associated_course_code = b.`course code`
+CREATE (a)-[r:`is instance of`]->(b)
+RETURN r
 //:
 
 CALL apoc.periodic.iterate(
@@ -23,7 +15,7 @@ CALL apoc.periodic.iterate(
 	YIELD rel
 	RETURN rel
 ",
-{batchSize:1000})
+{batchSize:10000})
 //:
 
 CALL apoc.periodic.iterate(
@@ -37,7 +29,7 @@ CALL apoc.periodic.iterate(
 	YIELD rel
 	RETURN rel
 ",
-{batchSize:1000})
+{batchSize:10000})
 //:
 
 CALL apoc.periodic.iterate(
@@ -52,7 +44,7 @@ CALL apoc.periodic.iterate(
 	YIELD rel
 	RETURN rel
 ",
-{batchSize:1000})
+{batchSize:10000})
 //:
 
 CALL apoc.periodic.iterate(
@@ -66,7 +58,7 @@ CALL apoc.periodic.iterate(
 		YIELD rel
 		RETURN rel
 	",
-	{batchSize:1000}
+	{batchSize:10000}
 )
 //:
 
@@ -81,7 +73,7 @@ CALL apoc.periodic.iterate(
 		YIELD rel
 		RETURN rel
 	",
-	{batchSize:1000}
+	{batchSize:10000}
 )
 //:
 
@@ -96,7 +88,7 @@ CALL apoc.periodic.iterate(
 		YIELD rel
 		RETURN rel
 	",
-	{batchSize:1000}
+	{batchSize:10000}
 )
 //:
 
@@ -111,38 +103,24 @@ CALL apoc.periodic.iterate(
 		YIELD rel
 		RETURN rel
 	",
-	{batchSize:1000}
+	{batchSize:10000}
 )
 //:
 
-CALL apoc.periodic.iterate(
-	"MATCH
-		(a:Registration),
-		(b:Class)
-	WHERE a.crn = b.crn
-	RETURN a, b
-	",
-	"CALL apoc.create.relationship(a, 'is a', {}, b)
-		YIELD rel
-		RETURN rel
-	",
-	{batchSize:1000}
-)
+MATCH
+(a:Registration),
+(b:Class)
+WHERE a.crn = b.crn
+CREATE (a)-[r:`is a`]->(b)
+RETURN r
 //:
 
-CALL apoc.periodic.iterate(
-	"MATCH
-		(a:Student),
-		(b:Registration)
-	WHERE a.drexel_id = b.student_id
-	RETURN a, b
-	",
-	"CALL apoc.create.relationship(a, 'is registered for', {}, b)
-		YIELD rel
-		RETURN rel
-	",
-	{batchSize:1000}
-)
+MATCH
+(a:Student),
+(b:Registration)
+WHERE a.drexel_id = b.student_id
+CREATE (a)-[r:`is registered for`]->(b)
+RETURN a
 //:
 
 CALL apoc.periodic.iterate(
@@ -156,7 +134,7 @@ CALL apoc.periodic.iterate(
 	YIELD rel
 	RETURN rel
 ",
-{batchSize:1000})
+{batchSize:10000})
 //:
 
 CALL apoc.periodic.iterate(
@@ -170,7 +148,7 @@ CALL apoc.periodic.iterate(
 	YIELD rel
 	RETURN rel
 ",
-{batchSize:1000})
+{batchSize:10000})
 //:
 
 CALL apoc.periodic.iterate(
@@ -184,7 +162,7 @@ CALL apoc.periodic.iterate(
 	YIELD rel
 	RETURN rel
 ",
-{batchSize:1000})
+{batchSize:10000})
 //:
 
 CALL apoc.periodic.iterate(
@@ -198,7 +176,7 @@ CALL apoc.periodic.iterate(
 	YIELD rel
 	RETURN rel
 ",
-{batchSize:1000})
+{batchSize:10000})
 //:
 
 CALL apoc.periodic.iterate('
@@ -208,7 +186,7 @@ MATCH (s:Student {drexel_id:row.drexelID}), (cl:CampusLocation {building_name:ro
 CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, cl)
 YIELD rel
 RETURN rel;
-', {batchSize:1000, iterateList:true, parallel:true});
+', {batchSize:10000, iterateList:true, parallel:true});
 //:
 
 CALL apoc.periodic.iterate('
@@ -218,7 +196,7 @@ MATCH (s:Student {drexel_id:row.drexelID}), (cl:CampusLocation {building_name:ro
 CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, cl)
 YIELD rel
 RETURN rel;
-', {batchSize:1000, iterateList:true, parallel:true});
+', {batchSize:10000, iterateList:true, parallel:true});
 //:
 
 CALL apoc.periodic.iterate('
@@ -228,5 +206,5 @@ MATCH (s:Student {drexel_id:row.drexelID}), (sys:System {name:row.system})
 CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, sys)
 YIELD rel
 RETURN rel;
-', {batchSize:1000, iterateList:true, parallel:true});
+', {batchSize:10000, iterateList:true, parallel:true});
 //:
