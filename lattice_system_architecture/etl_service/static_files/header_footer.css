@@ -10,6 +10,7 @@
   height: 12vh;
   width: 100%;
   border-bottom: 1.5px solid #000000;
+  z-index: 1000;
 }
 
 #myfooter {
@@ -19,6 +20,7 @@
   height: 8vh;
   width: 100%;
   border-top: 1.5px solid #000000;
+  z-index: 1000;
 }
 
 #footer-text-1 {
