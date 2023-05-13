@@ -1,0 +1,232 @@
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Class),
+		(b:Course)
+	WHERE a.associated_course_code = b.`course code`
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'is instance if', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Employee),
+		(b:Department)
+	WHERE a.primary_department = b.department_name
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'belongs To', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Department),
+		(b:College)
+	WHERE a.college_name = b.name
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'is in', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Student),
+		(b:Housing)
+	//WHERE a.living_address = b.address //using CONTAINS until the quotes are removed from a.living_address
+	WHERE b.address CONTAINS SUBSTRING(a.living_address,1) //TEMPORARY
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'lives at', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:AreaOfStudy),
+		(b:Department)
+	WHERE a.department CONTAINS b.department_name
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'is part of', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
+//:
+
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:Program),
+		(b:AreaOfStudy)
+	WHERE a.area_of_study = b.name
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'is in', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
+//:
+
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:Employee),
+		(b:Class)
+	WHERE a.full_name = b.instructor
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'teaches', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
+//:
+
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:Employee),
+		(b:Department)
+	WHERE a.full_name = b.department_head
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'is head of', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
+//:
+
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:Registration),
+		(b:Class)
+	WHERE a.crn = b.crn
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'is a', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
+//:
+
+CALL apoc.periodic.iterate(
+	"MATCH
+		(a:Student),
+		(b:Registration)
+	WHERE a.drexel_id = b.student_id
+	RETURN a, b
+	",
+	"CALL apoc.create.relationship(a, 'is registered for', {}, b)
+		YIELD rel
+		RETURN rel
+	",
+	{batchSize:1000}
+)
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Course),
+		(b:Course)
+	WHERE a.prerequisites contains b.`course code`
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'requires', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Course),
+		(b:College)
+	WHERE a.college = b.name
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'is in', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Student),
+		(b:Program)
+	WHERE a.majors contains b.program_name OR a.minors contains b.program_name
+	RETURN a, b
+",
+"CALL apoc.create.relationship(a, 'enrolled in', {}, b)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate(
+"MATCH 
+		(a:Program),
+		(b:ProgramRequirements)
+	WHERE a.program_name = b.program_name
+	RETURN a, b
+",
+"CALL apoc.create.relationship(b, 'is a', {}, a)
+	YIELD rel
+	RETURN rel
+",
+{batchSize:1000})
+//:
+
+CALL apoc.periodic.iterate('
+CALL apoc.load.csv("import/logs/LibraryLogs.csv") yield map as row return row
+','
+MATCH (s:Student {drexel_id:row.drexelID}), (cl:CampusLocation {building_name:row.location})
+CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, cl)
+YIELD rel
+RETURN rel;
+', {batchSize:1000, iterateList:true, parallel:true});
+//:
+
+CALL apoc.periodic.iterate('
+CALL apoc.load.csv("import/logs/RecreationCenterLogs.csv") yield map as row return row
+','
+MATCH (s:Student {drexel_id:row.drexelID}), (cl:CampusLocation {building_name:row.location})
+CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, cl)
+YIELD rel
+RETURN rel;
+', {batchSize:1000, iterateList:true, parallel:true});
+//:
+
+CALL apoc.periodic.iterate('
+CALL apoc.load.csv("import/logs/SystemsLogs.csv") yield map as row return row
+','
+MATCH (s:Student {drexel_id:row.drexelID}), (sys:System {name:row.system})
+CALL apoc.create.relationship(s, row.action, {time_of_action:(row.date + " " + row.time)}, sys)
+YIELD rel
+RETURN rel;
+', {batchSize:1000, iterateList:true, parallel:true});
+//:
