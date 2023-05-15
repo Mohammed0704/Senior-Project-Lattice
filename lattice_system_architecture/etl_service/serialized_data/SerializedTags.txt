@@ -32,7 +32,8 @@
             "mongo.classes.classes_info.description",
             "mongo.classes.classes_info.instructor",
             "mongo.classes.classes_instruction_info.professor",
-            "mongo.classes.classes_info.associated_course_code"
+            "mongo.classes.classes_info.associated_course_code",
+            "mongo.classes.classes_info.associated_term"
         ],
         "description": "A term instance of a Course"
     },

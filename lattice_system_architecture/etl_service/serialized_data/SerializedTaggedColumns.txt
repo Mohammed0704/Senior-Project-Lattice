@@ -65,6 +65,9 @@
         ],
         "associated_course_code": [
             "Class"
+        ],
+        "associated_term": [
+            "Class"
         ]
     },
     "mongo.classes.classes_instruction_info": {

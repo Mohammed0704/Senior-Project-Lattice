@@ -14,18 +14,19 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href='/static_files/temp_menu_template.css' />
+    <link rel="stylesheet" href='/static_files/menu_template.css' />
   </head>
   <body id="body-pd">
     <div class="l-navbar" id="nav-bar">
       <nav class="nav">
         <div>
-          <div style="margin-top: 12vh;">
-          <a href="{{ url_for('home') }}" id="logo_container">
-            <img id="logo1" src="{{ url_for('static', filename='logo_symbol.png') }}" alt="Data made simple" />
-            <img class="hidden" id="logo2" src="{{ url_for('static', filename='new_logo_1.png') }}" alt="Data made simple" />
-          </a>
-          <div class="nav_list">
+          <!--<div style="margin-top: 12vh;">
+            <a href="{{ url_for('home') }}" id="logo_container">
+              <img id="logo1" src="{{ url_for('static', filename='logo_symbol.png') }}" alt="Data made simple" />
+              <img class="hidden" id="logo2" src="{{ url_for('static', filename='new_logo_1.png') }}" alt="Data made simple" />
+            </a>
+          </div>-->
+          <div style="margin-top: 12vh; class="nav_list">
             <a href="#" class="nav_link">
               <!-- <i class="bx bx-menu fa-3x" id="header-toggle"></i> -->
               <i class="bx bx-menu nav_icon" id="header-toggle"></i>
