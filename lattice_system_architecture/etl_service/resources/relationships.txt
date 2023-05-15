@@ -62,12 +62,6 @@ CREATE (a)-[r:`is registered for`]->(b)
 RETURN a
 //:
 
-MATCH (a:Course), (b:Course)
-WHERE a.prerequisites contains b.`course code`
-CREATE (a)-[r:`requires`]->(b)
-RETURN b
-//:
-
 MATCH (a:Course), (b:College)
 WHERE a.college = b.name
 CREATE (a)-[r:`is in`]->(b)
@@ -86,21 +80,47 @@ CREATE (b)-[r:`is a`]->(a)
 RETURN a
 //:
 
-MATCH (n:CourseRequirement), (m:Course)
+MATCH (n:CourseRequirements), (m:Course)
 WHERE n.rel_id = m.`course code`
 CREATE (m)-[r:has]->(n)
 RETURN n
 //:
 
-MATCH (n:CourseRequirement), (m:Course)
-WHERE n.reg_options contains m.`course code`
-CREATE (n)-[r:`has option`]->(m)
+MATCH (n:CourseRequirements), (m:Course)
+WHERE n.req_choices contains m.`course code`
+WITH m, n, replace(n.req_choices, ",", ";") as req_choices_replaced
+	WITH m, n, split(req_choices_replaced, "; ") as splitList
+		UNWIND RANGE(0,SIZE(splitList)-1) as i
+			CALL apoc.do.case([
+				not(n.req_choices contains ";") AND not(n.req_choices contains ","),
+				'CREATE (n)-[r:requires]->(m)',
+				m.`course code` = split(splitList[i], " [")[0] AND n.req_choices contains ";",
+				'CREATE (n)-[r:requires]->(m)',
+				m.`course code` = split(splitList[i], " [")[0] AND n.req_choices contains ",",
+				'CREATE (n)-[r:`has option`]->(m)'
+				],
+				'',
+				{m:m, n:n})
+YIELD value
 RETURN n
 //:
 
-MATCH (n:CourseRequirement), (m:CourseRequirement)
-WHERE n.reg_options contains m.cr_id
-CREATE (n)-[r:`has option`]->(m)
+MATCH (n:CourseRequirements), (m:CourseRequirements)
+WHERE n.req_choices contains m.cr_id
+WITH m, n, replace(n.req_choices, ",", ";") as req_choices_replaced
+	WITH m, n, split(req_choices_replaced, "; ") as splitList
+		UNWIND RANGE(0,SIZE(splitList)-1) as i
+			CALL apoc.do.case([
+				not(n.req_choices contains ";") AND not(n.req_choices contains ","),
+				'CREATE (n)-[r:requires]->(m)',
+				m.cr_id = split(splitList[i], " [")[0] AND n.req_choices contains ";",
+				'CREATE (n)-[r:requires]->(m)',
+				m.cr_id = split(splitList[i], " [")[0] AND n.req_choices contains ",",
+				'CREATE (n)-[r:`has option`]->(m)'
+				],
+				'',
+				{m:m, n:n})
+YIELD value
 RETURN n
 //:
 

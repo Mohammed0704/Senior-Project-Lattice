@@ -73,6 +73,14 @@
         ],
         "description": "The tag used to join Course tables together"
     },
+    "CourseRequirements": {
+        "columns_tagged": [
+            "postgres.education.course_requirements.cr_id",
+            "postgres.education.course_requirements.rel_id",
+            "postgres.education.course_requirements.req_choices"
+        ],
+        "description": "An instance of a Course that contains all the required Courses to take a Course"
+    },
     "Department": {
         "columns_tagged": [
             "postgres.education.departments.college_name",

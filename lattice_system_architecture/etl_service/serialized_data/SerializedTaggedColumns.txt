@@ -308,5 +308,16 @@
         "requirement_category": [
             "ProgramRequirements"
         ]
+    },
+    "postgres.education.course_requirements": {
+        "cr_id": [
+            "CourseRequirements"
+        ],
+        "rel_id": [
+            "CourseRequirements"
+        ],
+        "req_choices": [
+            "CourseRequirements"
+        ]
     }
 }
