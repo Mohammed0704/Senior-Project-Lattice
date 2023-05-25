@@ -76,7 +76,14 @@ RETURN b
 
 MATCH (a:Program), (b:ProgramRequirements)
 WHERE a.program_name = b.program_name
-CREATE (b)-[r:`is a`]->(a)
+CREATE (b)<-[r:has]-(a)
+RETURN a
+//:
+
+//ALTER THIS TO BE MORE ACCURATE WITH OR (has option/requires)
+MATCH (a:ProgramRequirements), (b:Course)
+WHERE a.course_code contains b.`course code`
+CREATE (a)-[r:`is a`]->(b)
 RETURN a
 //:
 

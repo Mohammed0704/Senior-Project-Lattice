@@ -1,34 +1,34 @@
 [
     {
-        "connection_name": "mariadb",
+        "connection_name": "mariadb_data",
         "connection_type": "MariaDB",
         "connection_URL": "96.245.253.230:3306",
-        "connection_username": "user",
+        "connection_username": "admin",
         "connection_password": "pass"
     },
     {
-        "connection_name": "mongo",
+        "connection_name": "mongo_data",
         "connection_type": "MongoDB",
         "connection_URL": "96.245.253.230:27017",
         "connection_username": "root",
         "connection_password": "password"
     },
     {
-        "connection_name": "postgres",
+        "connection_name": "postgres_data",
         "connection_type": "Postgres",
         "connection_URL": "96.245.253.230:5432",
-        "connection_username": "user",
+        "connection_username": "default",
         "connection_password": ""
     },
     {
-        "connection_name": "elasticsearch",
+        "connection_name": "elasticsearch_data",
         "connection_type": "Elasticsearch",
         "connection_URL": "96.245.253.230:9200",
         "connection_username": "admin",
         "connection_password": ""
     },
     {
-        "connection_name": "cassandra",
+        "connection_name": "cassandra_data",
         "connection_type": "Cassandra",
         "connection_URL": "96.245.253.230:9042",
         "connection_username": "",
