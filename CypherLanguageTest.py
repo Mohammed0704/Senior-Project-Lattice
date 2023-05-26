@@ -1,6 +1,7 @@
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import GraphCypherQAChain
 from langchain.graphs import Neo4jGraph
+import sys
 
 #pip3 install neo4j openai langchain #may need to run as Admin
 
@@ -19,5 +20,8 @@ chain = GraphCypherQAChain.from_llm(
 )
 
 chain.run("""
-What employees teach the Class CS 171?
+What full name of Students where the Student has an outstanding balance as an Integer has more than 97 
+are in the College of Computing & Informatics where AreaOfStudy is a part of a Department
 """)
+
+sys.exit(0)
