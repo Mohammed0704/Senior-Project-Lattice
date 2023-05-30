@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+  <link rel="stylesheet" href="/static_files/bulma/css/bulma.min.css"/>
+  <link rel='stylesheet' href='/static_files/data_object_pages.css' />
+  <style>
+    body {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    #wrapper {
+      flex: 1;
+    }
+  </style>
+    <head>
+        <title>Data Object Management Portal</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+      {% include "header.html" %}
+      {% include "menu_template.html" %}
+      <div id="wrapper">
+        <section class="section">
+          <div class="container">
+            <table id="connections-table" class="table is-striped is-hoverable is-fullwidth is-size-4">
+              <thead>
+                <tr id="table-header">
+                  <th class="table-header is-vcentered">Name</th>
+                  <th class="table-header is-vcentered">Type</th>
+                </tr>
+              </thead>
+              {% for values in connectionList %}
+                <tr id="{{ values['connection_name'] }}-row">
+                  {% for key, value in values.items() %}
+                    {% if key != "connection_URL" and key != "connection_username" and key != "connection_password" %}
+                      {% if loop.index == 1 %}
+                        <td class="table-element is-vcentered"><a href="/objects/{{ value }}"> {{ value }}</a></td>
+                      {% else %}
+                        <td class="table-element is-vcentered">{{ value }}</td>
+                      {% endif %}
+                    {% endif %}
+                  {% endfor %}
+                </tr>
+              {% endfor %}
+            </table>
+          </div>
+        </section>
+      </div>
+      {% include "footer.html" %}
+    </body>
+    <link rel='stylesheet' href='/static_files/main.css'/>
+</html>

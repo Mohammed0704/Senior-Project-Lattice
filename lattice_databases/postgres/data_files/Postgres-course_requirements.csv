@@ -1,0 +1,1151 @@
+cr_id,rel_id,req_choices
+AFAS 402-1,AFAS 402,AFAS 401 [Min Grade: CR]
+ANTH 345-1,ANTH 345,ANTH 101 [Min Grade: D]
+ARBC 102-1,ARBC 102,ARBC 101 [Min Grade: C]
+ARBC 103-1,ARBC 103,ARBC 102 [Min Grade: D]
+ARBC 201-1,ARBC 201,ARBC 103 [Min Grade: D]
+ARBC 202-1,ARBC 202,ARBC 201 [Min Grade: D]
+ARBC 310-1,ARBC 310,ARBC 202 [Min Grade: C]
+ARBC 320-1,ARBC 320,ARBC 310 [Min Grade: C]
+ARBC 410-1,ARBC 410,ARBC 310 [Min Grade: C]
+ARBC 420-1,ARBC 420,ARBC 310 [Min Grade: C]
+ARBC 450-1,ARBC 450,ARBC 310 [Min Grade: C]
+BIO 128-1,BIO 128,"BIO 124 [Min Grade: D], BIO 132 [Min Grade: D]"
+BIO 141-1,BIO 141,CHEM 101 [Min Grade: D]
+BIO 143-1,BIO 143,BIO 142 [Min Grade: D]
+BIO 144-1,BIO 144,BIO 143 [Min Grade: D]
+BIO 162-1,BIO 162,BIO 161 [Min Grade: D]
+BIO 163-1,BIO 163,BIO 162 [Min Grade: D]
+BIO 165-1,BIO 165,BIO 161 [Min Grade: D]
+BIO 201-1,BIO 201,"BIO 141 [Min Grade: D], BIO 122 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 202-1,BIO 202,BIO 201 [Min Grade: D]
+BIO 203-1,BIO 203,BIO 201 [Min Grade: D]
+BIO 204-1,BIO 204,"BIO 122 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 207-1,BIO 207,"BIO 122 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 208-1,BIO 208,BIO 207 [Min Grade: D]
+BIO 209-1,BIO 209,"BIO 122 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 211-1,BIO 211,BIO 209 [Min Grade: D]
+BIO 212-1,BIO 212,"BIO 122 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 213-1,BIO 213,"BIO 122 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 214-1,BIO 214,"BIO 122 [Min Grade: D], BIO 141 [Min Grade: D], BIO 100 [Min Grade: D], BIO 107 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 215-1,BIO 215,"or BIO 122 [Min Grade: D], BIO 141 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 218-1,BIO 218,"BIO 122 [Min Grade: D], BIO 141 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 219-1,BIO 219,"BIO 122 [Min Grade: D], BIO 141 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 220-1,BIO 220,"BIO 122 [Min Grade: D], BIO 141 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 221-1,BIO 221,"BIO 122 [Min Grade: D], BIO 141 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 222-1,BIO 222,"BIO 122 [Min Grade: D], BIO 141 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 224-1,BIO 224,"BIO 121 [Min Grade: D], BIO 122 [Min Grade: D], BIO 124 [Min Grade: D], BIO 126 [Min Grade: D], BIO 131 [Min Grade: D], BIO 132 [Min Grade: D], BIO 133 [Min Grade: D]"
+BIO 225-1,BIO 225,BIO 224 [Min Grade: D]
+BIO 228-1,BIO 228,BIO 228-1-1; BIO 228-1-2
+BIO 228-1-1,BIO 228-1,"BIO 122 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 228-1-2,BIO 228-1,"BIO 124 [Min Grade: D], BIO 132 [Min Grade: D]"
+BIO 232-1,BIO 232,"BIO 122 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 242-1,BIO 242,BIO 132 [Min Grade: D]
+BIO 244-1,BIO 244,"BIO 122 [Min Grade: D], BIO 132 [Min Grade: D]"
+BIO 256-1,BIO 256,"BIO 224 [Min Grade: D], ENVS 212 [Min Grade: D]"
+BIO 257-1,BIO 257,BIO 256 [Min Grade: D]
+BIO 284-1,BIO 284,"BIO 100 [Min Grade: D], BIO 101 [Min Grade: D], BIO 107 [Min Grade: D], BIO 109 [Min Grade: D], BIO 122 [Min Grade: D], BIO 141 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 285-1,BIO 285,"BIO 122 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 286-1,BIO 286,BIO 285 [Min Grade: D]
+BIO 305-1,BIO 305,"BIO 100 [Min Grade: D], BIO 101 [Min Grade: D], BIO 107 [Min Grade: D], BIO 108 [Min Grade: D], BIO 122 [Min Grade: D], BIO 141 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 306-1,BIO 306,"CHEM 242 [Min Grade: D], CHEM 248 [Min Grade: D]"
+BIO 311-1,BIO 311,"CHEM 242 [Min Grade: D], CHEM 248 [Min Grade: D]"
+BIO 314-1,BIO 314,"BIO 218 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 318-1,BIO 318,"BIO 318-1-1, BIO 211 [Min Grade: D]"
+BIO 318-1-1,BIO 318-1,BIO 214 [Min Grade: D]; BIO 218 [Min Grade: D]
+BIO 320-1,BIO 320,BIO 320-1-1; BIO 221 [Min Grade: D]
+BIO 320-1-1,BIO 320-1,"BIO 218 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 323-1,BIO 323,BIO 211 [Min Grade: D]
+BIO 329-1,BIO 329,BIO 219 [Min Grade: D]; BIO 209 [Min Grade: D]
+BIO 331-1,BIO 331,"BIO 122 [Min Grade: D], BIO 141 [Min Grade: D], BIO 132 [Min Grade: D]"
+BIO 332-1,BIO 332,BIO 331 [Min Grade: D]
+BIO 333-1,BIO 333,"BIO 122 [Min Grade: D], BIO 132 [Min Grade: D]; , BIO 141 [Min Grade: D]"
+BIO 346-1,BIO 346,"BIO 218 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 348-1,BIO 348,"BIO 122 [Min Grade: D], BIO 100 [Min Grade: D], BIO 107 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 349-1,BIO 349,"BIO 122 [Min Grade: D], BIO 100 [Min Grade: D], BIO 107 [Min Grade: D], BIO 131 [Min Grade: D]"
+BIO 372-1,BIO 372,"BIO 214 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 373-1,BIO 373,"BIO 211 [Min Grade: D], BIO 373-1-1"
+BIO 373-1-1,BIO 373-1,BIO 214 [Min Grade: D]; BIO 218 [Min Grade: D]
+BIO 374-1,BIO 374,"BIO 373 [Min Grade: D]; , BIO 270 [Min Grade: D]"
+BIO 386-1,BIO 386,"BIO 386-1-1, BIO 211 [Min Grade: D]"
+BIO 386-1-1,BIO 386-1,BIO 214 [Min Grade: D]; BIO 218 [Min Grade: D]
+BIO 387-1,BIO 387,"BIO 387-1-1, BIO 211 [Min Grade: D]"
+BIO 387-1-1,BIO 387-1,BIO 214 [Min Grade: D]; BIO 218 [Min Grade: D]
+BIO 388-1,BIO 388,BIO 386 [Min Grade: D]
+BIO 389-1,BIO 389,BIO 387 [Min Grade: D]
+BIO 404-1,BIO 404,"CHEM 242 [Min Grade: D], CHEM 248 [Min Grade: D]"
+BIO 410-1,BIO 410,BIO 211 [Min Grade: D]
+BIO 412-1,BIO 412,"BIO 218 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 413-1,BIO 413,"BIO 218 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 414-1,BIO 414,"BIO 122 [Min Grade: D], BIO 107 [Min Grade: D], BIO 132 [Min Grade: D]"
+BIO 415-1,BIO 415,"BIO 214 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 416-1,BIO 416,"BIO 203 [Min Grade: C], BIO 311 [Min Grade: C]"
+BIO 420-1,BIO 420,"BIO 218 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 421-1,BIO 421,"BIO 214 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 426-1,BIO 426,"BIO 214 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 430-1,BIO 430,"BIO 214 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 433-1,BIO 433,"BIO 214 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 435-1,BIO 435,BIO 426 [Min Grade: D]
+BIO 436-1,BIO 436,BIO 436-1-1; BIO 436-1-2; BIO 436-1-3
+BIO 436-1-1,BIO 436-1,"BIO 122 [Min Grade: D], BIO 132 [Min Grade: D]"
+BIO 436-1-2,BIO 436-1,"BIO 124 [Min Grade: D], BIO 132 [Min Grade: D]"
+BIO 436-1-3,BIO 436-1,"BIO 211 [Min Grade: D], BIO 217 [Min Grade: D], BIO 218 [Min Grade: D], ENVS 212 [Min Grade: D]"
+BIO 444-1,BIO 444,"BIO 218 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 447-1,BIO 447,BIO 447-1-1; BIO 447-1-2
+BIO 447-1-1,BIO 447-1,"BIO 218 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 447-1-2,BIO 447-1,"BIO 244 [Min Grade: D], BIO 444 [Min Grade: D]"
+BIO 453-1,BIO 453,"BIO 214 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 461-1,BIO 461,"BIO 218 [Min Grade: D], BIO 211 [Min Grade: D], BIO 348 [Min Grade: D], BIO 349 [Min Grade: D]"
+BIO 462-1,BIO 462,"BIO 201 [Min Grade: D], BIO 218 [Min Grade: D], BIO 211 [Min Grade: D], BIO 348 [Min Grade: D], BIO 349 [Min Grade: D]"
+BIO 463-1,BIO 463,"BIO 214 [Min Grade: D], BIO 211 [Min Grade: D], BIO 348 [Min Grade: D], BIO 349 [Min Grade: D]"
+BIO 465-1,BIO 465,"BIO 462 [Min Grade: D], BIO 211 [Min Grade: D], BIO 348 [Min Grade: D], BIO 349 [Min Grade: D]"
+BIO 466-1,BIO 466,"BIO 214 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 468-1,BIO 468,BIO 468-1-1; BIO 201 [Min Grade: D]
+BIO 468-1-1,BIO 468-1,"BIO 214 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 471-1,BIO 471,"BIO 218 [Min Grade: D], BIO 211 [Min Grade: D]"
+BIO 472-1,BIO 472,BIO 471 [Min Grade: D]
+BIO 473-1,BIO 473,BIO 472 [Min Grade: D]
+BIO 474-1,BIO 474,BIO 473 [Min Grade: D]
+CHEC 352-1,CHEC 352,PHYS 201 [Min Grade: D]; CHEC 352-1-1
+CHEC 352-1-1,CHEC 352-1,"CHE 206 [Min Grade: D], ENGR 210 [Min Grade: D], CHEM 253 [Min Grade: D]"
+CHEC 353-1,CHEC 353,PHYS 102 [Min Grade: D]; CHEC 353-1-1
+CHEC 353-1-1,CHEC 353-1,"CHE 230 [Min Grade: D], ENGR 210 [Min Grade: D]"
+CHEM 101-1,CHEM 101,"APCH 12, CHEM 111 [Min Grade: D], APCH50 P"
+CHEM 102-1,CHEM 102,"CHEM 101 [Min Grade: D], CHEM 121 [Min Grade: D], CHEM 161 [Min Grade: D]"
+CHEM 103-1,CHEM 103,"CHEM 102 [Min Grade: D], CHEM 103-1-1, CHEM 122 [Min Grade: D], CHEM 108 [Min Grade: D]"
+CHEM 103-1-1,CHEM 103-1,CHEM 162 [Min Grade: D]; CHEM 164 [Min Grade: D]
+CHEM 112-1,CHEM 112,CHEM 111 [Min Grade: D]
+CHEM 113-1,CHEM 113,CHEM 111 [Min Grade: D]
+CHEM 114-1,CHEM 114,CHEM 112 [Min Grade: D]
+CHEM 121-1,CHEM 121,"APCH 12, CHEM 111 [Min Grade: D], APCH50 P"
+CHEM 122-1,CHEM 122,"CHEM 101 [Min Grade: C-], CHEM 121 [Min Grade: C-]"
+CHEM 123-1,CHEM 123,"CHEM 102 [Min Grade: C-], CHEM 122 [Min Grade: C-]"
+CHEM 161-1,CHEM 161,"MATH 003 [Min Grade: D], CHEM 161-1-1"
+CHEM 161-1-1,CHEM 161-1,MATH 001 [Min Grade: D]; MATH 002 [Min Grade: D]
+CHEM 162-1,CHEM 162,"CHEM 161 [Min Grade: D], CHEM 101 [Min Grade: D]"
+CHEM 163-1,CHEM 163,CHEM 164 [Min Grade: D]; CHEM 162 [Min Grade: D]
+CHEM 164-1,CHEM 164,CHEM 162 [Min Grade: D]
+CHEM 165-1,CHEM 165,CHEM 163 [Min Grade: D]
+CHEM 230-1,CHEM 230,"CHEM 102 [Min Grade: D], CHEM 230-1-1, CHEM 122 [Min Grade: D]"
+CHEM 230-1-1,CHEM 230-1,CHEM 162 [Min Grade: D]; CHEM 164 [Min Grade: D]
+CHEM 231-1,CHEM 231,CHEM 230 [Min Grade: D]
+CHEM 241-1,CHEM 241,"CHEM 102 [Min Grade: D], CHEM 241-1-1, CHEM 122 [Min Grade: D]"
+CHEM 241-1-1,CHEM 241-1,CHEM 162 [Min Grade: D]; CHEM 164 [Min Grade: D]
+CHEM 242-1,CHEM 242,CHEM 241 [Min Grade: D]
+CHEM 243-1,CHEM 243,CHEM 242 [Min Grade: D]
+CHEM 244-1,CHEM 244,CHEM 242 [Min Grade: D]; CHEM 241 [Min Grade: D]
+CHEM 245-1,CHEM 245,CHEM 242 [Min Grade: D]; CHEM 244 [Min Grade: D]
+CHEM 246-1,CHEM 246,"CHEM 103 [Min Grade: D], CHEM 123 [Min Grade: D]"
+CHEM 248-1,CHEM 248,"CHEM 246 [Min Grade: D], CHEM 248-1-1"
+CHEM 248-1-1,CHEM 248-1,CHEM 241 [Min Grade: D]; CHEM 244 [Min Grade: D]
+CHEM 249-1,CHEM 249,"CHEM 248 [Min Grade: D], CHEM 249-1-1"
+CHEM 249-1-1,CHEM 249-1,CHEM 242 [Min Grade: D]; CHEM 245 [Min Grade: D]
+CHEM 251-1,CHEM 251,"CHEM 251-1-1, TDEC 121 [Min Grade: D], CHEM 251-1-2"
+CHEM 251-1-1,CHEM 251-1,CHEM 102 [Min Grade: D]; MATH 200 [Min Grade: D]
+CHEM 251-1-2,CHEM 251-1,CHEM 162 [Min Grade: D]; CHEM 164 [Min Grade: D]
+CHEM 253-1,CHEM 253,"CHEM 102 [Min Grade: D], CHEM 253-1-1, CHEM 122 [Min Grade: D], MATH 200 [Min Grade: D]"
+CHEM 253-1-1,CHEM 253-1,CHEM 162 [Min Grade: D]; CHEM 164 [Min Grade: D]
+CHEM 256-1,CHEM 256,"CHEM 102 [Min Grade: D], CHEM 256-1-1, CHEM 122 [Min Grade: D]"
+CHEM 256-1-1,CHEM 256-1,CHEM 162 [Min Grade: D]; CHEM 164 [Min Grade: D]
+CHEM 270-1,CHEM 270,"CHEM 102 [Min Grade: D], CHEM 270-1-1, CHEM 122 [Min Grade: D]"
+CHEM 270-1-1,CHEM 270-1,"PHYS 201 [Min Grade: D], PHYS 211 [Min Grade: D]"
+CHEM 346-1,CHEM 346,"CHEM 249 [Min Grade: D], CHEM 346-1-1"
+CHEM 346-1-1,CHEM 346-1,CHEM 243 [Min Grade: D]; CHEM 245 [Min Grade: D]
+CHEM 355-1,CHEM 355,CHEM 355-1-1; CHEM 355-1-2; CHEM 355-1-3
+CHEM 355-1-1,CHEM 355-1,"CHEM 253 [Min Grade: D], CHEC 352 [Min Grade: D]"
+CHEM 355-1-2,CHEM 355-1,"CHEM 270 [Min Grade: D], PHYS 160 [Min Grade: D]"
+CHEM 355-1-3,CHEM 355-1,"MATH 201 [Min Grade: D], MATH 210 [Min Grade: D]"
+CHEM 356-1,CHEM 356,CHEM 241 [Min Grade: D]
+CHEM 357-1,CHEM 357,CHEM 253 [Min Grade: D]; CHEM 357-1-1; CHEC 352 [Min Grade: D]
+CHEM 357-1-1,CHEM 357-1,"PHYS 211 [Min Grade: D], PHYS 201 [Min Grade: D]"
+CHEM 358-1,CHEM 358,CHEM 357 [Min Grade: D]; CHEM 358-1-1
+CHEM 358-1-1,CHEM 358-1,"CHEM 253 [Min Grade: D], CHEC 352 [Min Grade: D]"
+CHEM 359-1,CHEM 359,CHEM 355 [Min Grade: D]
+CHEM 361-1,CHEM 361,"CHEM 249 [Min Grade: D], CHEM 361-1-1"
+CHEM 361-1-1,CHEM 361-1,CHEM 243 [Min Grade: D]; CHEM 245 [Min Grade: D]
+CHEM 364-1,CHEM 364,"CHEM 249 [Min Grade: D], CHEM 243 [Min Grade: D]"
+CHEM 371-1,CHEM 371,"CHEM 243 [Min Grade: D], CHEM 249 [Min Grade: D]"
+CHEM 375-1,CHEM 375,"CHEM 243 [Min Grade: D], CHEM 249 [Min Grade: D]; , CHEM 245 [Min Grade: D]"
+CHEM 420-1,CHEM 420,CHEM 421 [Min Grade: D]
+CHEM 421-1,CHEM 421,"CHEM 253 [Min Grade: D]; , ENGR 210 [Min Grade: D]"
+CHEM 422-1,CHEM 422,CHEM 420 [Min Grade: D]
+CHEM 425-1,CHEM 425,CHEM 422 [Min Grade: D]
+CHEM 430-1,CHEM 430,CHEM 253 [Min Grade: D]; CHEM 430-1-1; CHEM 430-1-2; CHEM 230 [Min Grade: D]; CHEC 352 [Min Grade: D]
+CHEM 430-1-1,CHEM 430-1,"CHEM 248 [Min Grade: D], CHEM 242 [Min Grade: D]"
+CHEM 430-1-2,CHEM 430-1,
+CHEM 431-1,CHEM 431,"CHEM 430 [Min Grade: D], ENGR 210 [Min Grade: D]"
+CHEM 465-1,CHEM 465,"CHEM 242 [Min Grade: D], CHEM 248 [Min Grade: D]"
+CHEM 466-1,CHEM 466,CHEM 466-1-1; CHEM 253 [Min Grade: D]
+CHEM 466-1-1,CHEM 466-1,"CHEM 242 [Min Grade: D], CHEM 248 [Min Grade: D]"
+CHEM 467-1,CHEM 467,"CHEM 253 [Min Grade: D], CHEC 352 [Min Grade: D], ENGR 210 [Min Grade: D]"
+CHIN 101-1,CHIN 101,"APCX N, APWCH 0"
+CHIN 102-1,CHIN 102,CHIN 101 [Min Grade: D]
+CHIN 103-1,CHIN 103,CHIN 102 [Min Grade: D]
+CHIN 201-1,CHIN 201,CHIN 103 [Min Grade: D]
+CHIN 202-1,CHIN 202,CHIN 201 [Min Grade: D]
+CHIN 310-1,CHIN 310,CHIN 202 [Min Grade: C]
+CHIN 320-1,CHIN 320,CHIN 310 [Min Grade: C]
+CHIN 340-1,CHIN 340,CHIN 310 [Min Grade: C]
+CHIN 350-1,CHIN 350,CHIN 310 [Min Grade: C]
+CHIN 420-1,CHIN 420,CHIN 310 [Min Grade: C]
+CHIN 440-1,CHIN 440,CHIN 310 [Min Grade: C]
+CHIN 450-1,CHIN 450,CHIN 310 [Min Grade: C]
+COM 216-1,COM 216,COM 160 [Min Grade: D]
+COM 222-1,COM 222,"COM 101 [Min Grade: D], COM 111 [Min Grade: D]"
+COM 230-1,COM 230,"ENGL 102 [Min Grade: D], ENGL 105 [Min Grade: D], ENGL 112 [Min Grade: D]"
+COM 261-1,COM 261,COM 160 [Min Grade: D]
+COM 263-1,COM 263,COM 160 [Min Grade: D]
+COM 265-1,COM 265,"COM 160 [Min Grade: D], COM 260 [Min Grade: D]"
+COM 266-1,COM 266,"COM 160 [Min Grade: D], COM 260 [Min Grade: D]"
+COM 270-1,COM 270,"ENGL 102 [Min Grade: D], ENGL 112 [Min Grade: D]"
+COM 282-1,COM 282,COM 181 [Min Grade: D]
+COM 284-1,COM 284,COM 181 [Min Grade: D]
+COM 286-1,COM 286,COM 282 [Min Grade: D]
+COM 290-1,COM 290,"ENGL 102 [Min Grade: D], ENGL 112 [Min Grade: D]"
+COM 305-1,COM 305,"COM 260 [Min Grade: D], COM 160 [Min Grade: D]"
+COM 310-1,COM 310,"ENGL 102 [Min Grade: C], ENGL 112 [Min Grade: C]"
+COM 315-1,COM 315,"COM 260 [Min Grade: D], COM 261 [Min Grade: D]"
+COM 320-1,COM 320,"HUM 103 [Min Grade: D], HUM 105 [Min Grade: A], HUM 108 [Min Grade: D], ENGL 103 [Min Grade: D], ENGL 105 [Min Grade: A]"
+COM 330-1,COM 330,COM 230 [Min Grade: D]
+COM 335-1,COM 335,"ENGL 102 [Min Grade: D], ENGL 112 [Min Grade: D]"
+COM 340-1,COM 340,"ENGL 102 [Min Grade: D], ENGL 112 [Min Grade: D]"
+COM 342-1,COM 342,"ENGL 102 [Min Grade: D], ENGL 112 [Min Grade: D]"
+COM 351-1,COM 351,COM 220 [Min Grade: D]
+COM 355-1,COM 355,"HUM 103 [Min Grade: D], HUM 105 [Min Grade: A], HUM 108 [Min Grade: D], ENGL 103 [Min Grade: D], ENGL 105 [Min Grade: A]"
+COM 365-1,COM 365,"COM 260 [Min Grade: D], COM 160 [Min Grade: D]"
+COM 375-1,COM 375,"COM 270 [Min Grade: D], COM 310 [Min Grade: D], SOC 260 [Min Grade: D], SOC 355 [Min Grade: D]"
+COM 386-1,COM 386,COM 284 [Min Grade: D]; COM 286 [Min Grade: D]; COM 248 [Min Grade: D]
+COM 391-1,COM 391,COM 150 [Min Grade: D]
+COM 400-1,COM 400,COM 210 [Min Grade: D]
+COM 491-1,COM 491,COM 210 [Min Grade: D]; COM 491-1-1
+COM 491-1-1,COM 491-1,"COM 220 [Min Grade: D], SOC 250 [Min Grade: D]"
+COM 492-1,COM 492,COM 491 [Min Grade: D]
+CJS 300-1,CJS 300,CJS 250 [Min Grade: C]
+CJS 301-1,CJS 301,CJS 300 [Min Grade: C]
+CJS 302-1,CJS 302,"CJS 200 [Min Grade: C], CJ 204 [Min Grade: C]"
+CJS 310-1,CJS 310,CJS 270 [Min Grade: C-]; CJS 250 [Min Grade: C-]
+CJS 331-1,CJS 331,CJS 330 [Min Grade: C]
+CJS 405-1,CJS 405,CJS 300 [Min Grade: C-]; CJS 250 [Min Grade: C-]; CJS 270 [Min Grade: C-]
+ENGL 102-1,ENGL 102,ENGL 101 [Min Grade: D]
+ENGL 103-1,ENGL 103,ENGL 102 [Min Grade: D]
+ENGL 111-1,ENGL 111,"APE 2, ESL 110 [Min Grade: D]"
+ENGL 112-1,ENGL 112,ENGL 111 [Min Grade: D]
+ENGL 113-1,ENGL 113,ENGL 112
+ENGL 200-1,ENGL 200,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 201-1,ENGL 201,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 202-1,ENGL 202,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 203-1,ENGL 203,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 204-1,ENGL 204,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 205-1,ENGL 205,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 206-1,ENGL 206,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 207-1,ENGL 207,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 211-1,ENGL 211,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 212-1,ENGL 212,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 214-1,ENGL 214,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 215-1,ENGL 215,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 216-1,ENGL 216,"ENGL 103 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 220-1,ENGL 220,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 300-1,ENGL 300,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 302-1,ENGL 302,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 303-1,ENGL 303,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 304-1,ENGL 304,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 305-1,ENGL 305,"ENGL 103 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 306-1,ENGL 306,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 307-1,ENGL 307,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 308-1,ENGL 308,"ENGL 308-1-1, ENGL 105 [Min Grade: A]"
+ENGL 308-1-1,ENGL 308-1,ENGL 101 [Min Grade: D]; ENGL 102 [Min Grade: D]; ENGL 103 [Min Grade: D]
+ENGL 310-1,ENGL 310,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 312-1,ENGL 312,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D]"
+ENGL 315-1,ENGL 315,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 320-1,ENGL 320,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 323-1,ENGL 323,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: D]"
+ENGL 325-1,ENGL 325,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 330-1,ENGL 330,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 335-1,ENGL 335,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 340-1,ENGL 340,ENGL 101 [Min Grade: D]; ENGL 102 [Min Grade: D]
+ENGL 345-1,ENGL 345,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 350-1,ENGL 350,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 355-1,ENGL 355,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 360-1,ENGL 360,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 365-1,ENGL 365,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 380-1,ENGL 380,ENGL 380-1-1; ENGL 380-1-2; ENGL 380-1-3
+ENGL 380-1-1,ENGL 380-1,"ENGL 101 [Min Grade: C], ENGL 111 [Min Grade: C]"
+ENGL 380-1-2,ENGL 380-1,"ENGL 102 [Min Grade: C], ENGL 112 [Min Grade: C]"
+ENGL 380-1-3,ENGL 380-1,"ENGL 202 [Min Grade: C], ENGL 203 [Min Grade: C], ENGL 204 [Min Grade: C], ENGL 205 [Min Grade: C], ENGL 206 [Min Grade: C], ENGL 211 [Min Grade: C], ENGL 212 [Min Grade: C], ENGL 214 [Min Grade: C]"
+ENGL 395-1,ENGL 395,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENGL 470-1,ENGL 470,ENGL 470-1-1; HUM 315 [Min Grade: B]
+ENGL 470-1-1,ENGL 470-1,"ENGL 103 [Min Grade: D], ENGL 105 [Min Grade: D]"
+ENVS 201-1,ENVS 201,"BIO 124 [Min Grade: D], BIO 132 [Min Grade: D]"
+ENVS 202-1,ENVS 202,"BIO 124 [Min Grade: D], BIO 132 [Min Grade: D]"
+ENVS 203-1,ENVS 203,"ENVS 101 [Min Grade: D], BIO 126 [Min Grade: D], BIO 133 [Min Grade: D]"
+ENVS 212-1,ENVS 212,"BIO 100 [Min Grade: D], BIO 101 [Min Grade: D], BIO 107 [Min Grade: D], BIO 109 [Min Grade: D], BIO 124 [Min Grade: D], BIO 132 [Min Grade: D], BIO 141 [Min Grade: D]"
+ENVS 230-1,ENVS 230,"BIO 126 [Min Grade: D], BIO 141 [Min Grade: D], BIO 101 [Min Grade: D], BIO 109 [Min Grade: D], BIO 133 [Min Grade: D]"
+ENVS 254-1,ENVS 254,"BIO 100 [Min Grade: D], BIO 101 [Min Grade: D], BIO 107 [Min Grade: D], BIO 109 [Min Grade: D], BIO 124 [Min Grade: D], BIO 133 [Min Grade: D]"
+ENVS 284-1,ENVS 284,"BIO 126 [Min Grade: D], BIO 133 [Min Grade: D], ENVS 230 [Min Grade: D]"
+ENVS 286-1,ENVS 286,"BIO 126 [Min Grade: D], BIO 133 [Min Grade: D], ENVS 230 [Min Grade: D]"
+ENVS 302-1,ENVS 302,CHEM 103 [Min Grade: D]
+ENVS 310-1,ENVS 310,CHEM 103 [Min Grade: D]
+ENVS 312-1,ENVS 312,"ENVS 202 [Min Grade: D], BIO 126 [Min Grade: D], BIO 133 [Min Grade: D], BIO 141 [Min Grade: D]"
+ENVS 315-1,ENVS 315,"ENVS 230 [Min Grade: D], BIO 126 [Min Grade: D], BIO 133 [Min Grade: D]"
+ENVS 322-1,ENVS 322,"ENVS 230 [Min Grade: D], BIO 126 [Min Grade: D], BIO 133 [Min Grade: D], BIO 141 [Min Grade: D]"
+ENVS 326-1,ENVS 326,"ENVS 230 [Min Grade: D], ENVS 284 [Min Grade: D], BIO 211 [Min Grade: D], BIO 218 [Min Grade: D], BIO 141 [Min Grade: D]"
+ENVS 327-1,ENVS 327,"ENVS 230 [Min Grade: D], ENVS 284 [Min Grade: D], BIO 211 [Min Grade: D], BIO 218 [Min Grade: D]"
+ENVS 328-1,ENVS 328,"ENVS 230 [Min Grade: D], BIO 126 [Min Grade: D], BIO 133 [Min Grade: D]"
+ENVS 330-1,ENVS 330,"ENVS 230 [Min Grade: D], BIO 126 [Min Grade: D], BIO 133 [Min Grade: D], BIO 141 [Min Grade: D]"
+ENVS 333-1,ENVS 333,"ENVS 230 [Min Grade: D], BIO 126 [Min Grade: D], BIO 133 [Min Grade: D]"
+ENVS 335-1,ENVS 335,"BIO 126 [Min Grade: D], BIO 133 [Min Grade: D], ENVS 230 [Min Grade: D]"
+ENVS 352-1,ENVS 352,"BIO 126 [Min Grade: D], BIO 133 [Min Grade: D], BIO 109 [Min Grade: D], BIO 141 [Min Grade: D], ENVS 230 [Min Grade: D]"
+ENVS 354-1,ENVS 354,"BIO 126 [Min Grade: D], BIO 133 [Min Grade: D], ENVS 230 [Min Grade: D]"
+ENVS 355-1,ENVS 355,"BIO 126 [Min Grade: D], BIO 133 [Min Grade: D], ENVS 212 [Min Grade: D]"
+ENVS 360-1,ENVS 360,"ENVS 212 [Min Grade: D], BIO 217 [Min Grade: D]"
+ENVS 362-1,ENVS 362,"BIO 109 [Min Grade: D], BIO 126 [Min Grade: D], BIO 133 [Min Grade: D], BIO 141 [Min Grade: D], ENVS 230 [Min Grade: D]"
+ENVS 364-1,ENVS 364,"ENVS 212 [Min Grade: D], BIO 126 [Min Grade: D], BIO 133 [Min Grade: D]"
+ENVS 372-1,ENVS 372,CHEM 102 [Min Grade: D]; ENVS 372-1-1
+ENVS 372-1-1,ENVS 372-1,"GEO 101 [Min Grade: D], CAEE 212 [Min Grade: D], ENVS 203 [Min Grade: D]"
+ENVS 383-1,ENVS 383,"BIO 133 [Min Grade: D], BIO 126 [Min Grade: D], ENVS 230 [Min Grade: D]"
+ENVS 385-1,ENVS 385,"BIO 126 [Min Grade: D], BIO 133 [Min Grade: D], BIO 141 [Min Grade: D]"
+ENVS 388-1,ENVS 388,"BIO 133 [Min Grade: D], BIO 126 [Min Grade: D], ENVS 230 [Min Grade: D]"
+ENVS 390-1,ENVS 390,"BIO 133 [Min Grade: D], BIO 126 [Min Grade: D], BIO 141 [Min Grade: D], ENVS 230 [Min Grade: D]"
+ENVS 391-1,ENVS 391,"BIO 124 [Min Grade: D], BIO 132 [Min Grade: D], BIO 141 [Min Grade: D]"
+ENVS 393-1,ENVS 393,"BIO 124 [Min Grade: D], BIO 132 [Min Grade: D], BIO 141 [Min Grade: D]"
+ENVS 394-1,ENVS 394,"BIO 124 [Min Grade: D], BIO 132 [Min Grade: D], BIO 141 [Min Grade: D]"
+ENVS 401-1,ENVS 401,"CHEM 102 [Min Grade: D], CHEM 122 [Min Grade: D]"
+ENVS 405-1,ENVS 405,"CHEM 102 [Min Grade: D], CHEM 122 [Min Grade: D]"
+ENVS 410-1,ENVS 410,"BIO 133 [Min Grade: D], BIO 126 [Min Grade: D], BIO 141 [Min Grade: D], ENVS 230 [Min Grade: D]"
+ENVS 412-1,ENVS 412,ENVS 412-1-1; ENVS 412-1-2
+ENVS 412-1-1,ENVS 412-1,"MATH 239 [Min Grade: D], MATH 123 [Min Grade: D]"
+ENVS 412-1-2,ENVS 412-1,"PHYS 153 [Min Grade: D], PHYS 102 [Min Grade: D]"
+ENVS 415-1,ENVS 415,"ENVS 308 [Min Grade: D], ENVE 455 [Min Grade: D]"
+ENVS 417-1,ENVS 417,"BIO 133 [Min Grade: D], BIO 126 [Min Grade: D], BIO 141 [Min Grade: D], ENVS 230 [Min Grade: D]"
+ENVS 418-1,ENVS 418,CHEM 101 [Min Grade: D]
+ENVS 438-1,ENVS 438,"BIO 124 [Min Grade: D], ENVS 230 [Min Grade: D], BIO 132 [Min Grade: D]"
+ENVS 442-1,ENVS 442,ENVS 441 [Min Grade: D]
+ENVS 443-1,ENVS 443,ENVS 442 [Min Grade: D]
+ENVS 470-1,ENVS 470,"ENVS 212 [Min Grade: D], BIO 217 [Min Grade: D]"
+FREN 101-1,FREN 101,"APFX N, APWFR 0"
+FREN 102-1,FREN 102,"FREN 101 [Min Grade: D], APWFR 180"
+FREN 103-1,FREN 103,FREN 102 [Min Grade: D]
+FREN 201-1,FREN 201,FREN 103 [Min Grade: D]
+FREN 202-1,FREN 202,FREN 201 [Min Grade: D]
+FREN 310-1,FREN 310,FREN 202 [Min Grade: D]
+FREN 320-1,FREN 320,FREN 310 [Min Grade: D]
+FREN 330-1,FREN 330,FREN 310 [Min Grade: D]
+FREN 340-1,FREN 340,FREN 310 [Min Grade: D]
+FREN 350-1,FREN 350,FREN 310 [Min Grade: D]
+FREN 410-1,FREN 410,FREN 310 [Min Grade: D]
+FREN 420-1,FREN 420,FREN 310 [Min Grade: D]
+FREN 430-1,FREN 430,FREN 310 [Min Grade: D]
+FREN 440-1,FREN 440,FREN 310 [Min Grade: D]
+FREN 450-1,FREN 450,FREN 310 [Min Grade: D]
+GEO 215-1,GEO 215,CHEM 101 [Min Grade: D]
+GEO 301-1,GEO 301,GEO 301-1-1; GEO 103 [Min Grade: D]
+GEO 301-1-1,GEO 301-1,"GEO 101 [Min Grade: D], CAEE 212 [Min Grade: D]"
+GEO 306-1,GEO 306,"GEO 101 [Min Grade: D], CAEE 212 [Min Grade: D]"
+GEO 309-1,GEO 309,"CHEM 103 [Min Grade: D], CHEM 123 [Min Grade: D], CHEM 102 [Min Grade: D]"
+GEO 312-1,GEO 312,"GEO 101 [Min Grade: D], CAEE 212 [Min Grade: D]"
+GEO 320-1,GEO 320,"BIO 124 [Min Grade: D], BIO 132 [Min Grade: D], BIO 141 [Min Grade: D], BIO 109 [Min Grade: D]"
+GEO 322-1,GEO 322,"BIO 124 [Min Grade: D], GEO 322-1-1, BIO 132 [Min Grade: D]"
+GEO 322-1-1,GEO 322-1,"BIO 109 [Min Grade: D], BIO 141 [Min Grade: D]"
+GEO 325-1,GEO 325,"GEO 101 [Min Grade: D], CAEE 212 [Min Grade: D]"
+GEO 342-1,GEO 342,"GEO 101 [Min Grade: D], CAEE 212 [Min Grade: D]"
+GEO 346-1,GEO 346,"GEO 101 [Min Grade: D], CAEE 212 [Min Grade: D]"
+GEO 348-1,GEO 348,"GEO 101 [Min Grade: D], CHEM 101 [Min Grade: D], CAEE 212 [Min Grade: D]"
+GEO 375-1,GEO 375,GEO 101 [Min Grade: D]; GEO 103 [Min Grade: D]
+GEO 401-1,GEO 401,GEO 401-1-1; CHEM 102 [Min Grade: D]; GEO 215 [Min Grade: D]
+GEO 401-1-1,GEO 401-1,"GEO 101 [Min Grade: D], CAEE 212 [Min Grade: D]"
+GEO 412-1,GEO 412,CHEM 102 [Min Grade: D]; GEO 412-1-1
+GEO 412-1-1,GEO 412-1,"MATH 239 [Min Grade: D], MATH 123 [Min Grade: D]"
+GEO 418-1,GEO 418,GEO 418-1-1; GEO 418-1-2
+GEO 418-1-1,GEO 418-1,"MATH 239 [Min Grade: D], MATH 123 [Min Grade: D]"
+GEO 418-1-2,GEO 418-1,"PHYS 153 [Min Grade: D], PHYS 102 [Min Grade: D]"
+GEO 444-1,GEO 444,"GEO 101 [Min Grade: D], CAEE 212 [Min Grade: D]; MATH 101 [Min Grade: D], MATH 121 [Min Grade: D]"
+GER 101-1,GER 101,"APGX N, APWGR 0"
+GER 102-1,GER 102,GER 101 [Min Grade: D]
+GER 103-1,GER 103,GER 102 [Min Grade: D]
+GER 201-1,GER 201,GER 103 [Min Grade: D]
+GER 202-1,GER 202,GER 201 [Min Grade: D]
+GER 310-1,GER 310,GER 202 [Min Grade: C]
+GER 330-1,GER 330,GER 310 [Min Grade: C]
+GER 340-1,GER 340,GER 310 [Min Grade: C]
+GER 350-1,GER 350,GER 310 [Min Grade: C]
+GER 410-1,GER 410,GER 310 [Min Grade: C]; GER 410-1-1
+GER 410-1-1,GER 410-1,"GER 320 [Min Grade: C], GER 330 [Min Grade: C], GER 340 [Min Grade: C], GER 350 [Min Grade: C]"
+GER 420-1,GER 420,GER 310 [Min Grade: D]
+GER 430-1,GER 430,GER 310 [Min Grade: D]
+GER 440-1,GER 440,GER 310 [Min Grade: D]
+GER 450-1,GER 450,GER 310 [Min Grade: D]
+HBRW 101-1,HBRW 101,APHX N
+HBRW 102-1,HBRW 102,HBRW 101 [Min Grade: D]
+HBRW 103-1,HBRW 103,HBRW 102 [Min Grade: D]
+HBRW 201-1,HBRW 201,HBRW 103 [Min Grade: C]
+HBRW 202-1,HBRW 202,HBRW 201 [Min Grade: C]
+HIST 296-1,HIST 296,HIST 102 [Min Grade: D]
+HIST 301-1,HIST 301,HIST 296 [Min Grade: D]
+HIST 396-1,HIST 396,HIST 301 [Min Grade: D]
+HIST 490-1,HIST 490,HIST 301 [Min Grade: D]; HIST 396 [Min Grade: D]
+HIST 491-1,HIST 491,HIST 490 [Min Grade: D]
+ITAL 102-1,ITAL 102,ITAL 101 [Min Grade: D]
+ITAL 103-1,ITAL 103,ITAL 102 [Min Grade: C]
+ITAL 201-1,ITAL 201,ITAL 103 [Min Grade: D]
+ITAL 202-1,ITAL 202,ITAL 201 [Min Grade: D]
+JAPN 101-1,JAPN 101,APJX N
+JAPN 102-1,JAPN 102,JAPN 101 [Min Grade: D]
+JAPN 103-1,JAPN 103,JAPN 102 [Min Grade: D]
+JAPN 201-1,JAPN 201,JAPN 103 [Min Grade: D]
+JAPN 202-1,JAPN 202,JAPN 201 [Min Grade: D]
+JAPN 310-1,JAPN 310,JAPN 202 [Min Grade: D]
+JAPN 320-1,JAPN 320,JAPN 310 [Min Grade: D]
+JAPN 340-1,JAPN 340,JAPN 310 [Min Grade: D]
+JAPN 350-1,JAPN 350,JAPN 310 [Min Grade: D]
+JAPN 410-1,JAPN 410,JAPN 310 [Min Grade: D]
+JAPN 420-1,JAPN 420,JAPN 310 [Min Grade: D]
+JAPN 440-1,JAPN 440,JAPN 310 [Min Grade: D]
+JAPN 450-1,JAPN 450,JAPN 310 [Min Grade: D]
+KOR 101-1,KOR 101,APKX N
+KOR 102-1,KOR 102,KOR 101 [Min Grade: D]
+KOR 103-1,KOR 103,KOR 102 [Min Grade: D]
+KOR 201-1,KOR 201,KOR 103 [Min Grade: D]
+KOR 202-1,KOR 202,KOR 201 [Min Grade: D]
+KOR 310-1,KOR 310,KOR 202 [Min Grade: C]
+KOR 320-1,KOR 320,KOR 310 [Min Grade: C]
+KOR 350-1,KOR 350,KOR 310 [Min Grade: C]
+KOR 410-1,KOR 410,KOR 310 [Min Grade: C]
+KOR 420-1,KOR 420,KOR 310 [Min Grade: C]
+KOR 450-1,KOR 450,KOR 310 [Min Grade: C]
+MATH 101-1,MATH 101,"MATH 100 [Min Grade: C-], APEM 070, APC 060, APMA49 P, APCA49 P"
+MATH 102-1,MATH 102,"MATH 101 [Min Grade: D], MATH 172 [Min Grade: C-]"
+MATH 107-1,MATH 107,"MATH 100 [Min Grade: D], MATH 101 [Min Grade: D], APEM 070"
+MATH 110-1,MATH 110,"MATH 100 [Min Grade: C], APC 060, APMA49 P, APCA49 P"
+MATH 116-1,MATH 116,"APC 060, MATH 100 [Min Grade: C], APMA49 P, APCA49 P"
+MATH 117-1,MATH 117,MATH 116 [Min Grade: C-]
+MATH 121-1,MATH 121,"MATH 110 [Min Grade: C-], MATH 105 [Min Grade: C-], APC 070, APCA50 P"
+MATH 122-1,MATH 122,"MATH 117 [Min Grade: C-], MATH 121 [Min Grade: C-]"
+MATH 123-1,MATH 123,MATH 122 [Min Grade: D]
+MATH 171-1,MATH 171,"MATH 100 [Min Grade: C-], APEM 070, APC 060, APMA49 P, APCA49 P"
+MATH 172-1,MATH 172,"MATH 171 [Min Grade: C-], MATH 101 [Min Grade: D]"
+MATH 173-1,MATH 173,MATH 172 [Min Grade: C-]
+MATH 180-1,MATH 180,"MATH 102 [Min Grade: D], MATH 121 [Min Grade: D], MATH 172 [Min Grade: C-], MATH 117 [Min Grade: D]"
+MATH 200-1,MATH 200,MATH 122 [Min Grade: D]
+MATH 201-1,MATH 201,"MATH 121 [Min Grade: D], MATH 117 [Min Grade: D]"
+MATH 205-1,MATH 205,"MATH 201 [Min Grade: D], MATH 261 [Min Grade: D]"
+MATH 210-1,MATH 210,MATH 200 [Min Grade: D]; MATH 201 [Min Grade: D]
+MATH 220-1,MATH 220,"MATH 123 [Min Grade: C-], MATH 200 [Min Grade: C-]"
+MATH 221-1,MATH 221,"MATH 220 [Min Grade: C], CS 270 [Min Grade: D], ECE 200 [Min Grade: D]"
+MATH 222-1,MATH 222,MATH 220 [Min Grade: C]
+MATH 235-1,MATH 235,MATH 200 [Min Grade: D]
+MATH 239-1,MATH 239,"MATH 102 [Min Grade: D], MATH 122 [Min Grade: D]"
+MATH 250-1,MATH 250,MATH 123 [Min Grade: D]
+MATH 261-1,MATH 261,MATH 122 [Min Grade: D]
+MATH 262-1,MATH 262,MATH 261 [Min Grade: D]
+MATH 285-1,MATH 285,MATH 210 [Min Grade: D]
+MATH 291-1,MATH 291,MATH 200 [Min Grade: D]
+MATH 300-1,MATH 300,MATH 200 [Min Grade: D]; MATH 300-1-1; MATH 300-1-2; 
+MATH 300-1-1,MATH 300-1,"MATH 201 [Min Grade: D], MATH 261 [Min Grade: D]"
+MATH 300-1-2,MATH 300-1,"CS 171 [Min Grade: D], CS 123 [Min Grade: D]"
+MATH 301-1,MATH 301,MATH 300 [Min Grade: D]
+MATH 305-1,MATH 305,"MATH 201 [Min Grade: D], MATH 261 [Min Grade: D]"
+MATH 310-1,MATH 310,MATH 200 [Min Grade: D]
+MATH 311-1,MATH 311,MATH 122 [Min Grade: D]
+MATH 312-1,MATH 312,MATH 200 [Min Grade: D]; MATH 312-1-1
+MATH 312-1-1,MATH 312-1,"MATH 311 [Min Grade: D], ENGR 361 [Min Grade: D]"
+MATH 313-1,MATH 313,MATH 312 [Min Grade: D]
+MATH 316-1,MATH 316,MATH 123 [Min Grade: D]; MATH 200 [Min Grade: D]
+MATH 318-1,MATH 318,"MATH 310 [Min Grade: D], MATH 312 [Min Grade: D]"
+MATH 319-1,MATH 319,MATH 318 [Min Grade: D]
+MATH 320-1,MATH 320,MATH 312 [Min Grade: D]
+MATH 321-1,MATH 321,MATH 321-1-1; MATH 200 [Min Grade: D]
+MATH 321-1-1,MATH 321-1,"MATH 201 [Min Grade: D], MATH 261 [Min Grade: D]"
+MATH 322-1,MATH 322,"MATH 210 [Min Grade: D], MATH 262 [Min Grade: D]"
+MATH 323-1,MATH 323,"MATH 210 [Min Grade: D], MATH 262 [Min Grade: D]"
+MATH 331-1,MATH 331,MATH 331-1-1; MATH 331-1-2
+MATH 331-1-1,MATH 331-1,"MATH 220 [Min Grade: C-], CS 270 [Min Grade: C-]"
+MATH 331-1-2,MATH 331-1,"MATH 201 [Min Grade: D], MATH 261 [Min Grade: D], ENGR 231 [Min Grade: D]"
+MATH 332-1,MATH 332,MATH 331 [Min Grade: C-]
+MATH 387-1,MATH 387,"MATH 261 [Min Grade: D], MATH 201 [Min Grade: D]"
+MATH 401-1,MATH 401,MATH 401-1-1; MATH 401-1-2; MATH 200 [Min Grade: D]
+MATH 401-1-1,MATH 401-1,"MATH 220 [Min Grade: C-], CS 270 [Min Grade: C-]"
+MATH 401-1-2,MATH 401-1,"MATH 201 [Min Grade: D], MATH 261 [Min Grade: D], ENGR 231 [Min Grade: D]"
+MATH 402-1,MATH 402,MATH 401 [Min Grade: C-]
+MATH 410-1,MATH 410,"MATH 122 [Min Grade: D], MATH 239 [Min Grade: D]"
+MATH 411-1,MATH 411,MATH 410 [Min Grade: C-]
+MATH 422-1,MATH 422,MATH 220 [Min Grade: C]
+MATH 449-1,MATH 449,MATH 311 [Min Grade: D]
+MATH 450-1,MATH 450,MATH 450-1-1; MATH 450-1-2
+MATH 450-1-1,MATH 450-1,"MATH 201 [Min Grade: D], MATH 261 [Min Grade: D]"
+MATH 450-1-2,MATH 450-1,"MATH 221 [Min Grade: D], MATH 222 [Min Grade: D]"
+MATH 475-1,MATH 475,MATH 475-1-1; MATH 311 [Min Grade: D]
+MATH 475-1-1,MATH 475-1,"MATH 201 [Min Grade: D], MATH 261 [Min Grade: D]"
+MATH 483-1,MATH 483,MATH 311 [Min Grade: C]
+MATH 489-1,MATH 489,MATH 489-1-1; MATH 200 [Min Grade: C]
+MATH 489-1-1,MATH 489-1,"MATH 201 [Min Grade: C], MATH 261 [Min Grade: C], ENGR 231 [Min Grade: C]"
+PHIL 421-1,PHIL 421,PHIL 421-1-1; PHIL 421-1-2
+PHIL 421-1-1,PHIL 421-1,"PHIL 211 [Min Grade: D], PHIL 212 [Min Grade: D], PHIL 214 [Min Grade: D], PHIL 215 [Min Grade: D]"
+PHIL 421-1-2,PHIL 421-1,"PHIL 221 [Min Grade: D], PHIL 231 [Min Grade: D], PHIL 241 [Min Grade: D], PHIL 251 [Min Grade: D]"
+PHIL 431-1,PHIL 431,PHIL 431-1-1; PHIL 431-1-2
+PHIL 431-1-1,PHIL 431-1,"PHIL 221 [Min Grade: D], PHIL 231 [Min Grade: D], PHIL 241 [Min Grade: D], PHIL 251 [Min Grade: D]"
+PHIL 431-1-2,PHIL 431-1,"PHIL 211 [Min Grade: D], PHIL 212 [Min Grade: D], PHIL 214 [Min Grade: D], PHIL 215 [Min Grade: D]"
+PHIL 461-1,PHIL 461,PHIL 461-1-1; PHIL 461-1-2
+PHIL 461-1-1,PHIL 461-1,"PHIL 211 [Min Grade: D], PHIL 212 [Min Grade: D], PHIL 214 [Min Grade: D], PHIL 215 [Min Grade: D]"
+PHIL 461-1-2,PHIL 461-1,"PHIL 221 [Min Grade: D], PHIL 231 [Min Grade: D], PHIL 241 [Min Grade: D], PHIL 251 [Min Grade: D]"
+PHIL 481-1,PHIL 481,PHIL 481-1-1; PHIL 481-1-2
+PHIL 481-1-1,PHIL 481-1,"PHIL 121 [Min Grade: D], PHIL 210 [Min Grade: D], PHIL 211 [Min Grade: D], PHIL 212 [Min Grade: D], PHIL 214 [Min Grade: D], PHIL 215 [Min Grade: D], PHIL 216 [Min Grade: D], PHIL 218 [Min Grade: D], PHIL 221 [Min Grade: D], PHIL 231 [Min Grade: D], PHIL 241 [Min Grade: D], PHIL 251 [Min Grade: D], PHIL 255 [Min Grade: D], PHIL T280 [Min Grade: D], PHIL 291 [Min Grade: D], PHIL 301 [Min Grade: D], PHIL 305 [Min Grade: D], PHIL 311 [Min Grade: D], PHIL 315 [Min Grade: D], PHIL 317 [Min Grade: D], PHIL 321 [Min Grade: D], PHIL 323 [Min Grade: D], PHIL 325 [Min Grade: D], PHIL 330 [Min Grade: D], PHIL 335 [Min Grade: D], PHIL 340 [Min Grade: D], PHIL 341 [Min Grade: D], PHIL 351 [Min Grade: D], PHIL 355 [Min Grade: D], PHIL 361 [Min Grade: D], PHIL T380 [Min Grade: D], PHIL 381 [Min Grade: D], PHIL 385 [Min Grade: D], PHIL 391 [Min Grade: D], PHIL T480 [Min Grade: D], PHIL 201 [Min Grade: D]"
+PHIL 481-1-2,PHIL 481-1,"PHIL 102 [Min Grade: D], PHIL 105 [Min Grade: D], PHIL 110 [Min Grade: D], PHIL 111 [Min Grade: D], PHIL 151 [Min Grade: D], PHIL 101 [Min Grade: D]"
+PHIL 485-1,PHIL 485,PHIL 485-1-1; PHIL 485-1-2
+PHIL 485-1-1,PHIL 485-1,"PHIL 121 [Min Grade: D], PHIL 210 [Min Grade: D], PHIL 211 [Min Grade: D], PHIL 212 [Min Grade: D], PHIL 214 [Min Grade: D], PHIL 215 [Min Grade: D], PHIL 216 [Min Grade: D], PHIL 218 [Min Grade: D], PHIL 221 [Min Grade: D], PHIL 231 [Min Grade: D], PHIL 241 [Min Grade: D], PHIL 251 [Min Grade: D], PHIL 255 [Min Grade: D], PHIL T280 [Min Grade: D], PHIL 291 [Min Grade: D], PHIL 301 [Min Grade: D], PHIL 305 [Min Grade: D], PHIL 311 [Min Grade: D], PHIL 315 [Min Grade: D], PHIL 317 [Min Grade: D], PHIL 321 [Min Grade: D], PHIL 323 [Min Grade: D], PHIL 325 [Min Grade: D], PHIL 330 [Min Grade: D], PHIL 335 [Min Grade: D], PHIL 340 [Min Grade: D], PHIL 341 [Min Grade: D], PHIL 351 [Min Grade: D], PHIL 355 [Min Grade: D], PHIL 361 [Min Grade: D], PHIL T380 [Min Grade: D], PHIL 385 [Min Grade: D], PHIL 391 [Min Grade: D], PHIL T480 [Min Grade: D], PHIL 381 [Min Grade: D], PHIL 201 [Min Grade: D]"
+PHIL 485-1-2,PHIL 485-1,"PHIL 101 [Min Grade: D], PHIL 102 [Min Grade: D], PHIL 105 [Min Grade: D], PHIL 110 [Min Grade: D], PHIL 111 [Min Grade: D], PHIL 151 [Min Grade: D]"
+PHIL 498-1,PHIL 498,PHIL 497 [Min Grade: D]
+PHIL 499-1,PHIL 499,PHIL 498 [Min Grade: D]
+PPE 450-1,PPE 450,PPE 101 [Min Grade: C]
+PHYS 101-1,PHYS 101,PHYS 101-1-1; PHYS 101-1-2
+PHYS 101-1-1,PHYS 101-1,"APPH50 P, PHYS 100 [Min Grade: D], APC 070"
+PHYS 101-1-2,PHYS 101-1,"MATH 121 [Min Grade: C-], MATH 117 [Min Grade: C-]"
+PHYS 102-1,PHYS 102,PHYS 101 [Min Grade: D]
+PHYS 105-1,PHYS 105,PHYS 105-1-1; PHYS 105-1-2
+PHYS 105-1-1,PHYS 105-1,"PHYS 113 [Min Grade: D], PHYS 101 [Min Grade: D]"
+PHYS 105-1-2,PHYS 105-1,"CS 171 [Min Grade: D], CS 143 [Min Grade: D], ENGR 131 [Min Grade: D]"
+PHYS 114-1,PHYS 114,MATH 121 [Min Grade: D]; PHYS 113 [Min Grade: D]
+PHYS 115-1,PHYS 115,MATH 122 [Min Grade: D]; PHYS 114 [Min Grade: D]
+PHYS 128-1,PHYS 128,PHYS 113 [Min Grade: D]
+PHYS 153-1,PHYS 153,"PHYS 152 [Min Grade: D], PHYS 101 [Min Grade: D]"
+PHYS 154-1,PHYS 154,"PHYS 101 [Min Grade: D], PHYS 152 [Min Grade: D]"
+PHYS 182-1,PHYS 182,"MATH 183 [Min Grade: D], MATH 101 [Min Grade: D], MATH 102 [Min Grade: D], MATH 173 [Min Grade: D]"
+PHYS 183-1,PHYS 183,PHYS 182 [Min Grade: D]
+PHYS 184-1,PHYS 184,PHYS 183 [Min Grade: D]
+PHYS 185-1,PHYS 185,MATH 121 [Min Grade: D]
+PHYS 186-1,PHYS 186,PHYS 185 [Min Grade: D]
+PHYS 188-1,PHYS 188,PHYS 189 [Min Grade: D]
+PHYS 189-1,PHYS 189,PHYS 185 [Min Grade: D]
+PHYS 201-1,PHYS 201,PHYS 102 [Min Grade: D]; MATH 122 [Min Grade: D]
+PHYS 217-1,PHYS 217,MATH 200 [Min Grade: D]; PHYS 217-1-1
+PHYS 217-1-1,PHYS 217-1,"PHYS 114 [Min Grade: D], PHYS 201 [Min Grade: D]"
+PHYS 227-1,PHYS 227,PHYS 226 [Min Grade: D]
+PHYS 231-1,PHYS 231,PHYS 231-1-1; MATH 121 [Min Grade: D]
+PHYS 231-1-1,PHYS 231-1,"PHYS 101 [Min Grade: D], PHYS 113 [Min Grade: D]"
+PHYS 232-1,PHYS 232,PHYS 113 [Min Grade: D]; MATH 121 [Min Grade: D]
+PHYS 233-1,PHYS 233,PHYS 233-1-1; MATH 122 [Min Grade: D]
+PHYS 233-1-1,PHYS 233-1,"PHYS 113 [Min Grade: D], PHYS 101 [Min Grade: D]"
+PHYS 262-1,PHYS 262,"PHYS 115 [Min Grade: D], PHYS 201 [Min Grade: D]"
+PHYS 280-1,PHYS 280,"PHYS 102 [Min Grade: D], PHYS 189 [Min Grade: D]"
+PHYS 282-1,PHYS 282,PHYS 280 [Min Grade: D]
+PHYS 305-1,PHYS 305,PHYS 105 [Min Grade: D]
+PHYS 311-1,PHYS 311,PHYS 311-1-1; MATH 200 [Min Grade: D]
+PHYS 311-1-1,PHYS 311-1,"PHYS 113 [Min Grade: D], PHYS 101 [Min Grade: D]"
+PHYS 312-1,PHYS 312,PHYS 311 [Min Grade: D]
+PHYS 317-1,PHYS 317,PHYS 317-1-1; MATH 200 [Min Grade: D]
+PHYS 317-1-1,PHYS 317-1,"PHYS 217 [Min Grade: D], CHEM 253 [Min Grade: D], ENGR 210 [Min Grade: D]"
+PHYS 321-1,PHYS 321,"PHYS 115 [Min Grade: D], PHYS 102 [Min Grade: D]"
+PHYS 322-1,PHYS 322,PHYS 321 [Min Grade: D]
+PHYS 325-1,PHYS 325,PHYS 105 [Min Grade: D]
+PHYS 326-1,PHYS 326,PHYS 311 [Min Grade: D]; MATH 210 [Min Grade: D]
+PHYS 327-1,PHYS 327,PHYS 326 [Min Grade: D]
+PHYS 328-1,PHYS 328,"PHYS 223 [Min Grade: D], PHYS 128 [Min Grade: D]"
+PHYS 330-1,PHYS 330,PHYS 330-1-1; PHYS 330-1-2
+PHYS 330-1-1,PHYS 330-1,"PHYS 115 [Min Grade: D], PHYS 201 [Min Grade: D]"
+PHYS 330-1-2,PHYS 330-1,"MATH 210 [Min Grade: D], ENGR 232 [Min Grade: D]"
+PHYS 405-1,PHYS 405,PHYS 305 [Min Grade: C]
+PHYS 428-1,PHYS 428,PHYS 327 [Min Grade: D]
+PHYS 431-1,PHYS 431,PHYS 311 [Min Grade: D]
+PHYS 432-1,PHYS 432,PHYS 311 [Min Grade: D]
+PHYS 433-1,PHYS 433,"PHYS 321 [Min Grade: C-], PHYS 233 [Min Grade: C-]"
+PHYS 440-1,PHYS 440,"PHYS 115 [Min Grade: D], CS 171 [Min Grade: D]"
+PHYS 452-1,PHYS 452,PHYS 317 [Min Grade: D]; PHYS 326 [Min Grade: D]
+PHYS 453-1,PHYS 453,PHYS 311 [Min Grade: D]; PHYS 217 [Min Grade: D]
+PHYS 461-1,PHYS 461,PHYS 317 [Min Grade: D]
+PHYS 462-1,PHYS 462,PHYS 105 [Min Grade: D]; PHYS 217 [Min Grade: D]; MATH 210 [Min Grade: D]
+PHYS 476-1,PHYS 476,PHYS 327 [Min Grade: D]
+PHYS 479-1,PHYS 479,"PHYS 327 [Min Grade: C-], CHEM 355 [Min Grade: C-], MATE 351 [Min Grade: C-]"
+PHYS 492-1,PHYS 492,PHYS 491 [Min Grade: D]
+PHYS 493-1,PHYS 493,PHYS 492 [Min Grade: D]
+PSCI 210-1,PSCI 210,PSCI 110 [Min Grade: D]
+PSCI 220-1,PSCI 220,PSCI 110 [Min Grade: D]
+PSCI 223-1,PSCI 223,PSCI 120 [Min Grade: D]
+PSCI 240-1,PSCI 240,PSCI 140 [Min Grade: D]
+PSCI 250-1,PSCI 250,PSCI 150 [Min Grade: D]
+PSCI 252-1,PSCI 252,"PSCI 150 [Min Grade: D], PSCI 140 [Min Grade: D]"
+PSCI 260-1,PSCI 260,"PSCI 140 [Min Grade: D], PSCI 150 [Min Grade: D]"
+PSCI 320-1,PSCI 320,PSCI 110 [Min Grade: D]
+PSCI 493-1,PSCI 493,PSCI 492 [Min Grade: D]
+PSY 112-1,PSY 112,PSY 111 [Min Grade: D]
+PSY 210-1,PSY 210,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 212-1,PSY 212,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 213-1,PSY 213,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 225-1,PSY 225,PSY 225-1-1; PSY 240 [Min Grade: D]
+PSY 225-1-1,PSY 225-1,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 240-1,PSY 240,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 242-1,PSY 242,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 244-1,PSY 244,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 245-1,PSY 245,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 250-1,PSY 250,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 252-1,PSY 252,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 254-1,PSY 254,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 264-1,PSY 264,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 265-1,PSY 265,PSY 265-1-1; PSY 264 [Min Grade: D]
+PSY 265-1-1,PSY 265-1,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 280-1,PSY 280,PSY 264 [Min Grade: D]; PSY 265 [Min Grade: D]
+PSY 285-1,PSY 285,"PSY 101 [Min Grade: C], PSY 112 [Min Grade: C]"
+PSY 290-1,PSY 290,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 310-1,PSY 310,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 312-1,PSY 312,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 320-1,PSY 320,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 325-1,PSY 325,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 330-1,PSY 330,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D], IDM 211 [Min Grade: D]"
+PSY 335-1,PSY 335,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 336-1,PSY 336,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 342-1,PSY 342,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 345-1,PSY 345,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 352-1,PSY 352,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 355-1,PSY 355,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 356-1,PSY 356,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 357-1,PSY 357,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 360-1,PSY 360,PSY 265 [Min Grade: D]
+PSY 368-1,PSY 368,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 370-1,PSY 370,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 371-1,PSY 371,"PSY 101 [Min Grade: D], PSY 111 [Min Grade: D]"
+PSY 380-1,PSY 380,PSY 280 [Min Grade: D]; PSY 360 [Min Grade: D]
+PSY 410-1,PSY 410,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 427-1,PSY 427,"PSY 330 [Min Grade: D], ECON 301 [Min Grade: D]"
+PSY 450-1,PSY 450,PSY 450-1-1; PSY 120 [Min Grade: C]
+PSY 450-1-1,PSY 450-1,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 455-1,PSY 455,"PSY 101 [Min Grade: D], PSY 111 [Min Grade: D]"
+PSY 463-1,PSY 463,"PSY 101 [Min Grade: D], PSY 112 [Min Grade: D]"
+PSY 491-1,PSY 491,PSY 490 [Min Grade: D]
+PSY 492-1,PSY 492,PSY 491 [Min Grade: D]
+SOC 281-1,SOC 281,"SOC 101 [Min Grade: D], SOC 115 [Min Grade: D]"
+SOC 356-1,SOC 356,"SOC 355 [Min Grade: D], SOC 260 [Min Grade: D]"
+SOC 420-1,SOC 420,SOC 356 [Min Grade: C]
+SOC 450-1,SOC 450,SOC 101 [Min Grade: C]; SOC 450-1-1
+SOC 450-1-1,SOC 450-1,"SOC 115 [Min Grade: C], SOC 210 [Min Grade: C], SOC 215 [Min Grade: C], SOC 220 [Min Grade: C], SOC 221 [Min Grade: C], SOC 222 [Min Grade: C], SOC 230 [Min Grade: C], SOC 235 [Min Grade: C], SOC 240 [Min Grade: C], SOC 241 [Min Grade: C], SOC 242 [Min Grade: C], SOC 268 [Min Grade: C], SOC 271 [Min Grade: C], SOC 276 [Min Grade: C], SOC 313 [Min Grade: C], SOC 320 [Min Grade: C], SOC 330 [Min Grade: C], SOC 335 [Min Grade: C], SOC 340 [Min Grade: C], SOC 341 [Min Grade: C], SOC 345 [Min Grade: C], SOC 346 [Min Grade: C], SOC 349 [Min Grade: C], SOC 355 [Min Grade: C], SOC 356 [Min Grade: C], SOC 370 [Min Grade: C], SOC 410 [Min Grade: C], SOC 420 [Min Grade: C], SOC 430 [Min Grade: C], SOC 444 [Min Grade: C]"
+SOC 490-1,SOC 490,SOC 241 [Min Grade: D]; SOC 242 [Min Grade: D]
+SOC 491-1,SOC 491,SOC 490 [Min Grade: D]
+SOC 492-1,SOC 492,SOC 491 [Min Grade: D]
+SPAN 102-1,SPAN 102,SPAN 101 [Min Grade: D]
+SPAN 103-1,SPAN 103,SPAN 102 [Min Grade: D]
+SPAN 113-1,SPAN 113,SPAN 102 [Min Grade: D]
+SPAN 201-1,SPAN 201,"SPAN 103 [Min Grade: D], APWSP 331, SPAN 113 [Min Grade: D]"
+SPAN 202-1,SPAN 202,"SPAN 201 [Min Grade: D], SPAN 211 [Min Grade: D]"
+SPAN 211-1,SPAN 211,"SPAN 103 [Min Grade: D], SPAN 113 [Min Grade: D]"
+SPAN 212-1,SPAN 212,"SPAN 201 [Min Grade: D], SPAN 211 [Min Grade: D]"
+SPAN 310-1,SPAN 310,"SPAN 202 [Min Grade: D], SPAN 212 [Min Grade: D]"
+SPAN 320-1,SPAN 320,SPAN 310 [Min Grade: D]
+SPAN 330-1,SPAN 330,SPAN 310 [Min Grade: D]
+SPAN 340-1,SPAN 340,SPAN 310 [Min Grade: D]
+SPAN 350-1,SPAN 350,SPAN 310 [Min Grade: D]
+SPAN 410-1,SPAN 410,SPAN 310 [Min Grade: D]
+SPAN 420-1,SPAN 420,SPAN 310 [Min Grade: D]
+SPAN 430-1,SPAN 430,SPAN 310 [Min Grade: D]
+SPAN 440-1,SPAN 440,SPAN 310 [Min Grade: D]
+SPAN 450-1,SPAN 450,SPAN 310 [Min Grade: D]
+WRIT 200-1,WRIT 200,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D]"
+WRIT 210-1,WRIT 210,WRIT 210-1-1; WRIT 210-1-2
+WRIT 210-1-1,WRIT 210-1,"ENGL 101 [Min Grade: C], ENGL 111 [Min Grade: C]"
+WRIT 210-1-2,WRIT 210-1,"ENGL 102 [Min Grade: C], ENGL 112 [Min Grade: C]"
+WRIT 211-1,WRIT 211,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D]"
+WRIT 212-1,WRIT 212,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D]"
+WRIT 220-1,WRIT 220,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+WRIT 225-1,WRIT 225,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+WRIT 226-1,WRIT 226,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D]"
+WRIT 250-1,WRIT 250,ENGL 103 [Min Grade: D]
+WRIT 295-1,WRIT 295,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D]"
+WRIT 301-1,WRIT 301,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+WRIT 302-1,WRIT 302,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: D]"
+WRIT 303-1,WRIT 303,"ENGL 103 [Min Grade: D], ENGL 105 [Min Grade: A]"
+WRIT 306-1,WRIT 306,"WRIT 306-1-1, ENGL 105 [Min Grade: D]"
+WRIT 306-1-1,WRIT 306-1,ENGL 101 [Min Grade: D]; ENGL 102 [Min Grade: D]; ENGL 103 [Min Grade: D]
+WRIT 310-1,WRIT 310,"ENGL 103 [Min Grade: D], ENGL 105 [Min Grade: A]"
+WRIT 311-1,WRIT 311,WRIT 311-1-1; WRIT 311-1-2; WRIT 311-1-3
+WRIT 311-1-1,WRIT 311-1,"ENGL 101 [Min Grade: C], ENGL 111 [Min Grade: C]"
+WRIT 311-1-2,WRIT 311-1,"ENGL 102 [Min Grade: C], ENGL 112 [Min Grade: C]"
+WRIT 311-1-3,WRIT 311-1,"ENGL 103 [Min Grade: C], ENGL 113 [Min Grade: C]"
+WRIT 312-1,WRIT 312,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+WRIT 315-1,WRIT 315,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D]"
+WRIT 401-1,WRIT 401,WRIT 295 [Min Grade: C]; WRIT 301 [Min Grade: C]
+WRIT 402-1,WRIT 402,WRIT 295 [Min Grade: C]; WRIT 302 [Min Grade: C]
+WRIT 405-1,WRIT 405,"ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D], ENGL 105 [Min Grade: A]"
+ENTP 102-1,ENTP 102,ENTP 101 [Min Grade: D]
+ENTP 325-1,ENTP 325,"ACCT 115 [Min Grade: D], ACCT 120 [Min Grade: D], ACCT 110 [Min Grade: D]"
+ENTP 375-1,ENTP 375,ENTP 270 [Min Grade: D]
+ENTP 395-1,ENTP 395,ENTP 105 [Min Grade: D]; ENTP 225 [Min Grade: D]
+ENTP 410-1,ENTP 410,"ENTP 210 [Min Grade: D], ENTP 270 [Min Grade: D], ENTP 385 [Min Grade: D]"
+ENTP 450-1,ENTP 450,ENTP 205 [Min Grade: D]; ENTP 325 [Min Grade: D]
+CS 172-1,CS 172,"CS 171 [Min Grade: C], CS 175 [Min Grade: C]"
+CS 176-1,CS 176,"CS 171 [Min Grade: C], CS 175 [Min Grade: C]"
+CS 260-1,CS 260,CS 265 [Min Grade: C]
+CS 265-1,CS 265,"CS 172 [Min Grade: C], CS 176 [Min Grade: C], ECE 105 [Min Grade: D], ECEC 201 [Min Grade: D]"
+CS 270-1,CS 270,"CS 172 [Min Grade: C], CS 176 [Min Grade: C], CS 265 [Min Grade: C], ECE 105 [Min Grade: D], ECEC 201 [Min Grade: D], ECEC 301 [Min Grade: D]"
+CS 277-1,CS 277,CS 260 [Min Grade: C]; CS 270 [Min Grade: C]; MATH 221 [Min Grade: C]
+CS 281-1,CS 281,CS 281-1-1; CS 281-1-2
+CS 281-1-1,CS 281-1,"CS 270 [Min Grade: C], ECE 200 [Min Grade: D]"
+CS 281-1-2,CS 281-1,"CS 172 [Min Grade: C], CS 176 [Min Grade: C], ECEC 301 [Min Grade: D], ECEC 201 [Min Grade: D], ECE 105 [Min Grade: D]"
+CS 283-1,CS 283,CS 265 [Min Grade: C]
+CS 300-1,CS 300,CS 260 [Min Grade: C]; CS 270 [Min Grade: C]; MATH 200 [Min Grade: C]; MATH 201 [Min Grade: C]
+CS 303-1,CS 303,CS 260 [Min Grade: C]; CS 303-1-1; CS 303-1-2; 
+CS 303-1-1,CS 303-1,"MATH 221 [Min Grade: C], MATH 222 [Min Grade: C]"
+CS 303-1-2,CS 303-1,"MATH 201 [Min Grade: C], ENGR 231 [Min Grade: D]"
+CS 314-1,CS 314,CS 283 [Min Grade: C]
+CS 338-1,CS 338,"CS 350 [Min Grade: C], SE 310 [Min Grade: C], CS 275 [Min Grade: C]"
+CS 341-1,CS 341,GMAP 377 [Min Grade: D]
+CS 342-1,CS 342,"CS 345 [Min Grade: C], GMAP 345 [Min Grade: D]"
+CS 345-1,CS 345,CS 345-1-1; CS 345-1-2
+CS 345-1-1,CS 345-1,"DIGM 260 [Min Grade: D], GMAP 260 [Min Grade: D]"
+CS 345-1-2,CS 345-1,"CS 265 [Min Grade: C], DIGM 141 [Min Grade: D]"
+CS 352-1,CS 352,"CS 281 [Min Grade: C], ECEC 355 [Min Grade: D]"
+CS 360-1,CS 360,CS 260 [Min Grade: C]; CS 265 [Min Grade: C]; CS 270 [Min Grade: C]
+CS 361-1,CS 361,CS 260 [Min Grade: C]; CS 361-1-1
+CS 361-1-1,CS 361-1,"CS 281 [Min Grade: C], ECEC 355 [Min Grade: D]"
+CS 370-1,CS 370,"CS 283 [Min Grade: C], ECEC 353 [Min Grade: D]"
+CS 375-1,CS 375,CS 265 [Min Grade: C]
+CS 377-1,CS 377,"CS 283 [Min Grade: C], ECEC 353 [Min Grade: D]"
+CS 380-1,CS 380,CS 260 [Min Grade: C]; CS 270 [Min Grade: C]
+CS 383-1,CS 383,CS 260 [Min Grade: C]; CS 383-1-1; CS 383-1-2; CS 383-1-3; 
+CS 383-1-1,CS 383-1,"MATH 201 [Min Grade: C], ENGR 231 [Min Grade: D]"
+CS 383-1-2,CS 383-1,"MATH 221 [Min Grade: C], MATH 222 [Min Grade: C]"
+CS 383-1-3,CS 383-1,"MATH 311 [Min Grade: C], MATH 410 [Min Grade: C], ECE 361 [Min Grade: D]"
+CS 385-1,CS 385,CS 260 [Min Grade: C]; CS 380 [Min Grade: C]
+CS 387-1,CS 387,CS 260 [Min Grade: C]; CS 380 [Min Grade: C]
+CS 429-1,CS 429,CS 260 [Min Grade: C]; CS 265 [Min Grade: C]; CS 270 [Min Grade: C]
+CS 430-1,CS 430,CS 260 [Min Grade: C]; CS 430-1-1
+CS 430-1-1,CS 430-1,"MATH 201 [Min Grade: C], MATH 261 [Min Grade: C], ENGR 231 [Min Grade: D]"
+CS 431-1,CS 431,"CS 430 [Min Grade: D], CS 432 [Min Grade: D]"
+CS 432-1,CS 432,CS 260 [Min Grade: C]; CS 432-1-1
+CS 432-1-1,CS 432-1,"MATH 201 [Min Grade: C], MATH 261 [Min Grade: C], ENGR 231 [Min Grade: D]"
+CS 435-1,CS 435,CS 260 [Min Grade: C]; CS 435-1-1
+CS 435-1-1,CS 435-1,"MATH 201 [Min Grade: C], MATH 261 [Min Grade: C], ENGR 231 [Min Grade: D]"
+CS 440-1,CS 440,CS 270 [Min Grade: C]; CS 440-1-1
+CS 440-1-1,CS 440-1,"MATH 221 [Min Grade: C], MATH 222 [Min Grade: C]"
+CS 441-1,CS 441,CS 441-1-1; CS 360 [Min Grade: C]
+CS 441-1-1,CS 441-1,"CS 281 [Min Grade: C], ECE 350 [Min Grade: D]"
+CS 457-1,CS 457,CS 260 [Min Grade: C]; CS 457-1-1; CS 270 [Min Grade: C]; CS 277 [Min Grade: C]
+CS 457-1-1,CS 457-1,"MATH 221 [Min Grade: C], MATH 222 [Min Grade: C]"
+CS 458-1,CS 458,CS 457 [Min Grade: D]
+CS 460-1,CS 460,CS 260 [Min Grade: C]; CS 270 [Min Grade: C]; CS 277 [Min Grade: C]; MATH 221 [Min Grade: C]
+CS 461-1,CS 461,CS 260 [Min Grade: C]
+CS 465-1,CS 465,CS 303 [Min Grade: D]
+CS 472-1,CS 472,"CS 361 [Min Grade: D], CS 283 [Min Grade: C], ECEC 353 [Min Grade: D]"
+CS 475-1,CS 475,"CS 472 [Min Grade: D], CS 283 [Min Grade: C], ECEC 353 [Min Grade: D]"
+CS 476-1,CS 476,"CS 476-1-1, CS 476-1-2"
+CS 476-1-1,CS 476-1,CS 281 [Min Grade: C]; CS 283 [Min Grade: C]
+CS 476-1-2,CS 476-1,ECEC 353 [Min Grade: D]; ECEC 355 [Min Grade: D]
+CS 479-1,CS 479,CS 475 [Min Grade: D]
+CS 481-1,CS 481,CS 380 [Min Grade: D]; CS 481-1-1
+CS 481-1-1,CS 481-1,"MATH 311 [Min Grade: D], MATH 410 [Min Grade: D], ECE 361 [Min Grade: D]"
+CS 486-1,CS 486,CS 380 [Min Grade: C]
+CT 140-1,CT 140,INFO 101 [Min Grade: D]
+CT 200-1,CT 200,INFO 101 [Min Grade: D]
+CT 301-1,CT 301,CT 140 [Min Grade: D]; CT 201 [Min Grade: D]
+CT 310-1,CT 310,CT 210 [Min Grade: D]
+CT 312-1,CT 312,"CT 420 [Min Grade: D], CT 301 [Min Grade: D]"
+CT 320-1,CT 320,CT 200 [Min Grade: D]
+CT 330-1,CT 330,CT 140 [Min Grade: D]
+CT 335-1,CT 335,"CT 230 [Min Grade: D], INFO 152 [Min Grade: D], CS 265 [Min Grade: D]"
+CT 353-1,CT 353,CT 200 [Min Grade: D]; CT 210 [Min Grade: D]
+CT 355-1,CT 355,"CT 420 [Min Grade: D], CT 301 [Min Grade: D]"
+CT 362-1,CT 362,"CT 420 [Min Grade: D], CT 301 [Min Grade: D]"
+CT 400-1,CT 400,CT 330 [Min Grade: D]
+CT 432-1,CT 432,"CT 420 [Min Grade: D], CT 301 [Min Grade: D]"
+CT 491-1,CT 491,INFO 324 [Min Grade: D]
+CT 496-1,CT 496,CT 491 [Min Grade: D]
+CI 103-1,CI 103,CI 102 [Min Grade: D]
+CI 491-1,CI 491,"CS 451 [Min Grade: D], CI 491-1-1, INFO 442 [Min Grade: D], SE 310 [Min Grade: D]"
+CI 491-1-1,CI 491-1,INFO 324 [Min Grade: D]; INFO 355 [Min Grade: D]
+CI 492-1,CI 492,CI 491 [Min Grade: D]
+CI 493-1,CI 493,CI 492 [Min Grade: D]
+DSCI 351-1,DSCI 351,INFO 212 [Min Grade: D]
+DSCI 471-1,DSCI 471,INFO 213 [Min Grade: D]; MATH 201 [Min Grade: D]
+INFO 152-1,INFO 152,"INFO 151 [Min Grade: D], CS 140 [Min Grade: D]"
+INFO 153-1,INFO 153,INFO 152 [Min Grade: D]
+INFO 154-1,INFO 154,INFO 152 [Min Grade: D]
+INFO 200-1,INFO 200,INFO 101 [Min Grade: D]
+INFO 202-1,INFO 202,INFO 103 [Min Grade: D]
+INFO 210-1,INFO 210,"INFO 101 [Min Grade: D], SE 210 [Min Grade: D]"
+INFO 212-1,INFO 212,"INFO 153 [Min Grade: D], CS 172 [Min Grade: D]"
+INFO 213-1,INFO 213,INFO 212 [Min Grade: D]; STAT 201 [Min Grade: D]
+INFO 300-1,INFO 300,INFO 300-1-1; INFO 102 [Min Grade: D]
+INFO 300-1-1,INFO 300-1,"INFO 153 [Min Grade: D], CS 172 [Min Grade: D]"
+INFO 310-1,INFO 310,"INFO 110 [Min Grade: D], INFO 151 [Min Grade: D], CS 171 [Min Grade: D], ECE 105 [Min Grade: D], ECE 203 [Min Grade: D]"
+INFO 315-1,INFO 315,INFO 210 [Min Grade: D]
+INFO 323-1,INFO 323,INFO 103 [Min Grade: D]; INFO 210 [Min Grade: D]; INFO 212 [Min Grade: D]
+INFO 324-1,INFO 324,INFO 324-1-1; INFO 200 [Min Grade: D]
+INFO 324-1-1,INFO 324-1,"INFO 153 [Min Grade: D], CS 172 [Min Grade: D]"
+INFO 332-1,INFO 332,INFO 103 [Min Grade: D]; INFO 332-1-1
+INFO 332-1-1,INFO 332-1,"STAT 201 [Min Grade: D], PBHL 211 [Min Grade: D]"
+INFO 350-1,INFO 350,INFO 250 [Min Grade: D]; INFO 212 [Min Grade: D]
+INFO 355-1,INFO 355,INFO 210 [Min Grade: D]; INFO 200 [Min Grade: D]
+INFO 365-1,INFO 365,INFO 210 [Min Grade: D]; INFO 365-1-1
+INFO 365-1-1,INFO 365-1,"CS 171 [Min Grade: D], CS 175 [Min Grade: D], INFO 152 [Min Grade: D], SE 102 [Min Grade: D]"
+INFO 366-1,INFO 366,INFO 365 [Min Grade: D]
+INFO 371-1,INFO 371,"STAT 201 [Min Grade: D], PBHL 211 [Min Grade: D]"
+INFO 375-1,INFO 375,INFO 200 [Min Grade: D]; CT 140 [Min Grade: D]
+INFO 405-1,INFO 405,"INFO 310 [Min Grade: D], INFO 110 [Min Grade: D]"
+INFO 420-1,INFO 420,INFO 420-1-1; INFO 420-1-2
+INFO 420-1-1,INFO 420-1,"INFO 200 [Min Grade: D], SE 210 [Min Grade: D]"
+INFO 420-1-2,INFO 420-1,"CS 172 [Min Grade: D], CS 265 [Min Grade: D], INFO 152 [Min Grade: D], SE 103 [Min Grade: D], CS 176 [Min Grade: D]"
+INFO 432-1,INFO 432,INFO 332 [Min Grade: D]
+INFO 440-1,INFO 440,"INFO 212 [Min Grade: D], CS 172 [Min Grade: D]"
+INFO 442-1,INFO 442,INFO 213 [Min Grade: D]; INFO 332 [Min Grade: D]
+SE 181-1,SE 181,"CS 172 [Min Grade: C], CS 176 [Min Grade: C]"
+SE 210-1,SE 210,"CS 172 [Min Grade: C], CS 176 [Min Grade: C]"
+SE 211-1,SE 211,SE 210 [Min Grade: C]
+SE 310-1,SE 310,CS 265 [Min Grade: C]; CS 260 [Min Grade: C]; SE 181 [Min Grade: C]
+SE 311-1,SE 311,"SE 310 [Min Grade: C], CS 350 [Min Grade: C]"
+SE 320-1,SE 320,CS 260 [Min Grade: C]; SE 181 [Min Grade: C]
+SE 410-1,SE 410,CS 260 [Min Grade: C]
+SE 420-1,SE 420,CS 260 [Min Grade: C]
+CIVC 200-1,CIVC 200,CIVC 100 [Min Grade: D]
+CIVC 201-1,CIVC 201,CIVC 100 [Min Grade: D]
+CIVC 202-1,CIVC 202,CIVC 100 [Min Grade: D]
+LAW 304-1,LAW 304,LAW 110 [Min Grade: D]; PSCI 220 [Min Grade: D]
+LAW 310-1,LAW 310,LAW 201 [Min Grade: C]; LAW 210 [Min Grade: C]
+LAW 340-1,LAW 340,LAW 101 [Min Grade: C]; LAW 201 [Min Grade: C]; LAW 210 [Min Grade: C]; LAW 211 [Min Grade: C]
+ANAT 102-1,ANAT 102,ANAT 101 [Min Grade: D]
+ANAT 103-1,ANAT 103,ANAT 102 [Min Grade: D]
+BACS 200-1,BACS 200,"ENGL 101 [Min Grade: D], ENGL 111 [Min Grade: D], ENGL 102 [Min Grade: D], ENGL 112 [Min Grade: D], ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D]"
+BACS 236-1,BACS 236,"ENGL 101 [Min Grade: D], ENGL 111 [Min Grade: D], ENGL 102 [Min Grade: D], ENGL 112 [Min Grade: D], ENGL 103 [Min Grade: D], ENGL 113 [Min Grade: D]"
+BACS 255-1,BACS 255,BACS 220 [Min Grade: D]
+BACS 301-1,BACS 301,BACS 220 [Min Grade: D]
+BACS 304-1,BACS 304,BACS 220 [Min Grade: D]
+BACS 367-1,BACS 367,BACS 220 [Min Grade: C]
+BACS 401-1,BACS 401,BACS 220 [Min Grade: D]
+BACS 404-1,BACS 404,BACS 304 [Min Grade: C]
+BACS 412-1,BACS 412,BACS 301 [Min Grade: C]
+BMES 102-1,BMES 102,BMES 101 [Min Grade: D]
+BMES 202-1,BMES 202,BMES 201 [Min Grade: D]
+BMES 212-1,BMES 212,BIO 122 [Min Grade: D]
+BMES 238-1,BMES 238,"MATH 201 [Min Grade: D], ENGR 231 [Min Grade: D], MATH 261 [Min Grade: D]; MEM 202 [Min Grade: D]"
+BMES 241-1,BMES 241,MATH 200 [Min Grade: D]; BMES 241-1-1; PHYS 102 [Min Grade: D]; BIO 122 [Min Grade: D]; BMES 201 [Min Grade: D]
+BMES 241-1-1,BMES 241-1,"BMES 102 [Min Grade: D], ENGR 103 [Min Grade: D], ENGR 113 [Min Grade: D]"
+BMES 301-1,BMES 301,BMES 345 [Min Grade: D]; BMES 301-1-1
+BMES 301-1-1,BMES 301-1,"MATH 201 [Min Grade: D], MATH 261 [Min Grade: D], ENGR 231 [Min Grade: D]"
+BMES 302-1,BMES 302,ECE 201 [Min Grade: D]; BIO 201 [Min Grade: D]
+BMES 303-1,BMES 303,ECE 201 [Min Grade: D]; BMES 303-1-1
+BMES 303-1-1,BMES 303-1,"MATH 210 [Min Grade: D], ENGR 232 [Min Grade: D], MATH 262 [Min Grade: D]"
+BMES 304-1,BMES 304,BIO 201 [Min Grade: D]; ECE 201 [Min Grade: D]
+BMES 305-1,BMES 305,BMES 305-1-1; MEM 202 [Min Grade: D]
+BMES 305-1-1,BMES 305-1,"BIO 201 [Min Grade: D], BMES 235 [Min Grade: D]"
+BMES 310-1,BMES 310,"ENGR 231 [Min Grade: D], MATH 261 [Min Grade: D], MATH 201 [Min Grade: D], MATH 239 [Min Grade: D]"
+BMES 315-1,BMES 315,BMES 310 [Min Grade: D]
+BMES 325-1,BMES 325,MEM 202 [Min Grade: D]; BMES 325-1-1; BIO 122 [Min Grade: D]
+BMES 325-1-1,BMES 325-1,"ENGR 232 [Min Grade: D], MATH 262 [Min Grade: D], MATH 210 [Min Grade: D]"
+BMES 326-1,BMES 326,ECE 201 [Min Grade: D]; BMES 325 [Min Grade: D]
+BMES 337-1,BMES 337,BMES 337-1-1; BMES 337-1-2; BMES 337-1-3; BMES 375 [Min Grade: D]; BIO 201 [Min Grade: D]; BMES 451 [Min Grade: D]
+BMES 337-1-1,BMES 337-1,"MATH 210 [Min Grade: D], ENGR 232 [Min Grade: D], MATH 262 [Min Grade: D]"
+BMES 337-1-2,BMES 337-1,"BMES 432 [Min Grade: D], ECES 302 [Min Grade: D]"
+BMES 337-1-3,BMES 337-1,"BMES 238 [Min Grade: D], MEM 238 [Min Grade: D]"
+BMES 341-1,BMES 341,BMES 241 [Min Grade: D]; BMES 341-1-1; BMES 341-1-2; ECE 201 [Min Grade: D]; ENGR 220 [Min Grade: D]; BMES 202 [Min Grade: D]
+BMES 341-1-1,BMES 341-1,"MATH 210 [Min Grade: D], ENGR 232 [Min Grade: D], MATH 262 [Min Grade: D]"
+BMES 341-1-2,BMES 341-1,"BMES 238 [Min Grade: D], MEM 238 [Min Grade: D]"
+BMES 345-1,BMES 345,BIO 201 [Min Grade: D]; MEM 202 [Min Grade: D]; ENGR 220 [Min Grade: D]
+BMES 353-1,BMES 353,BMES 201 [Min Grade: D]; BMES 353-1-1; BMES 353-1-2; 
+BMES 353-1-1,BMES 353-1,"MATH 201 [Min Grade: D], MATH 239 [Min Grade: D]"
+BMES 353-1-2,BMES 353-1,"BIO 201 [Min Grade: D], BIO 218 [Min Grade: D], BIO 211 [Min Grade: D], BIO 348 [Min Grade: D], BIO 349 [Min Grade: D]"
+BMES 372-1,BMES 372,BIO 201 [Min Grade: D]; BMES 372-1-1; BMES 202 [Min Grade: D]
+BMES 372-1-1,BMES 372-1,"ENGR 232 [Min Grade: D], MATH 262 [Min Grade: D], MATH 210 [Min Grade: D]"
+BMES 375-1,BMES 375,BIO 122 [Min Grade: D]; BMES 375-1-1; BMES 202 [Min Grade: D]
+BMES 375-1-1,BMES 375-1,"MATH 210 [Min Grade: D], ENGR 232 [Min Grade: D], MATH 262 [Min Grade: D]"
+BMES 382-1,BMES 382,BMES 381 [Min Grade: D]
+BMES 391-1,BMES 391,ECE 201 [Min Grade: D]; BMES 391-1-1; BMES 391-1-2; BIO 201 [Min Grade: D]
+BMES 391-1-1,BMES 391-1,"ENGR 210 [Min Grade: D], CHEM 253 [Min Grade: D]"
+BMES 391-1-2,BMES 391-1,"ENGR 232 [Min Grade: D], MATH 210 [Min Grade: D], MATH 262 [Min Grade: D]"
+BMES 392-1,BMES 392,BMES 391 [Min Grade: D]
+BMES 401-1,BMES 401,BMES 401-1-1; ECE 201 [Min Grade: D]; BMES 401-1-2
+BMES 401-1-1,BMES 401-1,"CHEM 253 [Min Grade: D], ENGR 210 [Min Grade: D]"
+BMES 401-1-2,BMES 401-1,"ENGR 232 [Min Grade: D], MATH 262 [Min Grade: D], MATH 210 [Min Grade: D]"
+BMES 402-1,BMES 402,BMES 401 [Min Grade: D]
+BMES 405-1,BMES 405,BIO 201 [Min Grade: D]; BMES 405-1-1; BMES 202 [Min Grade: D]
+BMES 405-1-1,BMES 405-1,"BMES 337 [Min Grade: D], ECES 356 [Min Grade: D]"
+BMES 411-1,BMES 411,BIO 201 [Min Grade: D]
+BMES 412-1,BMES 412,BMES 411 [Min Grade: D]
+BMES 415-1,BMES 415,MATH 122 [Min Grade: D]; BMES 201 [Min Grade: D]
+BMES 418-1,BMES 418,BMES 201 [Min Grade: D]
+BMES 421-1,BMES 421,BMES 421-1-1; PHYS 201 [Min Grade: D]; BMES 421-1-2
+BMES 421-1-1,BMES 421-1,"ECES 302 [Min Grade: D], ECES 303 [Min Grade: D], BMES 432 [Min Grade: D]"
+BMES 421-1-2,BMES 421-1,"MATH 311 [Min Grade: D], BMES 310 [Min Grade: D]"
+BMES 422-1,BMES 422,BMES 421 [Min Grade: D]
+BMES 423-1,BMES 423,BMES 422 [Min Grade: D]
+BMES 424-1,BMES 424,"BMES 353 [Min Grade: D], BMES 421 [Min Grade: D]"
+BMES 430-1,BMES 430,BIO 201 [Min Grade: D]; BMES 202 [Min Grade: D]; MEM 202 [Min Grade: D]
+BMES 432-1,BMES 432,"MATH 210 [Min Grade: D], ENGR 232 [Min Grade: D], MATH 262 [Min Grade: D]"
+BMES 440-1,BMES 440,BIO 201 [Min Grade: D]; BMES 440-1-1; BMES 440-1-2; 
+BMES 440-1-1,BMES 440-1,"MEM 238 [Min Grade: D], BMES 238 [Min Grade: D]"
+BMES 440-1-2,BMES 440-1,"MATH 210 [Min Grade: D], ENGR 232 [Min Grade: D], MATH 262 [Min Grade: D]"
+BMES 441-1,BMES 441,BMES 441-1-1; BMES 441-1-2; BIO 201 [Min Grade: D]
+BMES 441-1-1,BMES 441-1,"MEM 230 [Min Grade: D], BMES 345 [Min Grade: D]"
+BMES 441-1-2,BMES 441-1,"MEM 238 [Min Grade: D], BMES 238 [Min Grade: D]"
+BMES 442-1,BMES 442,BMES 441 [Min Grade: D]
+BMES 443-1,BMES 443,BMES 442 [Min Grade: D]
+BMES 444-1,BMES 444,BMES 451 [Min Grade: D]; BIO 201 [Min Grade: D]
+BMES 451-1,BMES 451,BIO 201 [Min Grade: D]; BMES 451-1-1; BMES 451-1-2; 
+BMES 451-1-1,BMES 451-1,"CHEM 253 [Min Grade: D], ENGR 210 [Min Grade: D]"
+BMES 451-1-2,BMES 451-1,"ENGR 232 [Min Grade: D], MATH 262 [Min Grade: D], MATH 210 [Min Grade: D]"
+BMES 452-1,BMES 452,BMES 451 [Min Grade: D]
+BMES 461-1,BMES 461,BMES 460 [Min Grade: D]
+BMES 471-1,BMES 471,BIO 218 [Min Grade: D]; BMES 471-1-1; BIO 219 [Min Grade: D]
+BMES 471-1-1,BMES 471-1,"MEM 230 [Min Grade: D], BMES 345 [Min Grade: D]"
+BMES 472-1,BMES 472,BMES 471 [Min Grade: D]
+BMES 475-1,BMES 475,BMES 461 [Min Grade: D]; BMES 472 [Min Grade: D]
+BMES 477-1,BMES 477,BIO 201 [Min Grade: D]; BMES 477-1-1; BMES 477-1-2; 
+BMES 477-1-1,BMES 477-1,"BIO 462 [Min Grade: D], BMES 430 [Min Grade: D], BIO 348 [Min Grade: D]"
+BMES 477-1-2,BMES 477-1,"BMES 337 [Min Grade: D], BMES 375 [Min Grade: D], BMES 372 [Min Grade: D]"
+BMES 478-1,BMES 478,"BMES 477 [Min Grade: D], BMES 353 [Min Grade: D]"
+BMES 483-1,BMES 483,BMES 375 [Min Grade: D]; BIO 218 [Min Grade: D]
+BMES 484-1,BMES 484,BMES 375 [Min Grade: D]; BIO 218 [Min Grade: D]
+BMES 485-1,BMES 485,"BMES 412 [Min Grade: D], BMES 430 [Min Grade: D], BMES 432 [Min Grade: D], BMES 418 [Min Grade: D]"
+BMES 490-1,BMES 490,BMES 382 [Min Grade: D]
+BMES 491-1,BMES 491,BMES 382 [Min Grade: D]
+CULA 120-1,CULA 120,CULA 115 [Min Grade: D]
+CULA 121-1,CULA 121,CULA 120 [Min Grade: D]
+CULA 125-1,CULA 125,CULA 115 [Min Grade: D]
+CULA 216-1,CULA 216,CULA 121 [Min Grade: D]
+CULA 220-1,CULA 220,CULA 125 [Min Grade: D]
+CULA 225-1,CULA 225,CULA 220 [Min Grade: D]
+CULA 227-1,CULA 227,CULA 125 [Min Grade: D]
+CULA 228-1,CULA 228,CULA 125 [Min Grade: D]
+CULA 229-1,CULA 229,CULA 125 [Min Grade: D]
+CULA 290-1,CULA 290,CULA 120 [Min Grade: D]
+CULA 291-1,CULA 291,CULA 120 [Min Grade: D]
+CULA 300-1,CULA 300,"CULA 120 [Min Grade: D], CULA 115 [Min Grade: D]"
+CULA 305-1,CULA 305,"CULA 120 [Min Grade: D], CULA 115 [Min Grade: D]"
+CULA 310-1,CULA 310,"CULA 120 [Min Grade: D], CULA 115 [Min Grade: D]"
+CULA 315-1,CULA 315,"CULA 120 [Min Grade: D], CULA 115 [Min Grade: D]"
+CULA 316-1,CULA 316,"CULA 115 [Min Grade: D], CULA 120 [Min Grade: D]"
+CULA 320-1,CULA 320,"CULA 115 [Min Grade: D], CULA 120 [Min Grade: D]"
+CULA 325-1,CULA 325,"CULA 120 [Min Grade: D], CULA 115 [Min Grade: D]"
+CULA 328-1,CULA 328,CULA 125 [Min Grade: D]; CULA 320 [Min Grade: D]; CULA 325 [Min Grade: D]; CULA 227 [Min Grade: D]
+CULA 330-1,CULA 330,"CULA 115 [Min Grade: D], CULA 120 [Min Grade: D]"
+CULA 400-1,CULA 400,"CULA 115 [Min Grade: D], CULA 120 [Min Grade: D]"
+CULA 410-1,CULA 410,CULA 405 [Min Grade: D]
+CULA 420-1,CULA 420,CULA 310 [Min Grade: D]; CULA 315 [Min Grade: D]
+CULA 422-1,CULA 422,CULA 421 [Min Grade: D]
+ESCI 315-1,ESCI 315,ESCI 201 [Min Grade: D]
+ESCI 320-1,ESCI 320,ESCI 201 [Min Grade: D]
+ESCI 330-1,ESCI 330,PHYS 152 [Min Grade: D]; HSCI 103 [Min Grade: D]
+ESCI 340-1,ESCI 340,HSCI 325 [Min Grade: D]
+ESCI 370-1,ESCI 370,HSCI 425 [Min Grade: D]
+ESCI 410-1,ESCI 410,HSCI 325 [Min Grade: D]
+ESCI 415-1,ESCI 415,NFS 100 [Min Grade: D]; NFS 101 [Min Grade: D]; ESCI 325 [Min Grade: D]
+ESCI 420-1,ESCI 420,"ACCT 110 [Min Grade: D], ESCI 420-1-1, ESCI 201 [Min Grade: D]"
+ESCI 420-1-1,ESCI 420-1,"ACCT 120 [Min Grade: D], FIN 150 [Min Grade: D], BUSN 105 [Min Grade: D], SMT 110 [Min Grade: D]"
+FDSC 350-1,FDSC 350,FDSC 154 [Min Grade: D]
+FDSC 401-1,FDSC 401,"CULA 115 [Min Grade: D], CULA 120 [Min Grade: D]"
+FDSC 450-1,FDSC 450,FDSC 270 [Min Grade: D]
+FDSC 451-1,FDSC 451,FDSC 270 [Min Grade: D]
+FDSC 456-1,FDSC 456,"NFS 215 [Min Grade: D], CHEM 242 [Min Grade: D]"
+FDSC 458-1,FDSC 458,FDSC 154 [Min Grade: D]; NFS 215 [Min Grade: D]
+FDSC 460-1,FDSC 460,CHEM 242 [Min Grade: D]; CHEM 103 [Min Grade: D]
+FDSC 461-1,FDSC 461,CHEM 103 [Min Grade: D]; CHEM 242 [Min Grade: D]
+FDSC 468-1,FDSC 468,FDSC 154 [Min Grade: D]; NFS 215 [Min Grade: D]
+FDSC 487-1,FDSC 487,PHYS 175 [Min Grade: D]; MATH 102 [Min Grade: D]
+FDSC 491-1,FDSC 491,FDSC 350 [Min Grade: D]
+FDSC 492-1,FDSC 492,FDSC 491 [Min Grade: D]
+HSCI 102-1,HSCI 102,HSCI 101 [Min Grade: D]
+HSCI 103-1,HSCI 103,HSCI 102 [Min Grade: D]
+HSCI 201-1,HSCI 201,HSCI 103 [Min Grade: D]
+HSCI 301-1,HSCI 301,"ANAT 103 [Min Grade: D], HSCI 103 [Min Grade: D]"
+HSCI 302-1,HSCI 302,HSCI 301 [Min Grade: D]
+HSCI 303-1,HSCI 303,"HSCI 303-1-1, HSCI 303-1-2"
+HSCI 303-1-1,HSCI 303-1,"ANAT 103 [Min Grade: D], HSCI 103 [Min Grade: D]"
+HSCI 303-1-2,HSCI 303-1,BIO 201 [Min Grade: D]; BIO 202 [Min Grade: D]
+HSCI 313-1,HSCI 313,HSCI 310 [Min Grade: D]; HSCI 313-1-1; COM 320 [Min Grade: D]
+HSCI 313-1-1,HSCI 313-1,"STS 350 [Min Grade: D], HSCI 350 [Min Grade: D]"
+HSCI 315-1,HSCI 315,COM 320 [Min Grade: D]; HSCI 310 [Min Grade: D]
+HSCI 320-1,HSCI 320,HSCI 101 [Min Grade: D]; HSCI 320-1-1; HSCI 102 [Min Grade: D]; HSCI 103 [Min Grade: D]
+HSCI 320-1-1,HSCI 320-1,BIO 201 [Min Grade: D]; BIO 202 [Min Grade: D]
+HSCI 325-1,HSCI 325,"HSCI 325-1-1, HSCI 325-1-2"
+HSCI 325-1-1,HSCI 325-1,HSCI 101 [Min Grade: D]; HSCI 102 [Min Grade: D]; HSCI 103 [Min Grade: D]
+HSCI 325-1-2,HSCI 325-1,BIO 201 [Min Grade: D]; BIO 202 [Min Grade: D]
+HSCI 326-1,HSCI 326,"HSCI 326-1-1, HSCI 326-1-2"
+HSCI 326-1-1,HSCI 326-1,HSCI 101 [Min Grade: D]; HSCI 102 [Min Grade: D]
+HSCI 326-1-2,HSCI 326-1,BIO 201 [Min Grade: D]; BIO 202 [Min Grade: D]
+HSCI 337-1,HSCI 337,BIO 122 [Min Grade: D]
+HSCI 350-1,HSCI 350,"STS 345 [Min Grade: D], HSCI 345 [Min Grade: D]"
+HSCI 375-1,HSCI 375,HSCI 101 [Min Grade: D]; HSCI 375-1-1; HSCI 102 [Min Grade: D]; HSCI 103 [Min Grade: D]
+HSCI 375-1-1,HSCI 375-1,BIO 201 [Min Grade: D]; BIO 202 [Min Grade: D]
+HSCI 380-1,HSCI 380,HSCI 101 [Min Grade: D]; HSCI 380-1-1; HSCI 102 [Min Grade: D]; HSCI 103 [Min Grade: D]
+HSCI 380-1-1,HSCI 380-1,BIO 201 [Min Grade: D]; BIO 202 [Min Grade: D]
+HSCI 381-1,HSCI 381,HSCI 325 [Min Grade: D]
+HSCI 382-1,HSCI 382,"HSCI 103 [Min Grade: D], BIO 201 [Min Grade: D]"
+HSCI 410-1,HSCI 410,PSY 101 [Min Grade: D]
+HSCI 415-1,HSCI 415,HSCI 101 [Min Grade: D]; HSCI 415-1-1; HSCI 102 [Min Grade: D]; HSCI 103 [Min Grade: D]
+HSCI 415-1-1,HSCI 415-1,BIO 201 [Min Grade: D]; BIO 202 [Min Grade: D]
+HSCI 420-1,HSCI 420,"HSCI 103 [Min Grade: D], BIO 201 [Min Grade: D]"
+HSCI 425-1,HSCI 425,HSCI 325 [Min Grade: D]
+HSCI 430-1,HSCI 430,HSCI 101 [Min Grade: D]; HSCI 430-1-1; HSCI 102 [Min Grade: D]; HSCI 103 [Min Grade: D]
+HSCI 430-1-1,HSCI 430-1,BIO 201 [Min Grade: D]; BIO 202 [Min Grade: D]
+HSCI 435-1,HSCI 435,"HSCI 102 [Min Grade: D], HSCI 435-1-1"
+HSCI 435-1-1,HSCI 435-1,BIO 201 [Min Grade: D]; BIO 202 [Min Grade: D]
+HSAD 210-1,HSAD 210,"ENGL 101 [Min Grade: C], ENGL 102 [Min Grade: C], ENGL 103 [Min Grade: C]"
+HSAD 225-1,HSAD 225,"ENGL 101 [Min Grade: D], ENGL 111 [Min Grade: D]"
+HSAD 308-1,HSAD 308,"ENGL 103 [Min Grade: C], ENGL 113 [Min Grade: C]"
+HSAD 309-1,HSAD 309,HSAD 210 [Min Grade: C]
+HSAD 310-1,HSAD 310,"ENGL 101 [Min Grade: C], ENGL 102 [Min Grade: C], ENGL 103 [Min Grade: C]"
+HSAD 312-1,HSAD 312,"ENGL 101 [Min Grade: D], ENGL 105 [Min Grade: D], HUM 106 [Min Grade: D]"
+HSAD 313-1,HSAD 313,ENGL 101 [Min Grade: D]
+HSAD 314-1,HSAD 314,ENGL 101 [Min Grade: D]; ENGL 102 [Min Grade: D]
+HSAD 315-1,HSAD 315,"ENGL 101 [Min Grade: D], ENGL 105 [Min Grade: D], HUM 106 [Min Grade: D]"
+HSAD 316-1,HSAD 316,"ENGL 101 [Min Grade: D], ENGL 105 [Min Grade: D], HUM 106 [Min Grade: D]"
+HSAD 317-1,HSAD 317,"ENGL 101 [Min Grade: D], HUM 101 [Min Grade: D]"
+HSAD 318-1,HSAD 318,"ENGL 101 [Min Grade: D], ENGL 105 [Min Grade: D], HUM 106 [Min Grade: D]"
+HSAD 319-1,HSAD 319,"ENGL 101 [Min Grade: D], HUM 101 [Min Grade: D], ENGL 111 [Min Grade: D]"
+HSAD 320-1,HSAD 320,"ENGL 101 [Min Grade: D], ENGL 105 [Min Grade: D], HUM 106 [Min Grade: D]"
+HSAD 321-1,HSAD 321,HSAD 310 [Min Grade: C]; HSAD 334 [Min Grade: C]
+HSAD 322-1,HSAD 322,"ENGL 101 [Min Grade: C], ENGL 102 [Min Grade: C], ENGL 103 [Min Grade: C]"
+HSAD 323-1,HSAD 323,"ENGL 101 [Min Grade: C], ENGL 111 [Min Grade: C], ENGL 102 [Min Grade: C], ENGL 112 [Min Grade: C], ENGL 103 [Min Grade: C], ENGL 113 [Min Grade: C]"
+HSAD 324-1,HSAD 324,"HSAD 210 [Min Grade: C], PHIL 321 [Min Grade: C]"
+HSAD 325-1,HSAD 325,"ENGL 101 [Min Grade: D], ENGL 105 [Min Grade: D], HUM 106 [Min Grade: D]"
+HSAD 326-1,HSAD 326,"ENGL 101 [Min Grade: D], ENGL 105 [Min Grade: D], HUM 106 [Min Grade: D]"
+HSAD 327-1,HSAD 327,"ENGL 101 [Min Grade: D], ENGL 105 [Min Grade: D], HUM 106 [Min Grade: D]"
+HSAD 328-1,HSAD 328,"ENGL 101 [Min Grade: D], ENGL 105 [Min Grade: D], HUM 106 [Min Grade: D]"
+HSAD 329-1,HSAD 329,"ENGL 103 [Min Grade: D], ENGL 105 [Min Grade: A], HUM 108 [Min Grade: D]"
+HSAD 330-1,HSAD 330,"ACCT 115 [Min Grade: D], ACCT 110 [Min Grade: D]"
+HSAD 331-1,HSAD 331,HSAD 310 [Min Grade: C]; HSAD 332 [Min Grade: C]
+HSAD 332-1,HSAD 332,HSAD 310 [Min Grade: C]
+HSAD 333-1,HSAD 333,ENGL 101 [Min Grade: D]; ENGL 102 [Min Grade: D]; ENGL 103 [Min Grade: D]
+HSAD 334-1,HSAD 334,HSAD 310 [Min Grade: C]
+HSAD 335-1,HSAD 335,HSAD 310 [Min Grade: C]; PSCI 110 [Min Grade: D]
+HSAD 336-1,HSAD 336,ENGL 101 [Min Grade: D]
+HSAD 337-1,HSAD 337,ENGL 101 [Min Grade: D]
+HSAD 338-1,HSAD 338,ENGL 101 [Min Grade: D]
+HSAD 340-1,HSAD 340,HSAD 310 [Min Grade: C]; HSAD 334 [Min Grade: C]
+HSAD 342-1,HSAD 342,ENGL 101 [Min Grade: D]
+HSAD 343-1,HSAD 343,ENGL 101 [Min Grade: D]; ENGL 102 [Min Grade: D]
+HSAD 344-1,HSAD 344,ENGL 101 [Min Grade: D]
+HSAD 345-1,HSAD 345,"HSAD 210 [Min Grade: C], PHIL 321 [Min Grade: C]"
+HSAD 351-1,HSAD 351,"HSAD 210 [Min Grade: C], PHIL 321 [Min Grade: C]"
+HSAD 352-1,HSAD 352,"HSAD 210 [Min Grade: C], PHIL 321 [Min Grade: C]"
+HSAD 353-1,HSAD 353,"HSAD 210 [Min Grade: C], PHIL 321 [Min Grade: C]"
+HSAD 357-1,HSAD 357,"ENGL 103 [Min Grade: C], ENGL 113 [Min Grade: C]"
+HSAD 363-1,HSAD 363,"ENGL 103 [Min Grade: C], ENGL 113 [Min Grade: C]"
+HSAD 365-1,HSAD 365,HSAD 330 [Min Grade: C]
+HSAD 470-1,HSAD 470,"ENGL 103 [Min Grade: D], ENGL 105 [Min Grade: A], HUM 108 [Min Grade: D]"
+HSAD 475-1,HSAD 475,HSAD 475-1-1; HSAD 310 [Min Grade: B]; HSAD 334 [Min Grade: B]; HSAD 340 [Min Grade: B]
+HSAD 475-1-1,HSAD 475-1,"ENGL 101 [Min Grade: C], ENGL 111 [Min Grade: C], ENGL 102 [Min Grade: C], ENGL 112 [Min Grade: C], ENGL 103 [Min Grade: C], ENGL 113 [Min Grade: C]"
+HSAD 490-1,HSAD 490,"ENGL 103 [Min Grade: D], ENGL 105 [Min Grade: A], HUM 108 [Min Grade: D]"
+HSAD T480-1,HSAD T480,"ENGL 103 [Min Grade: D], ENGL 105 [Min Grade: A], ENGL 108 [Min Grade: D]"
+HLSO 370-1,HLSO 370,ENGL 101 [Min Grade: D]; ENGL 102 [Min Grade: D]
+HRM 120-1,HRM 120,HRM 110 [Min Grade: D]
+HRM 131-1,HRM 131,HRM 130 [Min Grade: D]
+HRM 155-1,HRM 155,HRM 110 [Min Grade: D]
+HRM 215-1,HRM 215,"CULA 115 [Min Grade: D], CULA 120 [Min Grade: D]"
+HRM 220-1,HRM 220,"HRM 110 [Min Grade: D], HRM 120 [Min Grade: D]"
+HRM 225-1,HRM 225,HRM 120 [Min Grade: D]
+HRM 330-1,HRM 330,"HRM 120 [Min Grade: D], HRM 110 [Min Grade: D]"
+HRM 335-1,HRM 335,HRM 120 [Min Grade: D]
+HRM 340-1,HRM 340,HRM 120 [Min Grade: D]
+HRM 345-1,HRM 345,HRM 110 [Min Grade: D]
+HRM 355-1,HRM 355,HRM 125 [Min Grade: D]
+HRM 360-1,HRM 360,HRM 110 [Min Grade: D]
+HRM 365-1,HRM 365,HRM 130 [Min Grade: D]
+HRM 410-1,HRM 410,HRM 110 [Min Grade: D]
+HRM 415-1,HRM 415,HRM 215 [Min Grade: D]
+HRM 425-1,HRM 425,HRM 355 [Min Grade: D]
+MBC 202-1,MBC 202,MBC 201 [Min Grade: D]
+MBC 250-1,MBC 250,MBC 201 [Min Grade: D]
+MBC 301-1,MBC 301,MBC 201 [Min Grade: D]
+MBC 302-1,MBC 302,MBC 301 [Min Grade: D]
+MBC 303-1,MBC 303,MBC 301 [Min Grade: D]
+MBC 304-1,MBC 304,MBC 303 [Min Grade: D]
+MBC 350-1,MBC 350,MBC 302 [Min Grade: D]
+MBC 360-1,MBC 360,MBC 304 [Min Grade: D]
+NURS 221-1,NURS 221,ANAT 103 [Min Grade: C]; NURS 221-1-1; MATH 101 [Min Grade: C]; BIO 226 [Min Grade: C]
+NURS 221-1-1,NURS 221-1,"NURS 120 [Min Grade: C], NURS 121 [Min Grade: C]"
+NURS 225-1,NURS 225,HSCI 103 [Min Grade: C]; MATH 101 [Min Grade: C]
+NURS 226-1,NURS 226,HSCI 103 [Min Grade: C]; MATH 101 [Min Grade: C]
+NURS 311-1,NURS 311,NURS 310 [Min Grade: C]
+NURS 312-1,NURS 312,NURS 310 [Min Grade: C]; NURS 311 [Min Grade: C]
+NURS 320-1,NURS 320,NURS 120 [Min Grade: C]; NURS 221 [Min Grade: C]; NURS 225 [Min Grade: C]; NURS 226 [Min Grade: C]
+NURS 321-1,NURS 321,NURS 320 [Min Grade: C]; NURS 323 [Min Grade: C]
+NURS 322-1,NURS 322,PSY 120 [Min Grade: C]; NURS 320 [Min Grade: C]; NURS 323 [Min Grade: C]; NURS 321 [Min Grade: C]; NURS 329 [Min Grade: C]
+NURS 323-1,NURS 323,NURS 120 [Min Grade: C]; NURS 221 [Min Grade: C]; NURS 225 [Min Grade: C]; NURS 226 [Min Grade: C]
+NURS 326-1,NURS 326,NURS 320 [Min Grade: C]; NURS 323 [Min Grade: C]; NURS 321 [Min Grade: C]; NURS 329 [Min Grade: C]; NURS 322 [Min Grade: C]
+NURS 327-1,NURS 327,NURS 320 [Min Grade: C]; NURS 321 [Min Grade: C]; NURS 322 [Min Grade: C]; NURS 323 [Min Grade: C]; NURS 329 [Min Grade: C]; NURS 328 [Min Grade: C]
+NURS 328-1,NURS 328,NURS 320 [Min Grade: C]; NURS 321 [Min Grade: C]; NURS 323 [Min Grade: C]; NURS 329 [Min Grade: C]; NURS 322 [Min Grade: C]
+NURS 329-1,NURS 329,NURS 323 [Min Grade: C]; NURS 320 [Min Grade: C]
+NURS 330-1,NURS 330,STS 345 [Min Grade: C]; NURS 325 [Min Grade: C]
+NURS 346-1,NURS 346,NURS 325 [Min Grade: C]
+NURS 380-1,NURS 380,NURS 325 [Min Grade: C]
+NURS 407-1,NURS 407,NURS 325 [Min Grade: C]; NURS 330 [Min Grade: C]
+NURS 420-1,NURS 420,NURS 320 [Min Grade: C]; NURS 321 [Min Grade: C]; NURS 323 [Min Grade: C]; NURS 326 [Min Grade: C]; NURS 328 [Min Grade: C]; NURS 329 [Min Grade: C]
+NURS 421-1,NURS 421,NURS 320 [Min Grade: C]; NURS 321 [Min Grade: C]; NURS 323 [Min Grade: C]; NURS 328 [Min Grade: C]; NURS 329 [Min Grade: C]
+NURS 422-1,NURS 422,NURS 321 [Min Grade: C]; NURS 329 [Min Grade: C]
+NURS 423-1,NURS 423,NURS 321 [Min Grade: C]; NURS 329 [Min Grade: C]; STS 345 [Min Grade: C]
+NURS 460-1,NURS 460,NURS 330 [Min Grade: C]; NURS 325 [Min Grade: C]
+NURS 465-1,NURS 465,NURS 407 [Min Grade: C]; NURS 325 [Min Grade: C]; NURS 330 [Min Grade: C]
+NURS 495-1,NURS 495,NURS 421 [Min Grade: C]; NURS 328 [Min Grade: C]; NURS 326 [Min Grade: C]
+NFS 101-1,NFS 101,NFS 100 [Min Grade: C]
+NFS 202-1,NFS 202,NFS 100 [Min Grade: B-]
+NFS 203-1,NFS 203,"NFS 200 [Min Grade: C], NFS 101 [Min Grade: C], NFS 230 [Min Grade: C]"
+NFS 215-1,NFS 215,CHEM 103 [Min Grade: C]
+NFS 217-1,NFS 217,CHEM 103 [Min Grade: C]
+NFS 220-1,NFS 220,CHEM 103 [Min Grade: C]
+NFS 230-1,NFS 230,NFS 101 [Min Grade: C]
+NFS 265-1,NFS 265,NFS 230 [Min Grade: C]
+NFS 315-1,NFS 315,"NFS 220 [Min Grade: C], NFS 230 [Min Grade: C]"
+NFS 320-1,NFS 320,"NFS 101 [Min Grade: C], NFS 220 [Min Grade: C], NFS 230 [Min Grade: C]"
+NFS 325-1,NFS 325,"NFS 100 [Min Grade: C], NFS 101 [Min Grade: C], NFS 230 [Min Grade: C]"
+NFS 345-1,NFS 345,CULA 115 [Min Grade: C]
+NFS 370-1,NFS 370,HRM 215 [Min Grade: C]
+NFS 391-1,NFS 391,NFS 203 [Min Grade: C]
+NFS 415-1,NFS 415,NFS 230 [Min Grade: C]
+NFS 416-1,NFS 416,NFS 415 [Min Grade: D]
+NFS 431-1,NFS 431,NFS 443 [Min Grade: C]
+NFS 443-1,NFS 443,NFS 416 [Min Grade: C]
+NFS 444-1,NFS 444,NFS 443 [Min Grade: C]
+NFS 445-1,NFS 445,NFS 444 [Min Grade: C]
+NFS 475-1,NFS 475,NFS 203 [Min Grade: C]
+NFS 485-1,NFS 485,NFS 205 [Min Grade: C]; NFS 305 [Min Grade: C]; NFS 405 [Min Grade: C]
+NFS 495-1,NFS 495,NFS 494 [Min Grade: D]
+NFS 496-1,NFS 496,NFS 495 [Min Grade: D]
+PBHL 211-1,PBHL 211,"PBHL 312 [Min Grade: C], PBHL 210 [Min Grade: C], STAT 201 [Min Grade: C], MATH 310 [Min Grade: C]"
+PBHL 215-1,PBHL 215,"PBHL 312 [Min Grade: C], PBHL 210 [Min Grade: C], STAT 201 [Min Grade: C], MATH 310 [Min Grade: C]"
+PBHL 302-1,PBHL 302,PBHL 101 [Min Grade: C]
+PBHL 303-1,PBHL 303,PBHL 101 [Min Grade: C]
+PBHL 304-1,PBHL 304,PBHL 101 [Min Grade: C]
+PBHL 306-1,PBHL 306,PBHL 101 [Min Grade: D]
+PBHL 308-1,PBHL 308,PBHL 101 [Min Grade: C]
+PBHL 309-1,PBHL 309,PBHL 101 [Min Grade: C]
+PBHL 310-1,PBHL 310,PBHL 301 [Min Grade: C]
+PBHL 311-1,PBHL 311,PBHL 311-1-1; PBHL 101 [Min Grade: C]
+PBHL 311-1-1,PBHL 311-1,"BIO 107 [Min Grade: C], BIO 122 [Min Grade: C], BIO 131 [Min Grade: C]"
+PBHL 312-1,PBHL 312,PBHL 101 [Min Grade: C]
+PBHL 313-1,PBHL 313,PBHL 101 [Min Grade: C]
+PBHL 314-1,PBHL 314,PBHL 101 [Min Grade: C]
+PBHL 315-1,PBHL 315,PBHL 101 [Min Grade: C]
+PBHL 320-1,PBHL 320,"BIO 107 [Min Grade: C], BIO 122 [Min Grade: C], BIO 131 [Min Grade: C]"
+PBHL 332-1,PBHL 332,PBHL 301 [Min Grade: C]; PBHL 302 [Min Grade: C]
+PBHL 333-1,PBHL 333,PBHL 101 [Min Grade: C]
+PBHL 335-1,PBHL 335,"PBHL 312 [Min Grade: C], PBHL 210 [Min Grade: C], STAT 201 [Min Grade: C]"
+PBHL 340-1,PBHL 340,"PBHL 211 [Min Grade: C], STAT 202 [Min Grade: C], MATH 411 [Min Grade: C], HSCI 350 [Min Grade: C], INFO 332 [Min Grade: C]"
+PBHL 400-1,PBHL 400,MATH 122 [Min Grade: C]; PBHL 400-1-1
+PBHL 400-1-1,PBHL 400-1,"PBHL 312 [Min Grade: C], PBHL 210 [Min Grade: C], STAT 201 [Min Grade: C], MATH 310 [Min Grade: C]"
+PBHL 422-1,PBHL 422,PBHL 304 [Min Grade: C-]
+PBHL 453-1,PBHL 453,"PBHL 210 [Min Grade: C], PBHL 312 [Min Grade: C]"
+PBHL 459-1,PBHL 459,PBHL 211 [Min Grade: C]
+PBHL 497-1,PBHL 497,PBHL 301 [Min Grade: C-]; PBHL 302 [Min Grade: C-]; PBHL 303 [Min Grade: C-]; PBHL 304 [Min Grade: C-]; PBHL 308 [Min Grade: C-]; PBHL 314 [Min Grade: C-]
+PBHL 498-1,PBHL 498,PBHL 301 [Min Grade: C-]; PBHL 302 [Min Grade: C-]; PBHL 303 [Min Grade: C-]; PBHL 304 [Min Grade: C-]; PBHL 308 [Min Grade: C-]; PBHL 314 [Min Grade: C-]
+PBHL 499-1,PBHL 499,PBHL 301 [Min Grade: C-]; PBHL 302 [Min Grade: C-]; PBHL 303 [Min Grade: C-]; PBHL 304 [Min Grade: C-]; PBHL 308 [Min Grade: C-]; PBHL 314 [Min Grade: C-]
+EDLT 492-1,EDLT 492,EDLT 491 [Min Grade: D]
+EDLT 493-1,EDLT 493,EDLT 491 [Min Grade: D]; EDLT 492 [Min Grade: D]
+MTED 418-1,MTED 418,MTED 417 [Min Grade: B]
+ESTM 210-1,ESTM 210,ESTM 201 [Min Grade: B]
+ESTM 301-1,ESTM 301,ESTM 210 [Min Grade: B]; ESTM 201 [Min Grade: B]
+ESTM 302-1,ESTM 302,ESTM 301 [Min Grade: B]
+ESTM 303-1,ESTM 303,ESTM 302 [Min Grade: B]
+ESTM 350-1,ESTM 350,ESTM 302 [Min Grade: B]; ESTM 201 [Min Grade: B]; ESTM 210 [Min Grade: B]
+ESTM 410-1,ESTM 410,ESTM 350 [Min Grade: B]
+EDEX 336-1,EDEX 336,EDEX 142 [Min Grade: B]; EDEX 344 [Min Grade: B]
+EDEX 344-1,EDEX 344,EDEX 142 [Min Grade: B]
+EDEX 348-1,EDEX 348,EDEX 142 [Min Grade: B]; EDEX 344 [Min Grade: B]
+EDEX 349-1,EDEX 349,EDEX 142 [Min Grade: B]; EDEX 344 [Min Grade: B]
+EDEX 350-1,EDEX 350,EDEX 142 [Min Grade: B]; EDEX 344 [Min Grade: B]
+EDEX 352-1,EDEX 352,EDEX 142 [Min Grade: B]; EDEX 344 [Min Grade: B]
+EDEX 355-1,EDEX 355,EDEX 142 [Min Grade: B]; EDEX 344 [Min Grade: B]
+EDEX 368-1,EDEX 368,EDEX 142 [Min Grade: B]; EDEX 344 [Min Grade: B]
+EDEX 375-1,EDEX 375,EDEX 142 [Min Grade: B]; EDEX 344 [Min Grade: B]
+EDEX 378-1,EDEX 378,EDEX 142 [Min Grade: B]; EDEX 344 [Min Grade: B]
+EDEX 388-1,EDEX 388,EDEX 142 [Min Grade: B]; EDEX 344 [Min Grade: B]
+EDEX 414-1,EDEX 414,EDEX 348 [Min Grade: B]; EDEX 349 [Min Grade: B]; EDEX 350 [Min Grade: B]; EDEX 352 [Min Grade: B]; EDEX 142 [Min Grade: B]; EDEX 344 [Min Grade: B]; EDEX 355 [Min Grade: B]; EDEX 336 [Min Grade: B]; EDEX 368 [Min Grade: B]; EDEX 378 [Min Grade: B]
+SCL 419-1,SCL 419,SCL 101 [Min Grade: C]; SCL 102 [Min Grade: C]
+SCL 497-1,SCL 497,SCL 495 [Min Grade: CR]; SCL 496 [Min Grade: CR]
+EDUC 121-1,EDUC 121,EDUC 120 [Min Grade: D]
+EDUC 223-1,EDUC 223,EDUC 123 [Min Grade: D]
+EDUC 336-1,EDUC 336,EDUC 236 [Min Grade: D]
+EDUC 358-1,EDUC 358,EDUC 101 [Min Grade: B]

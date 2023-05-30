@@ -1,0 +1,31 @@
+MATCH (n:Course) where n.`course code` = "SE 181"
+WITH m,n, split(n.prerequisites, "or ") as prList
+  UNWIND RANGE(0,SIZE(prList)-1) as i
+    CALL apoc.do.when(
+      prList[i] contains "15",
+      'CALL apoc.create.relationship(m, "last1", {}, n) YIELD rel RETURN rel',
+      'CALL apoc.create.relationship(m, "last2", {}, n) YIELD rel RETURN rel',
+      {m:m, n:n})
+YIELD value
+RETURN n, m
+
+
+
+
+MATCH (n:CourseRequirements), (m:Course)
+WHERE n.req_choices contains m.`course code`
+WITH m, n, replace(n.req_choices, ",", ";") as req_choices_replaced
+	WITH m, n, split(req_choices_replaced, "; ") as splitList
+		UNWIND RANGE(0,SIZE(splitList)-1) as i
+			CALL apoc.do.case([
+				not(n.req_choices contains ";") AND not(n.req_choices contains ","),
+				'CREATE (n)-[r:requires]->(m)',
+				m.`course code` = split(splitList[i], " [")[0] AND n.req_choices contains ";",
+				'CREATE (n)-[r:requires]->(m)',
+				m.`course code` = split(splitList[i], " [")[0] AND n.req_choices contains ",",
+				'CREATE (n)-[r:`has option`]->(m)'
+				],
+				'',
+				{m:m, n:n})
+YIELD value
+RETURN n

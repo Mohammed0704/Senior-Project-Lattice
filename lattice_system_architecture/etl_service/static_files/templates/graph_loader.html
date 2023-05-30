@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <link rel='stylesheet' href='/static_files/graph_loader.css' />
+  <link rel="stylesheet" href="/static_files/bulma/css/bulma.min.css"/>
+  
+  <head>
+    <title>Graph Loader Portal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  
+  <body>
+    {% include "header.html" %}
+    {% include "menu_template.html" %}
+    <div id="wrapper">
+      <section class="section">
+        <div id="outer-content-box">
+          <!-- <p id="title"><strong>Note: </strong>Once 'Load Data' is clicked, all previous data in Neo4j will be cleared</p> -->
+          <p id="title">Click the 'Load Data' button below to update Neo4j with your tagged data</p>
+          <button id="load-button" class="button button1">Load Data</button>
+          <center>
+            <p id="execution-container-text" style="font-size: 24px;"></p>
+          </center>
+        </div>
+      </section>
+    </div>
+    {% include "footer.html" %}
+  </body>
+  <link rel='stylesheet' href='/static_files/main.css' />
+  <style>
+    .button1 { margin: 4px 2px; }
+  </style>
+  
+  <script src="/static_files/jquery-3.1.1.js"></script>
+  <script>
+    function execute(executionIndex) {
+      const executionContainerText = document.querySelector('#execution-container-text');
+      const loadButton = document.getElementById("load-button");
+      
+      console.log("fetching!");
+      fetch('/loader/load', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: executionIndex
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        if (data.returnMessage == "END_OF_EXECUTION") {
+          console.log("end of execution");
+          loadButton.disabled = false;
+          loadButton.classList.remove("spinner"); // remove "spinner" class from button
+          loadButton.innerHTML = "Load Data"; // restore button text
+        } else {
+          console.log("next execution");
+          executionContainerText.innerHTML = executionContainerText.innerHTML + data.returnMessage + "<br></br>"
+          tempExecutionIndex = executionIndex + 1;
+          execute(tempExecutionIndex); //recursive call
+        }
+      });
+    }
+    
+    $("#load-button").click(function(event) {
+      const loadButton = document.getElementById("load-button");
+      const executionContainerText = document.getElementById("execution-container-text");
+
+      loadButton.disabled = true;
+      loadButton.innerHTML = "Loading... ";
+      loadButton.classList.add("spinner"); // add "spinner" class to button
+
+      executionContainerText.innerHTML = "";
+
+      var executionIndex = 0;
+      execute(executionIndex);
+    });
+  </script>
+
+</html>

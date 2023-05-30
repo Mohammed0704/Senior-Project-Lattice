@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"></script>
+  <link rel="stylesheet" href="/static_files/bulma/css/bulma.min.css"/>
+  <link rel='stylesheet' href='/static_files/tag_management.css'/>
+
+  <head>
+    <title>Lattice - Data Source Connections</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    {% include "header.html" %}
+    {% include "menu_template.html" %}
+    <div id="wrapper">
+      <section class="section">
+        <div class="container">
+            <table id="tags-table" class="table is-striped is-hoverable is-fullwidth is-size-4">
+                <thead>
+                    <tr id="table-header">
+                        <th class="is-vcentered table-header">Tag</th>
+                        <th class="is-vcentered table-header">Description</th>
+                        <th class="is-vcentered table-header"></th>
+                        <th class="is-vcentered table-header"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if tagDict|length > 0 %}
+                        {% for tagKey, columnsTaggedList in tagDict.items() %}
+                            <tr id="{{ tagKey }}-row">
+                                <td class="is-vcentered table-element"> {{ tagKey }}</td>
+                                <td class="is-vcentered table-element"> {{ tagDict[tagKey]["description"] }}</td>
+                                <td class="is-vcentered has-text-right">
+                                    <span class="usages-icon js-modal-trigger usages-button" data-target="{{ tagKey }}-modal" name="{{ tagKey }}"><i class="fa fa-question is-clickable" aria-hidden="true"></i></span>
+                                </td>
+                                <td class="is-vcentered">
+                                    <span class="delete-icon delete-button delete-button1" name="{{ tagKey }}"><i class="fas fa-trash-alt is-clickable"></i></span>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                    <tr class="is-vcentered" id="table-footer">
+                        <td class="tag-input is-vcentered" style="font-size: 17px;">
+                            <div class="is-vcentered" id="create-div">
+                                <form class="is-vcentered" id="create-form">
+                                    <input type="text" id="Tag" name="Tag" value="" placeholder="Tag name...">
+                                </form>
+                            </div>
+                        </td>
+                        <td class="tag-description is-vcentered" style="font-size: 17px;">
+                            <div class="is-vcentered" id="description-div">
+                                    <form class="is-vcentered" id="description-form">
+                                        <input class="description-input" type="text" id="TagDescription" name="TagDescription" value="" placeholder="Tag description...">
+                                    </form>
+                            </div>
+                        </td>
+                        <td class="is-vcentered">
+                            <button style="font-size: 19px; background-color: #D9D9D9;" class="button button1 create-button create-button1" id="create-button">Create Tag</button>
+                        </td>
+                        <td id="end-cell">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 17px;" id="result"></p>
+        </div>
+      </section>
+    </div>
+    {% include "footer.html" %}
+    {% if tagDict|length > 0 %}
+        {% for tagKey, columnsTaggedList in tagDict.items() %}
+        <div id="{{ tagKey }}-modal" class="modal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+                <header class="modal-card-head">
+                    <b><p class="modal-card-title">Usages</p></b>
+                </header>
+                <section class="modal-card-body">
+                    <table id="{{ tagKey }}-usages-table" class="table is-striped is-hoverable is-fullwidth is-size-4">
+                        <thead>
+                            <tr class="is-vcentered" id="table-header">
+                                <th class="is-vcentered table-header">Database.Schema.Table.ColumnName</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for tag in columnsTaggedList["columns_tagged"] %}
+                                {% set tag_parts = tag.split('.') %}
+                                {% set connectionName = tag_parts[0] %}
+                                {% set schemaName = tag_parts[1] %}
+                                {% set tableName = tag_parts[2] %}
+                                <tr class="is-vcentered" id="{{ tagKey }}-row">
+                                    <td class="is-vcentered table-element"><a href="/objects/{{ connectionName }}/{{ schemaName }}/{{ tableName }}">{{ tag }}</a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </section>
+                <footer class="modal-card-foot">
+                    <b><button style="background-color: #D9D9D9;" class="button">Close</button></b>
+                </footer>
+            </div>
+        </div>
+        {% endfor %}
+    {% endif %}
+  </body>
+  <link rel="stylesheet" href="/static_files/main.css"/>
+
+  <script src="/static_files/jquery-3.1.1.js"></script>
+
+  <script src="/static_files/jquery-3.1.1.js"></script>
+
+  <script>
+    $(document).on("click", ".delete-button", function ()
+    {
+      elementToDeleteName = $(this).attr("name")
+  
+      // Check if tag name is in SerializedTaggedColumns.txt
+      $.get("/tags/check/" + elementToDeleteName, function(data) {
+        if (data == "True") {
+          if (confirm("Are you sure you want to delete this tag? This tag will also be deleted from the selected tags in the Data Object Management Portal")) {
+            console.log("Deleting " + elementToDeleteName + "...");
+            $("#" + elementToDeleteName.replace( /(:|\.|\[|\])/g, "\\$1" ) + "-row").remove()
+    
+            $.ajax({
+              url: "/tags/remove/" + elementToDeleteName,
+              type: "delete"
+            });
+          }
+        }
+        else {
+          console.log("Deleting " + elementToDeleteName + "...");
+          $("#" + elementToDeleteName.replace( /(:|\.|\[|\])/g, "\\$1" ) + "-row").remove()
+    
+          $.ajax({
+            url: "/tags/remove/" + elementToDeleteName,
+            type: "delete"
+          });
+        }
+      });
+    });
+   
+    $(document).on("keypress", "#Tag", function (event) {
+    if (event.which === 13) {
+      event.preventDefault();
+      $("#create-button").click();
+    }
+  });
+  
+  const tagForm = document.querySelector('#create-form');
+  const tagDescriptionForm = document.querySelector('#description-form');
+  const createButton = document.querySelector('#create-button');
+  const result = document.querySelector('#result');
+
+    createButton.addEventListener('click', function() {
+      const tag = tagForm.elements.Tag.value;
+      const description = tagDescriptionForm.elements.TagDescription.value;
+      if (tag.includes(' ') || tag == "") {
+        result.innerHTML = `<p id="error-message">Cannot have spaces in the tag name</p>`;
+        return;
+      }
+      const tag_dict = JSON.stringify({'tag_name': tag, 'tag_description': description});
+   
+      fetch('/tags/create/create-tag', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: tag_dict
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        if (data.success) {
+          //Creates a new row for a created tag on the client side //Could probably be abstracted better
+          const tagsTable = document.querySelector('#tags-table').querySelector('tbody');
+          const tableRowToAppend = tagsTable.insertRow(tagsTable.rows.length - 1);
+          tableRowToAppend.setAttribute("id", tag + "-row");
+  
+          const rowToAppendColumn1 = document.createElement("td");
+          rowToAppendColumn1.classList.add("is-vcentered")
+          rowToAppendColumn1.classList.add("table-element")
+          rowToAppendColumn1.innerHTML = tag;
+
+          const rowToAppendColumn2 = document.createElement("td");
+          rowToAppendColumn2.classList.add("is-vcentered")
+          rowToAppendColumn2.classList.add("table-element")
+          rowToAppendColumn2.innerHTML = description;
+  
+          const rowToAppendColumn3 = document.createElement("td");
+          rowToAppendColumn3.classList.add("is-vcentered")
+          rowToAppendColumn3.classList.add("has-text-right")
+          const usageButtonToAppend = document.createElement("span");
+          usageButtonToAppend.classList.add("usages-icon");
+          usageButtonToAppend.classList.add("usages-button");
+          usageButtonToAppend.classList.add("js-modal-trigger");
+          usageButtonToAppend.setAttribute("name", tag);
+          usageButtonToAppend.setAttribute("data-target", tag + "-modal");
+          const usageButtonIconToAppend = document.createElement("i");
+          usageButtonIconToAppend.classList.add("fas");
+          usageButtonIconToAppend.classList.add("fa-question");
+          usageButtonIconToAppend.classList.add("is-clickable");
+          usageButtonIconToAppend.setAttribute("aria-hidden", true)
+          usageButtonIconToAppend.setAttribute("name", tag);
+          usageButtonToAppend.appendChild(usageButtonIconToAppend);
+
+
+          rowToAppendColumn3.appendChild(usageButtonToAppend);
+  
+          const rowToAppendColumn4 = document.createElement("td");
+          rowToAppendColumn4.classList.add("is-vcentered")
+          const deleteButtonToAppend = document.createElement("span");
+          deleteButtonToAppend.classList.add("delete-button");
+          deleteButtonToAppend.classList.add("delete-button1");
+          deleteButtonToAppend.classList.add("delete-icon");
+          deleteButtonToAppend.setAttribute("name", tag);
+          const deleteButtonIconToAppend = document.createElement("i");
+          deleteButtonIconToAppend.classList.add("fas");
+          deleteButtonIconToAppend.classList.add("fa-trash-alt");
+          deleteButtonIconToAppend.classList.add("is-clickable");
+          deleteButtonIconToAppend.setAttribute("name", tag);
+          deleteButtonToAppend.appendChild(deleteButtonIconToAppend);
+
+          rowToAppendColumn4.appendChild(deleteButtonToAppend);
+  
+          tableRowToAppend.appendChild(rowToAppendColumn1);
+          tableRowToAppend.appendChild(rowToAppendColumn2);
+          tableRowToAppend.appendChild(rowToAppendColumn3);
+          tableRowToAppend.appendChild(rowToAppendColumn4);
+          
+          result.innerHTML = `<p id="success-message">Tag "${tag}" was added</p>`;
+          tagForm.elements.Tag.value = "";
+          tagDescriptionForm.elements.TagDescription.value = "";
+        } else {
+          result.innerHTML = `<p id="error-message">Tag "${tag}" already exists</p>`;
+        }
+      });
+    });
+
+    //const usagesButton = document.getElementsByClassName('usages-button');
+    //$(document).on("DOMContentLoaded", ".usages-button", function ()
+    //{
+    document.addEventListener('DOMContentLoaded', () => {
+        // Functions to open and close a modal
+        function openModal($el) {
+            $el.classList.add('is-active');
+        }
+
+        function closeModal($el) {
+            $el.classList.remove('is-active');
+        }
+
+        function closeAllModals() {
+            (document.querySelectorAll('.modal') || []).forEach(($modal) => {
+            closeModal($modal);
+            });
+        }
+
+        (document.querySelectorAll('.js-modal-trigger') || []).forEach(($trigger) => {
+            const modal = $trigger.dataset.target;
+            const $target = document.getElementById(modal);
+
+            $trigger.addEventListener('click', () => {
+            openModal($target);
+            });
+        });
+
+        // Add a click event on various child elements to close the parent modal
+        (document.querySelectorAll('.modal-background, .modal-close, .modal-card-head .delete, .modal-card-foot .button') || []).forEach(($close) => {
+            const $target = $close.closest('.modal');
+
+            $close.addEventListener('click', () => {
+            closeModal($target);
+            });
+        });
+
+        // Add a keyboard event to close all modals
+        document.addEventListener('keydown', (event) => {
+            const e = event || window.event;
+
+            if (e.keyCode === 27) { // Escape key
+            closeAllModals();
+            }
+        });
+        });
+  </script>
+</html>

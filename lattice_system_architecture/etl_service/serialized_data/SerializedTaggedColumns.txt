@@ -1,5 +1,5 @@
 {
-    "mariadb.drexel_people.basic_student_info": {
+    "mariadb_data.drexel_people.basic_student_info": {
         "date_of_birth": [
             "Student"
         ],
@@ -28,7 +28,7 @@
             "Student"
         ]
     },
-    "mongo.courses.courses_info": {
+    "mongo_data.courses.courses_info": {
         "course code": [
             "Course.join"
         ],
@@ -37,9 +37,12 @@
         ],
         "college": [
             "Course"
+        ],
+        "credits": [
+            "Course"
         ]
     },
-    "mongo.courses.courses_requirements": {
+    "mongo_data.courses.courses_requirements": {
         "course code": [
             "Course.join"
         ],
@@ -50,7 +53,7 @@
             "Course"
         ]
     },
-    "mongo.classes.classes_info": {
+    "mongo_data.classes.classes_info": {
         "crn": [
             "Class.join"
         ],
@@ -62,9 +65,12 @@
         ],
         "associated_course_code": [
             "Class"
+        ],
+        "associated_term": [
+            "Class"
         ]
     },
-    "mongo.classes.classes_instruction_info": {
+    "mongo_data.classes.classes_instruction_info": {
         "crn": [
             "Class.join"
         ],
@@ -72,7 +78,7 @@
             "Class"
         ]
     },
-    "postgres.education.colleges": {
+    "postgres_data.education.colleges": {
         "name": [
             "College"
         ],
@@ -84,9 +90,18 @@
         ],
         "contact_email": [
             "College"
+        ],
+        "description": [
+            "College"
+        ],
+        "url": [
+            "College"
+        ],
+        "year_founded": [
+            "College"
         ]
     },
-    "postgres.education.departments": {
+    "postgres_data.education.departments": {
         "college_name": [
             "Department"
         ],
@@ -103,7 +118,7 @@
             "Department"
         ]
     },
-    "mariadb.locations.student_locations": {
+    "mariadb_data.locations.student_locations": {
         "drexel_id": [
             "Student.join"
         ],
@@ -114,7 +129,7 @@
             "Student"
         ]
     },
-    "postgres.education.areas_of_study": {
+    "postgres_data.education.areas_of_study": {
         "department": [
             "AreaOfStudy"
         ],
@@ -122,7 +137,7 @@
             "AreaOfStudy.join"
         ]
     },
-    "elasticsearch.additional_info.area_of_study": {
+    "elasticsearch_data.additional_info.area_of_study": {
         "name": [
             "AreaOfStudy.join"
         ],
@@ -136,7 +151,7 @@
             "AreaOfStudy"
         ]
     },
-    "postgres.education.programs": {
+    "postgres_data.education.programs": {
         "program_name": [
             "Program"
         ],
@@ -151,9 +166,12 @@
         ],
         "description": [
             "Program"
+        ],
+        "url": [
+            "Program"
         ]
     },
-    "postgres.campus_life.housing_options": {
+    "postgres_data.campus_life.housing_options": {
         "address": [
             "Housing"
         ],
@@ -164,7 +182,7 @@
             "Housing"
         ]
     },
-    "mariadb.drexel_people.basic_employee_info": {
+    "mariadb_data.drexel_people.basic_employee_info": {
         "date_of_birth": [
             "Employee"
         ],
@@ -181,7 +199,7 @@
             "Employee.join"
         ]
     },
-    "cassandra.finances.employee_salaries": {
+    "cassandra_data.finances.employee_salaries": {
         "drexel_id": [
             "Employee.join"
         ],
@@ -192,18 +210,21 @@
             "Employee"
         ]
     },
-    "cassandra.registration.class_registration": {
+    "cassandra_data.registration.class_registration": {
         "reg_code": [
             "Registration"
         ],
-        "crm": [
+        "crn": [
             "Registration"
         ],
-        "drexel_id": [
+        "grade": [
+            "Registration"
+        ],
+        "student_id": [
             "Registration"
         ]
     },
-    "postgres.campus_life.locations": {
+    "postgres_data.campus_life.locations": {
         "building_name": [
             "CampusLocation"
         ],
@@ -226,7 +247,7 @@
             "CampusLocation"
         ]
     },
-    "cassandra.finances.software_costs": {
+    "cassandra_data.finances.software_costs": {
         "software": [
             "System.join"
         ],
@@ -234,7 +255,7 @@
             "System"
         ]
     },
-    "mongo.classes.software": {
+    "mongo_data.classes.software": {
         "name": [
             "System.join",
             "System"
@@ -253,6 +274,50 @@
         ],
         "is_downloadable": [
             "System"
+        ]
+    },
+    "postgres_data.education.student_education_choices": {
+        "drexel_id": [
+            "Student.join"
+        ],
+        "majors": [
+            "Student"
+        ],
+        "minors": [
+            "Student"
+        ]
+    },
+    "cassandra_data.finances.tuition": {
+        "drexel_id": [
+            "Student.join"
+        ],
+        "annual_financial_aid_award": [
+            "Student"
+        ],
+        "outstanding_balances": [
+            "Student"
+        ]
+    },
+    "postgres_data.education.program_requirements": {
+        "program_name": [
+            "ProgramRequirements"
+        ],
+        "course_code": [
+            "ProgramRequirements"
+        ],
+        "requirement_category": [
+            "ProgramRequirements"
+        ]
+    },
+    "postgres_data.education.course_requirements": {
+        "cr_id": [
+            "CourseRequirements"
+        ],
+        "rel_id": [
+            "CourseRequirements"
+        ],
+        "req_choices": [
+            "CourseRequirements"
         ]
     }
 }

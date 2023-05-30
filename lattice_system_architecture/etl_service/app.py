@@ -22,12 +22,12 @@ def base():
 
 @app.route("/home")
 def home():
-    return render_template("home_page.html")
+    return render_template("home_page.html", headerText="Home")
 
 @app.route("/connections")
 def connections():
     connectionsList = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
-    return render_template("menu_template.html") + render_template("portal_data_source_connections.html", connectionsList=connectionsList)
+    return render_template("data_source_connections.html", headerText="Data Source Connections", connectionsList=connectionsList)
 
 @app.route("/connections/remove/<connectionToDelete>", methods=['DELETE'])
 def connectionsRemove(connectionToDelete):
@@ -78,23 +78,20 @@ def connections_create():
         trinoConnectorCreator.createConnector(newConn)
         return jsonify({"success": True, "message": "Connection has been created"})
     
-    return render_template("menu_template.html") + render_template("portal_data_source_connections_create.html", databaseTypes=databaseTypes)   
+    return render_template("data_source_connections_create.html", headerText="Data Source Connections", databaseTypes=databaseTypes)
     
 
 @app.route("/tags")
 def tags():
     tagDict = Serialization.Deserialize('serialized_data/SerializedTags.txt')
-    return render_template("menu_template.html") + render_template("portal_tag_management.html", tagDict=tagDict)
-
-@app.route("/tags/create")
-def tags_create():
-    return render_template("menu_template.html") + render_template("portal_create_new_tag.html")
+    return render_template("tag_management.html", headerText="Tag Management", tagDict=tagDict)
 
 @app.route('/tags/create/create-tag', methods=['POST'])
 def create_tag():
     # Extract JSON payload from request
     tagDict = request.get_json()
     tagName = tagDict.get("tag_name")
+    tagDescription = tagDict.get("tag_description")
     filePath = "serialized_data/SerializedTags.txt"
 
     if not tagName or " " in tagName:
@@ -109,7 +106,7 @@ def create_tag():
 
     # If the tag does not exist, write the new tag to the file
     with open(filePath, 'w') as f:
-        tagsDict[tagName] = {"columns_tagged": []}
+        tagsDict[tagName] = {"columns_tagged": [], "description": tagDescription}
         sortedTagsDict = {key: val for key, val in sorted(tagsDict.items(), key = lambda ele: ele[0])} #alphabetizes tags
         Serialization.Serialize(sortedTagsDict, "serialized_data/SerializedTags.txt")
 
@@ -151,17 +148,17 @@ def tagsCheck(tagToDelete):
 @app.route("/objects")
 def objects():
     connectionList = Serialization.Deserialize("./serialized_data/SerializedConnections.txt")
-    return render_template("menu_template.html") + render_template("data_object_pages/portal_data_object_management.html", connectionList=connectionList)
+    return render_template("data_object_pages/data_object_management.html", headerText="Data Object Management", connectionList=connectionList)
 
 @app.route("/objects/<connectionName>")
 def schemas(connectionName):
     schemaList = TrinoConnection.query(TrinoSchemasQuery, connectionName)
-    return render_template("menu_template.html") + render_template("data_object_pages/data_object_schemas_page.html", schemaList=schemaList, connectionName=connectionName)
+    return render_template("data_object_pages/data_object_schemas_page.html", headerText="Data Object Management", schemaList=schemaList, connectionName=connectionName)
 
 @app.route("/objects/<connectionName>/<schemaName>")
 def tables(connectionName, schemaName):
     tableList = TrinoConnection.query(TrinoTablesQuery, connectionName + "." + schemaName)
-    return render_template("menu_template.html") + render_template("data_object_pages/data_object_tables_page.html", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
+    return render_template("data_object_pages/data_object_tables_page.html", headerText="Data Object Management", tableList=tableList, connectionName=connectionName, schemaName=schemaName)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>")
 def columns(connectionName, schemaName, tableName):
@@ -197,7 +194,7 @@ def columns(connectionName, schemaName, tableName):
             pass
         exampleColumnDataDict[column] = exampleColumnData
 
-    return render_template("menu_template.html") + render_template("data_object_pages/data_object_columns_page.html", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagDict=tagDict, exampleColumnDataDict=exampleColumnDataDict)
+    return render_template("data_object_pages/data_object_columns_page.html", headerText="Data Object Management", columnList=columnList, connectionName=connectionName, schemaName=schemaName, tableName=tableName, columnTagDict=columnTagDict, tagDict=tagDict, exampleColumnDataDict=exampleColumnDataDict)
 
 @app.route("/objects/<connectionName>/<schemaName>/<tableName>/<columnName>/add/<tagToAdd>", methods=['POST'])
 def addTagToColumn(connectionName, schemaName, tableName, columnName, tagToAdd):
@@ -255,7 +252,7 @@ def removeTagFromColumn(connectionName, schemaName, tableName, columnName, tagTo
 
 @app.route("/loader")
 def loader():        
-    return render_template("menu_template.html") + render_template("portal_graph_loader.html")
+    return render_template("graph_loader.html", headerText="Graph Loader Portal")
 
 @app.route("/loader/load", methods=['GET', 'POST'])
 def loadDataObjects(): #TODO: Make sure to disable button during load process until done

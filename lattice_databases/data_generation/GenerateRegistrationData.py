@@ -28,25 +28,26 @@ with open(filePathClass, 'r') as jsonClass:
 
   #Python 3.10 and later can use switch statements (pattern match)
   for aClass in dataClass:
-    match aClass["associated_term"]:
-      case "Fall Quarter 22-23":
-        dataFall22.append(aClass)
-      case "Winter Quarter 22-23":
-        dataWinter22.append(aClass)
-      case "Spring Quarter 22-23":
-        dataSpring22.append(aClass)
-      case "Summer Quarter 22-23":
-        dataSummer22.append(aClass)
-      case "Fall Quarter 21-22":
-        dataFall21.append(aClass)
-      case "Winter Quarter 21-22":
-        dataWinter21.append(aClass) 
-      case _:
-        print("missed: " + aClass) #classes marked with terms that arent the above
+      associated_term = aClass["associated_term"]
+      if associated_term == "Fall Quarter 22-23":
+          dataFall22.append(aClass)
+      elif associated_term == "Winter Quarter 22-23":
+          dataWinter22.append(aClass)
+      elif associated_term == "Spring Quarter 22-23":
+          dataSpring22.append(aClass)
+      elif associated_term == "Summer Quarter 22-23":
+          dataSummer22.append(aClass)
+      elif associated_term == "Fall Quarter 21-22":
+          dataFall21.append(aClass)
+      elif associated_term == "Winter Quarter 21-22":
+          dataWinter21.append(aClass)
+      else:
+          print("missed: " + associated_term)  # classes marked with terms that aren't the above
         
   dataTerms = [dataFall22, dataWinter22, dataSpring22, dataSummer22, dataFall21] #not adding Winter21 b/c of problem, idk 
 
-dataHeaderRegistration = ["reg_code, crn, student_id"]
+dataHeaderRegistration = ["reg_code", "crn", "student_id", "grade"]
+possible_grades = ['A+', 'A', 'A-', 'B+', 'B', 'B-', 'C+', 'C', 'C-', 'D+', 'D', 'D-', 'F']
 dataRowsRegistration = []
 
 with open(filePathCourse, 'r') as jsonCourse:
@@ -142,9 +143,10 @@ with open(filePathStudent, 'r') as csvStudent:
 
         termRegistration.append([newClass["crn"], student[0]]) #crn and the student id
       for registration in termRegistration:
-        dataRowsRegistration.append([generatedRowIndex, registration[0], registration[1]])
+        grade = random.choice(possible_grades)
+        dataRowsRegistration.append([generatedRowIndex, registration[0], registration[1], grade])
         generatedRowIndex += 1
-
+    
 with open(filePathOutput, 'w', newline='') as csvOutput:
   writer = csv.writer(csvOutput)
 
